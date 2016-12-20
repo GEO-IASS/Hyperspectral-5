@@ -1,0 +1,29 @@
+function [indices,error,linerror,P,linab,semiab] = library_fast(libs,rl,pixels)
+disp('Selecting')
+[indices,linab,~,linerror] = MESMA_brute_small(pixels.',rl);
+pixcount = size(indices,2)
+error = zeros(1,pixcount);
+P = zeros(1,pixcount);
+linab = linab.';
+semilab = linab;
+disp('unmixing')
+for i=1:pixcount
+    if mod(i,1000) == 0
+        disp(i/pixcount) 
+    end
+    [semilab(i,:),P(i),~,~,error(i)] = multilin_psmall(pixels(i,:),build_endmem(libs,indices(:,i)),false,false);
+end
+
+
+end
+
+function endmem = build_endmem(lib,indices)
+perm = find(indices);
+len = size(perm(:),1);
+bands = size(lib{1},2);
+endmem = zeros(len,bands);
+for i=1:len
+    endmem(i,:) = lib{perm(i)}(indices(perm(i)),:);
+end
+
+end
