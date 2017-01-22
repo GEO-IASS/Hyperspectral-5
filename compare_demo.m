@@ -1,11 +1,11 @@
 function c = compare_demo()
 c.testpix = @testpix;
-
+c.show = @show_table;
 
 end
 
 
-function [tabl,error,runtime,abundance,reflectance] = testpix(x,y)
+function [tabl,error,runtime,abundance,reflectance,names] = testpix(x,y)
 
 [libs,~,data,rl] = load_Alina();
 pixel = reshape(data(y,x,:),[1,53]);
@@ -58,6 +58,24 @@ for op  = allsystems
 end
 
 tabl = table(runtime,error,freedom,abundance,reflectance,'RowNames',names)
+
+end
+
+
+function show_table(rownumber)
+errors = zeros(5,19);
+
+for x=1:19
+    [~,errors(:,x),~,~,~,names] = testpix(x,rownumber);
+end
+
+close all;
+bar(1:19,errors)
+set(gca, 'YScale', 'log')
+legend(names)
+xlabel positie
+ylabel reconstructieerror
+print('lin_errors','-dpdf')
 
 end
 
