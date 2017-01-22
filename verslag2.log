@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  16 DEC 2016 12:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  22 JAN 2017 17:36
 entering extended mode
 **verslag2.tex
 (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag2.tex
@@ -493,36 +493,36 @@ t_PMC_10_100_angle.pdf>]
 <exp_runtime.pdf, id=128, 614.295pt x 794.97pt>
 File: exp_runtime.pdf Graphic file (type pdf)
  <use exp_runtime.pdf>
-Package pdftex.def Info: exp_runtime.pdf used on input line 534.
+Package pdftex.def Info: exp_runtime.pdf used on input line 549.
 (pdftex.def)             Requested size: 371.1033pt x 252.86406pt.
 
 <exp_runtime_honest.pdf, id=129, 614.295pt x 794.97pt>
 File: exp_runtime_honest.pdf Graphic file (type pdf)
 
 <use exp_runtime_honest.pdf>
-Package pdftex.def Info: exp_runtime_honest.pdf used on input line 535.
+Package pdftex.def Info: exp_runtime_honest.pdf used on input line 550.
 (pdftex.def)             Requested size: 371.1033pt x 252.86406pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 534--536
+Underfull \hbox (badness 10000) in paragraph at lines 549--551
 [][]
  []
 
 <exp_errors.pdf, id=130, 614.295pt x 794.97pt>
 File: exp_errors.pdf Graphic file (type pdf)
  <use exp_errors.pdf>
-Package pdftex.def Info: exp_errors.pdf used on input line 540.
+Package pdftex.def Info: exp_errors.pdf used on input line 555.
 (pdftex.def)             Requested size: 371.1033pt x 252.86406pt.
 
 <Relative_Error.pdf, id=131, 614.295pt x 794.97pt>
 File: Relative_Error.pdf Graphic file (type pdf)
  <use Relative_Error.pdf>
-Package pdftex.def Info: Relative_Error.pdf used on input line 545.
+Package pdftex.def Info: Relative_Error.pdf used on input line 560.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
 <P.pdf, id=132, 614.295pt x 794.97pt>
 File: P.pdf Graphic file (type pdf)
  <use P.pdf>
-Package pdftex.def Info: P.pdf used on input line 546.
+Package pdftex.def Info: P.pdf used on input line 561.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
  [20] [21 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/exp_runtime.pdf>
  <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/exp_runtime_honest.pdf>] 
@@ -533,13 +533,13 @@ Hoofdstuk 4.
 <semilinMESMA.pdf, id=164, 614.295pt x 794.97pt>
 File: semilinMESMA.pdf Graphic file (type pdf)
  <use semilinMESMA.pdf>
-Package pdftex.def Info: semilinMESMA.pdf used on input line 639.
+Package pdftex.def Info: semilinMESMA.pdf used on input line 655.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
 
 <linMESMA.pdf, id=165, 614.295pt x 794.97pt>
 File: linMESMA.pdf Graphic file (type pdf)
  <use linMESMA.pdf>
-Package pdftex.def Info: linMESMA.pdf used on input line 644.
+Package pdftex.def Info: linMESMA.pdf used on input line 660.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
  [23
 
@@ -585,7 +585,7 @@ msfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on verslag2.pdf (29 pages, 483849 bytes).
+Output written on verslag2.pdf (29 pages, 485226 bytes).
 PDF statistics:
  299 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -516,6 +516,21 @@ Kijken we naar de gemeten $P$ waarden dan zien we dat deze consequent lager zijn
 
 Om te weten te komen hoe goed de nieuwe bibliotheekelementen lijken op de oude, kan gebruik worden gemaakt van de hoek tussen deze twee spectra. Maar  zoals te zien in figuur \ref{fig:hoek} zijn de foutenvlaggen op deze waarden veel groter dan de waarden zelf, dus kan uit deze grafiek weinig afgeleid worden.
 
+\subsubsection{maximale reflectie}
+
+Op de grafieken is te zien dat de reconstructieerror van het semilenaire model exact nul wordt als $P=1$. Op zich is dit geen probleem aangezien deze situatie in werkelijkheid niet zal voorkomen en ook niet fysisch relevant is. Als een lichtstraal een kans van $1$ heeft om terug op het materiaal te vallen, zal deze nooit op de detector vallen. Uit vergelijking 35 volgt:
+
+\begin{align}
+\bm{x} = \frac{\sum_{i=1}^p (1-P_i) a_{i} \bm{w}_{i}}{1-\sum_{i=1}^p P_i a_{i} \bm{w}_{i}}
+\end{align}
+
+Vullen we $P \rightarrow 1$ in dan krijgt men
+
+\begin{align}
+\bm{x} = 0
+\end{align}
+
+Dit geldt zowel voor de het reconstructiespectrum als het gemengde spectrum, en de reconstructieerror is dus de norm van de nulvector, en deze is nul.
 
 \subsection{Experimentele controle} \label{sec:exp}
 
@@ -546,6 +561,7 @@ In figuur \ref{fig:q} is enerzijds het quoti\"ent van de lineaire en semilineair
 \includegraphics[width=0.49\linewidth,trim=0 200 0 175 cm]{P.pdf}
 \caption{Relatieve reconstructie-error en reflexie voor de Alina dataset. Deze figuren zijn gemaakt met \textit{matlab}\cite{MATLAB} \label{fig:q}}
 \end{figure}
+
 
 
 

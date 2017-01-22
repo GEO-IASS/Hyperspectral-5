@@ -248,7 +248,7 @@ end
 
 function p = pixelcompare(x,y)
 [libs,~,data] = load_Alina();
-pixel = data(y,x,:);
+pixel = data(y,x,:)
 abundance = zeros(5,4);
 reflections = zeros(5,4);
 indices = zeros(5,4);

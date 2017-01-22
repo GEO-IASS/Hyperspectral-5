@@ -23,7 +23,8 @@
 \contentsline {subsection}{\numberline {3.1.2}Selecteren versus ontmengen, het semilineair model}{15}
 \contentsline {section}{\numberline {3.2}Juistheid van het semilineair model}{16}
 \contentsline {subsection}{\numberline {3.2.1}Theoretische controle}{16}
-\contentsline {subsection}{\numberline {3.2.2}Experimentele controle}{19}
+\contentsline {subsubsection}{maximale reflectie}{19}
+\contentsline {subsection}{\numberline {3.2.2}Experimentele controle}{20}
 \contentsline {chapter}{\numberline {4}toepassen op datasets}{23}
 \contentsline {chapter}{Appendices}{26}
 \contentsline {chapter}{Bibliografie}{28}
