@@ -11,13 +11,23 @@ function [tabl,error,runtime,abundance,reflectance,names] = testpix(x,y)
 pixel = reshape(data(y,x,:),[1,53]);
 
 
+% allsystems = { ...
+%     multilin_options(1,true,false,false,600), ...
+%     multilin_options(1,false,false,false,600), ...
+%     multilin_options(1,false,true,false,600), ...
+%     multilin_options(1,false,false,true,600), ...
+%     multilin_options(1,false,true,true,600), ...
+%     };
+
 allsystems = { ...
-    %multilin_options(false,false,false,false,600), ...
-    multilin_options(true,true,false,false,600), ...
-    multilin_options(true,false,false,false,600), ...
-    multilin_options(true,false,true,false,600), ...
-    multilin_options(true,false,false,true,600), ...
-    multilin_options(true,false,true,true,600)};
+    multilin_options(1,true,false,false,600), ...
+    multilin_options(1,false,true,false,600), ...
+    multilin_options(1,false,false,false,600), ...
+    multilin_options(2,false,true,false,600), ...
+    multilin_options(1,false,true,true,600), ...
+    multilin_options(1,false,false,true,600), ...
+    multilin_options(2,false,true,true,600), ...
+    };
     
 l = length(allsystems);
 abundance = zeros(l,4);
@@ -36,10 +46,16 @@ for op  = allsystems
     names{i} = options.name;
     tic()
 
-    if options.linapprox
-        indices = library_fast(libs,rl,pixel);
-    else
-        indices = library_custom(pixel,libs,options);
+    switch options.select
+        case 0
+            indices = library_custom(pixel,libs,options);
+        case 1
+            indices = MESMA_brute_small(pixel.',rl);
+        case 2
+            addpath('AAM/')
+            indices = AAM(pixel.',rl);
+        otherwise
+            assert(true,'Invalid method')
     end
     
     perm = find(indices);
@@ -63,19 +79,19 @@ end
 
 
 function show_table(rownumber)
-errors = zeros(5,19);
+errors = zeros(7,19);
 
 for x=1:19
     [~,errors(:,x),~,~,~,names] = testpix(x,rownumber);
 end
 
 close all;
-bar(1:19,errors)
+bar(1:19,errors.')
 set(gca, 'YScale', 'log')
 legend(names)
 xlabel positie
 ylabel reconstructieerror
-print('lin_errors','-dpdf')
+print('full_errors','-dpdf')
 
 end
 

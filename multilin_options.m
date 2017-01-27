@@ -1,14 +1,14 @@
-function o = multilin_options(linapprox,linsolve,indepp,freep,acc)
-o.linapprox = linapprox;
+function o = multilin_options(select,linsolve,indepp,freep,acc)
+o.select = select; %0 = multilineair, 1 = lineair, 2 = AAM, 3 = bilineair
 o.linsolve = linsolve;
 o.indepp = indepp;
 o.freeP = freep;
 o.accuracy = acc;
-names1 = {'multilineair','semilineair','inverslineair','lineair'};
+names1 = {'multilineair','inverslineair','semilineair','lineair','AAM ML','AAM','semibilineair','bilineair'};
 names2 = {'real','free','strict','strong'};
-name1 = names1{linapprox+2*linsolve+1};
+name1 = names1{2*select+linsolve+1};
 name2 = names2{freep+2*indepp+1};
-if linapprox && linsolve
+if select && linsolve
     name2 = '';
 end
 

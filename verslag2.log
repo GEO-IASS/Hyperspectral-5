@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  22 JAN 2017 17:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  23 JAN 2017 09:57
 entering extended mode
 **verslag2.tex
 (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag2.tex
@@ -376,47 +376,47 @@ Package pdftex.def Info: vlabsym.png used on input line 121.
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Thorvald/Dropbox
 /Masterproef/Hyperspectral/download.jpg> <C:/Users/Thorvald/Dropbox/Masterproef
 /Hyperspectral/vlabsym.png>] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectr
-al\verslag2.toc)
-\tf@toc=\write3
-
+al\verslag2.toc
 [1
 
-] [2
+])
+\tf@toc=\write3
 
-] [3
-
-]
-Hoofdstuk 1.
-[4
-
-]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5] [6]
+[2] [3
+
+] [4
+
+]
+Hoofdstuk 1.
+[5
+
+] [6] [7]
 Hoofdstuk 2.
-[7
+[8
 
-] [8] [9] [10] [11]
+] [9] [10] [11] [12]
 
-Package natbib Warning: Citation `MATLAB:2010' on page 12 undefined on input li
+Package natbib Warning: Citation `MATLAB:2010' on page 13 undefined on input li
 ne 397.
 
 
-Package natbib Warning: Citation `MATLAB:2010' on page 12 undefined on input li
+Package natbib Warning: Citation `MATLAB:2010' on page 13 undefined on input li
 ne 397.
 
 
 Package natbib Warning: Citation `MATLAB:2010' undefined on input line 397.
 
-[12] [13]
+[13] [14]
 Hoofdstuk 3.
-[14
+[15
 
-] [15] [16]
+] [16] [17]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 488.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -425,42 +425,42 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 488.
 
-<export_PMC_10_100_corr.pdf, id=79, 614.295pt x 794.97pt>
+<export_PMC_10_100_corr.pdf, id=82, 614.295pt x 794.97pt>
 File: export_PMC_10_100_corr.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_corr.pdf>
 Package pdftex.def Info: export_PMC_10_100_corr.pdf used on input line 496.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
-<export_PMC_10_100_PP.pdf, id=80, 614.295pt x 794.97pt>
+<export_PMC_10_100_PP.pdf, id=83, 614.295pt x 794.97pt>
 File: export_PMC_10_100_PP.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_PP.pdf>
 Package pdftex.def Info: export_PMC_10_100_PP.pdf used on input line 497.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
-<export_PMC_10_100_E.pdf, id=81, 614.295pt x 794.97pt>
+<export_PMC_10_100_E.pdf, id=84, 614.295pt x 794.97pt>
 File: export_PMC_10_100_E.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_E.pdf>
 Package pdftex.def Info: export_PMC_10_100_E.pdf used on input line 498.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
-<export_PMC_10_100_El.pdf, id=82, 614.295pt x 794.97pt>
+<export_PMC_10_100_El.pdf, id=85, 614.295pt x 794.97pt>
 File: export_PMC_10_100_El.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_El.pdf>
 Package pdftex.def Info: export_PMC_10_100_El.pdf used on input line 499.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
-<export_PMC_10_100_Elog.pdf, id=83, 614.295pt x 794.97pt>
+<export_PMC_10_100_Elog.pdf, id=86, 614.295pt x 794.97pt>
 File: export_PMC_10_100_Elog.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_Elog.pdf>
 Package pdftex.def Info: export_PMC_10_100_Elog.pdf used on input line 500.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
-<export_PMC_10_100_EPlog.pdf, id=84, 614.295pt x 794.97pt>
+<export_PMC_10_100_EPlog.pdf, id=87, 614.295pt x 794.97pt>
 File: export_PMC_10_100_EPlog.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_EPlog.pdf>
@@ -476,27 +476,27 @@ Underfull \hbox (badness 2181) in paragraph at lines 496--502
 [] []
  []
 
-<export_PMC_10_100_angle.pdf, id=85, 614.295pt x 794.97pt>
+<export_PMC_10_100_angle.pdf, id=88, 614.295pt x 794.97pt>
 File: export_PMC_10_100_angle.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_angle.pdf>
 Package pdftex.def Info: export_PMC_10_100_angle.pdf used on input line 507.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
- [17] [18 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_10
+ [18] [19 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_10
 0_corr.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_
 100_PP.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_
 100_E.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_1
 00_El.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_1
 00_Elog.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10
-_100_EPlog.pdf>] [19 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/expor
+_100_EPlog.pdf>] [20 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/expor
 t_PMC_10_100_angle.pdf>]
-<exp_runtime.pdf, id=128, 614.295pt x 794.97pt>
+<exp_runtime.pdf, id=131, 614.295pt x 794.97pt>
 File: exp_runtime.pdf Graphic file (type pdf)
  <use exp_runtime.pdf>
 Package pdftex.def Info: exp_runtime.pdf used on input line 549.
 (pdftex.def)             Requested size: 371.1033pt x 252.86406pt.
 
-<exp_runtime_honest.pdf, id=129, 614.295pt x 794.97pt>
+<exp_runtime_honest.pdf, id=132, 614.295pt x 794.97pt>
 File: exp_runtime_honest.pdf Graphic file (type pdf)
 
 <use exp_runtime_honest.pdf>
@@ -507,52 +507,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 549--551
 [][]
  []
 
-<exp_errors.pdf, id=130, 614.295pt x 794.97pt>
+<exp_errors.pdf, id=133, 614.295pt x 794.97pt>
 File: exp_errors.pdf Graphic file (type pdf)
  <use exp_errors.pdf>
 Package pdftex.def Info: exp_errors.pdf used on input line 555.
 (pdftex.def)             Requested size: 371.1033pt x 252.86406pt.
 
-<Relative_Error.pdf, id=131, 614.295pt x 794.97pt>
+<Relative_Error.pdf, id=134, 614.295pt x 794.97pt>
 File: Relative_Error.pdf Graphic file (type pdf)
  <use Relative_Error.pdf>
 Package pdftex.def Info: Relative_Error.pdf used on input line 560.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
-<P.pdf, id=132, 614.295pt x 794.97pt>
+<P.pdf, id=135, 614.295pt x 794.97pt>
 File: P.pdf Graphic file (type pdf)
  <use P.pdf>
 Package pdftex.def Info: P.pdf used on input line 561.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
- [20] [21 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/exp_runtime.pdf>
+ [21] [22 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/exp_runtime.pdf>
  <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/exp_runtime_honest.pdf>] 
-[22 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/exp_errors.pdf> <C:/Us
+[23 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/exp_errors.pdf> <C:/Us
 ers/Thorvald/Dropbox/Masterproef/Hyperspectral/Relative_Error.pdf> <C:/Users/Th
 orvald/Dropbox/Masterproef/Hyperspectral/P.pdf>]
 Hoofdstuk 4.
-<semilinMESMA.pdf, id=164, 614.295pt x 794.97pt>
+[24
+
+]
+Hoofdstuk 5.
+<semilinMESMA.pdf, id=172, 614.295pt x 794.97pt>
 File: semilinMESMA.pdf Graphic file (type pdf)
  <use semilinMESMA.pdf>
-Package pdftex.def Info: semilinMESMA.pdf used on input line 655.
+Package pdftex.def Info: semilinMESMA.pdf used on input line 681.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
 
-<linMESMA.pdf, id=165, 614.295pt x 794.97pt>
+<linMESMA.pdf, id=173, 614.295pt x 794.97pt>
 File: linMESMA.pdf Graphic file (type pdf)
  <use linMESMA.pdf>
-Package pdftex.def Info: linMESMA.pdf used on input line 660.
+Package pdftex.def Info: linMESMA.pdf used on input line 686.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
- [23
+ [25
 
-] [24 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/semilinMESMA.pdf>] [
-25 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/linMESMA.pdf>] [26
+] [26 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/semilinMESMA.pdf>] [
+27 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/linMESMA.pdf>] [28
 
 
 ]
-(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag2.bbl [27])
+(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag2.bbl [29])
 
 Package natbib Warning: There were undefined citations.
 
-[28
+[30
 
 ] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag2.aux)
 
@@ -560,13 +564,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4405 strings out of 493921
- 57134 string characters out of 3147272
- 132610 words of memory out of 3000000
- 7583 multiletter control sequences out of 15000+200000
- 19740 words of font info for 72 fonts, out of 3000000 for 9000
+ 4413 strings out of 493921
+ 57268 string characters out of 3147272
+ 132611 words of memory out of 3000000
+ 7591 multiletter control sequences out of 15000+200000
+ 21600 words of font info for 79 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 31i,11n,48p,1137b,309s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,11n,48p,1137b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Program Files/MiKTe
@@ -578,16 +582,17 @@ s/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
 8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on verslag2.pdf (29 pages, 485226 bytes).
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on verslag2.pdf (31 pages, 498650 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
+ 310 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

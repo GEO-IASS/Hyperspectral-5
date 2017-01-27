@@ -10,7 +10,7 @@ for i=1:pixcount
     if mod(i,1000) == 0
         disp(i/pixcount) 
     end
-    %[~,P(i),~,~,error(i)] = multilin_psmall(pixels(i,:),build_endmem(libs,indices(:,i)),false,false);
+    [~,P(i),~,~,error(i)] = multilin_psmall(pixels(i,:),build_endmem(libs,indices(:,i)),false,false);
 end
 
 

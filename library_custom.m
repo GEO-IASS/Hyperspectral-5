@@ -2,6 +2,7 @@ function [indices,error] = library_custom(pixel,libs,options)
 
 len = length(libs);
 error = Inf();
+indices = zeros(1,len);
 
 for p=1:2^len-1
     perm = find(dec2bin(p,len) - '0');
