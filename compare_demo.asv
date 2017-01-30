@@ -1,7 +1,7 @@
 function c = compare_demo()
 c.testpix = @testpix;
 c.show = @show_table;
-c.c = @cdata;
+c.c = 
 end
 
 
@@ -20,8 +20,8 @@ pixel = reshape(data(y,x,:),[1,53]);
 %     };
 
 allsystems = { ...
-    multilin_options(0,false,false,false,600), ...
-    multilin_options(0,false,false,true,600), ...
+    %multilin_options(0,false,false,false,600), ...
+    %multilin_options(0,false,false,true,600), ...
     multilin_options(1,true,false,false,600), ...
     multilin_options(1,false,true,false,600), ...
     multilin_options(1,false,false,false,600), ...
@@ -119,21 +119,19 @@ end
 end
 function cdata()
 
-table1 = testpix(3,3);
-table2 = testpix(11,3);
-table3 = testpix(17,3);
+table1 = c.testpix(3,3);
+table2 = c.testpix(11,3);
+table3 = c.testpix(17,3);
 
-save_latex_file(table1,'TabTree');
-save_latex_file(table2,'TabRoad');
-save_latex_file(table3,'TabGrass');
-
-show_table(3);
+save_latex_file(table1,'TabTree')
+save_latex_file(table2,'TabRoad')
+save_latex_file(table3,'TabGrass')
 
 end
 
 %Deze code snipped komt uit de example file van latexTable
 function save_latex_file(table,filename)
-input.data = table;
+input.data = table
 latex = latexTable(input);
 % save LaTex code as file
 fid=fopen( [filename '.tex' ],'w');
@@ -142,7 +140,7 @@ for row = 1:nrows
     fprintf(fid,'%s\n',latex{row,:});
 end
 fclose(fid);
-fprintf('\n... your LaTex code has been saved in your working directory\n');
+fprintf('\n... your LaTex code has been saved as ''MyLatex.tex'' in your working directory\n');
    
 end
 
