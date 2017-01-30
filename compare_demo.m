@@ -80,18 +80,26 @@ end
 
 function show_table(rownumber)
 errors = zeros(7,19);
+runtime = errors;
 
 for x=1:19
-    [~,errors(:,x),~,~,~,names] = testpix(x,rownumber);
+    [~,errors(:,x),runtime(:,x),~,~,names] = testpix(x,rownumber);
 end
 
 close all;
-bar(1:19,errors.')
+bar3(1:19,errors.')
 set(gca, 'YScale', 'log')
 legend(names)
 xlabel positie
 ylabel reconstructieerror
-print('full_errors','-dpdf')
+print('full3_errors','-dpdf')
+figure;
+bar3(1:19,runtime.')
+set(gca, 'YScale', 'log')
+legend(names)
+xlabel positie
+ylabel reconstructieerror
+print('full3_runtimes','-dpdf')
 
 end
 
