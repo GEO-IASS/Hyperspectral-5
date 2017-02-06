@@ -82,28 +82,32 @@ tabl = table(runtime,error*1000,freedom,abundance,reflectance,'RowNames',names)
 end
 
 
-function show_table(rownumber)
-errors = zeros(9,19);
+function show_table(numberofsystems,rownumber)
+errors = zeros(numberofsystems,19);
 runtime = errors;
+
 
 for x=1:19
     [~,errors(:,x),runtime(:,x),~,~,names] = testpix(x,rownumber);
 end
 
+
 close all;
-bar3(1:19,errors.')
+bar(1:19,errors.')
 set(gca, 'YScale', 'log')
 legend(names)
 xlabel positie
 ylabel reconstructieerror
-print('full3_errors','-dpdf')
+colormap jet
+print('full_errors','-dpdf')
 figure;
-bar3(1:19,runtime.')
+bar(1:19,runtime.')
 set(gca, 'YScale', 'log')
 legend(names)
 xlabel positie
 ylabel reconstructieerror
-print('full3_runtimes','-dpdf')
+colormap jet
+print('full_runtimes','-dpdf')
 
 end
 
@@ -127,7 +131,7 @@ save_latex_file(table1,'TabTree');
 save_latex_file(table2,'TabRoad');
 save_latex_file(table3,'TabGrass');
 
-show_table(3);
+show_table(11,3);
 
 end
 
