@@ -14,6 +14,6 @@ end
 
 o.name = [name2 ' ' name1 ' (' num2str(acc) ')'];
 
-o.dof = 4 + (~linsolve)*(1+3*~indepp);
+o.dof = 3 + (~linsolve)*(1+3*~indepp);
 
 end
