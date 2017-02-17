@@ -1,0 +1,291 @@
+\documentclass[12pt]{report}
+
+\usepackage[dutch]{babel}
+\usepackage[nobottomtitles]{titlesec}
+\usepackage[bottom]{footmisc}
+\usepackage{graphicx}
+\usepackage{titleps}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{titling}
+\usepackage[toc,page]{appendix}
+\usepackage{bm}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\fancyhf{}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+	\rfoot{\fancyplain{}{\nouppercase{\thepage}}}
+	\lfoot{\fancyplain{}{Thorvald Dox}}
+  \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+  \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
+\lhead{\fancyplain{}{Semilineaire MESMA}}
+\rhead{\fancyplain{}{\nouppercase{\leftmark}}}
+\rfoot{\fancyplain{}{\nouppercase{\thepage}}}
+\lfoot{\fancyplain{}{Thorvald Dox}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancyhfoffset[E,O]{0pt}
+\date{}
+  
+\usepackage[margin=1in]{geometry}
+\usepackage{float}
+
+
+
+\usepackage[super,sort]{natbib}
+\usepackage{bibentry}
+\nobibliography*
+
+\newcommand{\footcite}[1]{\cite{#1}\let\thefootnote\relax \footnote{\cite{#1} \bibentry{#1}} }
+
+\DeclareMathOperator*{\Odot}{\bigodot}
+\allowdisplaybreaks
+
+%\title{Semi-lineair Multiple Endmember mixture spectrum analysis}
+\title{Semilineaire spectraalanalyse met meerdere eindmembers}
+\author{Thorvald Dox}
+
+\begin{document}
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Universiteit Antwerpen}\\[1.5cm] % Name of your university/college
+\textsc{\Large Fysica}\\[0.5cm] % Major heading such as course name
+\textsc{\large Masterproef}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \Large \bfseries \thetitle}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Auteur:}\\
+\theauthor % Your name
+~\\
+~\\
+~\\
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Promotor:} \\
+Paul {Scheunders} \\ % Supervisor's Name
+\emph{Copromotor:} \\
+Rob {Heylen} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[5cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+%{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+%\includegraphics[height=4cm]{remote.png}
+\includegraphics[height=4cm]{download.jpg}
+\hspace{5 cm}
+\includegraphics[height=4cm]{vlabsym.png}
+ \\[1cm] % Include a department/university logo - this will require the graphicx package
+
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+\tableofcontents
+\newpage
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\newpage
+\chapter*{Inleiding}
+\addcontentsline{toc}{chapter}{Inleiding}
+\section{aardopservatie}
+
+
+
+\chapter{ontmengen}
+
+\section{spectrale analyse}
+
+\begin{itemize}
+\item spectra als functies (eigenschappen van licht)
+\item spectra als vector (endmembers) $\rightarrow$ matlab implementatie
+\item mengen van endmembers (abundancies)
+\end{itemize}
+
+\subsection{atmosferische correctie}
+
+\section{ontmengen}
+
+\begin{itemize}
+\item optimalisatieprobleem
+\item reconstructie
+\item reconstructieerror
+\item vrijheidsgraden
+\end{itemize}
+
+\section{lineair ontmengen}
+
+Least-Squares
+$\rightarrow$ Berekening
+
+
+\subsubsection{niet-negativiteit}
+
+\subsubsection{sum to one}
+
+
+
+\subsection{implementatie in matlab}
+
+\section{multilineair ontmengen}
+
+Uitleg $\rightarrow$ lichtstraal heeft kans om te reflecteren
+
+\subsection{berekening}
+
+\subsection{reflectancy vs albedo}
+
+\subsection{afhankelijke vs onafhankelijke P waarden}
+
+\subsection{Ondergrens van P waarde}
+
+Of dat $P > 0$ moet gebruikt worden als voorwaarde of niet.
+
+\subsection{implementatie in matlab}
+
+\chapter{Selecteren}
+
+\section{Variabiliteit}
+
+\begin{itemize}
+\item variabiliteit
+\item bibliotheek $\rightarrow$ model
+\item pixel-afhankelijke selectie
+\end{itemize}
+
+\section{MESMA}
+
+\begin{itemize}
+\item Ontmengen aan de hand van elke subset
+\item Selectie op basis van niet-negativiteitsvoorwaarde
+\end{itemize}
+
+\subsection{ontmengingsmethode naar keuz (lineair vs multilineair)}
+
+\subsection{implementatie in matlab}
+
+\section{AAM}
+
+\begin{itemize}
+\item concept hoek in hoogdimentonale ruimtes
+\item AAM
+\end{itemize}
+
+\subsection{implementatie in matlab}
+
+
+\chapter{Methodes}
+
+\section{Semi-lineair model}
+
+ontkoppeling van Ontmenging in MESMA bij selectie tov ontmenging voor abundancies
+
+\subsection{Theoretische controle dmv monte carlo simulaties}
+
+\section{multilineair AAM}
+
+\chapter{experimentele vergelijking van verschillende methodes}
+
+\section{Alina dataset}
+
+\section{Lijst en korte uitleg bij alle methodes}
+
+Elke methode is hiervoor beschreven, maar dit beschrijft kort de verschillen in de methodes en hoe deze geimplementeerd zijn door middel van `schakelaars' in de code. Ook een uitleg bij de weergave van de resultaten. 
+
+\begin{itemize}
+\item lineair MESMA
+\item semi-lineair MESMA
+\item multi-lineair MESMA
+\item lineair AAM
+\item multilineair AAM
+\end{itemize}
+
+$\rightarrow$ Voor de multilineaire modellen wordt ook al dan niet $P> 0$ en $P$ materiaalafhankelijk vergeleken.
+
+
+
+\section{Bepreking lineair vs semi-linair}
+
+Verschil voor hoge reflectie (bomen)
+$\rightarrow$ semilinair geeft betere resultaten voor dezelfde runtime
+
+\section{Bespreking semi-lineair vs multilineair}
+
+$\rightarrow$ semilineair geeft vergelijkbare resultaten op kortere tijd
+
+\section{Bespreking P-afhankelijkheid}
+
+$\rightarrow$ P-afhankelijkheid geeft vergelijkbare resultaten op gelijke tijd, maar heeft meer vrijheidsgraden
+
+\section{Bespreking P-ondergrens}
+
+verschil voor lage reflectie (asfalt)
+$\rightarrow$ Weglaten van ondergrens geeft betere resultaten op gelijke tijd.
+
+\section{Bepreking multilinair AAM vs semilinair model}
+
+$\rightarrow$ zelfde resultaten voor kortere tijd.
+
+\begin{appendices}
+
+
+\end{appendices}
+
+
+\begin{flushleft}
+\nocite{*}
+\bibliography{biblio}{}
+\bibliographystyle{amsplain}
+\addcontentsline{toc}{chapter}{Bibliografie}
+
+\end{flushleft}
+
+
+\end{document}
