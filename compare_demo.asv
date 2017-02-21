@@ -1,7 +1,7 @@
 function c = compare_demo()
 c.testpix = @testpix;
 c.show = @show_table;
-c.c = 
+c.c = @cdata;
 end
 
 
@@ -24,14 +24,17 @@ allsystems = { ...
     %multilin_options(0,false,false,true,600), ...
     multilin_options(1,true,false,false,600), ...
     multilin_options(1,false,true,false,600), ...
-    multilin_options(1,false,false,false,600), ...
-    multilin_options(2,false,true,false,600), ...
-    multilin_options(2,false,true,false,60), ...
     multilin_options(1,false,true,true,600), ...
-    multilin_options(1,false,false,true,600), ...
+    multilin_options(1,false,false,true,600), ...    
+    multilin_options(1,false,false,false,600), ...
+    multilin_options(2,true,false,false,600), ...
+    multilin_options(2,false,true,false,600), ...
     multilin_options(2,false,true,true,600), ...
-    multilin_options(2,false,true,true,60), ...
+    multilin_options(2,false,false,true,600), ...    
+    multilin_options(2,false,false,false,600), ...
     };
+
+
     
 l = length(allsystems);
 abundance = zeros(l,4);
@@ -40,7 +43,7 @@ error = zeros(l,1);
 runtime = zeros(l,1);
 freedom = zeros(l,1);
 names = {};
-
+markers = cell(l,1);
 
 i = 0;
 for op  = allsystems
@@ -48,6 +51,8 @@ for op  = allsystems
     options = op{1};
     disp(options)
     names{i} = options.name;
+    markers{i,1} = options.marker;
+    
     tic()
 
     switch options.select
@@ -67,7 +72,7 @@ for op  = allsystems
 
     if options.linsolve
         size(abundance(i,:))
-        [a,~,error(i)] = SCLSU(endmembers,pixel);
+        [a,~,error(i)] = FCLSU(endmembers,pixel);
         abundance(i,perm) = a.';
     else
         [ abundance(i,perm), ~, reflectance(i,perm), ~, error(i) ] = multilin_custom(pixel, endmembers,options);
@@ -77,33 +82,37 @@ for op  = allsystems
     freedom(i,:) = options.dof;
 end
 
-tabl = table(runtime,error*1000,freedom,abundance,reflectance,'RowNames',names)
+tabl = table(runtime,error,freedom,abundance,reflectance,markers,'RowNames',names)
 
 end
 
 
-function show_table(rownumber)
-errors = zeros(9,19);
+function show_table(numberofsystems,rownumber)
+errors = zeros(numberofsystems,19);
 runtime = errors;
+
 
 for x=1:19
     [~,errors(:,x),runtime(:,x),~,~,names] = testpix(x,rownumber);
 end
 
+
 close all;
-bar3(1:19,errors.')
+bar(1:19,errors.')
 set(gca, 'YScale', 'log')
 legend(names)
 xlabel positie
 ylabel reconstructieerror
-print('full3_errors','-dpdf')
+colormap jet
+print('full_errors','-dpdf')
 figure;
-bar3(1:19,runtime.')
+bar(1:19,runtime.')
 set(gca, 'YScale', 'log')
 legend(names)
 xlabel positie
 ylabel reconstructieerror
-print('full3_runtimes','-dpdf')
+colormap jet
+print('full_runtimes','-dpdf')
 
 end
 
@@ -119,19 +128,24 @@ end
 end
 function cdata()
 
-table1 = c.testpix(3,3);
-table2 = c.testpix(11,3);
-table3 = c.testpix(17,3);
+table1 = testpix(3,3);
+table2 = testpix(11,3);
+table3 = testpix(17,3);
 
-save_latex_file(table1,'TabTree')
-save_latex_file(table2,'TabRoad')
-save_latex_file(table3,'TabGrass')
+%save_latex_file(table1,'TabTree');
+%save_latex_file(table2,'TabRoad');
+%save_latex_file(table3,'TabGrass');
+save('fulltables.mat','table1','table2','table3');
+subplot(2,2,1)
+table
+
+%show_table(11,3);
 
 end
 
 %Deze code snipped komt uit de example file van latexTable
 function save_latex_file(table,filename)
-input.data = table
+input.data = table;
 latex = latexTable(input);
 % save LaTex code as file
 fid=fopen( [filename '.tex' ],'w');
@@ -140,7 +154,7 @@ for row = 1:nrows
     fprintf(fid,'%s\n',latex{row,:});
 end
 fclose(fid);
-fprintf('\n... your LaTex code has been saved as ''MyLatex.tex'' in your working directory\n');
+fprintf('\n... your LaTex code has been saved in your working directory\n');
    
 end
 
