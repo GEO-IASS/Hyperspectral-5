@@ -135,23 +135,47 @@ Rob {Heylen} % Supervisor's Name
 \newpage
 \chapter*{Inleiding}
 \addcontentsline{toc}{chapter}{Inleiding}
-\section{aardopservatie}
 
+
+Aardopservatie is de studie van het extraheren en catalogiseren van objecten of materialen op het aardoppervlak. Dit gebeurt door middel van hyperspectrale satelietbeelden. De meest voor de hand liggende toepassing hiervan is cartografie, wat letterlijk het in kaart brengen van het aardoppervlak inhoud, maar dit kan ook gebruikt worden in biologische en militaire toepassingen. Een voorbeeld hiervan is het in kaart brengen van verschillende vegetatievormen\cite{dias12} om op deze manier invasieve soorten planten op te sporen. 
+
+Gewone beelden van een camera bevatten drie kleuren. Dit betekend dat voor elke pixel, een afbeelding drie waarden heeft, namelijk de hoeveelheid rood, groen en blauw in deze pixel. Hyperspectrale cameras werken in essentie op dezelfde manier, alleen detecteerd deze camera niet alleen de hoeveelheid rood, groen en blauw, maar detecteert deze een groot aantal banden. Doordat deze banden meer informatie bevatten dan de banden van een gewone camera, kan hier  meer informatie uit gehaald worden. Deze informatie, het zogenaamde spectra, is uniek voor elk materiaal. Daardoor kan uit dit spectrum het aanwezige materiaal bepaald worden.
+
+Het doel van spectrale anaylise is om uit deze hyperspectrale beelden het bepalen welke materialen zich op een specifieke pixel bevinden. Hoewel het belangrijkste toepassing hiervan de aardopservatie is, kan dit evidenterwijs ook gebruikt worden om materialen te analyseren in een laboratorium of voor bijvoorbeeld kwaliteitscontrole in de industrie.
+
+
+Een pixel in een hyperspectraal beeld bevat meerdere materialen. Een van de belangrijkste oorzaken is het gevolg van de beperkte resolutie van de camera. Maar zelfs als het praktisch haalbaar was om de resolutie kleiner te maken, ligt het probleem vooral in de fractalische eigenschappen van veel objecten. Neem nu bijvoorbeeld een bos. Als we een zeer grove resolutie gebruiken, vallen er verschillende soorten bomen in een enkele pixel. Als de pixels kleiner worden, kunnen bomen al van elkaar onderscheiden worden, maar de takken van verschillende bomen nog niet. Zelfs als we enkel een blad beschouwen zijn er nog verschillende materialen, aangezien de nerven van het blad een ander materiaal hebben dan de bladmoes. Een ander voorbeeld zijn mineralen. Een gesteente bevat verschillende mineralen, maar om deze van elkaar te kunnen onderscheiden moet de pixelgrootte al op microscopisch niveau zijn. 
+
+Hierom is het van belang om een spectra van een pixel, dat een combinatie is van de spectra van de verschillende materialen in deze pixel, te kunnen ``ontmengen''.
 
 
 \chapter{ontmengen}
 
+
+
 \section{spectrale analyse}
 
-\begin{itemize}
-\item spectra als functies (eigenschappen van licht)
-\item spectra als vector (endmembers) $\rightarrow$ matlab implementatie
-\item mengen van endmembers (abundancies)
-\end{itemize}
+
+Het spectra van licht kan beschreven worden als een wiskunde functie die een frequentie omzet in een intensiteit. In werkelijkheid bevat een hyperspectraal beeld niet de volledige functie, maar bevat deze tweehonderd waarden in deze functie, de zogenoemde banden. Dit matlab\citep{MATLAB} zal dit worden opgeslagen als een driedimensinale tensor, waarbij de verschillende assen de x positie, y positie en band van de pixel weergeven. In deze thesis zijn we niet geintereseerd in  interpixel-interacties, wat betekend dat het materiaal in een pixel geen invloed heeft op het spectrum van andere pixels. Daardoor kan de drie-dimentionale matrix worden omgezet in een matrix, waar de rijen de verschillende pixels zijn en de colommen de de banden.  
+
+De spectra in deze hyperspectrale beelden moeten vergeleken worden met de spectra van de materialen, de zogenaamde endmembers. Hiervoor moet er eerst gekend zijn op welke manier de endmembers mengen. De meest voor de hand liggende methode is de linaire methode, waar het spectrum van elke endmember wordt vermenigvuldigd met de abundantie, en dan worden alle spectra opgeteld. Hierbij is de abundantie een getal dat het gedeelte van de lichtstralen dat afkomstig is van dat materiaal weergeeft. Aangezien dit een goede maat is voor de aanwezige hoeveelheid van een bepaald materiaal in een pixel, is dit de belangrijkste parameter waarin we ge\"intereseerd zijn.
+
+%\begin{itemize}
+%\item spectra als functies (eigenschappen van licht)
+%\item spectra als vector (endmembers) $\rightarrow$ matlab implementatie
+%\item mengen van endmembers (abundancies)
+%\end{itemize}
+
+\subsection{reflectie}
+
+Wanneer een lichtstraal invalt op een materiaal reflecteert deze een gedeelte van dit licht. Het nieuwe spectrum van het gereflecteerde licht kan bepaald worden aan de hand van de eigenschappen van het materiaal en het spectrum van het binnenkomende licht. Er kan de benadering gemaakt worden dat de intensiteit voor een gegeven frequentie van het gereflecteerde spectrum alleen afhankelijk is van de intensiteit van het invallende spectrum, en deze daar recht evenredig aan is. In dit geval kan de reflectie beschreven worden als een Hadamard van het spectrum van de inkomende straal en het ``spectrum'' van het materiaal. Dit spectrum is nu geen vector van intensiteiten weer, maar een vector die voor elke frequentie bevat welk deel van de inkomende lichtstraal wordt gereflecteerd. 
 
 \subsection{atmosferische correctie}
 
+Wanneer de lichtbron die we beschouwen uniform and genormaliseerd is, is het spectrum van het materiaal gelijk aan het spectrum van het gedetecteerde licht. Alleen is de in werkelijkheid gebruikte lichtbron -meestal is dit de zon- niet uniform. Ook reist de lichtstraal niet onveranderd door de atmosfeer. Er zijn verschillende effecten zoals verschuiving en  verstrooiing die het spectrum be\"invloeden. De gebruikte datasets in deze thesis zijn al door een algoritme gecorrigeerd voor deze effecten, en we kunnen deze dus beschouwen als verlicht door een uniforme lichtbron.
+
 \section{ontmengen}
+
 
 \begin{itemize}
 \item optimalisatieprobleem
@@ -161,9 +185,6 @@ Rob {Heylen} % Supervisor's Name
 \end{itemize}
 
 \section{lineair ontmengen}
-
-Least-Squares
-$\rightarrow$ Berekening
 
 
 \subsubsection{niet-negativiteit}

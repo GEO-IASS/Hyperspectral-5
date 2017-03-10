@@ -1,12 +1,12 @@
 \select@language {dutch}
 \contentsline {chapter}{Abstract}{3}
 \contentsline {chapter}{Inleiding}{4}
-\contentsline {section}{\numberline {0.1}aardopservatie}{4}
 \contentsline {chapter}{\numberline {1}ontmengen}{5}
 \contentsline {section}{\numberline {1.1}spectrale analyse}{5}
-\contentsline {subsection}{\numberline {1.1.1}atmosferische correctie}{5}
-\contentsline {section}{\numberline {1.2}ontmengen}{5}
-\contentsline {section}{\numberline {1.3}lineair ontmengen}{5}
+\contentsline {subsection}{\numberline {1.1.1}reflectie}{5}
+\contentsline {subsection}{\numberline {1.1.2}atmosferische correctie}{6}
+\contentsline {section}{\numberline {1.2}ontmengen}{6}
+\contentsline {section}{\numberline {1.3}lineair ontmengen}{6}
 \contentsline {subsubsection}{niet-negativiteit}{6}
 \contentsline {subsubsection}{sum to one}{6}
 \contentsline {subsection}{\numberline {1.3.1}implementatie in matlab}{6}
@@ -15,25 +15,25 @@
 \contentsline {subsection}{\numberline {1.4.2}reflectancy vs albedo}{6}
 \contentsline {subsection}{\numberline {1.4.3}afhankelijke vs onafhankelijke P waarden}{6}
 \contentsline {subsection}{\numberline {1.4.4}Ondergrens van P waarde}{6}
-\contentsline {subsection}{\numberline {1.4.5}implementatie in matlab}{6}
-\contentsline {chapter}{\numberline {2}Selecteren}{7}
-\contentsline {section}{\numberline {2.1}Variabiliteit}{7}
-\contentsline {section}{\numberline {2.2}MESMA}{7}
-\contentsline {subsection}{\numberline {2.2.1}ontmengingsmethode naar keuz (lineair vs multilineair)}{7}
-\contentsline {subsection}{\numberline {2.2.2}implementatie in matlab}{7}
-\contentsline {section}{\numberline {2.3}AAM}{7}
-\contentsline {subsection}{\numberline {2.3.1}implementatie in matlab}{8}
-\contentsline {chapter}{\numberline {3}Methodes}{9}
-\contentsline {section}{\numberline {3.1}Semi-lineair model}{9}
-\contentsline {subsection}{\numberline {3.1.1}Theoretische controle dmv monte carlo simulaties}{9}
-\contentsline {section}{\numberline {3.2}multilineair AAM}{9}
-\contentsline {chapter}{\numberline {4}experimentele vergelijking van verschillende methodes}{10}
-\contentsline {section}{\numberline {4.1}Alina dataset}{10}
-\contentsline {section}{\numberline {4.2}Lijst en korte uitleg bij alle methodes}{10}
-\contentsline {section}{\numberline {4.3}Bepreking lineair vs semi-linair}{11}
-\contentsline {section}{\numberline {4.4}Bespreking semi-lineair vs multilineair}{11}
-\contentsline {section}{\numberline {4.5}Bespreking P-afhankelijkheid}{11}
-\contentsline {section}{\numberline {4.6}Bespreking P-ondergrens}{11}
-\contentsline {section}{\numberline {4.7}Bepreking multilinair AAM vs semilinair model}{11}
-\contentsline {chapter}{Appendices}{12}
-\contentsline {chapter}{Bibliografie}{14}
+\contentsline {subsection}{\numberline {1.4.5}implementatie in matlab}{7}
+\contentsline {chapter}{\numberline {2}Selecteren}{8}
+\contentsline {section}{\numberline {2.1}Variabiliteit}{8}
+\contentsline {section}{\numberline {2.2}MESMA}{8}
+\contentsline {subsection}{\numberline {2.2.1}ontmengingsmethode naar keuz (lineair vs multilineair)}{8}
+\contentsline {subsection}{\numberline {2.2.2}implementatie in matlab}{8}
+\contentsline {section}{\numberline {2.3}AAM}{8}
+\contentsline {subsection}{\numberline {2.3.1}implementatie in matlab}{9}
+\contentsline {chapter}{\numberline {3}Methodes}{10}
+\contentsline {section}{\numberline {3.1}Semi-lineair model}{10}
+\contentsline {subsection}{\numberline {3.1.1}Theoretische controle dmv monte carlo simulaties}{10}
+\contentsline {section}{\numberline {3.2}multilineair AAM}{10}
+\contentsline {chapter}{\numberline {4}experimentele vergelijking van verschillende methodes}{11}
+\contentsline {section}{\numberline {4.1}Alina dataset}{11}
+\contentsline {section}{\numberline {4.2}Lijst en korte uitleg bij alle methodes}{11}
+\contentsline {section}{\numberline {4.3}Bepreking lineair vs semi-linair}{12}
+\contentsline {section}{\numberline {4.4}Bespreking semi-lineair vs multilineair}{12}
+\contentsline {section}{\numberline {4.5}Bespreking P-afhankelijkheid}{12}
+\contentsline {section}{\numberline {4.6}Bespreking P-ondergrens}{12}
+\contentsline {section}{\numberline {4.7}Bepreking multilinair AAM vs semilinair model}{12}
+\contentsline {chapter}{Appendices}{13}
+\contentsline {chapter}{Bibliografie}{15}
