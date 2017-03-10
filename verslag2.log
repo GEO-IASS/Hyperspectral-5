@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.28)  30 JAN 2017 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.28)  21 FEB 2017 10:04
 entering extended mode
 **./verslag2.tex
 (verslag2.tex
@@ -520,45 +520,45 @@ Package pdftex.def Info: P.pdf used on input line 561.
 > <./Relative_Error.pdf> <./P.pdf>]
 Hoofdstuk 4.
 (TabTree.tex
-Overfull \hbox (164.60655pt too wide) in paragraph at lines 3--26
+Overfull \hbox (182.23137pt too wide) in paragraph at lines 3--30
  [][] 
  []
 
-) (TabGrass.tex
-Overfull \hbox (166.56487pt too wide) in paragraph at lines 3--26
+[24
+
+]) (TabGrass.tex
+Overfull \hbox (184.18968pt too wide) in paragraph at lines 3--30
  [][] 
  []
 
 ) (TabRoad.tex
-Overfull \hbox (172.4398pt too wide) in paragraph at lines 3--26
+Overfull \hbox (190.06462pt too wide) in paragraph at lines 3--30
  [][] 
  []
 
-) [24
-
-] [25]
+) [25] [26]
 Hoofdstuk 5.
-<semilinMESMA.pdf, id=175, 614.295pt x 794.97pt>
+<semilinMESMA.pdf, id=178, 614.295pt x 794.97pt>
 File: semilinMESMA.pdf Graphic file (type pdf)
  <use semilinMESMA.pdf>
-Package pdftex.def Info: semilinMESMA.pdf used on input line 692.
+Package pdftex.def Info: semilinMESMA.pdf used on input line 702.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
 
-<linMESMA.pdf, id=176, 614.295pt x 794.97pt>
+<linMESMA.pdf, id=179, 614.295pt x 794.97pt>
 File: linMESMA.pdf Graphic file (type pdf)
  <use linMESMA.pdf>
-Package pdftex.def Info: linMESMA.pdf used on input line 697.
+Package pdftex.def Info: linMESMA.pdf used on input line 707.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
- [26
+ [27
 
-] [27 <./semilinMESMA.pdf>] [28 <./linMESMA.pdf>] [29
+] [28 <./semilinMESMA.pdf>] [29 <./linMESMA.pdf>] [30
 
 
-] (verslag2.bbl [30])
+] (verslag2.bbl [31])
 
 Package natbib Warning: There were undefined citations.
 
-[31
+[32
 
 ] (verslag2.aux)
 
@@ -568,7 +568,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  4523 strings out of 493634
  59036 string characters out of 3141293
- 158426 words of memory out of 3000000
+ 162426 words of memory out of 3000000
  7782 multiletter control sequences out of 15000+200000
  21600 words of font info for 79 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -594,9 +594,9 @@ pe1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmtt12.pfb>
-Output written on verslag2.pdf (32 pages, 502932 bytes).
+Output written on verslag2.pdf (33 pages, 503905 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
+ 316 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

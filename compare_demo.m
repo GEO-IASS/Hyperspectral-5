@@ -2,6 +2,7 @@ function c = compare_demo()
 c.testpix = @testpix;
 c.show = @show_table;
 c.c = @cdata;
+c.cf = @cfunc;
 end
 
 
@@ -24,14 +25,17 @@ allsystems = { ...
     multilin_options(0,false,false,true,600), ...
     multilin_options(1,true,false,false,600), ...
     multilin_options(1,false,true,false,600), ...
-    multilin_options(1,false,false,false,600), ...
-    multilin_options(2,false,true,false,600), ...
-    multilin_options(2,false,true,false,60), ...
     multilin_options(1,false,true,true,600), ...
-    multilin_options(1,false,false,true,600), ...
+    multilin_options(1,false,false,true,600), ...    
+    multilin_options(1,false,false,false,600), ...
+    multilin_options(2,true,false,false,600), ...
+    multilin_options(2,false,true,false,600), ...
     multilin_options(2,false,true,true,600), ...
-    multilin_options(2,false,true,true,60), ...
+    multilin_options(2,false,false,true,600), ...    
+    multilin_options(2,false,false,false,600), ...
     };
+
+
     
 l = length(allsystems);
 abundance = zeros(l,4);
@@ -40,7 +44,7 @@ error = zeros(l,1);
 runtime = zeros(l,1);
 freedom = zeros(l,1);
 names = {};
-
+markers = cell(l,1);
 
 i = 0;
 for op  = allsystems
@@ -48,6 +52,8 @@ for op  = allsystems
     options = op{1};
     disp(options)
     names{i} = options.name;
+    markers{i,1} = options.marker;
+    
     tic()
 
     switch options.select
@@ -67,7 +73,7 @@ for op  = allsystems
 
     if options.linsolve
         size(abundance(i,:))
-        [a,~,error(i)] = SCLSU(endmembers,pixel);
+        [a,~,error(i)] = FCLSU(endmembers,pixel);
         abundance(i,perm) = a.';
     else
         [ abundance(i,perm), ~, reflectance(i,perm), ~, error(i) ] = multilin_custom(pixel, endmembers,options);
@@ -77,7 +83,7 @@ for op  = allsystems
     freedom(i,:) = options.dof;
 end
 
-tabl = table(runtime,error*1000,freedom,abundance,reflectance,'RowNames',names)
+tabl = table(runtime,error,freedom,abundance,reflectance,markers,'RowNames',names)
 
 end
 
@@ -123,17 +129,59 @@ end
 end
 function cdata()
 
-table1 = testpix(3,3);
-table2 = testpix(11,3);
-table3 = testpix(17,3);
+trees = testpix(3,3);
+road = testpix(11,3);
+grass = testpix(17,3);
 
-save_latex_file(table1,'TabTree');
-save_latex_file(table2,'TabRoad');
-save_latex_file(table3,'TabGrass');
+%save_latex_file(table1,'TabTree');
+%save_latex_file(table2,'TabRoad');
+%save_latex_file(table3,'TabGrass');
+save('fulltables.mat','trees','road','grass');
 
-show_table(11,3);
-
+%show_table(11,3);
+cfunc()
 end
+
+function cfunc()
+load('fulltables.mat')
+figure;
+table_grapher(trees)
+title('Trees')
+print('plot_trees','-dpdf')
+figure;
+table_grapher(road)
+title('Road')
+print('plot_road','-dpdf')
+figure;
+table_grapher(grass)
+title('Grass')
+print('plot_grass','-dpdf')
+figure;
+for i=1:size(trees.runtime)
+    plot(i,trees.freedom(i),trees.markers{i})
+    hold on;
+end
+ylabel('degrees of freedom')
+
+set(gca,'XTick',[])
+set(gca,'XColor','w')
+lh = legend(trees.Properties.RowNames);
+set(lh,'location','northeastoutside');
+print('plot_freedom','-dpdf')
+figure;
+for i=1:size(trees.runtime)
+    plot(1,1,trees.markers{i})
+    hold on;
+end
+
+axis off;
+lh = legend(trees.Properties.RowNames);
+set(lh,'location','northeastoutside');
+print('plot_legend','-dpdf')
+end
+
+
+
 
 %Deze code snipped komt uit de example file van latexTable
 function save_latex_file(table,filename)
