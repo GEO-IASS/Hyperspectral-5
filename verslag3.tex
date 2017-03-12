@@ -176,15 +176,37 @@ Wanneer de lichtbron die we beschouwen uniform and genormaliseerd is, is het spe
 
 \section{ontmengen}
 
+Bij het ontmengen gaat het erom dat de juiste abundanties en endmembers gevonden worden zodat als deze gemengd worden volgens ons bovengenoemde mixing model, men als uiteindelijk spectrum terug het gemeten spectrum krijgt. In dit hoofdstuk beperken we ons tot de abundaties, het bepalen van de endmembers wordt beschreven in hoofdstuk \ref{sec:select}.
 
-\begin{itemize}
-\item optimalisatieprobleem
-\item reconstructie
-\item reconstructieerror
-\item vrijheidsgraden
-\end{itemize}
+Echter, omdat het mixing model slechts een benadering is van de werkelijkheid en omdat op een experimentele meting altijd een vorm van ruis zit, kan het exacte spectrum nooit terug gevonden worden. Er wordt daarom gezocht naar het reconstructiespectrum dat het meeste lijkt op het werkelijke spectrum. De ruis was verondersteld normaal verdeeld ofwel Gaussisch verdeeld te zijn, wat meestal het geval is in de meeste takken van de fysica. Dit is een eenvoudig geval van het centrale-limiet theorema, dat zegt dat de som van een groot aantal kansvariabelen normaal verdeeld is. 
+
+Noem $\bm{x}$ het gemeten spectrum, en $\bm{y}$ het reconstructiespectrum, met $\bm{\eta}$ de ruis, dan is
+
+\begin{equation}\label{eq:rec}
+\bm{x} = \bm{y} + \bm{\eta}
+\end{equation}
+
+De kans dat $\bm{x}$ gemeten wordt, gegeven dat $\bm{y}$ het werkelijk gemeten spectrum is, is $f(\eta)$, waarbij $f$ de normale verdeling is. Aangezien de normale verdeling alleen afhankelijk is van de kwadratische norm, zijn we ook alleen ge\"intereseerd in de kwadratische norm van de ruis. De normale verdeling is ook groter wanneer deze kwadratische norm kleiner is, dus moet om de kans te maximaliseren de norm van de ruis geminimaliseerd worden. 
+
+Deze norm kan berekend worden gebruik makend van vergelijking \ref{eq:rec}.
+
+\begin{eqnarray}
+\left|\bm{\eta}\right| &= \left|\bm{x} - \bm{y}\right|
+\end{eqnarray}
+
+De uitdrukking $\left|\bm{x} - \bm{y}\right|$ noemt men de reconstructieerror. Het is deze uitdrukking dat geminimaliseerd moet worden.
+
+Het minimaliseren van een uitdrukking om een waarde te vinden noemt men een optimalisatieprobleem, omdat men op zoek is naar de optimale waarden voor de verschillende parameters.
+
+\subsection{vrijheidsgraden}
+
+In een optimalisatieprobleem noemt men het aantal re\"eele continue variabelen waarvan een variable afhank de vrijheidsgraden. Wanneer het aantal te bepalen vrijheidsgraden groter is dan het aantal gegeven vrijheidsgraden, dan is het probleem ondergedefini\"eerd. Dit houd in dat er meerdere mogelijke oplossingen voor de vrije parameters zijn waarvoor alle voorwaarden voldaan zijn. Als dit voorkomt, is een gevonden oplossing niet met zekerheid de juiste oplossing, en geeft het model dus verkeerde oplossingen terug, die lijken te voldoen aan het systeem.
+
+Het aantal vrijheidsgraden van het gemeten spectrum is per definitie $200$, aangezien dit een vector is van tweehonderd re\"eele waarden. Maar uit dimensionale analyse volgt dat het werkelijke aantal vrijheidsgraden maar rond de $15$ ligt. Als er dus een model gebruikt wordt met meer dan $15$ parameters geeft dit per definitie een goed resultaat, zelfs als dit model totaal niet overeenkomt met de werkelijkheid. Wanneer verschillende modellen vergelijken worden, zal een model met meer vrijheidsgraden een lagere recontructie-error hebben.  
 
 \section{lineair ontmengen}
+
+
 
 
 \subsubsection{niet-negativiteit}
@@ -211,7 +233,7 @@ Of dat $P > 0$ moet gebruikt worden als voorwaarde of niet.
 
 \subsection{implementatie in matlab}
 
-\chapter{Selecteren}
+\chapter{Selecteren} \label{sec:select}
 
 \section{Variabiliteit}
 
@@ -253,6 +275,8 @@ ontkoppeling van Ontmenging in MESMA bij selectie tov ontmenging voor abundancie
 \section{multilineair AAM}
 
 \chapter{experimentele vergelijking van verschillende methodes}
+
+\section{looptijd en reconstructie-error}
 
 \section{Alina dataset}
 
