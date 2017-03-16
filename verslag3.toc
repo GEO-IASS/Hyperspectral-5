@@ -1,41 +1,42 @@
 \select@language {dutch}
 \contentsline {chapter}{Abstract}{3}
 \contentsline {chapter}{Inleiding}{4}
-\contentsline {chapter}{\numberline {1}ontmengen}{5}
-\contentsline {section}{\numberline {1.1}spectrale analyse}{5}
-\contentsline {subsection}{\numberline {1.1.1}reflectie}{5}
-\contentsline {subsection}{\numberline {1.1.2}atmosferische correctie}{6}
-\contentsline {section}{\numberline {1.2}ontmengen}{6}
-\contentsline {subsection}{\numberline {1.2.1}vrijheidsgraden}{7}
-\contentsline {section}{\numberline {1.3}lineair ontmengen}{7}
-\contentsline {subsubsection}{niet-negativiteit}{7}
-\contentsline {subsubsection}{sum to one}{7}
-\contentsline {subsection}{\numberline {1.3.1}implementatie in matlab}{7}
-\contentsline {section}{\numberline {1.4}multilineair ontmengen}{7}
-\contentsline {subsection}{\numberline {1.4.1}berekening}{7}
-\contentsline {subsection}{\numberline {1.4.2}reflectancy vs albedo}{7}
-\contentsline {subsection}{\numberline {1.4.3}afhankelijke vs onafhankelijke P waarden}{7}
-\contentsline {subsection}{\numberline {1.4.4}Ondergrens van P waarde}{7}
-\contentsline {subsection}{\numberline {1.4.5}implementatie in matlab}{8}
-\contentsline {chapter}{\numberline {2}Selecteren}{9}
-\contentsline {section}{\numberline {2.1}Variabiliteit}{9}
-\contentsline {section}{\numberline {2.2}MESMA}{9}
-\contentsline {subsection}{\numberline {2.2.1}ontmengingsmethode naar keuz (lineair vs multilineair)}{9}
-\contentsline {subsection}{\numberline {2.2.2}implementatie in matlab}{9}
-\contentsline {section}{\numberline {2.3}AAM}{9}
-\contentsline {subsection}{\numberline {2.3.1}implementatie in matlab}{10}
-\contentsline {chapter}{\numberline {3}Methodes}{11}
-\contentsline {section}{\numberline {3.1}Semi-lineair model}{11}
-\contentsline {subsection}{\numberline {3.1.1}Theoretische controle dmv monte carlo simulaties}{11}
-\contentsline {section}{\numberline {3.2}multilineair AAM}{11}
-\contentsline {chapter}{\numberline {4}experimentele vergelijking van verschillende methodes}{12}
-\contentsline {section}{\numberline {4.1}looptijd en reconstructie-error}{12}
-\contentsline {section}{\numberline {4.2}Alina dataset}{12}
-\contentsline {section}{\numberline {4.3}Lijst en korte uitleg bij alle methodes}{12}
-\contentsline {section}{\numberline {4.4}Bepreking lineair vs semi-linair}{13}
-\contentsline {section}{\numberline {4.5}Bespreking semi-lineair vs multilineair}{13}
-\contentsline {section}{\numberline {4.6}Bespreking P-afhankelijkheid}{13}
-\contentsline {section}{\numberline {4.7}Bespreking P-ondergrens}{13}
-\contentsline {section}{\numberline {4.8}Bepreking multilinair AAM vs semilinair model}{13}
-\contentsline {chapter}{Appendices}{14}
-\contentsline {chapter}{Bibliografie}{16}
+\contentsline {section}{\numberline {0.1}toepassingen}{5}
+\contentsline {chapter}{\numberline {1}ontmengen}{6}
+\contentsline {section}{\numberline {1.1}spectrale analyse}{6}
+\contentsline {subsection}{\numberline {1.1.1}reflectie}{7}
+\contentsline {subsection}{\numberline {1.1.2}atmosferische correctie}{7}
+\contentsline {section}{\numberline {1.2}ontmengen}{7}
+\contentsline {subsection}{\numberline {1.2.1}vrijheidsgraden}{8}
+\contentsline {section}{\numberline {1.3}lineair ontmengen}{8}
+\contentsline {subsubsection}{niet-negativiteit}{8}
+\contentsline {subsubsection}{sum to one}{8}
+\contentsline {subsection}{\numberline {1.3.1}implementatie in matlab}{8}
+\contentsline {section}{\numberline {1.4}multilineair ontmengen}{8}
+\contentsline {subsection}{\numberline {1.4.1}berekening}{9}
+\contentsline {subsection}{\numberline {1.4.2}reflectancy vs albedo}{9}
+\contentsline {subsection}{\numberline {1.4.3}afhankelijke vs onafhankelijke P waarden}{9}
+\contentsline {subsection}{\numberline {1.4.4}Ondergrens van P waarde}{9}
+\contentsline {subsection}{\numberline {1.4.5}implementatie in matlab}{9}
+\contentsline {chapter}{\numberline {2}Selecteren}{10}
+\contentsline {section}{\numberline {2.1}Variabiliteit}{10}
+\contentsline {section}{\numberline {2.2}MESMA}{10}
+\contentsline {subsection}{\numberline {2.2.1}ontmengingsmethode naar keuz (lineair vs multilineair)}{10}
+\contentsline {subsection}{\numberline {2.2.2}implementatie in matlab}{10}
+\contentsline {section}{\numberline {2.3}AAM}{10}
+\contentsline {subsection}{\numberline {2.3.1}implementatie in matlab}{11}
+\contentsline {chapter}{\numberline {3}Methodes}{12}
+\contentsline {section}{\numberline {3.1}Semi-lineair model}{12}
+\contentsline {subsection}{\numberline {3.1.1}Theoretische controle dmv monte carlo simulaties}{12}
+\contentsline {section}{\numberline {3.2}multilineair AAM}{12}
+\contentsline {chapter}{\numberline {4}experimentele vergelijking van verschillende methodes}{13}
+\contentsline {section}{\numberline {4.1}looptijd en reconstructie-error}{13}
+\contentsline {section}{\numberline {4.2}Alina dataset}{13}
+\contentsline {section}{\numberline {4.3}Lijst en korte uitleg bij alle methodes}{13}
+\contentsline {section}{\numberline {4.4}Bepreking lineair vs semi-linair}{14}
+\contentsline {section}{\numberline {4.5}Bespreking semi-lineair vs multilineair}{14}
+\contentsline {section}{\numberline {4.6}Bespreking P-afhankelijkheid}{14}
+\contentsline {section}{\numberline {4.7}Bespreking P-ondergrens}{14}
+\contentsline {section}{\numberline {4.8}Bepreking multilinair AAM vs semilinair model}{14}
+\contentsline {chapter}{Appendices}{15}
+\contentsline {chapter}{Bibliografie}{17}

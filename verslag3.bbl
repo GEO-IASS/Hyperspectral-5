@@ -1,41 +1,42 @@
-\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
-\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
-% \MRhref is called by the amsart/book/proc definition of \MR.
-\providecommand{\MRhref}[2]{%
-  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
-}
-\providecommand{\href}[2]{#2}
 \begin{thebibliography}{1}
 
 \bibitem{bioucas13}
 Jose~M. Biouscas-dias, Antonio Plaza, Gustavo Camps-Valls, Paul Scheunders,
-  Nasser~M. Nasrabadi, and Jocelyn Chanussot, \emph{Hyperspectral remote
-  sensing data analysis and future challenges}, Geoscience and remote sensing
-  magazine (2013), 6--36.
+  Nasser~M. Nasrabadi, and Jocelyn Chanussot.
+\newblock Hyperspectral remote sensing data analysis and future challenges.
+\newblock {\em Geoscience and remote sensing magazine}, pages 6--36, June 2013.
 
 \bibitem{dias12}
 Jose~M. Biouscas-dias, Antonio Plaza, Nicolas Dobigeon, Mario Parente, Qian Du,
-  Pual Grader, and Jocelyn Chanussot, \emph{Hyperspehyper unmixing overview:
-  Geometrical, statistical and sparse regression based approaches.}, Journal of
-  selected topics in applied earth opservation and remote sensing \textbf{5}
-  (2012), no.~2, 354--376.
+  Pual Grader, and Jocelyn Chanussot.
+\newblock Hyperspehyper unmixing overview: Geometrical, statistical and sparse
+  regression based approaches.
+\newblock {\em Journal of selected topics in applied earth opservation and
+  remote sensing}, 5(2):354--376, April 2012.
+
+\bibitem{fun}
+Canada centre for~remote sensing.
+\newblock {\em Fundamentals of remote sensing}.
+\newblock Natural Resources Canada.
 
 \bibitem{Alina}
-Xiaoxiao Du, Alina Zare, Paul Gader, and Dmitri Dranishnikov, \emph{Spatial and
-  spectral unmixing using the beta compositional model}, Journal of selected
-  topics in applied earth opservation and remote sensing \textbf{7} (2014),
-  no.~6, 1994--2003.
+Xiaoxiao Du, Alina Zare, Paul Gader, and Dmitri Dranishnikov.
+\newblock Spatial and spectral unmixing using the beta compositional model.
+\newblock {\em Journal of selected topics in applied earth opservation and
+  remote sensing}, 7(6):1994--2003, June 2014.
 
 \bibitem{mlinmix}
-Rob Heylen and Paul Scheunders, \emph{A multilinear mixing model for nonlinear
-  spectral unmixing}.
+Rob Heylen and Paul Scheunders.
+\newblock A multilinear mixing model for nonlinear spectral unmixing.
 
 \bibitem{mesma}
-Rob Heylen, Alina Zare, Paul Gader, and Paul Scheunders, \emph{Hyperspectral
-  unmixing with endmember variability via alternating angle minimization}.
+Rob Heylen, Alina Zare, Paul Gader, and Paul Scheunders.
+\newblock Hyperspectral unmixing with endmember variability via alternating
+  angle minimization.
 
 \bibitem{MATLAB}
-MATLAB, \emph{version 8.5.0 (r2015a)}, The MathWorks Inc., Natick,
-  Massachusetts, 2015.
+MATLAB.
+\newblock {\em version 8.5.0 (R2015a)}.
+\newblock The MathWorks Inc., Natick, Massachusetts, 2015.
 
 \end{thebibliography}

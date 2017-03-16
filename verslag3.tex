@@ -13,6 +13,8 @@
 \usepackage{titling}
 \usepackage[toc,page]{appendix}
 \usepackage{bm}
+\usepackage{wrapfig}
+\usepackage{subcaption}
 
 \usepackage{fancyhdr}
 
@@ -42,11 +44,15 @@
 
 
 
-\usepackage[super,sort]{natbib}
+\usepackage[super,square,sort]{natbib}
 \usepackage{bibentry}
 \nobibliography*
 
-\newcommand{\footcite}[1]{\cite{#1}\let\thefootnote\relax \footnote{\cite{#1} \bibentry{#1}} }
+%\newcommand{\footcite}[1]{\cite{#1}\let\thefootnote\relax \footnote{\cite{#1} \bibentry{#1}} }
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil(#1)%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+\newcommand{\rulesep}{\unskip\ \vrule height -1ex\ }
 
 \DeclareMathOperator*{\Odot}{\bigodot}
 \allowdisplaybreaks
@@ -136,22 +142,74 @@ Rob {Heylen} % Supervisor's Name
 \chapter*{Inleiding}
 \addcontentsline{toc}{chapter}{Inleiding}
 
+\begin{quotation}
+Aardobservatie is de wetenschap van het bepalen van informatie over het aardoppervlak. Dit wordt gedaan door het meten en vastleggen van gereflecteerde of uitgezonden energie en het verwerken, analyseren en toepassen van deze informatie.
+\signed{\textit{Fundamentals of remote sensing\cite{fun} p5}}
+\end{quotation}
 
-Aardopservatie is de studie van het extraheren en catalogiseren van objecten of materialen op het aardoppervlak. Dit gebeurt door middel van hyperspectrale satelietbeelden. De meest voor de hand liggende toepassing hiervan is cartografie, wat letterlijk het in kaart brengen van het aardoppervlak inhoud, maar dit kan ook gebruikt worden in biologische en militaire toepassingen. Een voorbeeld hiervan is het in kaart brengen van verschillende vegetatievormen\cite{dias12} om op deze manier invasieve soorten planten op te sporen. 
+\begin{wrapfigure}{R}{0.4\textwidth}
+\includegraphics[width=0.4\textwidth]{rs.PNG}
+\caption{Aardopservatie \label{fig:rs}}
+\end{wrapfigure}
 
-Gewone beelden van een camera bevatten drie kleuren. Dit betekend dat voor elke pixel, een afbeelding drie waarden heeft, namelijk de hoeveelheid rood, groen en blauw in deze pixel. Hyperspectrale cameras werken in essentie op dezelfde manier, alleen detecteerd deze camera niet alleen de hoeveelheid rood, groen en blauw, maar detecteert deze een groot aantal banden. Doordat deze banden meer informatie bevatten dan de banden van een gewone camera, kan hier  meer informatie uit gehaald worden. Deze informatie, het zogenaamde spectra, is uniek voor elk materiaal. Daardoor kan uit dit spectrum het aanwezige materiaal bepaald worden.
 
-Het doel van spectrale anaylise is om uit deze hyperspectrale beelden het bepalen welke materialen zich op een specifieke pixel bevinden. Hoewel het belangrijkste toepassing hiervan de aardopservatie is, kan dit evidenterwijs ook gebruikt worden om materialen te analyseren in een laboratorium of voor bijvoorbeeld kwaliteitscontrole in de industrie.
+Het gedetai\"eerde process verloopt zoals hierna beschreven\cite{fun}, en is te zien in figuur \ref{fig:rs} .
+
+Een lichtstraal ontstaat aan een zo genaamde lichtbron\footnote{In het geval dat men geintereseert is in het termisch infrarood spectrum, is er geen lichtbron nodig aangezien materialen op kamertemperatuur van nature dit soort licht uitstralen, ten gevolge van black body radiation.}. In de meeste gevallen is deze lichtbron de zon. Deze lichtstraal reist door de ruimte en door de atmosfeer, tot deze contact maakt men het materiaal, en hierop een of meerdere keren reflecteert. Daarna reist deze lichtstraal opnieuw door de atmosfeer tot deze contact maakt met een camera op een sateliet. De eigenschappen van deze lichtstraal worden be\"invloed door elk van deze processen.
 
 
-Een pixel in een hyperspectraal beeld bevat meerdere materialen. Een van de belangrijkste oorzaken is het gevolg van de beperkte resolutie van de camera. Maar zelfs als het praktisch haalbaar was om de resolutie kleiner te maken, ligt het probleem vooral in de fractalische eigenschappen van veel objecten. Neem nu bijvoorbeeld een bos. Als we een zeer grove resolutie gebruiken, vallen er verschillende soorten bomen in een enkele pixel. Als de pixels kleiner worden, kunnen bomen al van elkaar onderscheiden worden, maar de takken van verschillende bomen nog niet. Zelfs als we enkel een blad beschouwen zijn er nog verschillende materialen, aangezien de nerven van het blad een ander materiaal hebben dan de bladmoes. Een ander voorbeeld zijn mineralen. Een gesteente bevat verschillende mineralen, maar om deze van elkaar te kunnen onderscheiden moet de pixelgrootte al op microscopisch niveau zijn. 
 
-Hierom is het van belang om een spectra van een pixel, dat een combinatie is van de spectra van de verschillende materialen in deze pixel, te kunnen ``ontmengen''.
+
+
+Elke lichtstraal is een golf in het elektromagnetische spectrum. Deze golf wordt enerzijds bepaald door zijn golflengte, wat de lengte is tussen twee opeenvolgende maxima van de golf, zoals afgebeeld in figuur \ref{fig:golflengte}. Anderzijds wordt de golf bepaald door de intensiteit, wat de grootte is van de piek van elke golf. Soms wordt de frequentie van de golf gebruikt om deze te karakteriseren, maar die kan bepaald worden uit de golflengte en de snelheid van het licht. In werkelijkheid is een lichtstraal niet een golf, maar een combinatie van verschillende golven met elk hun golflengte en intensiteit. De bijbehorende intensiteit bij elke golflengte wordt het spectrum genoemd.
+
+
+
+
+Gewone beelden van een camera bevatten drie kleuren, elke passend bij een specifieke golflengte. De keuze voor deze drie kleuren, namelijk rood, groen en blauw, is een gevolg van de beperkingen van het menselijk oog. Dit zijn namelijk de kleuren dat een mens kan waarnemen. Om dit beeld digitaal te representeren, moet het beeld opgedeeld worden in kleine, even grootte, vierkante elementen, genaamd pixels. Elk van deze pixels bevat voor elke kleur een waarde, die de intensiteit van deze kleur in dit vierkant weergeeft. Hyperspectrale cameras werken in essentie op dezelfde manier, alleen detecteert deze camera niet alleen de hoeveelheid rood, groen en blauw, maar detecteert deze een groot aantal banden. Doordat deze banden meer informatie bevatten dan de banden van een gewone camera, kan hier meer informatie uit gehaald worden. Omdat de zon vooral licht uitzend in het infrarood, zichtbaar licht en ultraviolet worden er vooral banden gebruikt in dit spectrum, zoals te zien in figuur \ref{fig:specs}.  
+
+
+\begin{figure}
+\center
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[width=\textwidth]{golflengte.PNG}
+\caption{Golven met verschillende golflengten \label{fig:golflengte}}
+\end{subfigure} \rulesep
+\begin{subfigure}[b]{0.2\textwidth}
+\includegraphics[width=\textwidth]{spec.PNG}
+\caption{Het electromagnetische spectrum. \label{fig:spec}}
+\end{subfigure}\rulesep
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{spec2.PNG}
+\caption{Het spectrum van de zon. \label{fig:specs}}
+\end{subfigure}
+\caption{electromagnetische golven}
+\end{figure}
+
+
+Het doel van spectrale analyse is het bepalen van de hoeveelheden van elk materiaal in een specifieke pixel, gegeven het spectrum van deze pixel. Verschillende methoden hiervoor worden beschreven in deze thesis. 
+
+
+\section{toepassingen}
+
+
+Een veelgebruikte toepassing van aardopservatie is het in kaart brengen van landbouwgewassen\cite{fun}. Men kan niet alleen het soort gewas op een akker in kaart brengen, maar ook onder andere de gezondheid en verwachte oogst van verschillende gewassen. Deze informatie is nuttig voor de landbouwers zelf, omdat deze aan de hand van de data kunnen bepalen welke gewassen het beste groeien op welke plaats en wanneer er het best gezaaid of geoogst wordt. Ook is dit nuttig voor overheden en verzekeraars, omdat deze kunnen nagaan welke planten er geplant worden, kunnen voorspellen wat de oogst gaat zijn en kunnen bepalen wat de schade is na een droogte of storm. In het verleden werd het in kaart brengen van gewassen gedaan door steekproeven te nemen met de hand vanop de grond, maar aardopservatie is nauwkeuriger, goedkoper en kan eenvoudiger gestandaardiseerd worden. 
+
+Een andere toepassing is geologie. Men kan het soort gesteente van het aardoppervlak in kaart brengen, maar ook de formatie en zelfs gesteentes onder het aardoppervlak. Een van de voor de hand liggende toepassingen hiervan is de mijnbouw, maar dit kan ook gebruikt worden voor het voorspellen van aardbevingen, aardverschuivingen en vulkanisme. Daarom kan dit gebruikt worden voor het plannen van wegen, gebouwen en andere structuren. Meestal word deze data gebruikt in combinatie met data verzameld op de grond, namelijk radarbeelden. 
+
+  
 
 
 \chapter{ontmengen}
 
 
+
+%Het doel van spectrale anaylise is om uit deze hyperspectrale beelden het bepalen welke materialen zich op een specifieke pixel bevinden. Hoewel het belangrijkste toepassing hiervan de aardopservatie is, kan dit evidenterwijs ook gebruikt worden om materialen te analyseren in een laboratorium of voor bijvoorbeeld kwaliteitscontrole in de industrie.
+
+
+Een pixel in een hyperspectraal beeld bevat meerdere materialen. Een van de belangrijkste oorzaken is het gevolg van de beperkte resolutie van de camera. Echter, de hoeveelheid licht dat op de camera valt is beperkt, en moet verdeelt worden over de verschillende pixels en de verschillende banden. Dit betekend dat wanneer de pixels te klein worden, elke pixel te weinig licht krijgt en de signaal ruis verhouding te laag wordt. Maar zelfs als het praktisch haalbaar was om de resolutie kleiner te maken, ligt het probleem vooral in de fractalische eigenschappen van veel objecten. Neem nu bijvoorbeeld een bos. Als we een zeer grove resolutie gebruiken, vallen er verschillende soorten bomen in een enkele pixel. Als de pixels kleiner worden, kunnen bomen al van elkaar onderscheiden worden, maar de takken van verschillende bomen nog niet. Zelfs als we enkel een blad beschouwen zijn er nog verschillende materialen, aangezien de nerven van het blad een ander materiaal hebben dan de bladmoes. Een ander voorbeeld zijn mineralen. Een gesteente bevat verschillende mineralen, maar om deze van elkaar te kunnen onderscheiden moet de pixelgrootte al op microscopisch niveau zijn. 
+
+Hierom is het van belang om een spectra van een pixel, dat een combinatie is van de spectra van de verschillende materialen in deze pixel, te kunnen ``ontmengen''.
 
 \section{spectrale analyse}
 
@@ -172,7 +230,7 @@ Wanneer een lichtstraal invalt op een materiaal reflecteert deze een gedeelte va
 
 \subsection{atmosferische correctie}
 
-Wanneer de lichtbron die we beschouwen uniform and genormaliseerd is, is het spectrum van het materiaal gelijk aan het spectrum van het gedetecteerde licht. Alleen is de in werkelijkheid gebruikte lichtbron -meestal is dit de zon- niet uniform. Ook reist de lichtstraal niet onveranderd door de atmosfeer. Er zijn verschillende effecten zoals verschuiving en  verstrooiing die het spectrum be\"invloeden. De gebruikte datasets in deze thesis zijn al door een algoritme gecorrigeerd voor deze effecten, en we kunnen deze dus beschouwen als verlicht door een uniforme lichtbron.
+Wanneer de lichtbron die we beschouwen uniform and genormaliseerd is, is het spectrum van het materiaal gelijk aan het spectrum van het gedetecteerde licht. Alleen is de in werkelijkheid gebruikte lichtbron -meestal is dit de zon- niet uniform. En zijn er verschillende effecten die de lichtstraal beinvloeden\cite{fun} zoals verschuiving, atmospherische verstrooiing, rayleigh verstrooiing, Mie verstrooiing, nonselectieve verstooiing, atmospherische absorbsie, ozon absorbsie, $CO_2$*absorbsie en interpixel verstooiing die het spectrum be\"invloeden. De gebruikte datasets in deze thesis zijn al door een algoritme gecorrigeerd voor al deze effecten, en we kunnen deze dus beschouwen als verlicht door een uniforme lichtbron.
 
 \section{ontmengen}
 
@@ -327,7 +385,7 @@ $\rightarrow$ zelfde resultaten voor kortere tijd.
 \begin{flushleft}
 \nocite{*}
 \bibliography{biblio}{}
-\bibliographystyle{amsplain}
+\bibliographystyle{plain}
 \addcontentsline{toc}{chapter}{Bibliografie}
 
 \end{flushleft}
