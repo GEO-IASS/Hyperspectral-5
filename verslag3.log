@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  16 MAR 2017 09:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  19 MAR 2017 12:07
 entering extended mode
 **verslag3.tex
 (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.tex
@@ -265,7 +265,7 @@ Package caption Info: wrapfig package is loaded.
 )
 
 Package Fancyhdr Warning: \fancyhfoffset's `E' option without twoside option is
- useless on input line 39.
+ useless on input line 41.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -315,18 +315,18 @@ Package: bibentry 2007/10/30 1.5 (PWD)
 )
 (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.bbl)
 (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -380,11 +380,11 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 99.
+LaTeX Font Info:    Try loading font information for U+msa on input line 101.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 99.
+LaTeX Font Info:    Try loading font information for U+msb on input line 101.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -392,13 +392,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <download.jpg, id=1, 148.555pt x 127.47626pt>
 File: download.jpg Graphic file (type jpg)
  <use download.jpg>
-Package pdftex.def Info: download.jpg used on input line 125.
+Package pdftex.def Info: download.jpg used on input line 127.
 (pdftex.def)             Requested size: 132.6374pt x 113.81102pt.
 
 <vlabsym.png, id=2, 88.07906pt x 96.36pt>
 File: vlabsym.png Graphic file (type png)
  <use vlabsym.png>
-Package pdftex.def Info: vlabsym.png used on input line 127.
+Package pdftex.def Info: vlabsym.png used on input line 129.
 (pdftex.def)             Requested size: 104.03047pt x 113.81102pt.
  [1
 
@@ -419,90 +419,102 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2] [3
 
-] <rs.PNG, id=22, 279.29344pt x 228.855pt>
+] [4
+
+] [5
+
+] <rs.PNG, id=30, 279.29344pt x 228.855pt>
 File: rs.PNG Graphic file (type png)
  <use rs.PNG>
-Package pdftex.def Info: rs.PNG used on input line 151.
+Package pdftex.def Info: rs.PNG used on input line 175.
 (pdftex.def)             Requested size: 187.89914pt x 153.97108pt.
- [4
+ [6
 
  <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/rs.PNG>]
-<golflengte.PNG, id=31, 313.17pt x 241.65282pt>
+<golflengte.PNG, id=38, 313.17pt x 241.65282pt>
 File: golflengte.PNG Graphic file (type png)
  <use golflengte.PNG>
-Package pdftex.def Info: golflengte.PNG used on input line 175.
+Package pdftex.def Info: golflengte.PNG used on input line 199.
 (pdftex.def)             Requested size: 140.92793pt x 108.74644pt.
 
-<spec.PNG, id=32, 268.75406pt x 361.35pt>
+<spec.PNG, id=39, 268.75406pt x 361.35pt>
 File: spec.PNG Graphic file (type png)
  <use spec.PNG>
-Package pdftex.def Info: spec.PNG used on input line 179.
+Package pdftex.def Info: spec.PNG used on input line 203.
 (pdftex.def)             Requested size: 93.94957pt x 126.32pt.
 
-Underfull \hbox (badness 2027) in paragraph at lines 180--180
+Underfull \hbox (badness 2027) in paragraph at lines 204--204
 \OT1/cmr/m/n/10.95 ne-ti-sche spec-trum.
  []
 
-<spec2.PNG, id=33, 296.60812pt x 232.61906pt>
+<spec2.PNG, id=40, 296.60812pt x 232.61906pt>
 File: spec2.PNG Graphic file (type png)
  <use spec2.PNG>
-Package pdftex.def Info: spec2.PNG used on input line 183.
+Package pdftex.def Info: spec2.PNG used on input line 207.
 (pdftex.def)             Requested size: 187.89914pt x 147.36716pt.
- [5 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/golflengte.PNG> <C:/Us
-ers/Thorvald/Dropbox/Masterproef/Hyperspectral/spec.PNG> <C:/Users/Thorvald/Dro
-pbox/Masterproef/Hyperspectral/spec2.PNG>]
-Hoofdstuk 1.
-[6
 
-] [7] [8] [9]
+<hyp.PNG, id=41, 454.69875pt x 356.0803pt>
+File: hyp.PNG Graphic file (type png)
+ <use hyp.PNG>
+Package pdftex.def Info: hyp.PNG used on input line 226.
+(pdftex.def)             Requested size: 469.75502pt x 367.87521pt.
+ [7 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/golflengte.PNG> <C:/Us
+ers/Thorvald/Dropbox/Masterproef/Hyperspectral/spec.PNG> <C:/Users/Thorvald/Dro
+pbox/Masterproef/Hyperspectral/spec2.PNG>] [8 <C:/Users/Thorvald/Dropbox/Master
+proef/Hyperspectral/hyp.PNG>]
+Hoofdstuk 1.
+[9
+
+] [10] [11] [12]
 Hoofdstuk 2.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 299.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 345.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 299.
- [10
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 345.
+ [13
 
-] [11]
+] [14]
 Hoofdstuk 3.
-[12
+[15
 
 ]
 Hoofdstuk 4.
-[13
+[16
 
-] [14] [15
+] [17] [18
 
 
 ]
-(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.bbl [16])
-[17
+(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.bbl [19])
+[20
 
 ] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.aux) ) 
 Here is how much of TeX's memory you used:
- 5480 strings out of 493921
- 75988 string characters out of 3147272
- 146638 words of memory out of 3000000
- 8655 multiletter control sequences out of 15000+200000
+ 5486 strings out of 493921
+ 76051 string characters out of 3147272
+ 146556 words of memory out of 3000000
+ 8660 multiletter control sequences out of 15000+200000
  19877 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,11n,48p,1195b,504s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,10n,48p,1478b,504s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on verslag3.pdf (18 pages, 368657 bytes).
+ts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on verslag3.pdf (21 pages, 711628 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,7 @@
 \documentclass[12pt]{report}
 
+\newcommand{\titletext}{Semilinaire spectraalanalyse}
+
 \usepackage[dutch]{babel}
 \usepackage[nobottomtitles]{titlesec}
 \usepackage[bottom]{footmisc}
@@ -30,7 +32,7 @@
   \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
   \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
 }
-\lhead{\fancyplain{}{Semilineaire MESMA}}
+\lhead{\fancyplain{}{\titletext}}
 \rhead{\fancyplain{}{\nouppercase{\leftmark}}}
 \rfoot{\fancyplain{}{\nouppercase{\thepage}}}
 \lfoot{\fancyplain{}{Thorvald Dox}}
@@ -58,7 +60,7 @@
 \allowdisplaybreaks
 
 %\title{Semi-lineair Multiple Endmember mixture spectrum analysis}
-\title{Semilineaire spectraalanalyse met meerdere eindmembers}
+\title{\titletext}
 \author{Thorvald Dox}
 
 \begin{document}
@@ -134,22 +136,44 @@ Rob {Heylen} % Supervisor's Name
 
 \end{titlepage}
 \tableofcontents
+
+
 \newpage
 \chapter*{Abstract}
-\addcontentsline{toc}{chapter}{Abstract}
+\addcontentsline{toc}{chapter}{Abstract (english)}
 
+
+\newpage
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract (Nederlands)}
+
+
+
+\newpage
+\chapter*{Structuur van deze thesis}
+\addcontentsline{toc}{chapter}{Structuur van deze thesis}
+
+De inleiding legt uit wat aardopservatie is, welke concepten hiervoor nodig zijn en een aantal toepassingen hiervoor. Dit hoofdstuk is vooral gebaseerd op \textit{Fundamentals of remote sensing\cite{fun}}.
+
+Het eerste hoofdstuk gaat over ontmengen. Hier wordt wordt het concept ontmengen uitgelegd, en een voorbeeld gegeven hiervan, namelijk lineair ontmengen. 
+
+In het volgende hoofdstuk worden drie bestaande methodes uitgelegd. Het eerste deel gaat over het multilinair model, en is gebaseerd op \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}. De volgende delen gaan over selectiemethoden. Dit zijn methoden ontwikkeld om om te gaan met endmembervariabiliteit. Deze methoden staan beschreven in \textit{Hyperspectral unmixing with endmember variability via alternating angle minimization}\cite{mesma}. Deze methoden zijn volledig gekend in de literatuur maar voor deze thesis zijn deze methoden opnieuw berekend en ge\"implementeert. 
+
+Het derde hoofdstuk beschrijft twee nieuwe methoden, gebaseerd op de methoden beschreven in het vorige hoofdstuk, Ook wordt er van de eerste methode een numeriek bewijs geleverd dat deze goede resultaten geeft door middel van monte-carlo simulaties. 
+
+In het laatste hoofdstuk worden al deze methoden, en een aantal varianten hierop vergeleken aan de hand van een experimentele dataset: de Alina dataset\cite{Alina} en wordt besproken welke methodes en varienten het beste zijn in welke situaties. 
 \newpage
 \chapter*{Inleiding}
 \addcontentsline{toc}{chapter}{Inleiding}
 
 \begin{quotation}
-Aardobservatie is de wetenschap van het bepalen van informatie over het aardoppervlak. Dit wordt gedaan door het meten en vastleggen van gereflecteerde of uitgezonden energie en het verwerken, analyseren en toepassen van deze informatie.
+Aardobservatie is de wetenschap van het bepalen van informatie over het aardoppervlak vanop een afstand. Dit wordt gedaan door het meten en vastleggen van gereflecteerde of uitgezonden energie en het verwerken, analyseren en toepassen van deze informatie.
 \signed{\textit{Fundamentals of remote sensing\cite{fun} p5}}
 \end{quotation}
 
 \begin{wrapfigure}{R}{0.4\textwidth}
 \includegraphics[width=0.4\textwidth]{rs.PNG}
-\caption{Aardopservatie \label{fig:rs}}
+\caption{Aardopservatie \label{fig:rs} Deze afbeelding komt uit \textit{Fundamentals of remote sensing\cite{fun}}}
 \end{wrapfigure}
 
 
@@ -183,7 +207,7 @@ Gewone beelden van een camera bevatten drie kleuren, elke passend bij een specif
 \includegraphics[width=\textwidth]{spec2.PNG}
 \caption{Het spectrum van de zon. \label{fig:specs}}
 \end{subfigure}
-\caption{electromagnetische golven}
+\caption{electromagnetische golven. Deze afbeeldingen komen uit \textit{Fundamentals of remote sensing\cite{fun}}}
 \end{figure}
 
 
@@ -198,7 +222,10 @@ Een veelgebruikte toepassing van aardopservatie is het in kaart brengen van land
 Een andere toepassing is geologie. Men kan het soort gesteente van het aardoppervlak in kaart brengen, maar ook de formatie en zelfs gesteentes onder het aardoppervlak. Een van de voor de hand liggende toepassingen hiervan is de mijnbouw, maar dit kan ook gebruikt worden voor het voorspellen van aardbevingen, aardverschuivingen en vulkanisme. Daarom kan dit gebruikt worden voor het plannen van wegen, gebouwen en andere structuren. Meestal word deze data gebruikt in combinatie met data verzameld op de grond, namelijk radarbeelden. 
 
   
-
+\begin{figure}
+\includegraphics[width=\textwidth]{hyp.PNG}
+\caption{Opbouw van een hyperspectraal beeld. Deze afbeelding komt uit \textit{Fundamentals of remote sensing\cite{fun}}}
+\end{figure}
 
 \chapter{ontmengen}
 
@@ -207,17 +234,17 @@ Een andere toepassing is geologie. Men kan het soort gesteente van het aardopper
 %Het doel van spectrale anaylise is om uit deze hyperspectrale beelden het bepalen welke materialen zich op een specifieke pixel bevinden. Hoewel het belangrijkste toepassing hiervan de aardopservatie is, kan dit evidenterwijs ook gebruikt worden om materialen te analyseren in een laboratorium of voor bijvoorbeeld kwaliteitscontrole in de industrie.
 
 
-Een pixel in een hyperspectraal beeld bevat meerdere materialen. Een van de belangrijkste oorzaken is het gevolg van de beperkte resolutie van de camera. Echter, de hoeveelheid licht dat op de camera valt is beperkt, en moet verdeelt worden over de verschillende pixels en de verschillende banden. Dit betekend dat wanneer de pixels te klein worden, elke pixel te weinig licht krijgt en de signaal ruis verhouding te laag wordt. Maar zelfs als het praktisch haalbaar was om de resolutie kleiner te maken, ligt het probleem vooral in de fractalische eigenschappen van veel objecten. Neem nu bijvoorbeeld een bos. Als we een zeer grove resolutie gebruiken, vallen er verschillende soorten bomen in een enkele pixel. Als de pixels kleiner worden, kunnen bomen al van elkaar onderscheiden worden, maar de takken van verschillende bomen nog niet. Zelfs als we enkel een blad beschouwen zijn er nog verschillende materialen, aangezien de nerven van het blad een ander materiaal hebben dan de bladmoes. Een ander voorbeeld zijn mineralen. Een gesteente bevat verschillende mineralen, maar om deze van elkaar te kunnen onderscheiden moet de pixelgrootte al op microscopisch niveau zijn. 
+Een pixel in een hyperspectraal beeld bevat meerdere materialen. Een van de belangrijkste oorzaken is het gevolg van de beperkte resolutie van de camera. Echter, de hoeveelheid licht dat op de camera valt is beperkt, en moet verdeelt worden over de verschillende pixels en de verschillende banden. Dit betekend dat wanneer de pixels te klein worden, elke pixel te weinig licht krijgt en de signaal ruis verhouding te laag wordt. En aangezien de licht bestaat uit fotonen, is er een limiet van de gevoeligheid van de camera, en is de enige methode om de gevoeligheid te verhogen een langere belichtstijd. Dit zorgt vor een vergrotting van de ruis en is niet haalbaar voor een satelliet in een baan rond de aarde. Maar zelfs als het praktisch haalbaar was om de resolutie kleiner te maken, ligt het probleem vooral in de fractalische eigenschappen van veel objecten. Neem nu bijvoorbeeld een bos. Als we een zeer grove resolutie gebruiken, vallen er verschillende soorten bomen in een enkele pixel. Als de pixels kleiner worden, kunnen bomen al van elkaar onderscheiden worden, maar de takken van verschillende bomen nog niet. Zelfs als we enkel een blad beschouwen zijn er nog verschillende materialen, aangezien de nerven van het blad een ander materiaal hebben dan de bladmoes. Een ander voorbeeld zijn mineralen. Een gesteente bevat verschillende mineralen, maar om deze van elkaar te kunnen onderscheiden moet de pixelgrootte al op microscopisch niveau zijn. 
 
-Hierom is het van belang om een spectra van een pixel, dat een combinatie is van de spectra van de verschillende materialen in deze pixel, te kunnen ``ontmengen''.
+Hierom is het van belang om een spectra van een pixel, dat een combinatie is van de spectra van de verschillende materialen in deze pixel, te kunnen ``ontmengen''. Hierbij zijn we specifiek ge\"intereseerd in de abundantie van elk materiaal: een getal dat het gedeelte van de lichtstralen dat afkomstig is van dat specifiek materiaal weergeeft. Aangezien dit een goede maat is voor de aanwezige hoeveelheid van een bepaald materiaal in een pixel, is dit de belangrijkste parameter waarin we ge\"intereseerd zijn.
+
 
 \section{spectrale analyse}
 
 
 Het spectra van licht kan beschreven worden als een wiskunde functie die een frequentie omzet in een intensiteit. In werkelijkheid bevat een hyperspectraal beeld niet de volledige functie, maar bevat deze tweehonderd waarden in deze functie, de zogenoemde banden. Dit matlab\citep{MATLAB} zal dit worden opgeslagen als een driedimensinale tensor, waarbij de verschillende assen de x positie, y positie en band van de pixel weergeven. In deze thesis zijn we niet geintereseerd in  interpixel-interacties, wat betekend dat het materiaal in een pixel geen invloed heeft op het spectrum van andere pixels. Daardoor kan de drie-dimentionale matrix worden omgezet in een matrix, waar de rijen de verschillende pixels zijn en de colommen de de banden.  
 
-De spectra in deze hyperspectrale beelden moeten vergeleken worden met de spectra van de materialen, de zogenaamde endmembers. Hiervoor moet er eerst gekend zijn op welke manier de endmembers mengen. De meest voor de hand liggende methode is de linaire methode, waar het spectrum van elke endmember wordt vermenigvuldigd met de abundantie, en dan worden alle spectra opgeteld. Hierbij is de abundantie een getal dat het gedeelte van de lichtstralen dat afkomstig is van dat materiaal weergeeft. Aangezien dit een goede maat is voor de aanwezige hoeveelheid van een bepaald materiaal in een pixel, is dit de belangrijkste parameter waarin we ge\"intereseerd zijn.
-
+Endmembers zijn de spectra van de verschillende materialen waarin het beeld wordt ontmengd. Echter, om een goede theroie te construeren om deze spectra te ontmengen, moet eerst een model ontwikkeld worden om deze spectra te ontmengen. De meest voor de hand liggende methode is de linaire methode, waar het spectrum van elke endmember wordt vermenigvuldigd met de abundantie, en dan worden alle spectra opgeteld. 
 %\begin{itemize}
 %\item spectra als functies (eigenschappen van licht)
 %\item spectra als vector (endmembers) $\rightarrow$ matlab implementatie
@@ -226,7 +253,24 @@ De spectra in deze hyperspectrale beelden moeten vergeleken worden met de spectr
 
 \subsection{reflectie}
 
-Wanneer een lichtstraal invalt op een materiaal reflecteert deze een gedeelte van dit licht. Het nieuwe spectrum van het gereflecteerde licht kan bepaald worden aan de hand van de eigenschappen van het materiaal en het spectrum van het binnenkomende licht. Er kan de benadering gemaakt worden dat de intensiteit voor een gegeven frequentie van het gereflecteerde spectrum alleen afhankelijk is van de intensiteit van het invallende spectrum, en deze daar recht evenredig aan is. In dit geval kan de reflectie beschreven worden als een Hadamard van het spectrum van de inkomende straal en het ``spectrum'' van het materiaal. Dit spectrum is nu geen vector van intensiteiten weer, maar een vector die voor elke frequentie bevat welk deel van de inkomende lichtstraal wordt gereflecteerd. 
+%Wanneer een lichtstraal invalt op een materiaal reflecteert deze een gedeelte van dit licht. Het nieuwe spectrum van het gereflecteerde licht kan bepaald worden aan de hand van de eigenschappen van het materiaal en het spectrum van het binnenkomende licht. Er kan de benadering gemaakt worden dat de intensiteit voor een gegeven frequentie van het gereflecteerde spectrum alleen afhankelijk is van de intensiteit van het invallende spectrum, en deze daar recht evenredig aan is. In dit geval kan de reflectie beschreven worden als een Hadamard van het spectrum van de inkomende straal en het ``spectrum'' van het materiaal. Dit spectrum is nu geen vector van intensiteiten weer, maar een vector die voor elke frequentie bevat welk deel van de inkomende lichtstraal wordt gereflecteerd. 
+
+Wanneer een lichtstraal invalt op een materiaal reflecteert deze een gedeelte van dit licht en absorbeert dit de rest. De hoeveelheid energie van deze lichtstraal die gereflecteerd wordt is afhankelijk van het materiaal en van de golflengte van het licht. In deze thesis worden hiervoor drie aannames gemaakt. Als eerste heeft de gereflecteerde lichtstraal dezelfde golflengte als het invallende licht. Als tweede aanname wordt beweert dat de intensiteit van de gereflecteerde straal recht evenredig is aan de intensiteit van de invallende straal. Als laatset aanname wordt aangenomen dat als een invallende straal en gegeven combinatie is van verschillende golflengten, de reflectie de som is van de reflecties van elke afzonderlijke golflengte. Deze drie aannames zijn correct volgens de klassieke fysica, maar hier zitten correcties op van kwantummechanische effecten. Deze zullen echter klein genoeg zijn dat deze als deel van de ruis beschouwd kunnen worden.
+
+De intensiteit van de uitgaande straal kan geschreven worden als volgt:
+
+\begin{equation}
+E_{out}(\lambda) = R_\lambda E_{in}(\lambda)
+\end{equation}
+
+Dit is een stelsel van vergelijkingen (een vergelijking voor elke waarde van $\lambda$, wat overeenkomt met een band in het spectrum). Zowel de intensiteiten als de reflectieco\"efficienten kunnen samengesteld worden tot een vector, en dan geldt
+
+\begin{equation}
+\bm{x} = \bm{R}\odot \bm{y}
+\end{equation}
+
+met $\odot$ het Hadamard ofwel elementwijs product. De vector $R$ noemt men het spectrum van het materiaal. Merk op dat in tegenstelling tot het spectrum van licht, dit geen intensiteiten bevat maar dimensielose voorfactoren. Dus hoewel deze beide concepten allebei spectrum heten en vergelijkbare vormen en gebruiken hebben, zijn deze in wezen verschillend.
+
 
 \subsection{atmosferische correctie}
 
@@ -260,7 +304,7 @@ Het minimaliseren van een uitdrukking om een waarde te vinden noemt men een opti
 
 In een optimalisatieprobleem noemt men het aantal re\"eele continue variabelen waarvan een variable afhank de vrijheidsgraden. Wanneer het aantal te bepalen vrijheidsgraden groter is dan het aantal gegeven vrijheidsgraden, dan is het probleem ondergedefini\"eerd. Dit houd in dat er meerdere mogelijke oplossingen voor de vrije parameters zijn waarvoor alle voorwaarden voldaan zijn. Als dit voorkomt, is een gevonden oplossing niet met zekerheid de juiste oplossing, en geeft het model dus verkeerde oplossingen terug, die lijken te voldoen aan het systeem.
 
-Het aantal vrijheidsgraden van het gemeten spectrum is per definitie $200$, aangezien dit een vector is van tweehonderd re\"eele waarden. Maar uit dimensionale analyse volgt dat het werkelijke aantal vrijheidsgraden maar rond de $15$ ligt. Als er dus een model gebruikt wordt met meer dan $15$ parameters geeft dit per definitie een goed resultaat, zelfs als dit model totaal niet overeenkomt met de werkelijkheid. Wanneer verschillende modellen vergelijken worden, zal een model met meer vrijheidsgraden een lagere recontructie-error hebben.  
+Het aantal vrijheidsgraden van het gemeten spectrum is per definitie het aantal banden van de gebruikte sensor. Bij de Avari sensor, welke gebruikt is woor de beelden in dit verslag, is dit $200$. Maar uit dimensionale analyse volgt dat het werkelijke aantal vrijheidsgraden maar rond de $15$ ligt. Als er dus een model gebruikt wordt met meer dan $15$ parameters geeft dit per definitie een goed resultaat, zelfs als dit model totaal niet overeenkomt met de werkelijkheid. Wanneer verschillende modellen vergelijken worden, zal een model met meer vrijheidsgraden een lagere recontructie-error hebben.  
 
 \section{lineair ontmengen}
 
@@ -274,6 +318,8 @@ Het aantal vrijheidsgraden van het gemeten spectrum is per definitie $200$, aang
 
 
 \subsection{implementatie in matlab}
+
+\chapter{Bestaande methodes} \label{sec:select}
 
 \section{multilineair ontmengen}
 
@@ -291,7 +337,7 @@ Of dat $P > 0$ moet gebruikt worden als voorwaarde of niet.
 
 \subsection{implementatie in matlab}
 
-\chapter{Selecteren} \label{sec:select}
+
 
 \section{Variabiliteit}
 
@@ -322,7 +368,7 @@ Of dat $P > 0$ moet gebruikt worden als voorwaarde of niet.
 \subsection{implementatie in matlab}
 
 
-\chapter{Methodes}
+\chapter{Nieuwe Methodes}
 
 \section{Semi-lineair model}
 
