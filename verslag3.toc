@@ -3,6 +3,8 @@
 \contentsline {chapter}{Abstract (Nederlands)}{4}
 \contentsline {chapter}{Structuur van deze thesis}{5}
 \contentsline {chapter}{Inleiding}{6}
+\contentsline {subsubsection}{elektromagnetische golven}{6}
+\contentsline {subsubsection}{hyperspectrale cameras}{7}
 \contentsline {section}{\numberline {0.1}toepassingen}{7}
 \contentsline {chapter}{\numberline {1}ontmengen}{9}
 \contentsline {section}{\numberline {1.1}spectrale analyse}{10}

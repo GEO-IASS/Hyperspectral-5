@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  19 MAR 2017 16:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  21 MAR 2017 10:32
 entering extended mode
 **verslag3.tex
 (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.tex
@@ -434,46 +434,46 @@ Package pdftex.def Info: rs.PNG used on input line 175.
 <golflengte.PNG, id=38, 313.17pt x 241.65282pt>
 File: golflengte.PNG Graphic file (type png)
  <use golflengte.PNG>
-Package pdftex.def Info: golflengte.PNG used on input line 199.
+Package pdftex.def Info: golflengte.PNG used on input line 200.
 (pdftex.def)             Requested size: 140.92793pt x 108.74644pt.
 
 <spec.PNG, id=39, 268.75406pt x 361.35pt>
 File: spec.PNG Graphic file (type png)
  <use spec.PNG>
-Package pdftex.def Info: spec.PNG used on input line 203.
+Package pdftex.def Info: spec.PNG used on input line 204.
 (pdftex.def)             Requested size: 93.94957pt x 126.32pt.
 
-Underfull \hbox (badness 2027) in paragraph at lines 204--204
+Underfull \hbox (badness 2027) in paragraph at lines 205--205
 \OT1/cmr/m/n/10.95 ne-ti-sche spec-trum.
  []
 
 <spec2.PNG, id=40, 296.60812pt x 232.61906pt>
 File: spec2.PNG Graphic file (type png)
  <use spec2.PNG>
-Package pdftex.def Info: spec2.PNG used on input line 207.
+Package pdftex.def Info: spec2.PNG used on input line 208.
 (pdftex.def)             Requested size: 187.89914pt x 147.36716pt.
-
-<hyp.PNG, id=41, 454.69875pt x 356.0803pt>
-File: hyp.PNG Graphic file (type png)
- <use hyp.PNG>
-Package pdftex.def Info: hyp.PNG used on input line 225.
-(pdftex.def)             Requested size: 469.75502pt x 367.87521pt.
  [7 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/golflengte.PNG> <C:/Us
 ers/Thorvald/Dropbox/Masterproef/Hyperspectral/spec.PNG> <C:/Users/Thorvald/Dro
-pbox/Masterproef/Hyperspectral/spec2.PNG>] [8 <C:/Users/Thorvald/Dropbox/Master
-proef/Hyperspectral/hyp.PNG>]
+pbox/Masterproef/Hyperspectral/spec2.PNG>] <hyp.PNG, id=47, 454.69875pt x 356.0
+803pt>
+File: hyp.PNG Graphic file (type png)
+
+<use hyp.PNG>
+Package pdftex.def Info: hyp.PNG used on input line 226.
+(pdftex.def)             Requested size: 469.75502pt x 367.87521pt.
+ [8 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/hyp.PNG>]
 Hoofdstuk 1.
 [9
 
 ] [10] [11] [12] [13]
 Hoofdstuk 2.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 369.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 370.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 369.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 370.
  [14
 
 ] [15]
@@ -499,7 +499,7 @@ Here is how much of TeX's memory you used:
  8664 multiletter control sequences out of 15000+200000
  20046 words of font info for 73 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,10n,48p,1478b,504s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,10n,48p,1478b,507s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX
@@ -517,7 +517,7 @@ ublic/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.p
 fb>
-Output written on verslag3.pdf (22 pages, 752782 bytes).
+Output written on verslag3.pdf (22 pages, 752468 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
