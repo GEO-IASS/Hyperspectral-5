@@ -155,13 +155,13 @@ Rob {Heylen} % Supervisor's Name
 
 De inleiding legt uit wat aardopservatie is, welke concepten hiervoor nodig zijn en een aantal toepassingen hiervoor. Dit hoofdstuk is vooral gebaseerd op \textit{Fundamentals of remote sensing\cite{fun}}.
 
-Het eerste hoofdstuk gaat over ontmengen. Hier wordt wordt het concept ontmengen uitgelegd, en een voorbeeld gegeven hiervan, namelijk lineair ontmengen. 
+Het eerste hoofdstuk beschrijft ontmengen, en bevat een voorbeeld van een ontmengmethode, namelijk de linaire methode. Ook bevat deze een beschrijving niet-lineaire effecten en variabiliteit. 
 
-In het volgende hoofdstuk worden drie bestaande methodes uitgelegd. Het eerste deel gaat over het multilinair model, en is gebaseerd op \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}. De volgende delen gaan over selectiemethoden. Dit zijn methoden ontwikkeld om om te gaan met endmembervariabiliteit. Deze methoden staan beschreven in \textit{Hyperspectral unmixing with endmember variability via alternating angle minimization}\cite{mesma}. Deze methoden zijn volledig gekend in de literatuur maar voor deze thesis zijn deze methoden opnieuw berekend en ge\"implementeert. 
+In het volgende hoofdstuk worden methodes uit de literatuur beschreven om om te gaan met de problemen beschreven in het vorige hoofdstuk. Enerzijds wordt het multilineair model beschreven, dat gebaseerd is op \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}. De volgende twee methodes zijn selectiemethoden. Deze methoden zijn ontwikkeld om variabiliteit in rekening te brengen, en staan beschreven in \textit{Hyperspectral unmixing with endmember variability via alternating angle minimization}\cite{mesma}. Deze methoden zijn volledig gekend in de literatuur maar voor deze thesis zijn deze methoden opnieuw berekend en ge\"implementeert. 
 
-Het derde hoofdstuk beschrijft twee nieuwe methoden, gebaseerd op de methoden beschreven in het vorige hoofdstuk, Ook wordt er van de eerste methode een numeriek bewijs geleverd dat deze goede resultaten geeft door middel van monte-carlo simulaties. 
+Het derde hoofdstuk beschrijft een methode die rekening houd met beide concepten, niet-lineariteit en variabiliteit. Deze is gebaseerd op de methoden beschreven in het vorige hoofdstuk. Dit hoofdstuk bevat ook een numerieke test die gebruik maakt van monte-carlo simulaties.
 
-In het laatste hoofdstuk worden al deze methoden, en een aantal varianten hierop vergeleken aan de hand van een experimentele dataset: de Alina dataset\cite{Alina} en wordt besproken welke methodes en varienten het beste zijn in welke situaties. 
+In het laatste hoofdstuk worden al deze methoden, en een aantal varianten hierop vergeleken aan de hand van een experimentele dataset: de Alina dataset\cite{Alina} en wordt besproken welke methodes en varianten het beste zijn in welke situaties. 
 \newpage
 \chapter*{Inleiding}
 \addcontentsline{toc}{chapter}{Inleiding}
@@ -181,17 +181,17 @@ Aardobservatie is de wetenschap van het bepalen van informatie over het aardoppe
 
 %Een lichtstraal ontstaat aan een zo genaamde lichtbron, wat in de meeste gevallen de zon is. Deze lichtstraal reist door de ruimte en door de atmosfeer, tot deze contact maakt men een materiaal, en hierop een of meerdere keren reflecteert. Daarna reist deze lichtstraal opnieuw door de atmosfeer tot deze contact maakt met een camera op een satelliet. De eigenschappen van deze lichtstraal worden be\"invloed door elk van deze processen.
 
-Dit proces begint bij een lichtbron\footnote{In het geval dat men ge\"interesseerd is in het thermisch infrarood spectrum, is er geen lichtbron nodig aangezien materialen op kamertemperatuur van nature dit soort licht uitstralen, ten gevolge van black body radiation.}. Vaak is deze lichtbron de zon, maar het proces is gelijkaardig voor andere lichtbronnen. Deze lichtbron zend een lichtstraal uit, die reist door de ruimte en daarna de atmosfeer, totdat deze contact maakt met een materiaal op het aardoppervlak, en deze hierop een of meermaals reflecteert. Deze reflectie veranderd de eigenschappen van deze lichtstraal. Deze gereflecteerde lichtstraal reist opnieuw door de ruimte, totdat deze in contact komt met de detector op een satelliet. Deze detector zet de lichtstraal om in elektrische signalen, die verzonden worden vanaf de satelliet naar het aardoppervlak, waar deze geanalyseerd kunnen worden. Dit volledige proces wordt afgebeeld in figuur \ref{fig:rs}. 
+Aardobservatie begint bij een lichtbron\footnote{In het geval dat men ge\"interesseerd is in het thermisch infrarood spectrum, is er geen lichtbron nodig aangezien materialen op kamertemperatuur van nature dit soort licht uitstralen, ten gevolge van black body radiation.}. Deze lichtbron is vaak de zon, maar dit proces is gelijkaardig voor andere lichtbronnen. De lichtbron zendt een lichtstraal uit, die eerst door de ruimte en vervolgens door de atmosfeer reist, totdat deze contact maakt met een materiaal op het aardoppervlak en hierop een of meermaals reflecteert. Deze reflectie verandert de eigenschappen van de lichtstraal. De gereflecteerde lichtstraal reist opnieuw door de ruimte, totdat deze in contact komt met de detector op een satelliet. Deze detector zet de lichtstraal om in elektrische signalen, die verzonden worden vanaf de satelliet naar het aardoppervlak, waar deze geanalyseerd kunnen worden. Dit volledige proces wordt afgebeeld op figuur \ref{fig:rs}. 
 
 
 
 %Elke lichtstraal is een golf in het elektromagnetische spectrum. Deze golf wordt enerzijds bepaald door zijn golflengte, wat de lengte is tussen twee opeenvolgende maxima van de golf, zoals afgebeeld in figuur \ref{fig:golflengte}. Anderzijds wordt de golf bepaald door de intensiteit, wat de grootte is van de piek van de golf. Soms wordt de frequentie van de golf gebruikt om deze te karakteriseren, maar die kan bepaald worden uit de golflengte en de snelheid van het licht. In werkelijkheid is een lichtstraal niet een golf, maar een combinatie van verschillende golven met elk hun golflengte en intensiteit. De bijbehorende intensiteit bij elke golflengte wordt het spectrum genoemd.
 
 \subsubsection{elektromagnetische golven}
-Een lichtstraal is een elektromagnetische golf. Een van de belangrijkste eigenschappen van deze golf voor aardobservatie is de golflengte. Voor een vlakke golf is deze golflengte de afstand tussen twee opeenvolgende cycli, zoals te zien in figuur \ref{fig:rs}. Echter, een lichtstraal is in werkelijkheid bijna nooit een vlakke golf, maar een combinatie van verschillende vlakke golven met verschillende golflengten. De intensiteit van elke vlakke golf voor elke specifieke golflengte wordt het spectrum genoemd. Soms wordt in plaats van golflengte ook frequentie gebruikt, maar deze kan eenvoudig bepaald worden uit de golflengte en de snelheid van het licht.
+Een lichtstraal is een elektromagnetische golf, waarvan een van de belangrijkste eigenschappen voor aardobservatie de golflengte is. Voor een vlakke golf is deze golflengte de afstand tussen twee opeenvolgende cycli, zoals te zien in figuur \ref{fig:rs}. Echter, een lichtstraal is in werkelijkheid bijna nooit een vlakke golf, maar een combinatie van verschillende vlakke golven met verschillende golflengten. De intensiteit van elke vlakke golf voor elke specifieke golflengte wordt het spectrum genoemd. Soms wordt in plaats van golflengte ook frequentie gebruikt, maar deze kan eenvoudig bepaald worden uit de golflengte en de snelheid van het licht.
 
 \subsubsection{hyperspectrale cameras}
-Gewone beelden van een camera bevatten drie kleuren, elke passende bij een specifieke golflengte. De keuze voor deze drie kleuren, namelijk rood, groen en blauw, is een gevolg van de beperkingen van het menselijk oog. Dit zijn namelijk de kleuren dat een mens kan waarnemen. Om dit beeld digitaal te representeren, moet het beeld opgedeeld worden in kleine, even grote, vierkante elementen, genaamd pixels. Elk van deze pixels bevat voor elke kleur een waarde, die de intensiteit van elke respectievelijke kleur in dit vierkant weergeeft. Hyperspectrale cameras werken in essentie op dezelfde manier, alleen detecteert deze camera niet alleen de hoeveelheid rood, groen en blauw, maar detecteert deze een groot aantal kleuren, genaamd banden. Doordat deze banden meer informatie bevatten dan de banden van een gewone camera, kan hier meer informatie uit gehaald worden. De zon zend vooral licht uit in het infrarood, zichtbaar licht en ultraviolet en daarom worden er vooral banden gebruikt in dit spectrum, zoals te zien in figuur \ref{fig:specs}.  
+Gewone beelden van een camera bevatten drie kleuren, elke passende bij een specifieke golflengte. De keuze voor deze drie kleuren, namelijk rood, groen en blauw, is een gevolg van de beperkingen van het menselijk oog. Dit zijn namelijk de kleuren die een mens kan waarnemen. Om dit beeld digitaal te representeren, moet het beeld opgedeeld worden in kleine, even grote, vierkante elementen, genaamd pixels. Elk van deze pixels bevat voor elke kleur een waarde, die de intensiteit van elke respectievelijke kleur in dit vierkant weergeeft. Hyperspectrale cameras werken in essentie op dezelfde manier, alleen detecteert deze camera niet alleen de hoeveelheid rood, groen en blauw, maar detecteert deze een groot aantal kleuren, genaamd banden. Doordat deze banden meer informatie bevatten dan de banden van een gewone camera, kan hier meer informatie uit gehaald worden. De zon zendt vooral licht uit in het infrarood, zichtbaar licht en ultraviolet en daarom worden er vooral banden gebruikt in dit spectrum, zoals te zien in figuur \ref{fig:specs}.  
 
 
 \begin{figure}
@@ -227,14 +227,19 @@ Aardobservatie wordt ook toepast in de geologie. Van de aardbodem kan niet allee
 \caption{Opbouw van een hyperspectraal beeld. Deze afbeelding komt uit \textit{Fundamentals of remote sensing\cite{fun}}}
 \end{figure}
 
-\chapter{ontmengen}
+\chapter{Ontmengen}
 
 
 
 %Het doel van spectrale anaylise is om uit deze hyperspectrale beelden het bepalen welke materialen zich op een specifieke pixel bevinden. Hoewel het belangrijkste toepassing hiervan de aardopservatie is, kan dit evidenterwijs ook gebruikt worden om materialen te analyseren in een laboratorium of voor bijvoorbeeld kwaliteitscontrole in de industrie.
 
+\section{Resolutie}
 
-Een pixel in een hyperspectraal beeld bevat meerdere materialen. Een van de belangrijkste oorzaken is het gevolg van de beperkte resolutie van de camera. Echter, de hoeveelheid licht dat op de camera valt is beperkt, en moet verdeeld worden over de verschillende pixels en de verschillende banden. Dit betekent dat wanneer de pixels te klein worden, elke pixel te weinig licht krijgt en de signaal ruis verhouding te laag wordt. En aangezien licht bestaat uit fotonen, is er een limiet van de gevoeligheid van de camera, en is de enige methode om de gevoeligheid te verhogen een langere belichtingstijd. Dit zorgt voor een vergroting van de ruis en is niet haalbaar voor een satelliet in een baan rond de aarde. Maar zelfs als het praktisch haalbaar was om de resolutie kleiner te maken, ligt het probleem vooral in de fractalische eigenschappen van veel objecten. Neem nu bijvoorbeeld een bos. Als we een zeer grove resolutie gebruiken, vallen er verschillende soorten bomen in een enkele pixel. Als de pixels kleiner worden, kunnen bomen al van elkaar onderscheiden worden, maar de takken van verschillende bomen nog niet. Zelfs als we enkel een blad beschouwen zijn er nog verschillende materialen, aangezien de nerven van het blad een ander materiaal hebben dan de bladmoes. Een ander voorbeeld zijn mineralen. Een gesteente bevat verschillende mineralen, maar om deze van elkaar te kunnen onderscheiden moet de pixelgrootte al op microscopisch niveau zijn. 
+Een pixel in een hyperspectraal beeld bevat een of meerdere materialen. Een van de belangrijkste oorzaken hiervan is het gevolg van de beperkte resolutie van de camera. De hoeveelheid licht dat op de camera valt is immers beperkt, en moet verdeeld worden over de verschillende pixels en de verschillende banden. Dit betekent dat wanneer de pixels te klein worden, elke pixel te weinig licht krijgt en de signaal ruis verhouding te laag wordt, en aangezien licht bestaat uit fotonen, is er een limiet van de gevoeligheid van de camera. 
+
+De enige methode om de gevoeligheid te verhogen is dus een langere belichtingstijd. Dit zorgt echter voor een vergroting van de ruis en is niet haalbaar voor een satelliet in een baan rond de aarde - zelfs als het praktisch haalbaar was om de resolutie kleiner te maken, ligt het probleem vooral in de fractalische eigenschappen van veel objecten. 
+
+Als we bijvoorbeeld in een bos een zeer grove resolutie gebruiken, vallen er verschillende soorten bomen in een enkele pixel. Als de pixels kleiner worden, kunnen bomen al van elkaar onderscheiden worden, maar de takken van verschillende bomen nog niet. Zelfs als we enkel een blad beschouwen zijn er nog verschillende materialen, aangezien de nerven van het blad een ander materiaal hebben dan de bladmoes. Ook bij mineralen verkrijgen we hetzelfde probleem: een gesteente bevat verschillende mineralen, maar om deze van elkaar te kunnen onderscheiden moet de pixelgrootte al op microscopisch niveau zijn. 
 
 Hierom is het van belang om een spectra van een pixel, dat een combinatie is van de spectra van de verschillende materialen in deze pixel, te kunnen ``ontmengen''. Hierbij zijn we specifiek ge\"interesseerd in de abundantie van elk materiaal: een getal dat het gedeelte van de lichtstralen dat afkomstig is van dat specifiek materiaal weergeeft. Aangezien dit een goede maat is voor de aanwezige hoeveelheid van een bepaald materiaal in een pixel, is dit de belangrijkste parameter waarin we ge\"intereseerd zijn.
 
@@ -242,9 +247,11 @@ Hierom is het van belang om een spectra van een pixel, dat een combinatie is van
 \section{spectrale analyse}
 
 
-Het spectra van licht kan beschreven worden als een wiskunde functie die een frequentie omzet in een intensiteit. In werkelijkheid bevat een hyperspectraal beeld niet de volledige functie, maar bevat deze tweehonderd waarden in deze functie, de zogenoemde banden. In matlab\citep{MATLAB} zal dit worden opgeslagen als een driedimensionale tensor, waarbij de verschillende assen de x positie, y positie en band van de pixel weergeven. In deze thesis zijn we niet ge\"interesseerd in  interpixel-interacties, wat betekent dat het materiaal in een pixel geen invloed heeft op het spectrum van andere pixels, of zeker niet meer invloed tussen naburige pixels dan tussen willekeurige pixels. Daardoor is de exacte structuur van de pixels niet van belang en kan deze worden vervangen door een lijst, dus kan de drie-dimensionale tensor worden omgezet in een matrix, waar de rijen de verschillende pixels zijn en de kolommen de banden.  
+Het spectrum van licht kan beschreven worden als een wiskunde functie die een frequentie omzet in een intensiteit. In werkelijkheid bevat een hyperspectraal beeld niet de volledige functie, maar bevat deze tweehonderd waarden in deze functie, de zogenoemde banden. In matlab\citep{MATLAB} zal dit worden opgeslagen als een driedimensionale tensor, waarbij de verschillende assen de x positie, y positie en band van de pixel weergeven. 
 
-Endmembers zijn de spectra van de verschillende materialen waarin het beeld wordt ontmengd. Echter, om een goede theorie te construeren om deze spectra te ontmengen, moet eerst een model ontwikkeld worden om deze spectra te ontmengen. De meest voor de hand liggende methode is de linaire methode, waar het spectrum van elke endmember wordt vermenigvuldigd met de abundantie, en dan worden alle spectra opgeteld. 
+In deze thesis zijn we niet ge\"interesseerd in  interpixel-interacties, wat betekent dat het materiaal in een pixel geen invloed heeft op het spectrum van andere pixels, of zeker niet meer invloed tussen naburige pixels dan tussen willekeurige pixels. Daardoor is de exacte structuur van de pixels niet van belang en kan deze worden vervangen door een lijst, dus kan de drie-dimensionale tensor worden omgezet in een matrix, waar de rijen de verschillende pixels zijn en de kolommen de banden.  
+
+
 %\begin{itemize}
 %\item spectra als functies (eigenschappen van licht)
 %\item spectra als vector (endmembers) $\rightarrow$ matlab implementatie
@@ -255,7 +262,9 @@ Endmembers zijn de spectra van de verschillende materialen waarin het beeld word
 
 %Wanneer een lichtstraal invalt op een materiaal reflecteert deze een gedeelte van dit licht. Het nieuwe spectrum van het gereflecteerde licht kan bepaald worden aan de hand van de eigenschappen van het materiaal en het spectrum van het binnenkomende licht. Er kan de benadering gemaakt worden dat de intensiteit voor een gegeven frequentie van het gereflecteerde spectrum alleen afhankelijk is van de intensiteit van het invallende spectrum, en deze daar recht evenredig aan is. In dit geval kan de reflectie beschreven worden als een Hadamard van het spectrum van de inkomende straal en het ``spectrum'' van het materiaal. Dit spectrum is nu geen vector van intensiteiten weer, maar een vector die voor elke frequentie bevat welk deel van de inkomende lichtstraal wordt gereflecteerd. 
 
-Wanneer een lichtstraal invalt op een materiaal reflecteert deze een gedeelte van dit licht en absorbeert de rest. De hoeveelheid energie van deze lichtstraal die gereflecteerd wordt is afhankelijk van het materiaal en van de golflengte van het licht. In deze thesis worden hiervoor drie aannames gemaakt. Als eerste heeft de gereflecteerde lichtstraal dezelfde golflengte als het invallende licht. Als tweede aanname wordt beweerd dat de intensiteit van de gereflecteerde straal recht evenredig is aan de intensiteit van de invallende straal. Als laatste aanname wordt aangenomen dat als een invallende straal een gegeven combinatie is van verschillende golflengten, de reflectie de som is van elk van de  reflecties van de afzonderlijke golflengte. Deze drie aannames zijn correct volgens de klassieke fysica, maar hier zitten correcties op van kwantummechanische effecten. Deze zullen echter klein genoeg zijn zodat ze als deel van de ruis beschouwd kunnen worden.
+Wanneer een lichtstraal invalt op een materiaal reflecteert deze een gedeelte van dit licht en absorbeert de rest. Het spectrum van deze lichtstraal dat gereflecteerd noemt men de reflectantie. Dit is afhankelijk van het materiaal en van de golflengte van het licht. 
+
+In deze thesis worden hiervoor drie aannames gemaakt. Ten eerste heeft de gereflecteerde lichtstraal dezelfde golflengte als het invallende licht. Ten tweede wordt beweerd dat de intensiteit van de gereflecteerde straal recht evenredig is aan de intensiteit van de invallende straal. Ten derde, kan de reflectie van een lichtstraal van een specifieke golflengte niet be\"invloed wordt door licht van een andere frequentie. Deze drie aannames zijn correct volgens de klassieke fysica, maar hier zitten correcties op van kwantummechanische effecten. Deze zullen echter klein genoeg zijn zodat ze als deel van de ruis beschouwd kunnen worden.
 
 De intensiteit van de uitgaande straal kan geschreven worden als volgt:
 
@@ -269,18 +278,27 @@ Dit is een stelsel van vergelijkingen (een vergelijking voor elke waarde van $\l
 \bm{x} = \bm{R}\odot \bm{y}
 \end{equation}
 
-met $\odot$ het Hadamard ofwel elementwijs product. De vector $R$ noemt men het spectrum van het materiaal. Merk op dat in tegenstelling tot het spectrum van licht, dit geen intensiteiten bevat maar dimensielose voorfactoren. Dus hoewel deze beide concepten allebei spectrum heten en vergelijkbare vormen en gebruiken hebben, zijn deze in wezen verschillend.
+met $\odot$ het Hadamard ofwel elementwijs product. De vector $R$ noemt men de reflectie van het materiaal. Deze neemt in beschouwing dat er meerdere interacties kunnen gebeuren in het materiaal. De reflectie waarbij alleen een enkelvoudige interactie meegenomen is noemt men het albedo.
 
 
 \subsection{atmosferische correctie}
 
-Wanneer de lichtbron die we beschouwen uniform en genormaliseerd is, is het spectrum van het materiaal gelijk aan het spectrum van het gedetecteerde licht. Alleen is de in werkelijkheid gebruikte lichtbron -meestal is dit de zon- niet uniform. Ook zijn er verschillende effecten die de lichtstraal be\"invloeden\cite{fun} zoals verschuiving, atmosferische verstrooiing, Rayleigh verstrooiing, Mie verstrooiing, nonselectieve verstooiing, atmosferische absorptie, ozon absorptie, $CO_2$-absorptie en interpixel verstooi\"ing. De gebruikte datasets in deze thesis zijn al door een algoritme gecorrigeerd voor al deze effecten, en we kunnen deze dus beschouwen als verlicht door een uniforme lichtbron, waarbij de gedetecteerde lichtstraal alleen be\"invloed is door reflecties en Gaussische ruis. 
+Wanneer de lichtbron die we beschouwen uniform en genormaliseerd is, is het spectrum van het materiaal gelijk aan het spectrum van het gedetecteerde licht. Alleen is de in werkelijkheid gebruikte lichtbron - meestal is dit de zon - niet uniform. Ook zijn er verschillende effecten die de lichtstraal be\"invloeden\cite{fun} zoals verschuiving, atmosferische verstrooiing, Rayleigh verstrooiing, Mie verstrooiing, nonselectieve verstrooiing, atmosferische absorptie, ozon absorptie, $CO_2$-absorptie en interpixel verstrooiing. De gebruikte datasets in deze thesis zijn al door een algoritme gecorrigeerd voor al deze effecten, en we kunnen deze dus beschouwen als verlicht door een uniforme lichtbron, waarbij de gedetecteerde lichtstraal alleen be\"invloed is door reflecties en Gaussische ruis. 
 
-\section{ontmengen}
+\section{lineair ontmengen}
 
-Bij het ontmengen gaat het erom dat de juiste abundanties en endmembers gevonden worden zodat als deze gemengd worden volgens ons bovengenoemde mixing model, men als uiteindelijk spectrum terug het gemeten spectrum krijgt. In dit hoofdstuk beperken we ons tot de abundaties, het bepalen van de endmembers wordt beschreven in hoofdstuk \ref{sec:select}.
+Bij lineair ontmengen wordt uitgegaan van het ``lineair mixing model''. In een pixel valt de lichtstraal in op een wel bepaald materiaal, interageert met een enkel materiaal een enkele keer, en valt dan op de detector. Dit betekend dat het spectrum van de teruggekaatste lichtstraal alleen afhangt van de reflectancie van dit materiaal, de endmember genaamd. De totale reflectantie van een pixel die gemeten wordt is echter een gewogen van deze verschillende endmember, waarvan het gewicht van elke endmember bepaald wordt door het gedeelte van de lichtstralen dat op dit materiaal gereflecteerd is. Dit gedeelte wordt de abundantie genoemd. In symbolen geeft dit:
 
-Echter, omdat het mixing model slechts een benadering is van de werkelijkheid en omdat op een experimentele meting altijd een vorm van ruis zit, kan het exacte spectrum nooit terug gevonden worden. Er wordt daarom gezocht naar het reconstructiespectrum dat het meest lijkt op het werkelijke spectrum. De ruis was verondersteld normaal verdeeld te zijn. . Dit is een eenvoudig gevolg van het centrale-limiet theorema, dat zegt dat de som van een groot aantal kansvariabelen normaal verdeeld is. 
+
+% waarbij uitgegaan wordt dat elke lichtstraal die op een pixel valt enkelvoudig reflecteert en daarna op de detector valt. Het totale spectra op de detector is het gewogen gemiddelde van de spectra van de verschillende endmembers, waarbij het gewicht voor elke endmember de abundantie is van deze endmember. Men krijgt volgende uitdrukking: 
+
+
+\begin{align}
+\bm{x} &= \sum_i a_i \bm{e}_i \label{eq:nq}
+\end{align}
+
+Waarbij $\bm{x}$ het gemeten spectrum is, $e_i$ de endmembers en  $a_i$ de abundanties.
+Echter, omdat het mixing model slechts een benadering is van de werkelijkheid en omdat op een experimentele meting altijd een vorm van ruis zit, kan het exacte spectrum nooit terug gevonden worden. Er wordt daarom gezocht naar het reconstructiespectrum dat het dichtst ligt bij het werkelijke spectrum. De ruis was verondersteld normaal verdeeld te zijn. Dit is een eenvoudig gevolg van het centrale-limiet theorema, dat zegt dat de som van een groot aantal kansvariabelen normaal verdeeld is. 
 
 Noem $\bm{x}$ het gemeten spectrum, en $\bm{y}$ het reconstructiespectrum, met $\bm{\eta}$ de ruis, dan is
 
@@ -296,31 +314,24 @@ Deze norm kan berekend worden gebruik makend van vergelijking \ref{eq:rec0}.
 \left|\bm{\eta}\right| &= \left|\bm{x} - \bm{y}\right| \label{eq:rec}
 \end{eqnarray}
 
-De uitdrukking $\left|\bm{x} - \bm{y}\right|$ noemt men de reconstructie-error. Het is deze uitdrukking dat geminimaliseerd moet worden.
+De uitdrukking $\left|\bm{x} - \bm{y}\right|$ noemt men de reconstructie-error. Het is deze uitdrukking dat geminimaliseerd moet worden. 
 
 Het minimaliseren van een uitdrukking om een waarde te vinden noemt men een optimalisatieprobleem, omdat men op zoek is naar de optimale waarden voor de verschillende parameters.
 
-\subsection{vrijheidsgraden}
-
-In een optimalisatieprobleem noemt men het aantal re\"eele continue variabelen waarvan een variabele afhankelijk is de vrijheidsgraden. Wanneer het aantal te bepalen vrijheidsgraden groter is dan het aantal gegeven vrijheidsgraden, dan is het probleem ondergedefini\"eerd. Dit houdt in dat er meerdere mogelijke oplossingen voor de vrije parameters zijn waarvoor alle voorwaarden voldaan zijn. Als dit voorkomt, is een gevonden oplossing niet met zekerheid de juiste oplossing, en geeft het model dus verkeerde oplossingen terug, die lijken te voldoen aan het systeem.
-
-Het aantal vrijheidsgraden van het gemeten spectrum is per definitie het aantal banden van de gebruikte sensor. Bij de Avari sensor, welke gebruikt is voor de beelden in dit verslag, is dit $200$. Maar uit dimensionale analyse volgt dat het werkelijke aantal vrijheidsgraden maar rond de $15$ ligt. Als er dus een model gebruikt wordt met meer dan $15$ parameters geeft dit per definitie een goed resultaat, zelfs als dit model totaal niet overeenkomt met de werkelijkheid. Wanneer verschillende modellen vergeleken worden, zal een model met meer vrijheidsgraden een lagere reconstructie-error hebben.  
-
-\section{lineair ontmengen}
-
-Bij lineair ontmengen wordt uitgegaan van het ``lineair mixing model'' waarbij uitgegaan wordt dat elke lichtstraal die op een pixel valt enkelvoudig reflecteert en daarna op de detector valt. Het totale spectra op de detector is het gewogen gemiddelde van de spectra van de verschillende endmembers, waarbij het gewicht voor elke endmember de abundantie is van deze endmember. Men krijgt volgende uitdrukking: 
+\subsection{minimaliseren van reconstructieerror}
+Voor het linair model wordt in dit hoofdstuk er vanuit gegaan dat de endmembers gekend zijn, maar de abundanties en de ruis niet. Als de ruis wordt toegevoegd aan vergelijking \ref{eq:nq} dan geldt:
 
 \begin{align}
 \bm{x} &= \sum_i a_i \bm{e}_i + \eta
 \end{align}
 
-Waarbij $\bm{x}$ het gemeten spectrum is, $e_i$ de endmembers, $a_i$ de abundanties en $\eta$ de ruis. In dit hoofdstuk wordt er vanuit gegaan dat de endmembers gekend zijn, maar de abundanties en de ruis niet. Het minimaliseren van de reconstructie-error, gebruik makend van vergelijking \ref{eq:rec}:
+Het minimaliseren van de reconstructie-error, gebruik makend van vergelijking \ref{eq:rec}:
 
 \begin{align}
 \text{argmin}_{a_1 ... a_p} \left| \bm{x} - \sum_{i=1}^p a_i \bm{e}_i\right|^2
 \end{align}
 
-Indien de abundanties $a_i$ vrije re\"eele waarden zouden zijn, zou dit minimum eenvoudig berekend kunnen worden, door een projectie te nemen opgespannen door het vlak van de eindmembers. Deze projectie kan genomen worden als volgt.
+Indien de abundanties $a_i$ vrije re\"ele waarden zouden zijn, zou dit minimum eenvoudig berekend kunnen worden, door een projectie te nemen opgespannen door het vlak van de endmembers. Deze projectie kan genomen worden als volgt.
 
 Neem $E = [e_1,e_2,...,e_n]$ een matrix met als kolommen de verschillende endmembers. De projectie op de deelruimte opgespannen door de elementen van $E$ kan gevonden worden aan de hand van het Penrose-invense.
 
@@ -328,41 +339,27 @@ Neem $E = [e_1,e_2,...,e_n]$ een matrix met als kolommen de verschillende endmem
 \bm{a} = (E^T E)^{-1} E^T \bm{x}
 \end{equation}
 
-Echter, doordat de abundanties een gedeelte van de lichtstralen dat op een materiaal botst, zijn er twee extra voorwaarden hierop. Enerzijds moeten de abundanties positief zijn, aangezien men geen negatieve hoeveelheden lichtstralen heeft. Dit noemt de niet-negativiteitsvoorwaarde. Anderzijds kan elke lichtstraal maar op een enkel materiaal botsen, dus is de som van alle delen \'e\'en. Dit noemt de eenheidssomvoorwaarde.  
+Doordat de abundanties een gedeelte van de lichtstralen dat op een materiaal botst, zijn er twee extra voorwaarden hierop. Enerzijds moeten de abundanties positief zijn, aangezien men geen negatieve hoeveelheden lichtstralen heeft. Dit noemt de niet-negativiteitsvoorwaarde. Anderzijds kan elke lichtstraal maar op een enkel materiaal botsen, dus is de som van alle delen \'e\'en. Dit noemt de eenheidssomvoorwaarde.  
 
 
 \subsubsection{niet-negativiteit}
 
-De niet negativiteitsvoorwaarde geeft weer dat de abundanties allemaal positief moeten zijn, of met andere woorden groeter moeten zijn dan nul. Dit betekend dat men niet kan projecteren op de deelruimte, maar op een deelverzameling hiervan. Hiervoor kan een aangepast algorimte gebruikt worden, namelijk het ``nonnegative least-squares curve fitting'' of\texttt{lsqnonneg}, maar dit algorimte is veel berekeningsintensiever dan het penrose-inverse algoritme. Later in sectie \ref{sec:select} wordt een alternatieve methode beschreven om met deze voorwaarde om te gaan.
+De niet negativiteitsvoorwaarde geeft weer dat de abundanties allemaal positief moeten zijn, of met andere woorden groter moeten zijn dan nul. Dit betekend dat men niet kan projecteren op de deelruimte, maar op een deelverzameling hiervan. Hiervoor kan een aangepast algoritme gebruikt worden, namelijk het ``nonnegative least-squares curve fitting'' of\texttt{lsqnonneg}, maar dit algoritme is veel berekeningsintensiever dan het penrose-inverse algoritme. Later in sectie \ref{sec:select} wordt een alternatieve methode beschreven om met deze voorwaarde om te gaan.
 
 \subsubsection{eenheidssom}
 
 De eenheidssomvoorwaarde geeft weer dat de abundanties moeten sommeren tot \'e\'en. Dit zorgt ervoor dat de mogelijke abundanties geen deelruimte meer opspannen, aangezien het nulpunt geen deel meer is van de deelruimte. Dit kan worden opgelost door een van de endmembers als shadow te beschouwen. Dit houdt in dat het hypervlak verschoven wordt over de vector $e_1$ zodanig dat het nulpunt deel wordt van de hyperruimte en dit terug een deelruimte.
 
-Deze transformatie houd in dat de matrix $E$ getransplanteerd naar $[e_2-e_1;e_3-e_1;...;e_n-e_1]$ en het gemeten spectrum naar $\bm{x} - e_1$. Na deze transformatie kan het Penrose-inverse algoritme worden toegepast, zodat men de abundanties $a_2,a_3,...,a_n$ krijgt. De laatste abundantie $a_1$ kan gevonden worden door de eenheidssomvoorwaarde te eisen, zodat $a_1 = 1 - \sum{i=2}^{n} a_i$.
+Deze transformatie houdt in dat de matrix $E$ getransplanteerd naar $[e_2-e_1;e_3-e_1;...;e_n-e_1]$ en het gemeten spectrum naar $\bm{x} - e_1$. Na deze transformatie kan het Penrose-inverse algoritme worden toegepast, zodat men de abundanties $a_2,a_3,...,a_n$ krijgt. De laatste abundantie $a_1$ kan gevonden worden door de eenheidssomvoorwaarde te eisen, zodat $a_1 = 1 - \sum{i=2}^{n} a_i$.
+
+\subsection{vrijheidsgraden}
+
+In een optimalisatieprobleem noemt men het aantal re\"ele continue variabelen waarvan een variabele afhankelijk is de vrijheidsgraden. Wanneer het aantal te bepalen vrijheidsgraden groter is dan het aantal gegeven vrijheidsgraden, dan is het probleem ondergedefini\"eerd. Dit houdt in dat er meerdere mogelijke oplossingen voor de vrije parameters zijn waarvoor alle voorwaarden voldaan zijn. Als dit voorkomt, is een gevonden oplossing niet met zekerheid de juiste oplossing, en geeft het model dus verkeerde oplossingen terug, die lijken te voldoen aan het systeem.
+
+Het aantal vrijheidsgraden van het gemeten spectrum is per definitie het aantal banden van de gebruikte sensor. Bij de Avari sensor, welke gebruikt is voor de beelden in dit verslag, is dit $200$. Maar uit dimensionale analyse volgt dat het werkelijke aantal vrijheidsgraden maar rond de $15$ ligt. Als er dus een model gebruikt wordt met meer dan $15$ parameters geeft dit per definitie een goed resultaat, zelfs als dit model totaal niet overeenkomt met de werkelijkheid. Wanneer verschillende modellen vergeleken worden, zal een model met meer vrijheidsgraden een lagere reconstructie-error hebben.  
 
 
-\subsection{implementatie in matlab}
-
-\chapter{Bestaande methodes} 
-
-\section{multilineair ontmengen}
-
-Uitleg $\rightarrow$ lichtstraal heeft kans om te reflecteren
-
-\subsection{berekening}
-
-\subsection{reflectancy vs albedo}
-
-\subsection{afhankelijke vs onafhankelijke P waarden}
-
-\subsection{Ondergrens van P waarde}
-
-Of dat $P > 0$ moet gebruikt worden als voorwaarde of niet.
-
-\subsection{implementatie in matlab}
-
-
+\section{niet-linaire interacties}
 
 \section{Variabiliteit}\label{sec:select}
 
@@ -372,6 +369,106 @@ Of dat $P > 0$ moet gebruikt worden als voorwaarde of niet.
 \item pixel-afhankelijke selectie
 \end{itemize}
 
+
+\chapter{Oplossingsmethodes} 
+
+\section{multilineair ontmengen}
+
+Het multilineair model\cite{mlinmix} is een model dat oneindig veel ordes meeneemt, door de interactie van licht met de materialen op het monster te modelleren als een discreet Markov-proces. Deze bevat de volgende stappen, zoals beschreven in \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}.
+\begin{enumerate}
+\item De inkomende straal interageert met minstens \'e\'en materiaal in de bron.
+\item Na deze interactie heeft het materiaal een kans $P$ om een nieuwe interactie aan te gaan, en een kans $(1-P)$ om dat niet te doen.
+\item De kans om een nieuwe interactie aan te gaan met elk nieuw materiaal is evenredig met de abundantie van dat materiaal. Merk op dat aangezien de som van de abundaties \'e\'en is, de waarde van de kans gelijk is aan de abundantie.
+\item Wanneer een lichtstraal interageert met een materiaal wordt zijn spectrum gewijzigd, afhankelijk van het albedo van dit materiaal.
+\end{enumerate}
+
+De interactie van dit materiaal verloopt als volgt:
+\begin{equation}
+\bm{x}' = \bm{w} \odot \bm{x}
+\end{equation}
+waarbij $\bm{x}'$ de uitgaande straal is, $\bm{w}$ het albedo is, $\bm{x}$ de inkomende straal en $\odot$ het Hadamard product, ofwel elementgewijs product wat gedefinieerd is als volgt:
+\begin{equation}
+\left(\bm{x} \odot \bm{y}\right)_i = x_i.y_i
+\end{equation}
+
+
+\subsection{berekening}
+
+De kans dat een welbepaald pad gevolgd wordt, wordt als volgt genoteerd:
+
+\begin{equation}
+\mathcal{P}(i_1,i_2,i_3,...,i_R)
+\end{equation}
+
+Bovenstaande uitdrukking geeft de kans dat een lichtstraal respectievelijk reflecteert op materiaal 
+$i_1$,$i_2$,$i_3$ en zo voort. $R$ is hier het totale aantal materialen waarop gereflecteerd wordt.
+
+Deze kan aan de hand van het voorgaande Markov-proces berekend worden\cite{mlinmix}. 
+
+\begin{equation}
+\mathcal{P}(i_1,i_2,i_3,...,i_R) = P^{R-1} (1-P) \prod_{k=1}^R a_{i_k}
+\end{equation}
+
+De uitgaande straal ten gevolge van een specifiek pad is 
+$\Odot_{k=1}^R \bm{w}_{i_k}$ dus is de kans op de uitgaande straal vermenigvuldigd met het spectrum:
+\begin{equation}
+\bm{x}_{(i_1,i_2,i_3,...,i_R)} = P^{R-1} (1-P) \Odot_{k=1}^R \left(a_{i_k} \bm{w}_{i_k}\right)
+\end{equation}
+
+Gesommeerd over alle mogelijke paden wordt dit:
+
+\begin{equation}
+\bm{x} = \sum_{R=1}^{\infty} \left(\sum_{i_1}^{p} ... \sum_{i_R}^{p}\right)P^{R-1} (1-P) \Odot_{k=1}^R \left(a_{i_k} \bm{w}_{i_k}\right)
+\end{equation}
+
+Stel dat de kans dat een lichtstraal nog een keer interageert afhankelijk is van het materiaal. Dit kan voorkomen bij bijvoorbeeld een zandgrond met vegetatie erboven. Een lichtstraal die vertrekt op de grond zal met een grotere waarschijnlijkheid eerst met de vegetatie erboven interageren voor het op de detector terecht komt.
+
+\begin{align}
+\mathcal{P}(i_1,i_2,i_3,...,i_R) &= \prod_{k=1}^{R-1}P_{i_k} (1-P_{i_R})\\
+&= \prod_{k=1}^{R}P_{i_k} \frac{1-P_{i_R}}{P_{i_R}}
+\end{align}
+
+
+%Nu, laten we de verzameling beschouwen van alle mogelijke paden $(i_1,i_2,i_3,...,i_R)$. Deze kan worden verdeeld in klassen, waarbij elementen in dezelfde klasse worden geplaatst als ze een permutatie zijn van elkaar. Bijvoorbeeld $(1,2,3)$, $(2,1,3)$ en $(3,2,1)$ zitten in dezelfde klassen, maar $(1,2)$,$(1,2,3,4)$ en $(3,4,5)$ zitten allemaal in een verschillende klasse. Als we de $\mathcal{P}$ waarde van elk pad vervangen door het gemiddelde uit zijn klasse, die we $\mathcal{P'}$ zullen noemen, dan blijft de som over de reflectiespectr over alle paden gelijk. Merk op dt dit niet in het algemeen het geval is, maar alleen omdat de paden in eenzelfde klasse hetzelfde reflectiespectrum hebben.
+%
+%\begin{align}
+%\mathcal{P'}(i_1,i_2,i_3,...,i_R) &= \prod_{k=1}^{R}P_{i_k} \frac{1}{R}\sum_{k=1}^{R}\frac{1-P_k}{P_k}
+%\end{align}
+%
+%Veronderstel dat de verschillende $P_i$ waarden bij benadering aan elkaar gelijk zijn. Dit is niet zo een onverwachte eis, aangezien voordien deze waarden exact gelijk werden verondersteld. Met bij benadering gelijk bedoelen we dat $\forall i,j: \frac{P_i}{P_j} \approx 1$ en $\frac{1 - P_i}{1 - P_j} \approx 1$. Dus 0.51 en 0.52 zijn ongeveer gelijk, maar 0.001 en 0.000001 niet, hoewel de laatste twee getallen een veel kleiner verschil hebben. Dan kan het rekenkundig gemiddelde $\sum_{k=1}^{R}\frac{1-P_k}{P_k}$ vervangen worden door het meetkundig gemiddelde $\sqrt[R]{\prod_{k=1}^{R}\frac{1-P_k}{P_k}}
+%
+
+De amplitudo van dit pad wordt:
+
+\begin{align}
+\bm{x}_{(i_1,i_2,i_3,...,i_R)} &= \prod_{k=1}^{R-1}P_{i_k} (1-P_{i_R}) \Odot_{k=1}^R \left(a_{i_k} \bm{w}_{i_k}\right) \\
+&= \Odot_{k=1}^{R-1} \left(P_{i_k}a_{i_k} \bm{w}_{i_k}\right) \odot (1-P_{i_R}) a_{i_R} \bm{w}_{i_R} \\
+\bm{x} &= \sum_{R=1}^{\infty} \left(\sum_{i_1}^{p} ... \sum_{i_R}^{p}\right) \Odot_{k=1}^{R-1} \left(P_{i_k}a_{i_k} \bm{w}_{i_k}\right) \odot (1-P_{i_R}) a_{i_R} \bm{w}_{i_R} \\
+&= \sum_{i=1}^p (1-P_i) a_{i} \bm{w}_{i} + \sum_{i=1}^p \sum_{j=1}^p (1-P_i) a_{i} \bm{w}_{i} \odot P_j a_{j} \bm{w}_{j} \nonumber\\&+ \sum_{i=1}^p \sum_{j=1}^p \sum_{k=1}^p (1-P_i) a_{i} \bm{w}_{i} \odot P_j a_{j} \bm{w}_{j} \odot P_k a_{k} \bm{w}_{k} \nonumber\\&+ \sum_{i=1}^p \sum_{j=1}^p \sum_{k=1}^p  \sum_{l=1}^p (1-P_i) a_{i} \bm{w}_{i} \odot P_j a_{j} \bm{w}_{j} \odot P_k a_{k} \bm{w}_{k} \odot P_l a_{l} \bm{w}_{l} \nonumber \\& + ... \\
+&= \bm{z} + \bm{y}\odot\bm{z} + \bm{y}\odot\bm{y}\odot\bm{z} + ... \\
+&= \bm{z} + \bm{y}\odot\bm{x} \\
+ &= \frac{\bm{z}}{1-\bm{y}}
+\end{align}
+waar
+\begin{align}
+\bm{y} &= \sum_{i=1}^p P_i a_{i} \bm{w}_{i} \\
+\bm{z} &= \sum_{i=1}^p (1-P_i) a_{i} \bm{w}_{i} 
+\end{align}
+zodat
+\begin{equation}
+\bm{x} = \frac{\sum_{i=1}^p (1-P_i) a_{i} \bm{w}_{i}}{1-\sum_{i=1}^p P_i a_{i} \bm{w}_{i}} \label{eq:Pi}
+\end{equation}
+
+\subsection{reflectancy vs albedo}
+
+\subsection{afhankelijke vs onafhankelijke P waarden}
+
+
+
+\subsection{Ondergrens van P waarde}
+
+Of dat $P > 0$ moet gebruikt worden als voorwaarde of niet.
+
 \section{MESMA}
 
 \begin{itemize}
@@ -380,8 +477,6 @@ Of dat $P > 0$ moet gebruikt worden als voorwaarde of niet.
 \end{itemize}
 
 \subsection{ontmengingsmethode naar keuze (lineair vs multilineair)}
-
-\subsection{implementatie in matlab}
 
 \section{AAM}
 
@@ -393,7 +488,7 @@ Of dat $P > 0$ moet gebruikt worden als voorwaarde of niet.
 \subsection{implementatie in matlab}
 
 
-\chapter{Nieuwe Methodes}
+\chapter{Gecombineerde}
 
 \section{Semi-lineair model}
 
