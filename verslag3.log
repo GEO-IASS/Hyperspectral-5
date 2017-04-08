@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  8 APR 2017 14:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  8 APR 2017 15:18
 entering extended mode
 **verslag3.tex
 (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.tex
@@ -465,30 +465,33 @@ Package pdftex.def Info: hyp.PNG used on input line 249.
 Hoofdstuk 1.
 [10
 
-] [11]
-Overfull \hbox (9.88815pt too wide) in paragraph at lines 344--345
-\OT1/cmr/m/n/12 men geen ne-ga-tieve hoe-veel-he-den licht-stra-len heeft. Dit 
-noemt de niet-negativiteitsvoorwaarde.
- []
-
-[12] [13] [14] [15]
+] [11] [12]
+Missing character: There is no Â in font cmr12!
+Missing character: There is no ´ in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no ´ in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no ´ in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no ´ in font cmr12!
+ [13] [14] [15]
 Hoofdstuk 2.
 <multi.PNG, id=83, 297.36093pt x 198.7425pt>
 File: multi.PNG Graphic file (type png)
  <use multi.PNG>
-Package pdftex.def Info: multi.PNG used on input line 403.
+Package pdftex.def Info: multi.PNG used on input line 407.
 (pdftex.def)             Requested size: 187.89914pt x 125.58144pt.
  [16
 
  <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/multi.PNG>] [17] [18]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 516.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 521.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 516.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 521.
  [19]
 Hoofdstuk 3.
 [20
@@ -531,7 +534,7 @@ public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on verslag3.pdf (26 pages, 800431 bytes).
+Output written on verslag3.pdf (26 pages, 801001 bytes).
 PDF statistics:
  178 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
