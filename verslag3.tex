@@ -404,8 +404,8 @@ Het multilinair model gaat ervan uit dat een lichtstraal zo veel als mogelijk ka
 \caption{Markov-ketting van het multilineair model \label{fig:multi}}
 \end{wrapfigure}
 
-De inkomende lichtstraal valt in op minstens een materiaal. Op het moment dat deze invalt op een materiaal heeft deze een kans $P$ om nog eens in te vallen op een materiaal in dezelfde pixel, en een kans $(1 - P)$ om in te vallen op de detector. De kans van de gereflecteerde straal om in te vallen op een specifiek materiaal is gelijk aan de kans voor een lichtstraal afkomstig van de bron, namelijk de abundancie van de materiaal. Het spectrum van de lichtstraal veranderd bij elke interactie zoals beschreven in sectie \ref{sec:ref} wat het elementgewijs product is van de overgebleven lichtstraal en het 
-albedo van het materiaal. Dit hele process kan worden voorgesteld als een Markov-ketting zoals te zien in figuur \ref{fig:multi}.
+De inkomende lichtstraal valt in op een materiaal binnen een pixel. Wanneer deze invalt op het materiaal heeft deze een kans $P$ om herhaaldelijks in te vallen op hetzelfde of een ander materiaal in dezelfde pixel, en een kans $(1 - P)$ om te reflecteren naar de detector. De kans voor de gereflecteerde straal om in te vallen op een specifiek materiaal is gelijk aan diezelfde kans voor een lichtstraal afkomstig van de bron, namelijk de abundantie van de materiaal. Het spectrum van de lichtstraal veranderd bij elke interactie zoals beschreven in sectie \ref{sec:ref}. Dit wil zeggen dat de uitgaande lichtstraal  het elementgewijs product is van de invallende lichtstraal en het albedo van het materiaal.
+Dit hele process kan worden voorgesteld als een Markov-ketting zoals te zien in figuur \ref{fig:multi}.
 
 
 
@@ -420,16 +420,16 @@ albedo van het materiaal. Dit hele process kan worden voorgesteld als een Markov
 
 \subsection{berekening}
 
-De kans dat een welbepaald pad gevolgd wordt, wordt als volgt genoteerd:
+In deze sectie nomen we het "pad" van een lichtstraal de verzameling van de verschillende endmembers waarop het materiaal reflecteert, waarbij er rekening wordt gehouden met de volgorde. De kans dat een welbepaald pad gevolgd wordt, wordt als volgt genoteerd:
 
 \begin{equation}
 \mathcal{P}(i_1,i_2,i_3,...,i_R)
 \end{equation}
 
 Bovenstaande uitdrukking geeft de kans dat een lichtstraal reflecteert op materiaal 
-$i_1$, dan op $i_2$ dan op $i_3$ en zo voort, totdat het uieindelijk interageert mer lichtsraal $i_R$. $R$ is hier het totale aantal materialen waarop gereflecteerd wordt.
+$i_1$, dan op $i_2$ dan op $i_3$ en zo voort, totdat het uiteindelijk interageerd met materiaal $i_R$. $R$ is hier het totale aantal materialen waarop gereflecteerd wordt.
 
-De kans op dit pad kan worden uitgerekend aan de hand van het voorgenomde Markov-proces\cite{mlinmix}. 
+De kans op dit pad kan worden uitgerekend aan de hand van het voorgenoemde Markov-proces\cite{mlinmix}. 
 
 \begin{equation}
 \mathcal{P}(i_1,i_2,i_3,...,i_R) = P^{R-1} (1-P) \prod_{k=1}^R a_{i_k}
@@ -446,7 +446,7 @@ Gesommeerd over alle mogelijke paden geeft dit het totale gemeten spectrum.
 \bm{x} = \sum_{R=1}^{\infty} \left(\sum_{i_1}^{p} ... \sum_{i_R}^{p}\right)P^{R-1} (1-P) \Odot_{k=1}^R \left(a_{i_k} \bm{w}_{i_k}\right)
 \end{equation}
 
-Stel dat de kans dat een lichtstraal nog een keer interageerd afhankelijk is van het materiaal. Dan is de berekening van het pas analoog. 
+Stel dat de kans dat een lichtstraal nog een keer interageerd afhankelijk is van het materiaal. De kans dat een specifiek pad gevolgd wordt is kan op analoge wijze worden berekend
 
 \begin{align}
 \mathcal{P}(i_1,i_2,i_3,...,i_R) &= \prod_{k=1}^{R-1}P_{i_k} (1-P_{i_R})\\
@@ -474,6 +474,22 @@ zodat
 \bm{x} = \frac{\sum_{i=1}^p (1-P_i) a_{i} \bm{w}_{i}}{1-\sum_{i=1}^p P_i a_{i} \bm{w}_{i}} \label{eq:Pi}
 \end{equation}
 
+Dit is een uitdrukking voor het multilineair mengen van endmembers waarbij de reflectiekans endmember afhankelijk is. Indien men ge\"intereseerd is in een onafhankelijke reflectiekans, kan de formule hiervoor bekomen worden door te stellen dat $P_i = P \forall i$ zodat de formule wordt:
+
+\begin{equation}
+\bm{x} = \frac{(1-P) \sum_{i=1}^p a_{i} \bm{w}_{i}}{1-P\sum_{i=1}^p  a_{i} \bm{w}_{i}} \label{eq:P}
+\end{equation}
+
+wat exact overeenkomt met de formule in de literatuur\cite{mlinmix}.
+
+Om aan de hand van dit model te ontmengen moet nog steeds gebruik gemaakt worden van het minimaliseren van de reconstructie-error. 
+
+\begin{align}
+\text{argmin}_{a_1 ... a_p; P_1 ... P_p} \left| \bm{x} - \frac{\sum_{i=1}^p (1-P_i) a_{i} \bm{w}_{i}}{1-\sum_{i=1}^p P_i a_{i} \bm{w}_{i}} \right|^2
+\end{align}
+
+Aangezien deze vergelijking niet lineair is en dus ook geen hypervlak opspant, kan deze uitdrukking niet geminimaliseerd worden door middel van projecties, en zijn hier geavanceerde minimalisatietechnieken voor nodig. In matlab\cite{MATLAB} wordt voor deze thesis hier de functie \texttt{fmincon} gebruikt. Deze neemt gewoon de uitdrukking $\left| \bm{x} - \frac{\sum_{i=1}^p (1-P_i) a_{i} \bm{w}_{i}}{1-\sum_{i=1}^p P_i a_{i} \bm{w}_{i}} \right|^2$ in en geeft hier een minimum voor terug. Dit heeft als nadeel dat het draaien van deze functie op de experimentele data later beschreven in deze thesis een looptijd heeft van ongeveer $0.1$ seconden voor elke pixel, in tegenstelling tot het berekenen van pseudo-inversen, wat ongeveer $50$ microseconden in beslag neemt. 
+
 \subsection{reflectancy vs albedo}
 
 Het albedo  $\bm{w}_i$ uit vorig hoofdstuk kan in werkelijkheid niet exact gemeten worden. In theorie kan deze afgeleid worden uit de reflectie van een meting met een enkele endmember. Dit kan bepaald worden door vergelijking \ref{eq:Pi} te inverteren, zodat:
@@ -488,7 +504,7 @@ Echter, hier wordt verondersteld dat $P_i$ gekend is, wat meestal niet het geval
 
 $P$ is per definitie een getal groter dan nul, omdat kansen tussen nul en een liggen. Echter, het is mogelijk om in vergelijking \ref{eq:Pi} een negatieve waarde in te voeren. Deze waarde kan in werkelijkheid negatif zijn ten gevolge van twee fysische situaties. Enerzijds is, zoals beschreven in de vorige sectie, het albedo slechts een benadering. Doordat de reflectie van de referentie-endmember nul wordt verondersteld te zijn, is deze lager dan werkelijkheid. Bijgevolg zal ook de $P$ waarde van de pixel lager zijn dan in de werkelijkheid. In het geval de reflectiekans van de pixel lager is dan de reflectiekans van het referentiemateriaal, zal deze waarde zelfs onder nul liggen. Merk op dat dit systeem niet linair is, waardoor een verkeerde reflectiekans van bovengenoemde sectie niet kan opgelost door het herdefinieren van $P$. Anderzijds zijn er ook interpixelinteracties die invloed hebben op het systeem. Deze kunnen extra lichtstralen die al hebben gereflecteerd op het materiaal toevoegen aan het systeem, wat zorgt voor een verlaging van de reflectiekans. 
 
-\subsection{afhankelijke vs onafhankelijke P waarden}
+%\subsection{afhankelijke vs onafhankelijke P waarden}
 
 
 
