@@ -5,8 +5,8 @@
 \contentsline {chapter}{Inleiding}{6}
 \contentsline {subsubsection}{elektromagnetische golven}{6}
 \contentsline {subsubsection}{hyperspectrale cameras}{7}
-\contentsline {subsection}{\numberline {0.0.1}reflectie}{7}
-\contentsline {section}{\numberline {0.1}toepassingen}{8}
+\contentsline {section}{\numberline {0.1}reflectie}{7}
+\contentsline {section}{\numberline {0.2}toepassingen}{8}
 \contentsline {chapter}{\numberline {1}Ontmengen}{10}
 \contentsline {section}{\numberline {1.1}Resolutie}{10}
 \contentsline {section}{\numberline {1.2}spectrale analyse}{11}
