@@ -1,6 +1,6 @@
 \documentclass[12pt]{report}
 
-\newcommand{\titletext}{Semilinaire spectraalanalyse}
+\newcommand{\titletext}{Spectraalanalyse Variabiliteit voor niet-lineaire systemen.}
 
 \usepackage[dutch]{babel}
 \usepackage[nobottomtitles]{titlesec}
@@ -152,16 +152,16 @@ Rob {Heylen} % Supervisor's Name
 \newpage
 \chapter*{Structuur van deze thesis}
 \addcontentsline{toc}{chapter}{Structuur van deze thesis}
+ In de inleiding worden de fundamenten van aardobservatie beschreven.Dit hoofdstuk is vooral gebaseerd op 
+\textit{Fundamentals of remote sensing\cite{fun}}.
 
-De inleiding legt uit wat aardopservatie is, welke concepten hiervoor nodig zijn en een aantal toepassingen hiervoor. Dit hoofdstuk is vooral gebaseerd op \textit{Fundamentals of remote sensing\cite{fun}}.
+Het eerste hoofdstuk introduceert het onderwerp van deze thesis: spectrale ontmenging. Eerst wordt het lineaire spectrale ontmengingsmodel beschreven, welke het meest gebruikte model is. Dan worden twee belangrijke problemen beschreven die niet met het lineaire model kunnen worden behandeld: niet-lineaire effecten en endmember variabiliteit.
 
-Het eerste hoofdstuk beschrijft ontmengen, en bevat een voorbeeld van een ontmengmethode, namelijk de linaire methode. Ook bevat deze een beschrijving niet-lineaire effecten en variabiliteit. 
+In hoofdstuk 2 worden 2 state-of-the-art methodes uit de literatuur beschreven voor niet-lineair spectrale ontmenging en endmember variabiliteit.  Het multilineair model is een methode voor niet-lineaire spectrale ontmenging, en wordt uitvoerig beschreven in: \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}. De tweede methode brengt  endmember variabiliteit in rekening en wordt behandeld in: \textit{Hyperspectral unmixing with endmember variability via alternating angle minimization}\cite{mesma}.
 
-In het volgende hoofdstuk worden methodes uit de literatuur beschreven om om te gaan met de problemen beschreven in het vorige hoofdstuk. Enerzijds wordt het multilineair model beschreven, dat gebaseerd is op \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}. De volgende twee methodes zijn selectiemethoden. Deze methoden zijn ontwikkeld om variabiliteit in rekening te brengen, en staan beschreven in \textit{Hyperspectral unmixing with endmember variability via alternating angle minimization}\cite{mesma}. Deze methoden zijn volledig gekend in de literatuur maar voor deze thesis zijn deze methoden opnieuw berekend en ge\"implementeert. 
-
-Het derde hoofdstuk beschrijft een methode die rekening houd met beide concepten, niet-lineariteit en variabiliteit. Deze is gebaseerd op de methoden beschreven in het vorige hoofdstuk. Dit hoofdstuk bevat ook een numerieke test die gebruik maakt van monte-carlo simulaties.
-
-In het laatste hoofdstuk worden al deze methoden, en een aantal varianten hierop vergeleken aan de hand van een experimentele dataset: de Alina dataset\cite{Alina} en wordt besproken welke methodes en varianten het beste zijn in welke situaties. 
+Er zijn in de literatuur momenteel nauwelijks of geen methoden gekend die endmember variabiliteit in rekening brengen bij niet-lineaire ontmenging. Daarom heb ik in deze masterproef onderzoek gedaan naar de combinatie van niet-lineaire ontmenging en endmember variabiliteit. In het derde hoofdstuk beschrijf ik een aantal methodes die gelijktijdig rekening houden met beide concepten. Deze methodes zijn gebaseerd op combinaties van de 2 methodes uit hoofdstuk 2.
+	
+In hoofdstuk 4 worden de ontwikkelde methodes en een aantal varianten hierop gevalideerd  op een experimentele dataset: de Alina dataset\cite{Alina}.  
 \newpage
 \chapter*{Inleiding}
 \addcontentsline{toc}{chapter}{Inleiding}
@@ -237,6 +237,10 @@ Dit is een stelsel van vergelijkingen (een vergelijking voor elke waarde van $\l
 met $\odot$ het Hadamard ofwel elementwijs product. De vector $R$ noemt men de reflectie van het materiaal. Deze neemt in beschouwing dat er meerdere interacties kunnen gebeuren in het materiaal. De reflectie waarbij alleen een enkelvoudige interactie meegenomen is noemt men het albedo.
 
 
+\section{atmosferische correctie}
+
+Wanneer de lichtbron die we beschouwen uniform en genormaliseerd is, is het spectrum van het materiaal gelijk aan het spectrum van het gedetecteerde licht. Alleen is de in werkelijkheid gebruikte lichtbron - meestal is dit de zon - niet uniform. Ook zijn er verschillende effecten die de lichtstraal be\"invloeden\cite{fun} zoals verschuiving, atmosferische verstrooiing, Rayleigh verstrooiing, Mie verstrooiing, nonselectieve verstrooiing, atmosferische absorptie, ozon absorptie, $CO_2$-absorptie en interpixel verstrooiing. De gebruikte datasets in deze thesis zijn door een algoritme gecorrigeerd voor al deze effecten, en de beelden kunnen  deze dus beschouwd worden als verlicht door een uniforme lichtbron, waarbij de gedetecteerde lichtstraal alleen be\"invloed is door reflecties en Gaussische ruis. 
+
 \section{toepassingen}
 
 
@@ -250,7 +254,7 @@ Aardobservatie wordt ook toepast in de geologie. Van de aardbodem kan niet allee
 \caption{Opbouw van een hyperspectraal beeld. Deze afbeelding komt uit \textit{Fundamentals of remote sensing\cite{fun}}}
 \end{figure}
 
-\chapter{Ontmengen}
+\chapter{Spectraal ontmengen}
 
 
 
@@ -258,16 +262,15 @@ Aardobservatie wordt ook toepast in de geologie. Van de aardbodem kan niet allee
 
 \section{Resolutie}
 
-Een pixel in een hyperspectraal beeld bevat een of meerdere materialen. Indien elke pixel maar een enkel materiaal zou bevatten, zou elk spectrum van elke pixel vergeleken kunnen worden met een referentiespectrum. Echter, Het is theoretisch onmogelijk oom een camera te maken met zo een grote resolutie. De hoeveelheid licht dat op de camera valt is immers beperkt, en moet verdeeld worden over de verschillende pixels en de verschillende banden. Dit betekent dat wanneer de pixels te klein worden, elke pixel te weinig licht krijgt en de signaal ruis verhouding te laag wordt, en aangezien licht bestaat uit fotonen, is er een limiet van de gevoeligheid van de camera. 
+Een pixel in een hyperspectraal beeld bevat een of meerdere materialen. Indien elke pixel maar een enkel materiaal zou bevatten, zou elk spectrum van elke pixel vergeleken kunnen worden met een referentiespectrum. Echter, het is theoretisch onmogelijk om een camera te maken met resolutie die groot genoeg is om dit te verwezenlijken. De hoeveelheid licht dat op de camera valt is immers beperkt, en moet verdeeld worden over alle pixels en de verschillende banden. Dit betekent dat wanneer de pixels te klein worden, elke pixel te weinig licht krijgt en de signaal ruis verhouding te laag wordt, en aangezien licht bestaat uit fotonen, is er een limiet van de gevoeligheid van de camera. 
 
 De enige methode om de gevoeligheid te verhogen is bijgevolg een langere belichtingstijd. Dit zorgt echter voor een vergroting van de ruis en is niet haalbaar voor een satelliet in een baan rond de aarde - zelfs als het praktisch haalbaar was om de resolutie kleiner te maken, ligt het probleem vooral in de fractalische eigenschappen van vele objecten. 
 
-Als er bijvoorbeeld in een bos een zeer grove resolutie gebruikt wordt, vallen er verschillende soorten bomen in een enkele pixel. Als de pixels kleiner worden, kunnen bomen al van elkaar onderscheiden worden, maar de takken van verschillende bomen nog niet. Zelfs als enkel een blad beschouwd wordt zijn er nog verschillende materialen, aangezien de nerven van het blad uit ander materiaal bestaan dan de bladmoes. Ook bij mineralen heeft men hetzelfde probleem: een gesteente bevat verschillende mineralen, maar om deze van elkaar te kunnen onderscheiden moet de pixelgrootte op microscopisch niveau zijn. 
+Als er bijvoorbeeld in een bos een zeer grove resolutie gebruikt wordt, vallen er verschillende soorten bomen in een enkele pixel. Als de pixels kleiner worden, kunnen bomen al van elkaar onderscheiden worden, maar de takken van verschillende bomen nog niet. Zelfs een blad bestaat nog uit verschillende materialen, aangezien de nerven van het blad uit ander materiaal bestaan dan de bladmoes. Ook bij mineralen heeft men hetzelfde probleem: een gesteente bevat verschillende mineralen, maar om deze van elkaar te kunnen onderscheiden moet de pixelgrootte op microscopisch niveau zijn. 
 
 Hierom is het van belang om een spectra van een pixel, dat een combinatie is van de spectra van de verschillende materialen in deze pixel, te kunnen ``ontmengen''. Hierbij is men specifiek ge\"interesseerd in de abundantie van elk materiaal: een getal dat het gedeelte van de lichtstralen dat afkomstig is van dat specifiek materiaal in een pixel weergeeft. Aangezien dit een goede maat is voor de aanwezige hoeveelheid van een bepaald materiaal in een pixel, is dit de belangrijkste parameter.
 
-\section{spectrale analyse}
-
+\section{Spectrale analyse}
 
 Het spectrum van licht kan beschreven worden als een wiskunde functie die een frequentie omzet in een intensiteit. In werkelijkheid bevat een hyperspectraal beeld niet de volledige functie, maar bevat deze tweehonderd waarden in deze functie, de zogenoemde banden. In matlab\citep{MATLAB} zal dit worden opgeslagen als een driedimensionale tensor, waarbij de verschillende assen de x positie, y positie en de band van de pixel weergeven. 
 
@@ -282,11 +285,8 @@ In deze thesis is men niet ge\"interesseerd in  interpixel-interacties, wat bete
 
 
 
-\subsection{atmosferische correctie}
 
-Wanneer de lichtbron die we beschouwen uniform en genormaliseerd is, is het spectrum van het materiaal gelijk aan het spectrum van het gedetecteerde licht. Alleen is de in werkelijkheid gebruikte lichtbron - meestal is dit de zon - niet uniform. Ook zijn er verschillende effecten die de lichtstraal be\"invloeden\cite{fun} zoals verschuiving, atmosferische verstrooiing, Rayleigh verstrooiing, Mie verstrooiing, nonselectieve verstrooiing, atmosferische absorptie, ozon absorptie, $CO_2$-absorptie en interpixel verstrooiing. De gebruikte datasets in deze thesis zijn door een algoritme gecorrigeerd voor al deze effecten, en de beelden kunnen  deze dus beschouwd worden als verlicht door een uniforme lichtbron, waarbij de gedetecteerde lichtstraal alleen be\"invloed is door reflecties en Gaussische ruis. 
-
-\section{lineair ontmengen}
+\section{Lineair ontmengen}
 
 Bij lineair ontmengen wordt uitgegaan van het ``lineair mixing model''. Een lichtstraal valt in in een pixel op een enkel wel bepaald materiaal, interageerd met dit materiaal een enkele keer, en valt dan op de detector. Dit betekend dat het spectrum van de teruggekaatste lichtstraal alleen afhangt van de reflectantie van dit materiaal, de endmember genaamd. De totale reflectantie van een pixel die gemeten wordt is een gewogen gemiddelde van deze verschillende endmembers, waarvan het gewicht van elke endmember bepaald wordt door het gedeelte van de lichtstralen dat op dit materiaal gereflecteerd wordt. Dit gedeelte is de abundantie. In symbolen geeft dit:
 
@@ -299,7 +299,7 @@ Bij lineair ontmengen wordt uitgegaan van het ``lineair mixing model''. Een lich
 \end{align}
 
 Waarbij $\bm{x}$ het gemeten spectrum is, $e_i$ de endmembers en  $a_i$ de abundanties.
-Echter, omdat het mixing model slechts een benadering is van de werkelijkheid en omdat op een experimentele meting altijd een vorm van ruis zit, kan het exacte spectrum nooit gevonden worden. Er wordt daarom gezocht naar het reconstructiespectrum dat het dichtst ligt bij het werkelijke spectrum. De ruis was verondersteld normaal verdeeld te zijn. Dit is een eenvoudig gevolg van het centrale-limiet theorema, dat zegt dat de som van een groot aantal kansvariabelen normaal verdeeld is. 
+Echter, omdat het mixing model slechts een benadering is van de werkelijkheid en omdat op een experimentele meting altijd een vorm van ruis zit, kan het exacte spectrum nooit gevonden worden. Er wordt daarom gezocht naar het reconstructiespectrum dat het dichtst ligt bij het werkelijke spectrum. De ruis wordt verondersteld normaal verdeeld te zijn. Dit is een eenvoudig gevolg van het centrale-limiet theorema, dat zegt dat de som van een groot aantal kansvariabelen normaal verdeeld is. 
 
 Noem $\bm{x}$ het gemeten spectrum, en $\bm{y}$ het reconstructiespectrum, met $\bm{\eta}$ de ruis, dan is
 
@@ -317,9 +317,8 @@ Deze norm kan berekend worden gebruik makend van vergelijking \ref{eq:rec0}.
 
 De uitdrukking $\left|\bm{x} - \bm{y}\right|$ noemt men de reconstructie-error. Het is deze uitdrukking dat geminimaliseerd moet worden bij ontmenging. 
 
-Het minimaliseren van een uitdrukking om een waarde te vinden noemt men een optimalisatieprobleem, omdat men op zoek is naar de optimale waarden voor de verschillende parameters.
 
-\subsection{minimaliseren van reconstructieerror}
+\subsection{Minimaliseren van reconstructieerror}
 Voor het linair model wordt in dit hoofdstuk er vanuit gegaan dat de endmembers gekend zijn, maar de abundanties en de ruis niet. Als de ruis wordt toegevoegd aan vergelijking \ref{eq:nq} dan geldt:
 
 \begin{align}
@@ -332,15 +331,13 @@ Het minimaliseren van de reconstructie-error, gebruik makend van vergelijking \r
 \text{argmin}_{a_1 ... a_p} \left| \bm{x} - \sum_{i=1}^p a_i \bm{e}_i\right|^2
 \end{align}
 
-Indien de abundanties $a_i$ vrije re\"ele waarden zouden zijn, zou dit minimum eenvoudig berekend kunnen worden, door een projectie te nemen opgespannen door het vlak van de endmembers. Deze projectie kan genomen worden als volgt.
-
-Neem $E = [e_1,e_2,...,e_n]$ een matrix met als kolommen de verschillende endmembers. De projectie op de deelruimte opgespannen door de elementen van $E$ kan gevonden worden aan de hand van de Penrose-inverse matrix.
+Indien de abundanties $a_i$ vrije re\"ele waarden zouden zijn, zou dit minimum eenvoudig berekend kunnen worden, door een projectie te nemen opgespannen door het vlak van de endmembers. Deze projectie kan genomen worden als volgt. Neem $E = [e_1,e_2,...,e_n]$ een matrix met als kolommen de verschillende endmembers. De projectie op de deelruimte opgespannen door de elementen van $E$ kan gevonden worden aan de hand van de Penrose-inverse matrix.
 
 \begin{equation}
 \bm{a} = (E^T E)^{-1} E^T \bm{x}
 \end{equation}
 
-Doordat de abundanties een gedeelte van lichtstralen zijn dat op een materiaal botst, zijn er twee extra voorwaarden hierop. Enerzijds moeten de abundanties positief zijn, aangezien men geen negatieve hoeveelheden lichtstralen kan hebben. Dit noemt men de niet-negativiteitsvoorwaarde. Anderzijds kan elke lichtstraal maar op een enkel materiaal botsen, dus is de som van alle gedeeltes \'e\'en. Dit noemt de eenheidssomvoorwaarde.  
+Doordat de abundanties een gedeelte van lichtstralen zijn dat op een materiaal botst, zijn er twee extra voorwaarden hierop. Enerzijds moeten de abundanties positief zijn, aangezien men geen negatieve hoeveelheid lichtstralen kan hebben. Dit noemt men de niet-negativiteitsvoorwaarde. Anderzijds kan elke lichtstraal maar op een enkel materiaal botsen, dus is de som van alle gedeeltes \'e\'en. Dit noemt de eenheidssomvoorwaarde.  
 
 
 \subsubsection{niet-negativiteit}
@@ -355,27 +352,35 @@ Deze transformatie houdt in dat de matrix $E$ getranslateerd wordt naar $[e_2-e_
 
 \vspace{5 mm}
 Het algoritme dat beide bovenstaande correcties doorvoert noemt men het ´´fullyconstrained
-least-squares unmixing model''. Het algorimte dat enkel de eenheidssomvoorwaarde meeneemt, maar niet de nietnegativiteisvoorwaarde, noemt men het ´´sum-to-one
+least-squares unmixing model''. Het algoritme dat enkel de eenheidssomvoorwaarde meeneemt, maar niet de nietnegativiteisvoorwaarde, noemt men het ´´sum-to-one''
 constrained least-squares unmixing model''.
 
-\subsection{vrijheidsgraden} \label{sec:vrij}
 
-In een optimalisatieprobleem noemt men het aantal re\"ele continue variabelen waarvan een variabele afhankelijk is de vrijheidsgraden. Wanneer het aantal te bepalen vrijheidsgraden groter is dan het aantal gegeven vrijheidsgraden, dan is het probleem ondergedefini\"eerd. Dit houdt in dat er meerdere mogelijke oplossingen voor de vrije parameters zijn waarvoor alle voorwaarden voldaan zijn. Als dit voorkomt, is een gevonden oplossing niet met zekerheid de juiste oplossing, en geeft het model dus verkeerde oplossingen terug, die lijken te voldoen aan het systeem.
-
-Het aantal vrijheidsgraden van het gemeten spectrum is per definitie het aantal banden van de gebruikte sensor. Bij de Avari sensor, welke gebruikt is voor de beelden in dit verslag, is dit $200$. Maar uit dimensionale analyse volgt dat het werkelijke aantal vrijheidsgraden maar rond de $15$ ligt. Als er dus een model gebruikt wordt met meer dan $15$ parameters geeft dit per definitie een goed resultaat, zelfs als dit model totaal niet overeenkomt met de werkelijkheid. Wanneer verschillende modellen vergeleken worden, zal een model met meer vrijheidsgraden een lagere reconstructie-error hebben. 
  
 \vspace{5 mm}
 
 Volgende secties beschrijven twee belangrijke problemen voor spectraal ontmengen, en hiervoor wordt een oplossing beschreven in de rest van deze thesis.
 
 
-\section{niet-linaire interacties}
+\section{Niet-linaire interacties}
 
 In vorig hoofdstuk is men ervan uitgegaan dat elke lichtstraal maar een enkele keer interageert met een enkel materiaal. Dit is een goede benadering wanneer men vlakke gebieden met duidelijk verdeelde endmembers beschouwd. Echter, dit geldt niet meer voor geometrische structuren zoals gebouwen of vegetatie, waarbij enkelvoudige interacties zeldzaam zijn en de meerderheid van de lichtstralen meermaals interageert. Hetzelfde geldt voor gebieden met mineralen, waarbij lichtstralen meerdere keren interagerend met een enkele korrel en effecten zoals transmissie belangrijk worden.
 
 In deze thesis wordt er geen rekening gehouden met transmissie-effecten en interpixelinteracties. Dit laatste is het fenomeen waarbij een lichtstraal interageerd met materialen in twee of meer verschillende pixels. Wel wordt er rekening gehouden met niet-linaire effecten in een enkele pixel, wat inhoud dat een lichtstraal meerdere keren kan interageren met dezelfde of verschillende materialen in een enkele pixel. Hiervoor bestaan er twee veelgebruikte modellen, namelijk het bilinair en het multilinair model.
 
-\subsection{bilinair model}
+\section{Variabiliteit}\label{sec:select}
+
+In dit hoofdstuk werd ervan uitgegaan dat elke endmember een enkel vast spectrum heeft. In werkelijkheid is dit niet het geval. Enerzijds worden verschillende materialen vaak beschouwd als een enkel materiaal. Bijvoorbeeld de bovenkant en de onderkant van een blad hebben een verschillend spectrum. Ook door de mens gemaakte materialen, zoals beton en asfalt, kunnen verschillende spectra hebben. Meestal is het niet interessant om een onderscheid te maken tussen deze verschillende materialen. Anderzijds kan het spectrum van een enkel materiaal ook verschillen dankzij verschillen in belichting en atmosfeer. Deze beide effecten zorgen ervoor dat een enkele endmember meerdere spectra kan hebben. Dit concept noemt variabiliteit. Dit betekend dat elke endmember beschreven wordt door een bibliotheek van spectra, in plaats van een enkel spectrum. Hoe kan worden ontmengd rekening houdend met variabiliteit staat beschreven in sectie \ref{sec:mesma}. 
+
+\section{Vrijheidsgraden} \label{sec:vrij}
+
+In een optimalisatieprobleem noemt men het aantal re\"ele continue variabelen waarvan een variabele afhankelijk is de vrijheidsgraden. Wanneer het aantal te bepalen vrijheidsgraden groter is dan het aantal gegeven vrijheidsgraden, dan is het probleem ondergedefini\"eerd. Dit houdt in dat er meerdere mogelijke oplossingen voor de vrije parameters zijn waarvoor alle voorwaarden voldaan zijn. Als dit voorkomt, is een gevonden oplossing niet met zekerheid de juiste oplossing, en geeft het model dus verkeerde oplossingen terug, die lijken te voldoen aan het systeem.
+
+Het aantal vrijheidsgraden van het gemeten spectrum is per definitie het aantal banden van de gebruikte sensor. Bij de Avari sensor, welke gebruikt is voor de beelden in dit verslag, is dit $200$. Maar uit dimensionale analyse volgt dat het werkelijke aantal vrijheidsgraden maar rond de $15$ ligt. Als er dus een model gebruikt wordt met meer dan $15$ parameters geeft dit per definitie een goed resultaat, zelfs als dit model totaal niet overeenkomt met de werkelijkheid. Wanneer verschillende modellen vergeleken worden, zal een model met meer vrijheidsgraden een lagere reconstructie-error hebben. 
+
+\chapter{Niet-lineariteit en endmember variabiliteit} 
+
+\section{Bilinair ontmengen}
 
 Het bilineair model beschrijft dat elke lichtstraal \'e\'en of twee keer kan reflecteren. Van dit model bestaan twee varianten. Enerzijds bestaat het model van Nascimento en Somers\cite{mlinmix}. Deze voegt de bilinaire term is als volgt.
 
@@ -391,27 +396,19 @@ Deze geeft in de praktijk geen goede resultaten, omdat het bilinair model is ont
 
 Dit model heeft een ander probleem, namelijk dat voor een model met $p$ materialen, dit model $p^2$ extra vrijheidsgraden bevat. Dit betekend dat er geen garantie is dat het model het juiste resultaat weergeeft, zoals beschreven in sectie \ref{sec:vrij}. 
 
-Wegens deze problemen met het bilinaire model, wordt er overgegaan naar het multilinair model dat sterker fysisch onderbouwd is, en dat meer dan twee reflecties meeneemt. Dit model wordt beschreven in sectie \ref{sec:multi}.
-
-\section{Variabiliteit}\label{sec:select}
-
-In dit hoofdstuk werd ervan uitgegaan dat elke endmember een enkel vast spectrum heeft. In werkelijkheid is dit niet het geval. Enerzijds worden verschillende materialen vaak beschouwd als een enkel materiaal. Bijvoorbeeld de bovenkant en de onderkant van een blad hebben een verschillend spectrum. Ook door de mens gemaakte materialen, zoals beton en asfalt, kunnen verschillende spectra hebben. Meestal is het niet interessant om een onderscheid te maken tussen deze verschillende materialen. Anderzijds kan het spectrum van een enkel materiaal ook verschillen dankzij verschillen in belichting en atmosfeer. Deze beide effecten zorgen ervoor dat een enkele endmember meerdere spectra kan hebben. Dit concept noemt variabiliteit. Dit betekend dat elke endmember beschreven wordt door een bibliotheek van spectra, in plaats van een enkel spectrum. Hoe kan worden ontmengd rekening houdend met variabiliteit staat beschreven in sectie \ref{sec:mesma}. 
-
-\chapter{Oplossingsmethodes} 
+Wegens deze problemen met het bilinaire model, wordt er overgegaan naar het multilinair model dat sterker fysisch onderbouwd is, en dat meer dan twee reflecties meeneemt. Dit model wordt beschreven volgende sectie.
 
 \section{multilineair ontmengen} \label{sec:multi}
 
-Het multilinair model gaat ervan uit dat een lichtstraal zo veel als mogelijk kan reflecteren in een enkele pixel. Dit model is gebaseerd op \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}. 
+Het multilinair model gaat ervan uit dat een lichtstraal meerdere kan reflecteren in een enkele pixel. Dit model is gebaseerd op \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}. 
 
 \begin{wrapfigure}{R}{0.4\textwidth}
 \includegraphics[width=0.4\textwidth]{multi.PNG}
 \caption{Markov-ketting van het multilineair model \label{fig:multi}}
 \end{wrapfigure}
 
-De inkomende lichtstraal valt in op een materiaal binnen een pixel. Wanneer deze invalt op het materiaal heeft deze een kans $P$ om herhaaldelijks in te vallen op hetzelfde of een ander materiaal in dezelfde pixel, en een kans $(1 - P)$ om te reflecteren naar de detector. De kans voor de gereflecteerde straal om in te vallen op een specifiek materiaal is gelijk aan diezelfde kans voor een lichtstraal afkomstig van de bron, namelijk de abundantie van de materiaal. Het spectrum van de lichtstraal veranderd bij elke interactie zoals beschreven in sectie \ref{sec:ref}. Dit wil zeggen dat de uitgaande lichtstraal  het elementgewijs product is van de invallende lichtstraal en het albedo van het materiaal.
-Dit hele process kan worden voorgesteld als een Markov-ketting zoals te zien in figuur \ref{fig:multi}.
-
-
+De inkomende lichtstraal valt in op een materiaal binnen een pixel. Wanneer deze invalt op het materiaal heeft deze een kans $P$ om opnieuw in te vallen op hetzelfde of een ander materiaal in dezelfde pixel, en een kans $(1 - P)$ om te reflecteren naar de detector. De kans voor de gereflecteerde lichtstraal om in te vallen op een specifiek materiaal is gelijk aan diezelfde kans voor een lichtstraal afkomstig van de bron, namelijk de abundantie van de materiaal. Het spectrum van de lichtstraal veranderd bij elke interactie zoals beschreven in sectie \ref{sec:ref}. Dit wil zeggen dat de uitgaande lichtstraal  het elementwijs product is van de invallende lichtstraal en het albedo van het materiaal.
+Dit hele proces kan worden voorgesteld als een Markov-ketting zoals te zien in figuur \ref{fig:multi}.
 
 %\begin{enumerate}
 %\item De inkomende straal interageert met minstens \'e\'en materiaal in de bron.
@@ -419,8 +416,6 @@ Dit hele process kan worden voorgesteld als een Markov-ketting zoals te zien in 
 %\item De kans om een nieuwe interactie aan te gaan met elk nieuw materiaal is evenredig met de abundantie van dat materiaal. Merk op dat aangezien de som van de abundaties \'e\'en is, de waarde van de kans gelijk is aan de abundantie.
 %\item Wanneer een lichtstraal interageert met een materiaal wordt zijn spectrum gewijzigd, afhankelijk van het albedo van dit materiaal.
 %\end{enumerate}
-
-
 
 \subsection{berekening}
 
@@ -430,8 +425,7 @@ In deze sectie nomen we het "pad" van een lichtstraal de verzameling van de vers
 \mathcal{P}(i_1,i_2,i_3,...,i_R)
 \end{equation}
 
-Bovenstaande uitdrukking geeft de kans dat een lichtstraal reflecteert op materiaal 
-$i_1$, dan op $i_2$ dan op $i_3$ en zo voort, totdat het uiteindelijk interageerd met materiaal $i_R$. $R$ is hier het totale aantal materialen waarop gereflecteerd wordt.
+Met andere woorden, deze uitdrukking geeft de kans weer dat een lichtstraal reflecteert op materiaal $i_1$, daarna op $i_2$, op $i_3$ en zo voort, totdat deze uiteindelijk interagerend met materiaal $i_R$. $R$ is hier het totale aantal materialen waarop gereflecteerd wordt.
 
 De kans op dit pad kan worden uitgerekend aan de hand van het voorgenoemde Markov-proces\cite{mlinmix}. 
 
@@ -439,12 +433,12 @@ De kans op dit pad kan worden uitgerekend aan de hand van het voorgenoemde Marko
 \mathcal{P}(i_1,i_2,i_3,...,i_R) = P^{R-1} (1-P) \prod_{k=1}^R a_{i_k}
 \end{equation}
 
-Het spectrum van de uitgaande straal ten gevolge van een specifiek pad is $\Odot_{k=1}^R a_i \bm{w}_{i_k}$. Aan de hand hiervan kan de bijdrage van dit specifieke pad, wat de kans vermenigvuldigt met het spectrum is, berekend worden als volgt:
+Het spectrum van de uitgaande straal ten gevolge van een specifiek pad is $\Odot_{k=1}^R \bm{w}_{i_k}$, waarbij $\bm{w}_{i_k}$ het albedo is van materiaal $i_k$, en $\Odot$ het elementwijsproduct. Aan de hand hiervan kan de bijdrage van een specifiek pad, wat de kans vermenigvuldigt met het spectrum is, berekend worden als volgt:
 \begin{equation}
 \bm{x}_{(i_1,i_2,i_3,...,i_R)} = P^{R-1} (1-P) \Odot_{k=1}^R \left(a_{i_k} \bm{w}_{i_k}\right)
 \end{equation}
 
-Gesommeerd over alle mogelijke paden geeft dit het totale gemeten spectrum. 
+Gesommeerd over alle mogelijke paden geeft dit het totale gemeten spectrum. Deze som over alle paden kan berekend worden door de som te nemen over alle mogelijke waarden van $R$ voor een enkel pad, en dan als $R$ -wat hier betekend het aantal interacties- gekend is, kan voor elke interactie gesommeerd worden over alle materialen. Wanneer alle bijdragen van elk pad gesommeerd zijn over alle paden, geeft dit het totale spectrum terug dat de detector meet, en dit is gelijk aan:
 
 \begin{equation}
 \bm{x} = \sum_{R=1}^{\infty} \left(\sum_{i_1}^{p} ... \sum_{i_R}^{p}\right)P^{R-1} (1-P) \Odot_{k=1}^R \left(a_{i_k} \bm{w}_{i_k}\right)
@@ -456,6 +450,7 @@ Stel dat de kans dat een lichtstraal nog een keer interageerd afhankelijk is van
 \mathcal{P}(i_1,i_2,i_3,...,i_R) &= \prod_{k=1}^{R-1}P_{i_k} (1-P_{i_R})\\
 &= \prod_{k=1}^{R}P_{i_k} \frac{1-P_{i_R}}{P_{i_R}}
 \end{align}
+Waarbij $P_{i_k}$ de reflectiekans van materiaal $i_k$ is. 
 
 De spectrum dat gemeten wordt afkomstig van een specifiek pad wordt nu:
 
@@ -478,7 +473,7 @@ zodat
 \bm{x} = \frac{\sum_{i=1}^p (1-P_i) a_{i} \bm{w}_{i}}{1-\sum_{i=1}^p P_i a_{i} \bm{w}_{i}} \label{eq:Pi}
 \end{equation}
 
-Dit is een uitdrukking voor het multilineair mengen van endmembers waarbij de reflectiekans endmember afhankelijk is. Indien men ge\"intereseerd is in een onafhankelijke reflectiekans, kan de formule hiervoor bekomen worden door te stellen dat $P_i = P \forall i$ zodat de formule wordt:
+Dit is een uitdrukking voor het multilineair mengen van endmembers waarbij de reflectiekans endmember afhankelijk is. Indien men ge\"intereseerd is in een onafhankelijke reflectiekans, kan de formule hiervoor bekomen worden door te stellen dat $P_i = P \forall i$ zodat het reconstructiespectrum wordt:
 
 \begin{equation}
 \bm{x} = \frac{(1-P) \sum_{i=1}^p a_{i} \bm{w}_{i}}{1-P\sum_{i=1}^p  a_{i} \bm{w}_{i}} \label{eq:P}
@@ -499,7 +494,7 @@ Aangezien deze vergelijking niet lineair is en dus ook geen hypervlak opspant, k
 Het albedo  $\bm{w}_i$ uit vorig hoofdstuk kan in werkelijkheid niet exact gemeten worden. In theorie kan deze afgeleid worden uit de reflectie van een meting met een enkele endmember. Dit kan bepaald worden door vergelijking \ref{eq:Pi} te inverteren, zodat:
 
 \begin{equation}
-\bm{w}_i = \frac{\bm{e}_i}{\bm{e}_iP_i - 1 - P_i}
+\bm{w}_i = \frac{\bm{e}_i}{\bm{e}_iP_i + 1 - P_i}
 \end{equation}
 Waarbij de deling de elementwijze deling is. 
 
@@ -507,7 +502,7 @@ Het probleem hierbij is dat hier wordt verondersteld dat $P_i$ gekend is, wat in
 
 \subsection{Ondergrens van P waarde}
 
-$P$ is per definitie een getal groter dan nul, omdat kansen tussen nul en een liggen. Echter, het is mogelijk om in vergelijking \ref{eq:Pi} een negatieve waarde in te voeren. Deze waarde kan in werkelijkheid negatif zijn ten gevolge van twee fysische situaties. Enerzijds is, zoals beschreven in de vorige sectie, het albedo slechts een benadering. Doordat de reflectie van de referentie-endmember nul wordt verondersteld te zijn, is deze lager dan werkelijkheid. Bijgevolg zal ook de $P$ waarde van de pixel lager zijn dan in de werkelijkheid. In het geval de reflectiekans van de pixel lager is dan de reflectiekans van het referentiemateriaal, zal deze waarde zelfs onder nul liggen. Merk op dat dit systeem niet linair is, waardoor een verkeerde reflectiekans van bovengenoemde sectie niet kan opgelost door het herdefinieren van $P$. Anderzijds zijn er ook interpixelinteracties die invloed hebben op het systeem. Deze kunnen extra lichtstralen die al hebben gereflecteerd op het materiaal toevoegen aan het systeem, wat zorgt voor een verlaging van de reflectiekans. 
+$P$ is per definitie een getal groter dan nul, omdat kansen tussen nul en een liggen. Echter, het is mogelijk om in vergelijking \ref{eq:Pi} een negatieve waarde in te voeren. Deze waarde kan in werkelijkheid negatief zijn ten gevolge van twee fysische situaties. Enerzijds is, zoals beschreven in de vorige sectie, het albedo slechts een benadering. Doordat de reflectie van de referentie-endmember nul wordt verondersteld te zijn, is deze lager dan werkelijkheid. Bijgevolg zal ook de $P$ waarde van de pixel lager zijn dan in de werkelijkheid. In het geval de reflectiekans van de pixel lager is dan de reflectiekans van het referentiemateriaal, zal deze waarde zelfs onder nul liggen. Merk op dat dit systeem niet linair is, waardoor een verkeerde reflectiekans van bovengenoemde sectie niet kan opgelost door het herdefini\"eren van $P$. Anderzijds zijn er ook interpixelinteracties die invloed hebben op het systeem. Deze kunnen extra lichtstralen die al hebben gereflecteerd op het materiaal toevoegen aan het systeem, wat zorgt voor een verlaging van de reflectiekans. 
 
 %\subsection{afhankelijke vs onafhankelijke P waarden}
 
@@ -532,7 +527,7 @@ $P$ is per definitie een getal groter dan nul, omdat kansen tussen nul en een li
 \end{itemize}
 
 
-\chapter{Gecombineerde}
+\chapter{Variabiliteit voor niet-lineaire systemen.}
 
 \section{Semi-lineair model}
 
@@ -550,7 +545,7 @@ ontkoppeling van Ontmenging in MESMA bij selectie tov ontmenging voor abundancie
 
 \section{Lijst en korte uitleg bij alle methodes}
 
-Elke methode is hiervoor beschreven, maar dit beschrijft kort de verschillen in de methodes en hoe deze geimplementeerd zijn door middel van `schakelaars' in de code. Ook een uitleg bij de weergave van de resultaten. 
+Elke methode is hiervoor beschreven, maar dit beschrijft kort de verschillen in de methodes en hoe deze ge\"implementeerd zijn door middel van `schakelaars' in de code. Ook een uitleg bij de weergave van de resultaten. 
 
 \begin{itemize}
 \item lineair MESMA

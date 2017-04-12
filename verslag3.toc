@@ -6,28 +6,28 @@
 \contentsline {subsubsection}{elektromagnetische golven}{6}
 \contentsline {subsubsection}{hyperspectrale cameras}{7}
 \contentsline {section}{\numberline {0.1}reflectie}{7}
-\contentsline {section}{\numberline {0.2}toepassingen}{8}
-\contentsline {chapter}{\numberline {1}Ontmengen}{10}
+\contentsline {section}{\numberline {0.2}atmosferische correctie}{8}
+\contentsline {section}{\numberline {0.3}toepassingen}{8}
+\contentsline {chapter}{\numberline {1}Spectraal ontmengen}{10}
 \contentsline {section}{\numberline {1.1}Resolutie}{10}
-\contentsline {section}{\numberline {1.2}spectrale analyse}{11}
-\contentsline {subsection}{\numberline {1.2.1}atmosferische correctie}{11}
-\contentsline {section}{\numberline {1.3}lineair ontmengen}{11}
-\contentsline {subsection}{\numberline {1.3.1}minimaliseren van reconstructieerror}{12}
+\contentsline {section}{\numberline {1.2}Spectrale analyse}{11}
+\contentsline {section}{\numberline {1.3}Lineair ontmengen}{11}
+\contentsline {subsection}{\numberline {1.3.1}Minimaliseren van reconstructieerror}{12}
 \contentsline {subsubsection}{niet-negativiteit}{13}
 \contentsline {subsubsection}{eenheidssom}{13}
-\contentsline {subsection}{\numberline {1.3.2}vrijheidsgraden}{14}
-\contentsline {section}{\numberline {1.4}niet-linaire interacties}{14}
-\contentsline {subsection}{\numberline {1.4.1}bilinair model}{15}
-\contentsline {section}{\numberline {1.5}Variabiliteit}{15}
-\contentsline {chapter}{\numberline {2}Oplossingsmethodes}{16}
-\contentsline {section}{\numberline {2.1}multilineair ontmengen}{16}
-\contentsline {subsection}{\numberline {2.1.1}berekening}{16}
-\contentsline {subsection}{\numberline {2.1.2}reflectancy vs albedo}{19}
-\contentsline {subsection}{\numberline {2.1.3}Ondergrens van P waarde}{19}
-\contentsline {section}{\numberline {2.2}MESMA}{19}
-\contentsline {subsection}{\numberline {2.2.1}ontmengingsmethode naar keuze (lineair vs multilineair)}{19}
-\contentsline {section}{\numberline {2.3}AAM}{19}
-\contentsline {chapter}{\numberline {3}Gecombineerde}{20}
+\contentsline {section}{\numberline {1.4}Niet-linaire interacties}{13}
+\contentsline {section}{\numberline {1.5}Variabiliteit}{14}
+\contentsline {section}{\numberline {1.6}Vrijheidsgraden}{14}
+\contentsline {chapter}{\numberline {2}Niet-lineariteit en endmember variabiliteit}{15}
+\contentsline {section}{\numberline {2.1}Bilinair ontmengen}{15}
+\contentsline {section}{\numberline {2.2}multilineair ontmengen}{16}
+\contentsline {subsection}{\numberline {2.2.1}berekening}{16}
+\contentsline {subsection}{\numberline {2.2.2}reflectancy vs albedo}{18}
+\contentsline {subsection}{\numberline {2.2.3}Ondergrens van P waarde}{19}
+\contentsline {section}{\numberline {2.3}MESMA}{19}
+\contentsline {subsection}{\numberline {2.3.1}ontmengingsmethode naar keuze (lineair vs multilineair)}{19}
+\contentsline {section}{\numberline {2.4}AAM}{19}
+\contentsline {chapter}{\numberline {3}Variabiliteit voor niet-lineaire systemen.}{20}
 \contentsline {section}{\numberline {3.1}Semi-lineair model}{20}
 \contentsline {subsection}{\numberline {3.1.1}Theoretische controle dmv monte carlo simulaties}{20}
 \contentsline {section}{\numberline {3.2}multilineair AAM}{20}
