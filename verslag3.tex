@@ -17,6 +17,10 @@
 \usepackage{bm}
 \usepackage{wrapfig}
 \usepackage{subcaption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\floatname{algorithm}{Algoritme}
 
 \usepackage{fancyhdr}
 
@@ -27,15 +31,15 @@
 \fancyhf{}
 \fancypagestyle{plain}{%
   \fancyhf{}%
-	\rfoot{\fancyplain{}{\nouppercase{\thepage}}}
-	\lfoot{\fancyplain{}{Thorvald Dox}}
+    \rfoot{\fancyplain{}{\nouppercase{\thepage}}}
+    \lfoot{\fancyplain{}{\nouppercase{\leftmark}}}
   \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
   \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
 }
 \lhead{\fancyplain{}{\titletext}}
-\rhead{\fancyplain{}{\nouppercase{\leftmark}}}
+\rhead{\fancyplain{}{Thorvald Dox}}
 \rfoot{\fancyplain{}{\nouppercase{\thepage}}}
-\lfoot{\fancyplain{}{Thorvald Dox}}
+\lfoot{\fancyplain{}{\nouppercase{\leftmark}}}
 \renewcommand{\footrulewidth}{0.4pt}
 
 \fancyhfoffset[E,O]{0pt}
@@ -55,6 +59,7 @@
   \hbox{}\nobreak\hfil(#1)%
   \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
 \newcommand{\rulesep}{\unskip\ \vrule height -1ex\ }
+\newcommand{\proj}[2]{\text{proj}_{#2}\left(#1\right)}
 
 \DeclareMathOperator*{\Odot}{\bigodot}
 \allowdisplaybreaks
@@ -508,21 +513,142 @@ $P$ is per definitie een getal groter dan nul, omdat kansen tussen nul en \'e\'e
 
 
 
-\section{MESMA} \label{sec:mesma}
+\section{multiple endmember spectra mixture analysis} \label{sec:mesma}
+
+Om te ontmengen rekening houdend met variabiliteit is elke endmember een bibliotheek van verschillende spectra. Het extraheren van deze spectra uit de metingen ligt buiten het bestek van deze thesis, hier wordt gewoon vanuitgegaan dat de endmembers gekend zijn. De experimentele data beschouwd in deze thesis bevat spectra die vanop de grond gemeten worden aan de hand van een spectrograaf, en zijn dus exact gekend.
+
+Het \textit{multiple endmember spectra mixture analysis} ofwel \textit{MESMA} algoritme gaat ervan uit dat elk materiaal in elke pixel maar een enkel spectrum reflecteert, maar dit spectrum kan verschillen tussen verschillende pixels.  Merk op dat materialen die zich niet bevinden in een pixel ook geen toegewezen spectrum hebben. Deze spectra en de abundanties van de respectievelijke materialen worden gevonden door te ontmengen in functie van alle mogelijke spectra voor alle mogelijke deelverzamelingen van materialen, en daarna wordt de ontmenging geselecteerd met de laagste reconstructie-error. De volgende secties leggen deze procedure uit in meer detail.
+
+\subsection{deelverzameling van alle materialen}
+
+Als eerste moet er gelopen worden over alle mogelijke deelverzameling van materialen. Voor elke deelverzameling geldt dat een enkel materiaal daar ofwel een element van is, ofwel niet. Hierdoor zijn er $2^p$ mogelijke deelverzamelingen. Er kan ge\"itereerd worden over alle deelverzamelingen door te itereren over de natuurlijke getallen van nul tot $2^p-1$. Elke waarde van deze iterator kan geschreven worden als een binair getal, waarbij elk cijfer daarvan bepaald of het materiaal vervat zit in de deelverzameling of niet. De waarde nul is de lege deelverzameling, dus deze wordt overgeslagen, en de iterator begint bij een.
+
+\subsection{Itereren over alle bibliotheken}
+
+Wanneer beslist is welke materialen een pixel bevat, moet ge\"iterereerd worden over alle mogelijke spectrum van elk materiaal. Er zijn verschillende methoden om te intereren over verschillende verzamelingen, zoals bijvoorbeeld de \textit{Banker series}, maar in deze thesis wordt gebruik gemaakt van de overvloedige tellers. Dit houdt in dat men een vector gebruikt als index, waarbij elk element verwijst naar een enkel materiaal, en de waarde van dit element verwijst naar de index van het spectrum dat gekozen wordt voor dit materiaal. Elke lus wordt de vector gewijzigd zoals weergegeven in \ref{al:oc}.
+
+\begin{algorithm}
+\caption{Overvloedige tellers\label{al:oc}}
+\begin{algorithmic}[1]
+\State de vector begint met overal 1
+\While {True}
+\State verhoog het eerste element met 1
+\For {voor elk element}
+\If {Indien het element hoger is dan zijn maximum (het aantal spectra voor het respectievelijke materiaal)}
+\State zet het element op 1
+\State verhoog het volgende element met 1
+\State indien dit element het laatste element is, be\"eindig het algoritme.
+\EndIf
+\EndFor
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+\subsubsection{Voorbeeld van overvloedige tellers}
+
+Stel dat er gebruik gemaakt wordt van de voorgenoemde \textit{Alina dataset}. Deze bevat vier materialen, namelijk bebossing, asfalt, de stoeprand en gras. Deze vier materialen hebben elk een bibliotheek van respectievelijk 50, 10, 10 en 10 materialen. Beschouw nu een pixel waarvan bekend is dat deze uit bos, asfalt en gras bestaat. Dan evolueerd de indexvector als volgt:
 
 \begin{itemize}
-\item Ontmengen aan de hand van elke subset
-\item Selectie op basis van niet-negativiteitsvoorwaarde
+\item De vector begint met waarde $[1,1,1]$.
+\item Na de eerste stap wordt de waarde van deze vector $[2,1,1]$.
+\item Het eerste element blijft elke stap toenemen tot het de waarde 50 bereikt. De vector is nu gelijk aan $[50,1,1]$.
+\item De volgende stap wordt deze waarde $[1,2,1]$.
+\item Hierna neemt het eerste element weer toe, tot dat dit terug de waarde 50 bereikt. De vector is nu gelijk aan $[50,2,1]$.
+\item Zoals voordien blijft dit lopen tot de vector de waarde $[50,10,1]$ bereikt.
+\item De volgende stap wordt het eerste element op 1 gezet moet het tweede element verhogen, maar omdat dit element ook groter wordt dan het maximum, wordt dit ook op een gezet en wordt het laatste element verhoogt. Dit resulteert in een vector gelijk aan $[1,1,2]$.
+\item Dit proces wordt verder herhaald tot de vector gelijk is aan $[50,10,10]$. Hierna overstroomt het laatste element en eindigt het algoritme. 
 \end{itemize}
 
-\subsection{ontmengingsmethode naar keuze (lineair vs multilineair)}
+Na deze procedure zijn alle 5000 mogelijke waarde dat de indexvector kan aannemen afgegaan.
 
-\section{AAM}
+\subsection{Ontmengen van de selectie}
 
-\begin{itemize}
-\item concept hoek in hoogdimentonale ruimtes
-\item AAM
-\end{itemize}
+In de vorige secties zijn de materialen en de correcte spectra geselecteerd. Hierna kan de pixel worden ontmengd zoals in vorig hoofdstuk, gebruikt makend van het \textit{sum-to-one constrained least-squares unmixing model}. Dit model houdt geen rekening met de niet-negativiteitsvoorwaarde, en kan bijgevolg negatieve abundaties bekomen. Indien dit gebeurt, wordt deze selectie overgeslagen, en wordt overgegaan naar de volgende selectie van spectra en materialen. Dit is een logische keuze, aangezien indien een materiaal optimaal een negatieve hoeveelheid heeft, er beter kan worden overgegaan op een ander systeem, dat dit materiaal niet bevat. Merk op dat het onmogelijk is dat alle selecties worden verwijderd aan de hand van deze voorwaarde, aangezien dat de deelverzamelingen met een enkel materiaal dit materiaal dankzij de eenheidssom-voorwaarde een abundantie van $1$ heeft. Het hele proces wordt beschreven in algoritme \ref{al:mesma}.
+
+\begin{algorithm}
+\caption{MESMA\label{al:mesma}}
+\begin{algorithmic}[1]
+\State $\eta = +\infty$ 
+\For {Voor alle deelverzamelingen}
+\For {Voor alle combinaties van spectra}
+\State Ontmeng gebruik makend van het \textit{sum-to-one constrained least-squares unmixing model}
+\If {$\exists \text{Abundantie} < 0$}
+\State \textbf{continue}
+\EndIf
+\If {reconstructie-error $< \eta$}
+\State $\eta = $ reconstructie-error
+\State $a_i = $ abundanties
+\EndIf
+\EndFor
+\EndFor
+\State $a_i$ zijn nu de correcte abundanties
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{vrije keuze van het ontmeng-algoritme}
+Hierboven is gebruikt gemaakt van het lineaire ontmeng algoritme, maar dit hoeft niet het geval te zijn. In algoritme \ref{al:mesma} kan de regel \texttt{Ontmeng gebruik makend van het \textit{sum-to-one constrained least-squares unmixing model}} vervangen worden door elk algoritme naar keuze. Indien men ge\"intereseert is in niet lineaire effecten, kan hier gebruik gemaakt worden van het multilineair model. Echter, voor de Alina dataset gebruikt in deze thesis, die alleen al voor de deelverzameling van alle materialen $50\times 10\times 10 \times 10= 50000$ mogelijkheden bevat, en waarvoor het ontmengen van een pixel aan de hand van vier spectra ongeveer $0.1$ seconden duurt, neemt dit algoritme meer dan $2 uur$ in beslag voor elke pixel. Het beeld bevat ongeveer de 400 pixels, dus de totale looptijd van dit algoritme is ongeveer $25 dagen$. 
+
+\section{Hoekminimalisatie}
+
+Het lineair ontmengen gebeurd door het gemeten spectrum te projecteren op het hypervlak opgespannen door de endmembers. Noemen we dit hypervlak $S$, den kan de reconstructie-error herschreven worden als:
+
+\begin{equation}
+\left| \bm{x} - \proj{\bm{x}}{S}\right|
+\end{equation}
+
+Noemen we $F$ het hypervlak opgespannen door endmembers $\left\{ e_1 , ... e_{p-1} \right\}$, zijnde het hypervlak opgespannen door alle endmembers behalve $e_p$ dan geldt:
+
+\begin{equation}
+\left| \bm{x} - \proj{\bm{x}}{S}\right|  = \left| \bm{x} - \proj{\bm{x}}{F}\right| \sin \theta
+\end{equation}
+
+Met 
+
+\begin{align}
+\theta &= \min(\alpha, \pi-\alpha) \\
+\alpha &= \arcsin \left(\frac{\left|x - \proj{x}{S}\right|}{\left|x - \proj{x}{F}\right|}\right)
+\end{align}
+
+In deze laatste uitdrukking kan de rol van $e_p$ en $x$ worden verwisseld, dus als er gesteld wordt dat $G$ het hypervlak opgespannen door $\left\{ e_1 , ... ,e_{p-1}, x \right\}$ is, geldt dat:
+
+\begin{equation}
+\alpha = \arcsin \left(\frac{\left|e_p - \proj{e_p}{G}\right|}{\left|e_p - \proj{e_p}{F}\right|}\right)
+\end{equation} 
+
+Aangezien in functie van $e_p$, $\left| \bm{x} - \proj{\bm{x}}{F}\right|$ constant is, zal de minimalisatie van $\sin \theta$ de reconstructie-error minimaliseren. De optimale hoek kan gevonden worden door deze uit te rekenen voor elk bibliotheekelement en het minimum uit te kiezen.
+
+\subsection{optimalistatie}
+
+Om deze techniek toe te passen voor de selectie van spectra voor de endmembers, kan een optimalisatieprocesdure gebruikt worden. Men begint met een willekeurige selectie van bibliotheekelementen. Daarna wordt voor een elk materiaal het optimale spectrum bepaald, terwijl de andere materialen constant gehouden worden. Dit wordt herhaalt, totdat er voor geen enkel materiaal nog een verbetering van de spectrale hoek bestaat. Aangezien er een eindig aantal mogelijkheden zijn voor de keuze van spectra en dat de reconstructie-error kleiner wordt bij elke stap, eindigt dit algoritme met zekerheid. In praktijk wordt echter vaak een maximum aantal iteraties gebruikt, omdat dit computationeel eenvoudiger is. Het volledige proces staat beschreven in \ref{al:AAM}
+
+\begin{algorithm}
+\caption{\textit{Alternating Angle Minimalistation} \label{al:AAM}}
+\begin{algorithmic}[1]
+\State kies een aantal iteraties $K$
+\For {Voor elke deelverzameling van materialen}
+\State Stel $q$ het aantal materialen
+\State Stel $e_j^i$ het $j$-de spectrum uit de bibliotheek van het $i$-de materiaal.
+\State Selecteer een willekeurige index set $I_j$
+\For {doe $K$ keer} 
+\For {voor $i$ elk materiaal}
+\State Definieer F het hypervlak opgespannen door $\{e^1_{I_1},...,e^{i-1}_{I_{i-1}},e^{i+1}_{I_{i+1}},...,e^q_{I_q}\}$
+\State Defineer G het hypervlak opgespannen door bovenstaande endmembers en $\bm{x}$
+\For {n $\in [1,...,\text{aantal spectra}]$}
+\State $p_n = \arcsin \left(\frac{\left|e^i_n - \proj{e^i_n}{G}\right|}{\left|e^i_n - \proj{e^i_n}{F}\right|}\right)$
+\If {$(e^i_n - \proj{e^i_n}{F}) \dot (x - proj{x}{F}) < 0$}
+\State $p_n = \pi - p_n$
+\EndIf
+\EndFor
+\EndFor
+\State $I_n = \text{argmin}_n\left(p_n\right)$
+\EndFor
+\State $E = [e_{I_1},...,e_{I_p}]$
+\State Abundantie en reconstructie-error kan bepaald worden aan de hand van het \textit{Fully constrained
+least-squares unmixing model} met als endmembers $E$
+\EndFor
+\State geef het resultaat terug uit vorige stap met de laagste reconstructie-error.
+\end{algorithmic}
+\end{algorithm}
 
 
 \chapter{Variabiliteit voor niet-lineaire systemen.}
