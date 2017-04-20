@@ -5,45 +5,45 @@
 \contentsline {chapter}{Inleiding}{6}
 \contentsline {subsubsection}{Elektromagnetische golven}{6}
 \contentsline {subsubsection}{Hyperspectrale camera's}{7}
-\contentsline {section}{\numberline {0.1}Reflectie}{7}
+\contentsline {section}{\numberline {0.1}Reflectantie}{7}
 \contentsline {section}{\numberline {0.2}Atmosferische correctie}{8}
 \contentsline {section}{\numberline {0.3}Toepassingen}{8}
 \contentsline {chapter}{\numberline {1}Spectraal ontmengen}{10}
 \contentsline {section}{\numberline {1.1}Resolutie}{10}
-\contentsline {section}{\numberline {1.2}Spectrale analyse}{11}
-\contentsline {section}{\numberline {1.3}Lineair ontmengen}{11}
-\contentsline {subsection}{\numberline {1.3.1}Minimaliseren van reconstructie-error}{12}
-\contentsline {subsubsection}{Niet-negativiteit}{13}
+\contentsline {section}{\numberline {1.2}Lineair ontmengen}{11}
+\contentsline {subsection}{\numberline {1.2.1}Minimaliseren van reconstructie-error}{12}
+\contentsline {subsubsection}{Niet-negativiteit}{12}
 \contentsline {subsubsection}{Eenheidssom}{13}
-\contentsline {section}{\numberline {1.4}Niet-lineaire interacties}{13}
-\contentsline {section}{\numberline {1.5}Variabiliteit}{14}
-\contentsline {section}{\numberline {1.6}Vrijheidsgraden}{14}
-\contentsline {chapter}{\numberline {2}Niet-lineariteit en endmember-variabiliteit}{15}
+\contentsline {section}{\numberline {1.3}Niet-lineaire interacties}{13}
+\contentsline {section}{\numberline {1.4}Variabiliteit}{14}
+\contentsline {section}{\numberline {1.5}Vrijheidsgraden}{14}
+\contentsline {chapter}{\numberline {2}Niet-lineariteit}{15}
 \contentsline {section}{\numberline {2.1}Bilineair ontmengen}{15}
-\contentsline {section}{\numberline {2.2}Multilineair ontmengen}{16}
+\contentsline {section}{\numberline {2.2}Multilineair ontmengen}{15}
 \contentsline {subsection}{\numberline {2.2.1}Berekening}{16}
 \contentsline {subsection}{\numberline {2.2.2}Reflectantie vs albedo}{18}
 \contentsline {subsection}{\numberline {2.2.3}Ondergrens van P waarde}{19}
-\contentsline {section}{\numberline {2.3}multiple endmember spectra mixture analysis}{19}
-\contentsline {subsection}{\numberline {2.3.1}deelverzameling van alle materialen}{19}
-\contentsline {subsection}{\numberline {2.3.2}Itereren over alle bibliotheken}{20}
-\contentsline {subsubsection}{Voorbeeld van overvloedige tellers}{20}
-\contentsline {subsection}{\numberline {2.3.3}Ontmengen van de selectie}{21}
-\contentsline {subsection}{\numberline {2.3.4}vrije keuze van het ontmeng-algoritme}{22}
-\contentsline {section}{\numberline {2.4}Hoekminimalisatie}{22}
-\contentsline {subsection}{\numberline {2.4.1}optimalistatie}{23}
-\contentsline {chapter}{\numberline {3}Variabiliteit voor niet-lineaire systemen.}{24}
-\contentsline {section}{\numberline {3.1}Semi-lineair model}{24}
-\contentsline {subsection}{\numberline {3.1.1}Theoretische controle dmv monte carlo simulaties}{24}
-\contentsline {section}{\numberline {3.2}multilineair AAM}{24}
-\contentsline {chapter}{\numberline {4}experimentele vergelijking van verschillende methodes}{25}
-\contentsline {section}{\numberline {4.1}looptijd en reconstructie-error}{25}
-\contentsline {section}{\numberline {4.2}Alina dataset}{25}
-\contentsline {section}{\numberline {4.3}Lijst en korte uitleg bij alle methodes}{25}
-\contentsline {section}{\numberline {4.4}Bepreking lineair vs semi-linair}{26}
-\contentsline {section}{\numberline {4.5}Bespreking semi-lineair vs multilineair}{26}
-\contentsline {section}{\numberline {4.6}Bespreking P-afhankelijkheid}{26}
-\contentsline {section}{\numberline {4.7}Bespreking P-ondergrens}{26}
-\contentsline {section}{\numberline {4.8}Bepreking multilinair AAM vs semilinair model}{26}
-\contentsline {chapter}{Appendices}{27}
-\contentsline {chapter}{Bibliografie}{29}
+\contentsline {chapter}{\numberline {3}Endmember-variabiliteit}{20}
+\contentsline {section}{\numberline {3.1}multiple endmember spectra mixture analysis}{20}
+\contentsline {subsection}{\numberline {3.1.1}deelverzameling van alle materialen}{20}
+\contentsline {subsection}{\numberline {3.1.2}Itereren over alle bibliotheken}{21}
+\contentsline {subsection}{\numberline {3.1.3}Ontmengen van de selectie}{21}
+\contentsline {subsection}{\numberline {3.1.4}vrije keuze van het ontmeng-algoritme}{22}
+\contentsline {section}{\numberline {3.2}Hoekminimalisatie}{22}
+\contentsline {subsection}{\numberline {3.2.1}optimalistatie}{23}
+\contentsline {chapter}{\numberline {4}Spectrale variabiliteit bij niet-lineaire ontmenging.}{25}
+\contentsline {section}{\numberline {4.1}Semi-lineair model}{26}
+\contentsline {subsection}{\numberline {4.1.1}Theoretische controle door middel van monte carlo simulaties}{26}
+\contentsline {subsubsection}{maximale reflectie}{27}
+\contentsline {section}{\numberline {4.2}multilineair AAM}{29}
+\contentsline {chapter}{\numberline {5}experimentele vergelijking van verschillende methodes}{31}
+\contentsline {section}{\numberline {5.1}looptijd en reconstructie-error}{31}
+\contentsline {section}{\numberline {5.2}Alina dataset}{31}
+\contentsline {section}{\numberline {5.3}Lijst en korte uitleg bij alle methodes}{31}
+\contentsline {section}{\numberline {5.4}Bepreking lineair vs semi-linair}{32}
+\contentsline {section}{\numberline {5.5}Bespreking semi-lineair vs multilineair}{32}
+\contentsline {section}{\numberline {5.6}Bespreking P-afhankelijkheid}{32}
+\contentsline {section}{\numberline {5.7}Bespreking P-ondergrens}{32}
+\contentsline {section}{\numberline {5.8}Bepreking multilinair AAM vs semilinair model}{32}
+\contentsline {chapter}{Appendices}{33}
+\contentsline {chapter}{Bibliografie}{35}
