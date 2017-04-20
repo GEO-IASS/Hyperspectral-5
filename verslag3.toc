@@ -32,18 +32,20 @@
 \contentsline {section}{\numberline {3.2}Hoekminimalisatie}{22}
 \contentsline {subsection}{\numberline {3.2.1}optimalistatie}{23}
 \contentsline {chapter}{\numberline {4}Spectrale variabiliteit bij niet-lineaire ontmenging.}{25}
-\contentsline {section}{\numberline {4.1}Semi-lineair model}{26}
-\contentsline {subsection}{\numberline {4.1.1}Theoretische controle door middel van monte carlo simulaties}{26}
+\contentsline {section}{\numberline {4.1}multilineair MESMA}{25}
+\contentsline {section}{\numberline {4.2}Semi-lineair model}{26}
+\contentsline {subsection}{\numberline {4.2.1}Theoretische controle door middel van monte carlo simulaties}{26}
 \contentsline {subsubsection}{maximale reflectie}{27}
-\contentsline {section}{\numberline {4.2}multilineair AAM}{29}
+\contentsline {section}{\numberline {4.3}multilineair AAM}{29}
 \contentsline {chapter}{\numberline {5}experimentele vergelijking van verschillende methodes}{31}
 \contentsline {section}{\numberline {5.1}looptijd en reconstructie-error}{31}
-\contentsline {section}{\numberline {5.2}Alina dataset}{31}
-\contentsline {section}{\numberline {5.3}Lijst en korte uitleg bij alle methodes}{31}
-\contentsline {section}{\numberline {5.4}Bepreking lineair vs semi-linair}{32}
-\contentsline {section}{\numberline {5.5}Bespreking semi-lineair vs multilineair}{32}
-\contentsline {section}{\numberline {5.6}Bespreking P-afhankelijkheid}{32}
-\contentsline {section}{\numberline {5.7}Bespreking P-ondergrens}{32}
-\contentsline {section}{\numberline {5.8}Bepreking multilinair AAM vs semilinair model}{32}
-\contentsline {chapter}{Appendices}{33}
-\contentsline {chapter}{Bibliografie}{35}
+\contentsline {section}{\numberline {5.2}Alina dataset}{32}
+\contentsline {section}{\numberline {5.3}Lijst en korte uitleg bij alle methodes}{32}
+\contentsline {section}{\numberline {5.4}bespreking van de resultaten}{32}
+\contentsline {subsection}{\numberline {5.4.1}lineair vs semi-linair}{32}
+\contentsline {subsection}{\numberline {5.4.2}Bespreking semi-lineair vs multilineair}{36}
+\contentsline {subsection}{\numberline {5.4.3}Bespreking P-afhankelijkheid}{36}
+\contentsline {subsection}{\numberline {5.4.4}Bespreking P-ondergrens}{36}
+\contentsline {subsection}{\numberline {5.4.5}Bepreking multilinair AAM vs semilinair model}{36}
+\contentsline {chapter}{Appendices}{37}
+\contentsline {chapter}{Bibliografie}{39}

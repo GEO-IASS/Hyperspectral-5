@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  20 APR 2017 14:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  20 APR 2017 17:48
 entering extended mode
 **verslag3.tex
 (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.tex
@@ -536,56 +536,56 @@ Hoofdstuk 4.
 
 ]
 
-LaTeX Warning: Reference `e100' on page 26 undefined on input line 687.
+LaTeX Warning: Reference `e100' on page 26 undefined on input line 689.
 
 [26] <export_PMC_10_100_corr.pdf, id=124, 614.295pt x 794.97pt>
 File: export_PMC_10_100_corr.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_corr.pdf>
-Package pdftex.def Info: export_PMC_10_100_corr.pdf used on input line 691.
+Package pdftex.def Info: export_PMC_10_100_corr.pdf used on input line 693.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
 <export_PMC_10_100_PP.pdf, id=125, 614.295pt x 794.97pt>
 File: export_PMC_10_100_PP.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_PP.pdf>
-Package pdftex.def Info: export_PMC_10_100_PP.pdf used on input line 692.
+Package pdftex.def Info: export_PMC_10_100_PP.pdf used on input line 694.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
 <export_PMC_10_100_E.pdf, id=126, 614.295pt x 794.97pt>
 File: export_PMC_10_100_E.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_E.pdf>
-Package pdftex.def Info: export_PMC_10_100_E.pdf used on input line 693.
+Package pdftex.def Info: export_PMC_10_100_E.pdf used on input line 695.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
 <export_PMC_10_100_El.pdf, id=127, 614.295pt x 794.97pt>
 File: export_PMC_10_100_El.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_El.pdf>
-Package pdftex.def Info: export_PMC_10_100_El.pdf used on input line 694.
+Package pdftex.def Info: export_PMC_10_100_El.pdf used on input line 696.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
 <export_PMC_10_100_Elog.pdf, id=128, 614.295pt x 794.97pt>
 File: export_PMC_10_100_Elog.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_Elog.pdf>
-Package pdftex.def Info: export_PMC_10_100_Elog.pdf used on input line 695.
+Package pdftex.def Info: export_PMC_10_100_Elog.pdf used on input line 697.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
 <export_PMC_10_100_EPlog.pdf, id=129, 614.295pt x 794.97pt>
 File: export_PMC_10_100_EPlog.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_EPlog.pdf>
-Package pdftex.def Info: export_PMC_10_100_EPlog.pdf used on input line 696.
+Package pdftex.def Info: export_PMC_10_100_EPlog.pdf used on input line 698.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
-Underfull \hbox (badness 2181) in paragraph at lines 691--697
+Underfull \hbox (badness 2181) in paragraph at lines 693--699
 [][] []
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 691--697
+Underfull \hbox (badness 2181) in paragraph at lines 693--699
 [] []
  []
 
@@ -593,7 +593,7 @@ Underfull \hbox (badness 2181) in paragraph at lines 691--697
 File: export_PMC_10_100_angle.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_angle.pdf>
-Package pdftex.def Info: export_PMC_10_100_angle.pdf used on input line 702.
+Package pdftex.def Info: export_PMC_10_100_angle.pdf used on input line 704.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
  [27] [28 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_10
 0_corr.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_
@@ -604,21 +604,47 @@ Package pdftex.def Info: export_PMC_10_100_angle.pdf used on input line 702.
 _100_EPlog.pdf>] [29 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/expor
 t_PMC_10_100_angle.pdf>] [30]
 Hoofdstuk 5.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 778.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 778.
- [31
+Overfull \hbox (7.02892pt too wide) in paragraph at lines 771--772
+\OT1/cmr/m/n/12 ties voor een mo-del -bijvoorbeeld het wel of niet toe-pas-sen 
+van de niet-negativiteitsvoorwaarde-
+ []
 
-] [32] [33
+[31
+
+] <plot_trees.pdf, id=179, 614.295pt x 794.97pt>
+File: plot_trees.pdf Graphic file (type pdf)
+ <use plot_trees.pdf>
+Package pdftex.def Info: plot_trees.pdf used on input line 803.
+(pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
+
+<plot_road.pdf, id=180, 614.295pt x 794.97pt>
+File: plot_road.pdf Graphic file (type pdf)
+ <use plot_road.pdf>
+Package pdftex.def Info: plot_road.pdf used on input line 808.
+(pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
+
+<plot_grass.pdf, id=181, 614.295pt x 794.97pt>
+File: plot_grass.pdf Graphic file (type pdf)
+ <use plot_grass.pdf>
+Package pdftex.def Info: plot_grass.pdf used on input line 813.
+(pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
+
+<plot_legend.pdf, id=182, 614.295pt x 794.97pt>
+File: plot_legend.pdf Graphic file (type pdf)
+ <use plot_legend.pdf>
+Package pdftex.def Info: plot_legend.pdf used on input line 818.
+(pdftex.def)             Requested size: 187.89914pt x 148.02176pt.
+ [32]
+[33 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_trees.pdf>]
+[34 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_road.pdf>]
+[35 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_grass.pdf>]
+[36 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_legend.pdf>]
+[37
 
 
-]
-(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.bbl [34])
-[35
+] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.bbl [38])
+[39
 
 ] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.aux)
 
@@ -629,10 +655,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6132 strings out of 493921
- 85739 string characters out of 3147272
- 159309 words of memory out of 3000000
- 9282 multiletter control sequences out of 15000+200000
+ 6147 strings out of 493921
+ 85948 string characters out of 3147272
+ 159441 words of memory out of 3000000
+ 9296 multiletter control sequences out of 15000+200000
  20214 words of font info for 74 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  42i,13n,48p,1125b,507s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -655,9 +681,9 @@ ic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on verslag3.pdf (36 pages, 890761 bytes).
+Output written on verslag3.pdf (40 pages, 908795 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
+ 288 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 102 words of extra memory for PDF output out of 10000 (max. 10000000)
 
