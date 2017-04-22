@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  20 APR 2017 17:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  22 APR 2017 11:32
 entering extended mode
 **verslag3.tex
 (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.tex
@@ -343,11 +343,7 @@ LaTeX Info: Redefining \cite on input line 694.
 Package: bibentry 2007/10/30 1.5 (PWD)
 )
 (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.bbl)
-(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.aux
-
-LaTeX Warning: Label `fig:e100' multiply defined.
-
-)
+(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
@@ -360,7 +356,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count123
 \scratchdimen=\dimen138
@@ -499,34 +496,15 @@ Hoofdstuk 1.
 
 ] [11] [12] [13] [14]
 Hoofdstuk 2.
-<multi.PNG, id=80, 297.36093pt x 198.7425pt>
+[15
+
+] <multi.PNG, id=83, 297.36093pt x 198.7425pt>
 File: multi.PNG Graphic file (type png)
  <use multi.PNG>
-Package pdftex.def Info: multi.PNG used on input line 413.
+Package pdftex.def Info: multi.PNG used on input line 415.
 (pdftex.def)             Requested size: 187.89914pt x 125.58144pt.
- [15
-
-]
-Overfull \hbox (37.89442pt too wide) detected at line 452
-\OML/cmm/b/it/12 x \OT1/cmr/m/n/12 = [] [] [] \OML/cmm/m/it/12 P[] [] [] [] []
- []
-
-[16 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/multi.PNG>]
-Overfull \hbox (9.3537pt too wide) in paragraph at lines 456--457
-[]\OT1/cmr/m/n/12 Het spec-trum af-kom-stig van een spe-ci-fiek pad wordt: 
- []
-
-
-Overfull \hbox (96.37521pt too wide) in paragraph at lines 466--466
-[] 
- []
-
-
-Overfull \hbox (18.75777pt too wide) in paragraph at lines 477--478
-\OT1/cmr/m/n/12 gen van end-mem-bers waar-bij de re-flec-tie-kans endmember-
- []
-
-[17] [18] [19]
+ [16 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/multi.PNG>] [17] [18]
+ [19]
 Hoofdstuk 3.
 [20
 
@@ -535,155 +513,217 @@ Hoofdstuk 4.
 [25
 
 ]
-
-LaTeX Warning: Reference `e100' on page 26 undefined on input line 689.
+Overfull \hbox (9.08105pt too wide) in paragraph at lines 689--689
+ |[]\OT1/cmr/bx/n/14.4 Theoretische con-trole door mid-del van Monte-Carlosimul
+aties| 
+ []
 
 [26] <export_PMC_10_100_corr.pdf, id=124, 614.295pt x 794.97pt>
 File: export_PMC_10_100_corr.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_corr.pdf>
-Package pdftex.def Info: export_PMC_10_100_corr.pdf used on input line 693.
+Package pdftex.def Info: export_PMC_10_100_corr.pdf used on input line 697.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
 <export_PMC_10_100_PP.pdf, id=125, 614.295pt x 794.97pt>
 File: export_PMC_10_100_PP.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_PP.pdf>
-Package pdftex.def Info: export_PMC_10_100_PP.pdf used on input line 694.
+Package pdftex.def Info: export_PMC_10_100_PP.pdf used on input line 698.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
 <export_PMC_10_100_E.pdf, id=126, 614.295pt x 794.97pt>
 File: export_PMC_10_100_E.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_E.pdf>
-Package pdftex.def Info: export_PMC_10_100_E.pdf used on input line 695.
+Package pdftex.def Info: export_PMC_10_100_E.pdf used on input line 699.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
 <export_PMC_10_100_El.pdf, id=127, 614.295pt x 794.97pt>
 File: export_PMC_10_100_El.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_El.pdf>
-Package pdftex.def Info: export_PMC_10_100_El.pdf used on input line 696.
+Package pdftex.def Info: export_PMC_10_100_El.pdf used on input line 700.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
 <export_PMC_10_100_Elog.pdf, id=128, 614.295pt x 794.97pt>
 File: export_PMC_10_100_Elog.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_Elog.pdf>
-Package pdftex.def Info: export_PMC_10_100_Elog.pdf used on input line 697.
+Package pdftex.def Info: export_PMC_10_100_Elog.pdf used on input line 701.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
 <export_PMC_10_100_EPlog.pdf, id=129, 614.295pt x 794.97pt>
 File: export_PMC_10_100_EPlog.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_EPlog.pdf>
-Package pdftex.def Info: export_PMC_10_100_EPlog.pdf used on input line 698.
+Package pdftex.def Info: export_PMC_10_100_EPlog.pdf used on input line 702.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
 
-Underfull \hbox (badness 2181) in paragraph at lines 693--699
+Underfull \hbox (badness 2181) in paragraph at lines 697--703
 [][] []
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 693--699
+Underfull \hbox (badness 2181) in paragraph at lines 697--703
 [] []
  []
+
+
+Package natbib Warning: Citation `MATLAB' on page 27 undefined on input line 70
+4.
+
+
+Package natbib Warning: Citation `MATLAB' on page 27 undefined on input line 70
+4.
 
 <export_PMC_10_100_angle.pdf, id=130, 614.295pt x 794.97pt>
 File: export_PMC_10_100_angle.pdf Graphic file (type pdf)
 
 <use export_PMC_10_100_angle.pdf>
-Package pdftex.def Info: export_PMC_10_100_angle.pdf used on input line 704.
+Package pdftex.def Info: export_PMC_10_100_angle.pdf used on input line 708.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
- [27] [28 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_10
-0_corr.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_
-100_PP.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_
-100_E.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_1
-00_El.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_1
-00_Elog.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10
-_100_EPlog.pdf>] [29 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/expor
-t_PMC_10_100_angle.pdf>] [30]
-Hoofdstuk 5.
 
-Overfull \hbox (7.02892pt too wide) in paragraph at lines 771--772
-\OT1/cmr/m/n/12 ties voor een mo-del -bijvoorbeeld het wel of niet toe-pas-sen 
-van de niet-negativiteitsvoorwaarde-
+
+Package natbib Warning: Citation `MATLAB' on page 27 undefined on input line 70
+9.
+
+
+Package natbib Warning: Citation `MATLAB' on page 27 undefined on input line 70
+9.
+
+
+Overfull \hbox (8.45284pt too wide) in paragraph at lines 712--713
+\OT1/cmr/m/n/12 ge-ven re-flec-tie-kans. Deze geeft weer welk deel van de in-di
+-ces in $\OML/cmm/m/it/12 lineair$ \OT1/cmr/m/n/12 of $\OML/cmm/m/it/12 semilin
+eairMESMA$
  []
 
+
+Overfull \hbox (9.51622pt too wide) in paragraph at lines 714--715
+[]\OT1/cmr/m/n/12 De gra-fiek rechts-bo-ven in fi-guur 4.1[] geeft de ge-me-ten
+ re-flec-tie-kans van $\OML/cmm/m/it/12 semilinairMESMA$\OT1/cmr/m/n/12 .
+ []
+
+[27] [28 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_100
+_corr.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_1
+00_PP.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_1
+00_E.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_10
+0_El.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_10
+0_Elog.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_
+100_EPlog.pdf>] [29 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export
+_PMC_10_100_angle.pdf>] [30]
+Hoofdstuk 5.
 [31
 
-] <plot_trees.pdf, id=179, 614.295pt x 794.97pt>
+] <plot_trees.pdf, id=180, 614.295pt x 794.97pt>
 File: plot_trees.pdf Graphic file (type pdf)
  <use plot_trees.pdf>
-Package pdftex.def Info: plot_trees.pdf used on input line 803.
+Package pdftex.def Info: plot_trees.pdf used on input line 815.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
 
-<plot_road.pdf, id=180, 614.295pt x 794.97pt>
+
+Package natbib Warning: Citation `MATLAB' on page 32 undefined on input line 81
+6.
+
+
+Package natbib Warning: Citation `MATLAB' on page 32 undefined on input line 81
+6.
+
+<plot_road.pdf, id=181, 614.295pt x 794.97pt>
 File: plot_road.pdf Graphic file (type pdf)
  <use plot_road.pdf>
-Package pdftex.def Info: plot_road.pdf used on input line 808.
+Package pdftex.def Info: plot_road.pdf used on input line 820.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
 
-<plot_grass.pdf, id=181, 614.295pt x 794.97pt>
+
+Package natbib Warning: Citation `MATLAB' on page 32 undefined on input line 82
+1.
+
+
+Package natbib Warning: Citation `MATLAB' on page 32 undefined on input line 82
+1.
+
+<plot_grass.pdf, id=182, 614.295pt x 794.97pt>
 File: plot_grass.pdf Graphic file (type pdf)
  <use plot_grass.pdf>
-Package pdftex.def Info: plot_grass.pdf used on input line 813.
+Package pdftex.def Info: plot_grass.pdf used on input line 825.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
 
-<plot_legend.pdf, id=182, 614.295pt x 794.97pt>
+
+Package natbib Warning: Citation `MATLAB' on page 32 undefined on input line 82
+6.
+
+
+Package natbib Warning: Citation `MATLAB' on page 32 undefined on input line 82
+6.
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+829.
+
+<plot_legend.pdf, id=183, 614.295pt x 794.97pt>
 File: plot_legend.pdf Graphic file (type pdf)
  <use plot_legend.pdf>
-Package pdftex.def Info: plot_legend.pdf used on input line 818.
+Package pdftex.def Info: plot_legend.pdf used on input line 830.
 (pdftex.def)             Requested size: 187.89914pt x 148.02176pt.
- [32]
+
+
+Package natbib Warning: Citation `MATLAB' on page 32 undefined on input line 83
+1.
+
+
+Package natbib Warning: Citation `MATLAB' on page 32 undefined on input line 83
+1.
+
+[32 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_legend.pdf>]
 [33 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_trees.pdf>]
 [34 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_road.pdf>]
 [35 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_grass.pdf>]
-[36 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_legend.pdf>]
-[37
+[36] [37] [38
 
 
-] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.bbl [38])
-[39
+]
+(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.bbl [39])
 
-] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.aux)
+Package natbib Warning: There were undefined citations.
 
-LaTeX Warning: There were undefined references.
+[40
 
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.aux) ) 
 Here is how much of TeX's memory you used:
- 6147 strings out of 493921
- 85948 string characters out of 3147272
- 159441 words of memory out of 3000000
- 9296 multiletter control sequences out of 15000+200000
- 20214 words of font info for 74 fonts, out of 3000000 for 9000
+ 6155 strings out of 493921
+ 86077 string characters out of 3147272
+ 159413 words of memory out of 3000000
+ 9304 multiletter control sequences out of 15000+200000
+ 22074 words of font info for 81 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,13n,48p,1125b,507s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/
-cmmib8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
-i12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on verslag3.pdf (40 pages, 908795 bytes).
+ 42i,13n,48p,1122b,507s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmitt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on verslag3.pdf (41 pages, 927959 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
+ 299 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  102 words of extra memory for PDF output out of 10000 (max. 10000000)
 
