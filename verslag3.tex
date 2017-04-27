@@ -50,6 +50,7 @@
 
 
 
+
 \usepackage[super,square,sort]{natbib}
 \usepackage{bibentry}
 \nobibliography*
@@ -777,6 +778,9 @@ In dit hoofdstuk worden verschillende modellen toegepast op de \textit{Alina}-da
 
 Een algoritme heeft twee belangrijke aspecten. Ten eerste moet het zo nauwkeurig mogelijk zijn. Dit komt overeen met een zo laag mogelijke reconstructie-error. ten tweede moet het algoritme effeci\"ent zijn, dus een zo kort mogelijke looptijd. Deze twee aspecten zijn meestal niet verenigbaar. Een eenvoudig algoritme zoals lineair ontmengen heeft een korte looptijd maar een grote reconstructie-error; een complex algoritme zoals \textit{multilineair MESMA} heeft een lage reconstructie-error, maar een lange looptijd. In praktijk wordt de overweging gemaakt hoe nauwkeurig of hoe snel de data moet worden verwerkt, en aan de hand daarvan wordt een algoritme gekozen.
 
+
+
+
 \section{Alina-dataset}
 
 De \textit{Alina}-dataset is een dataset die vier endmembers bevat, namelijk bebossing, asfalt, voetpad en gras. De bibliotheken van deze endmembers zijn met de hand opgemeten en bevatten respectievelijk 50, 10, 10 en 10 elementen. 
@@ -787,18 +791,6 @@ De \textit{Alina}-dataset is een dataset die vier endmembers bevat, namelijk beb
 
 In dit hoofdstuk worden 5 methoden vergeleken. In tabel ref{tab:a} staan de secties en de pseudocode gebruikt in deze thesis.  
 
-\begin{wraptable}{R}{0.5\textwidth}
-\begin{tabular}{l r r}
-algoritme & sectie & algoritme \\
-\hline
-lineair MESMA & \ref{sec:mesma} & \ref{al:mesma}\\
-semi-lineair MESMA & \ref{sec:mmesma} &\ref{al:mmesma}\\
-multi-lineair MESMA & \ref{sec:smesma} &\ref{al:smesma}\\
-lineair AAM & \ref{sec:AAM}&\ref{al:AAM} \\
-multilineair AAM & \ref{sec:MAAM} & \ref{al:MAAM} 
-\end{tabular}
-\caption{De vijf beschouwde methoden \label{tab:a}}
-\end{wraptable}
 
 \begin{table}
 \Large\center
@@ -810,6 +802,30 @@ onafhankelijke $P$ & Strict & Strong
 \end{tabular}
 \caption{Benamingen van de verschillende parameteropties voor multilineair ontmengen \label{tab:b}}
 \end{table}
+
+
+\begin{figure}
+\includegraphics[width=0.4\textwidth, trim=400 450 0 175 cm,clip]{plot_legend.pdf}
+\caption{Legende van figuren \ref{fig:trees}, \ref{fig:road} en \ref{fig:grass}. Deze afbeelding is gemaakt met MATLAB\cite{MATLAB} \label{fig:legend}}
+\end{figure}
+\begin{table}
+\begin{tabular}{l r r}
+algoritme & sectie & algoritme \\
+\hline
+lineair MESMA & \ref{sec:mesma} & \ref{al:mesma}\\
+semi-lineair MESMA & \ref{sec:mmesma} &\ref{al:mmesma}\\
+multi-lineair MESMA & \ref{sec:smesma} &\ref{al:smesma}\\
+lineair AAM & \ref{sec:AAM}&\ref{al:AAM} \\
+multilineair AAM & \ref{sec:MAAM} & \ref{al:MAAM} 
+\end{tabular}
+\caption{De vijf beschouwde methoden \label{tab:a}}
+\end{table}
+
+
+We vergelijken niet alleen de verschillende methodes, maar ook, waar toepasselijk, de verschillende opties van het multilineair model. Ten eerste worden de afhankelijkheid met de onafhankelijkheid van de reflectiekans van het materiaal vergeleken. Ten tweede wordt het al dan niet toelaten van negatieve reflectiekansen bekeken. De optie die het meest fysisch relevant is, namelijk dat reflectiekansen afhankelijk zijn en positief, wordt \textit{real} genoemd. De optie met het meeste vrijheid, waarbij de reflectiekansen afhankelijk zijn en negatieve waarden kunnen aannemen wordt \textit{real} genoemd. De tegengestelde optie, met een onafhankelijke positieve reflectiekans wordt \textit{strict} genoemd en de overgebleven optie, met onafhankelijke als dan niet negatieve kansen wordt \textit{strong} genoemd. Voor het multilineair MESMA zijn maar twee van de vier opties nagegaan omdat deze computationeel intensief zijn, maar deze zullen dezelfde trend volgen als bij \textit{semilineair MESMA} en \textit{multilineair AAM}.  
+
+
+
 
 \begin{figure}
 \includegraphics[width=0.99\textwidth,trim=0 200 0 175 cm]{plot_trees.pdf}
@@ -825,15 +841,6 @@ onafhankelijke $P$ & Strict & Strong
 \includegraphics[width=0.99\textwidth,trim=0 200 0 175 cm]{plot_grass.pdf}
 \caption{Vergelijking van verschillende methoden voor een pixel waar de overheersende eindmember gras is. De legende van dez afbeelding is te vinden in figuur \ref{fig:legend}. Deze afbeelding is gemaakt met MATLAB\cite{MATLAB} \label{fig:grass}}
 \end{figure}
-
-\begin{wrapfigure}{R}{0.4\textwidth}
-\includegraphics[width=0.4\textwidth,trim=400 450 0 175 cm,clip]{plot_legend.pdf}
-\caption{Legende van figuren \ref{fig:trees}, \ref{fig:road} en \ref{fig:grass}. Deze afbeelding is gemaakt met MATLAB\cite{MATLAB} \label{fig:legend}}
-\end{wrapfigure}
-
-
-
-We vergelijken niet alleen de verschillende methodes, maar ook, waar toepasselijk, de verschillende opties van het multilineair model. Ten eerste worden de afhankelijkheid met de onafhankelijkheid van de reflectiekans van het materiaal vergeleken. Ten tweede wordt het al dan niet toelaten van negatieve reflectiekansen bekeken. De optie die het meest fysisch relevant is, namelijk dat reflectiekansen afhankelijk zijn en positief, wordt \textit{real} genoemd. De optie met het meeste vrijheid, waarbij de reflectiekansen afhankelijk zijn en negatieve waarden kunnen aannemen wordt \textit{real} genoemd. De tegengestelde optie, met een onafhankelijke positieve reflectiekans wordt \textit{strict} genoemd en de overgebleven optie, met onafhankelijke als dan niet negatieve kansen wordt \textit{strong} genoemd. Voor het multilineair MESMA zijn maar twee van de vier opties nagegaan omdat deze computationeel intensief zijn, maar deze zullen dezelfde trend volgen als bij \textit{semilineair MESMA} en \textit{multilineair AAM}.  
 
 
 
@@ -852,16 +859,19 @@ Ten tweede vergelijken we het semi-lineair model met het multilineair model. In 
 
 \subsection{P-afhankelijkheid}
 
-Als derde vergelijken we de verschillende 
+Om het belang van endmemberafhankelijkheid te bepalen, wordt algoritmes die deze onafhankelijkheid wel meenemen vergelijken met algoritmes die niet meenemen. In het algoritme zit het enige verschil in de randvoorwaarde van het \texttt{fmincon} algoritme, en is de looptijd dus gelijk, wat ook beaamd wordt in het experiment. Men verwacht ook een sterke reductie in de reconstructie-error, omdat enerzijds dit model fysisch correcter is, en anderzijds dit meer vrijheidsgraden heeft. Echter, het experiment geeft slechts een verwaarloosbare reductie in de reconstructie-error. Aangezien hiervoor een verdubbeling van het aantal vrijheidsgraden nodig is, vormt P-afhankelijkheid geen verbetering.
 
 \subsection{Bespreking P-ondergrens}
 
-verschil voor lage reflectie (asfalt)
-$\rightarrow$ Weglaten van ondergrens geeft betere resultaten op gelijke tijd.
+Het aanpassen van de ondergrens van $P$ geeft geen verschil in de looptijd, de enige verandering in het algoritme gebeurt in de randvoorwaarden van \texttt{fmincon}. Voor de gevallen met bos of gras geeft dit een vergelijkbare reconstructie-error, aangezien het aanpassen van randvoorwaarden geen invloed heeft op resultaten die niet in de buurt van de rand liggen. Echter, voor asfalt, waarvoor geld dat $P=10^{-5}$, ligt $P$ dicht bij de rand, en verwacht men dus een verbetering in de reconstuctie-error na een verandering in de ondergrens, wat beaamd wordt door het experiment.
 
 \subsection{Bepreking multilinair AAM vs semilinair model}
 
-$\rightarrow$ zelfde resultaten voor kortere tijd.
+Zoals te zien in de figuren en voorspeld was sectie \ref{sec:smesma}, heeft het semilineair model een verbetering ten opzichte van het multilineair model in looptijd, terwijl er maar een kleine verhoging is voor de reconstructie-error.
+
+\vspace{5 mm}
+
+Gebruikt makend van de vorige vergelijkingen is het meest nuttige model een semilineair model waarbij de reflectiekans onafhankelijk is van de endmember en tussen $-1$ en $1$ ligt. Dit is \textit{strong semilineair mesma}.
 
 \begin{appendices}
 
