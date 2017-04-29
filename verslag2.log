@@ -1,13 +1,22 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.28)  21 FEB 2017 10:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  28 APR 2017 16:21
 entering extended mode
-**./verslag2.tex
-(verslag2.tex
-LaTeX2e <2015/10/01> patch level 2
-Babel <3.9n> and hyphenation patterns for 69 languages loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
-Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+**verslag2.tex
+(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag2.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -22,26 +31,26 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2016/01/08 3.9n The Babel package
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-(C:\Users\Thorvald_Dox\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-dutch\dutch.l
-df
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\dutch.ldf"
 Language: dutch 2005/03/30 v3.8i Dutch support from the babel system
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2016/01/08 3.9n Babel common definitions
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
 Package babel Info: Making " an active character on input line 132.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box26
 \beforetitleunit=\skip43
@@ -53,8 +62,7 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen107
 \titlewidthfirst=\dimen108
 )
-(C:\Users\Thorvald_Dox\AppData\Roaming\MiKTeX\2.9\tex\latex\footmisc\footmisc.s
-ty
+("C:\Program Files\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks15
 \footnotemargin=\dimen109
@@ -67,31 +75,32 @@ Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
 Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count90
@@ -99,16 +108,16 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen110
 \Gin@req@width=\dimen111
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\titleps.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titleps.sty"
 Package: titleps 2011/12/15 v1.1.0 Page styles
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\ttlps.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\ttlps.def"
 File: ttlps.def 2011/12/15
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks17
 \symAMSa=\mathgroup4
@@ -116,24 +125,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
 \ex@=\dimen112
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen113
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count91
@@ -174,8 +183,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
-Package: amsthm 2015/03/04 v2.20.2
+("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks23
 \thm@bodyfont=\toks24
 \thm@headfont=\toks25
@@ -186,33 +195,33 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headsep=\skip50
 \dth@everypar=\toks28
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
-Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks29
 \verbatim@line=\toks30
 \verbatim@in@stream=\read1
 )
-(C:\Users\Thorvald_Dox\AppData\Roaming\MiKTeX\2.9\tex\latex\titling\titling.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\titling\titling.sty"
 Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip51
 \thanksmargin=\skip52
 \droptitle=\skip53
 )
-(C:\Users\Thorvald_Dox\AppData\Roaming\MiKTeX\2.9\tex\latex\appendix\appendix.s
-ty
+("C:\Program Files\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@pps=\count103
 \c@@ppsavesec=\count104
 \c@@ppsaveapp=\count105
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\bm.sty"
-Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty"
+Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
 \symboldsymbols=\mathgroup8
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
-LaTeX Info: Redefining \bm on input line 207.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
+LaTeX Info: Redefining \bm on input line 204.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
 \fancy@headwidth=\skip54
 \f@ncyO@elh=\skip55
 \f@ncyO@erh=\skip56
@@ -227,18 +236,18 @@ LaTeX Info: Redefining \bm on input line 207.
 Package Fancyhdr Warning: \fancyhfoffset's `E' option without twoside option is
  useless on input line 37.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count106
@@ -254,8 +263,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen128
 \Gm@dimlist=\toks31
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count109
 \float@exts=\toks32
@@ -263,17 +272,18 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks33
 \@floatcapt=\box30
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip63
 \bibsep=\skip64
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count110
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\natbib\bibentry.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\bibentry.sty"
 Package: bibentry 2007/10/30 1.5 (PWD)
 )
-(verslag2.bbl) (verslag2.aux
+(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag2.bbl)
+(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag2.aux
 
 LaTeX Warning: Label `eq:Pi' multiply defined.
 
@@ -287,8 +297,6 @@ LaTeX Warning: Label `table:MyTableLabel' multiply defined.
 LaTeX Warning: Label `table:MyTableLabel' multiply defined.
 
 )
-\openout1 = `verslag2.aux'.
-
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
@@ -301,7 +309,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
 \scratchdimen=\dimen129
@@ -350,12 +358,12 @@ LaTeX Font Info:    ... okay on input line 58.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 93.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 93.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <download.jpg, id=1, 148.555pt x 127.47626pt>
@@ -371,13 +379,14 @@ Package pdftex.def Info: vlabsym.png used on input line 121.
 (pdftex.def)             Requested size: 104.03047pt x 113.81102pt.
  [1
 
-{C:/Users/Thorvald_Dox/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./do
-wnload.jpg> <./vlabsym.png>] (verslag2.toc [1
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Thorvald/Dropbox
+/Masterproef/Hyperspectral/download.jpg> <C:/Users/Thorvald/Dropbox/Masterproef
+/Hyperspectral/vlabsym.png>] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectr
+al\verslag2.toc
+[1
 
 ])
 \tf@toc=\write3
-\openout3 = `verslag2.toc'.
-
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -416,8 +425,8 @@ Hoofdstuk 3.
 ] [16] [17]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 488.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 488.
@@ -479,16 +488,21 @@ File: export_PMC_10_100_angle.pdf Graphic file (type pdf)
 <use export_PMC_10_100_angle.pdf>
 Package pdftex.def Info: export_PMC_10_100_angle.pdf used on input line 507.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
- [18] [19 <./export_PMC_10_100_corr.pdf> <./export_PMC_10_100_PP.pdf> <./export
-_PMC_10_100_E.pdf> <./export_PMC_10_100_El.pdf> <./export_PMC_10_100_Elog.pdf> 
-<./export_PMC_10_100_EPlog.pdf>] [20 <./export_PMC_10_100_angle.pdf>] <exp_runt
-ime.pdf, id=131, 614.295pt x 794.97pt>
+ [18] [19 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_10
+0_corr.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_
+100_PP.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_
+100_E.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_1
+00_El.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_1
+00_Elog.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10
+_100_EPlog.pdf>] [20 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/expor
+t_PMC_10_100_angle.pdf>]
+<exp_runtime.pdf, id=131, 614.295pt x 794.97pt>
 File: exp_runtime.pdf Graphic file (type pdf)
-
-<use exp_runtime.pdf>
+ <use exp_runtime.pdf>
 Package pdftex.def Info: exp_runtime.pdf used on input line 549.
 (pdftex.def)             Requested size: 371.1033pt x 252.86406pt.
- <exp_runtime_honest.pdf, id=132, 614.295pt x 794.97pt>
+
+<exp_runtime_honest.pdf, id=132, 614.295pt x 794.97pt>
 File: exp_runtime_honest.pdf Graphic file (type pdf)
 
 <use exp_runtime_honest.pdf>
@@ -516,23 +530,26 @@ File: P.pdf Graphic file (type pdf)
  <use P.pdf>
 Package pdftex.def Info: P.pdf used on input line 561.
 (pdftex.def)             Requested size: 230.18253pt x 156.83932pt.
- [21] [22 <./exp_runtime.pdf> <./exp_runtime_honest.pdf>] [23 <./exp_errors.pdf
-> <./Relative_Error.pdf> <./P.pdf>]
+ [21] [22 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/exp_runtime.pdf>
+ <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/exp_runtime_honest.pdf>] 
+[23 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/exp_errors.pdf> <C:/Us
+ers/Thorvald/Dropbox/Masterproef/Hyperspectral/Relative_Error.pdf> <C:/Users/Th
+orvald/Dropbox/Masterproef/Hyperspectral/P.pdf>]
 Hoofdstuk 4.
-(TabTree.tex
-Overfull \hbox (182.23137pt too wide) in paragraph at lines 3--30
+(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\TabTree.tex
+Overfull \hbox (164.60655pt too wide) in paragraph at lines 3--26
  [][] 
  []
 
 [24
 
-]) (TabGrass.tex
-Overfull \hbox (184.18968pt too wide) in paragraph at lines 3--30
+]) (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\TabGrass.tex
+Overfull \hbox (166.56487pt too wide) in paragraph at lines 3--26
  [][] 
  []
 
-) (TabRoad.tex
-Overfull \hbox (190.06462pt too wide) in paragraph at lines 3--30
+) (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\TabRoad.tex
+Overfull \hbox (172.4398pt too wide) in paragraph at lines 3--26
  [][] 
  []
 
@@ -551,50 +568,50 @@ Package pdftex.def Info: linMESMA.pdf used on input line 707.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
  [27
 
-] [28 <./semilinMESMA.pdf>] [29 <./linMESMA.pdf>] [30
+] [28 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/semilinMESMA.pdf>] [
+29 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/linMESMA.pdf>] [30
 
 
-] (verslag2.bbl [31])
+]
+(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag2.bbl [31])
 
 Package natbib Warning: There were undefined citations.
 
 [32
 
-] (verslag2.aux)
+] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag2.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4523 strings out of 493634
- 59036 string characters out of 3141293
- 162426 words of memory out of 3000000
- 7782 multiletter control sequences out of 15000+200000
+ 4427 strings out of 493921
+ 57731 string characters out of 3147272
+ 148738 words of memory out of 3000000
+ 7596 multiletter control sequences out of 15000+200000
  21600 words of font info for 79 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 27i,11n,48p,1139b,375s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmtt12.pfb>
-Output written on verslag2.pdf (33 pages, 503905 bytes).
+ 841 hyphenation exceptions out of 8191
+ 31i,11n,48p,1137b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on verslag2.pdf (33 pages, 504338 bytes).
 PDF statistics:
  316 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
