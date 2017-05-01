@@ -414,9 +414,6 @@ Dit model heeft een ander probleem, namelijk dat voor een model met $p$ material
 
 In een optimalisatieprobleem noemt men het aantal re\"ele continue variabelen waarvan een systeem afhankelijk is de vrijheidsgraden. Wanneer het aantal te bepalen vrijheidsgraden groter is dan het aantal gegeven parameters, dan is het probleem ondergedefini\"eerd. Dit houdt in dat er meerdere  oplossingen voor de vrije parameters mogelijk zijn waarvoor aan alle voorwaarden voldaan is. Als dit gebeurt, is een gevonden oplossing niet met zekerheid de juiste oplossing, en geeft het model verkeerde oplossingen terug, die lijken te voldoen aan het systeem.
 
-Het aantal vrijheidsgraden van het gemeten spectrum is per definitie het aantal banden van de gebruikte sensor. Bij de Avari-sensor, welke gebruikt werd voor de beelden in dit verslag, is dit $200$. Maar uit dimensionale analyse volgt dat het werkelijke aantal vrijheidsgraden maar rond de $15$ ligt. Als er dus een model gebruikt wordt met meer dan $15$ parameters, geeft dit per definitie een goed resultaat, zelfs als dit model totaal niet met de werkelijkheid overeenkomt. Bij vergelijking van verschillende modellen, zal een model met meer vrijheidsgraden een lagere reconstructie-error hebben. 
-
-
 Van wegen deze problemen met het bilineaire model, wordt er overgegaan naar het multilineair model dat sterker fysisch onderbouwd is, en dat meer dan twee reflecties meeneemt. Dit model wordt beschreven in de volgende sectie.
 
 \section{Multilineair ontmengen} \label{sec:multi}
@@ -517,8 +514,10 @@ Hierbij wordt verondersteld dat $P_i$ gekend is, wat in werkelijkheid niet het g
 
 \subsection{Ondergrens van P waarde}
 
-$P$ is per definitie een getal groter dan nul, omdat kansen tussen nul en \'e\'en liggen. Echter, het is mogelijk om in vergelijking \ref{eq:Pi} een negatieve waarde in te voeren. Deze waarde kan negatief zijn in twee situaties. Enerzijds - zoals beschreven in de vorige sectie- is het albedo slechts een benadering. Doordat de reflectie van de referentie-endmember nul wordt verondersteld te zijn, is deze lager dan in werkelijkheid. Bijgevolg zal ook de reflectiekans van de pixel lager zijn dan in werkelijkheid. In het geval dat de reflectiekans van de pixel lager is dan de reflectiekans van het referentiemateriaal, ligt deze waarde onder nul. Merk op dat dit systeem niet lineair is, waardoor een verkeerde reflectiekans in bovengenoemde sectie niet kan opgelost worden door het herdefini\"eren van $P$. Anderzijds, zijn er ook interpixel-interacties die invloed hebben op het systeem. Deze kunnen extra lichtstralen die hebben gereflecteerd op een materiaal in een andere pixel toevoegen aan het systeem, wat zorgt voor een verlaging van de reflectiekans. 
-
+$P$ is per definitie een getal groter dan nul, omdat kansen tussen nul en \'e\'en liggen. Echter, het is mogelijk om in vergelijking \ref{eq:Pi} een negatieve waarde in te voeren. Dit komt neer op een verandering van de randvoorwaarden in het \texttt{fmincon} algoritme. In plaats van dat de grenzen $[0,1]$ zijn, worden de grenzen nu $[-1,1]$. 
+Een negatieve reflectiekans is niet fysisch, maar er bestaan twee mogelijke verklaringen voor het toelaten van negative $P$ waarden, elk waarbij $P$ niet meer als kans wordt beschouwd.
+De eerste mogelijke verklaring - zoals beschreven in de vorige sectie- is dat het albedo slechts een benadering os. Het vervangen van het albedo door de reflectie is equivalent aan het veronderstellen dat de reflectie van het referentiemateriaal gelijk is aan nul. Dit zorgt dat de waarde van $P$ die gemeten wordt lager is dan in werkelijkheid. Als de reflectie van de pixel kleiner is dan de reflectie van het referentiemateriaal, zorgt dit voor een negatieve gemeten reflectiekans, hoewel de werkelijke reflectie nog steeds positief is. Merk op dat de reflectiekans $P$ niet kan  vervangen worden door $P-P_{R}$ - met $P_{R}$ de reflectie van het referentiemateriaal - omdat het systeem niet lineair afhangt van $P$.
+De twee megelijke verklaring is het meenemen van interpixel interacties. Deze geeft extra hogere orde termen mee aan het systeem. De enige hoge orde termen die het multilineair model meeneemt hebben machten van $P$ als co\"efficienten, dus worden deze waarden van $P$ aangepast naar niet werkelijke waarden.  
 %\subsection{afhankelijke vs onafhankelijke P waarden}
 
 
@@ -591,7 +590,9 @@ Hierboven is gebruikt gemaakt van het lineaire ontmengalgoritme, maar dit hoeft 
 
 \section{Hoekminimalisatie} \label{sec:AAM}
 
-Het probleem bij het \textit{MESMA} algorimte is dat ontmengt moet worden in functie van elke deelverzameling van endmembers, voor elk materiaal.
+Bij \textit{MESMA} moet een pixel dat ontmengd worden in functie van elke deelverzameling van endmembers, voor elk materiaal. Zelfs als \textit{Sum-to-one contrained least-square unmixing} gebruikt wordt, levert dit een langdurig proces. Er bestaat een efficienter proces dat werkt als volgt.
+Een startpositie wordt gekozen van willekeurige bibliotheekelementen en daarna wordt herhaaldelijk voor een materiaal het geselecteerde spectrum vervangen door een andere spectrum van ditzelfde materiaal, met een minimale reconstructie-error. Hierbij worden de spectra van de andere materialen constant gehouden. Dit wordt gedaan voor elk materiaal, en verscheidene keren herhaald. 
+Doordat de reconstructie-error kleiner wordt na elke stap, bestaat er een optimaal minimum. Wanneer dit bereikt wordt, kan voor geen enkel materiaal het 
 
 \subsection{berekening}
 
@@ -622,9 +623,9 @@ In deze laatste uitdrukking kan de rol van $e_p$ en $x$ worden verwisseld, dus a
 
 Aangezien in functie van $\bm{e}_p$, $\left| \bm{x} - \proj{\bm{x}}{F}\right|$ constant is, zal de minimalisatie van $\sin \theta$ de reconstructie-error minimaliseren. De optimale hoek kan gevonden worden door deze uit te rekenen voor elk bibliotheekelement en het minimum te kiezen. Deze methode noemt men hoekminimalisatie of \textit{alternating angle minimalisation}
 
-\subsection{optimalisatie}
 
-Om deze techniek toe te passen voor de selectie van spectra voor de endmembers, kan een optimalisatieprocedure gebruikt worden. Men begint met een willekeurige selectie van bibliotheekelementen. Daarna wordt voor een enkel materiaal het optimale spectrum bepaald, terwijl de andere materialen constant worden gehouden. Dit wordt herhaald voor alle materialen, totdat er voor geen enkel materiaal nog een verbetering op de spectrale hoek bestaat. Aangezien er een eindig aantal mogelijkheden zijn voor de keuze van spectra en dat de reconstructie-error kleiner wordt bij elke stap, eindigt dit algoritme met zekerheid. In praktijk wordt vaak een maximum aantal iteraties gebruikt, omdat dit computationeel eenvoudiger is. Het volledige proces staat beschreven in algoritme \ref{al:AAM}.
+
+Het volledige proces staat beschreven in algoritme \ref{al:AAM}.
 
 \begin{algorithm}
 \caption{\textit{Alternating Angle Minimalistation} \label{al:AAM}}
