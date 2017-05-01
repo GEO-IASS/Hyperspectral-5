@@ -592,9 +592,10 @@ Hierboven is gebruikt gemaakt van het lineaire ontmengalgoritme, maar dit hoeft 
 
 Bij \textit{MESMA} moet een pixel dat ontmengd worden in functie van elke deelverzameling van endmembers, voor elk materiaal. Zelfs als \textit{Sum-to-one contrained least-square unmixing} gebruikt wordt, levert dit een langdurig proces. Er bestaat een efficienter proces dat werkt als volgt.
 Een startpositie wordt gekozen van willekeurige bibliotheekelementen en daarna wordt herhaaldelijk voor een materiaal het geselecteerde spectrum vervangen door een andere spectrum van ditzelfde materiaal, met een minimale reconstructie-error. Hierbij worden de spectra van de andere materialen constant gehouden. Dit wordt gedaan voor elk materiaal, en verscheidene keren herhaald. 
-Doordat de reconstructie-error kleiner wordt na elke stap, bestaat er een optimaal minimum. Wanneer dit bereikt wordt, kan voor geen enkel materiaal het 
+Doordat de reconstructie-error kleiner wordt na elke stap, bestaat er een optimaal minimum. Wanneer dit bereikt wordt, kan voor geen enkel materiaal de reconstructie-error verlaagt worden door een ander spectrum te nemen. Dit is niet per definitie gelijk aan de oplossing van \textit{mesma}, omdat dit een lokaal minimum vind in plaats van een globaal minimum.
+Men in in elke stap niet ge\"intereseert in de werkelijke reconstructie-error, alleen het element dat de laagst mogelijke reconstructie-error heeft.
 
-\subsection{berekening}
+\subsection{minimale reconstructie-error}
 
 Het lineair ontmengen gebeurt door het gemeten spectrum te projecteren op het hypervlak opgespannen door de endmembers. Noemen we dit hypervlak $S$, dan kan de reconstructie-error herschreven worden als:
 
@@ -621,9 +622,9 @@ In deze laatste uitdrukking kan de rol van $e_p$ en $x$ worden verwisseld, dus a
 \alpha = \arcsin \left(\frac{\left|\bm{e}_p - \proj{\bm{e}_p}{G}\right|}{\left|\bm{e}_p - \proj{\bm{e}_p}{F}\right|}\right)
 \end{equation} 
 
-Aangezien in functie van $\bm{e}_p$, $\left| \bm{x} - \proj{\bm{x}}{F}\right|$ constant is, zal de minimalisatie van $\sin \theta$ de reconstructie-error minimaliseren. De optimale hoek kan gevonden worden door deze uit te rekenen voor elk bibliotheekelement en het minimum te kiezen. Deze methode noemt men hoekminimalisatie of \textit{alternating angle minimalisation}
+Aangezien in functie van $\bm{e}_p$, $\left| \bm{x} - \proj{\bm{x}}{F}\right|$ constant is, zal de minimalisatie van $\sin \theta$ de reconstructie-error minimaliseren. Deze methode noemt men hoekminimalisatie of \textit{alternating angle minimalisation}
 
-
+\vspace{5 mm}
 
 Het volledige proces staat beschreven in algoritme \ref{al:AAM}.
 
