@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.28)  3 MAY 2017 09:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.28)  3 MAY 2017 10:07
 entering extended mode
 **./verslag3.tex
 (verslag3.tex
@@ -529,32 +529,29 @@ Hoofdstuk 3.
 Hoofdstuk 4.
 [25
 
-] [26] <export_PMC_10_100_E.pdf, id=128, 614.295pt x 794.97pt>
-File: export_PMC_10_100_E.pdf Graphic file (type pdf)
+] [26] <PMC_10_100_E.pdf, id=128, 614.295pt x 794.97pt>
+File: PMC_10_100_E.pdf Graphic file (type pdf)
 
-<use export_PMC_10_100_E.pdf>
-Package pdftex.def Info: export_PMC_10_100_E.pdf used on input line 721.
+<use PMC_10_100_E.pdf>
+Package pdftex.def Info: PMC_10_100_E.pdf used on input line 721.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+ <PMC_10_100_El.pdf, id=129, 614.295pt x 794.97pt>
+File: PMC_10_100_El.pdf Graphic file (type pdf)
 
-<export_PMC_10_100_El.pdf, id=129, 614.295pt x 794.97pt>
-File: export_PMC_10_100_El.pdf Graphic file (type pdf)
-
-<use export_PMC_10_100_El.pdf>
-Package pdftex.def Info: export_PMC_10_100_El.pdf used on input line 725.
+<use PMC_10_100_El.pdf>
+Package pdftex.def Info: PMC_10_100_El.pdf used on input line 725.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+ <PMC_10_100_Elog.pdf, id=130, 614.295pt x 794.97pt>
+File: PMC_10_100_Elog.pdf Graphic file (type pdf)
 
-<export_PMC_10_100_Elog.pdf, id=130, 614.295pt x 794.97pt>
-File: export_PMC_10_100_Elog.pdf Graphic file (type pdf)
-
-<use export_PMC_10_100_Elog.pdf>
-Package pdftex.def Info: export_PMC_10_100_Elog.pdf used on input line 729.
+<use PMC_10_100_Elog.pdf>
+Package pdftex.def Info: PMC_10_100_Elog.pdf used on input line 729.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+ <PMC_10_100_EPlog.pdf, id=131, 614.295pt x 794.97pt>
+File: PMC_10_100_EPlog.pdf Graphic file (type pdf)
 
-<export_PMC_10_100_EPlog.pdf, id=131, 614.295pt x 794.97pt>
-File: export_PMC_10_100_EPlog.pdf Graphic file (type pdf)
-
-<use export_PMC_10_100_EPlog.pdf>
-Package pdftex.def Info: export_PMC_10_100_EPlog.pdf used on input line 733.
+<use PMC_10_100_EPlog.pdf>
+Package pdftex.def Info: PMC_10_100_EPlog.pdf used on input line 733.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
 Overfull \hbox (2.61107pt too wide) in paragraph at lines 720--736
@@ -566,25 +563,23 @@ Overfull \hbox (2.61107pt too wide) in paragraph at lines 720--736
 [] [] 
  []
 
-<export_PMC_10_100_corr.pdf, id=132, 614.295pt x 794.97pt>
-File: export_PMC_10_100_corr.pdf Graphic file (type pdf)
-
-<use export_PMC_10_100_corr.pdf>
-Package pdftex.def Info: export_PMC_10_100_corr.pdf used on input line 742.
+<PMC_10_100_corr.pdf, id=132, 614.295pt x 794.97pt>
+File: PMC_10_100_corr.pdf Graphic file (type pdf)
+ <use PMC_10_100_corr.pdf>
+Package pdftex.def Info: PMC_10_100_corr.pdf used on input line 742.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-<export_PMC_10_100_PP.pdf, id=133, 614.295pt x 794.97pt>
-File: export_PMC_10_100_PP.pdf Graphic file (type pdf)
-
-<use export_PMC_10_100_PP.pdf>
-Package pdftex.def Info: export_PMC_10_100_PP.pdf used on input line 746.
+<PMC_10_100_PP.pdf, id=133, 614.295pt x 794.97pt>
+File: PMC_10_100_PP.pdf Graphic file (type pdf)
+ <use PMC_10_100_PP.pdf>
+Package pdftex.def Info: PMC_10_100_PP.pdf used on input line 746.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-<export_PMC_10_100_angle.pdf, id=134, 614.295pt x 794.97pt>
-File: export_PMC_10_100_angle.pdf Graphic file (type pdf)
+<PMC_10_100_angle.pdf, id=134, 614.295pt x 794.97pt>
+File: PMC_10_100_angle.pdf Graphic file (type pdf)
 
-<use export_PMC_10_100_angle.pdf>
-Package pdftex.def Info: export_PMC_10_100_angle.pdf used on input line 750.
+<use PMC_10_100_angle.pdf>
+Package pdftex.def Info: PMC_10_100_angle.pdf used on input line 750.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
 Overfull \hbox (5.62215pt too wide) in paragraph at lines 741--753
@@ -597,10 +592,9 @@ Overfull \hbox (13.1173pt too wide) in paragraph at lines 766--767
 .1a[] en 4.1b[] be-schrij-ven de reconstructie-
  []
 
-[27] [28 <./export_PMC_10_100_E.pdf> <./export_PMC_10_100_El.pdf> <./export_PMC
-_10_100_Elog.pdf> <./export_PMC_10_100_EPlog.pdf>] [29 <./export_PMC_10_100_cor
-r.pdf> <./export_PMC_10_100_PP.pdf> <./export_PMC_10_100_angle.pdf>] [30]
-[31]
+[27] [28 <./PMC_10_100_E.pdf> <./PMC_10_100_El.pdf> <./PMC_10_100_Elog.pdf> <./
+PMC_10_100_EPlog.pdf>] [29 <./PMC_10_100_corr.pdf> <./PMC_10_100_PP.pdf> <./PMC
+_10_100_angle.pdf>] [30] [31]
 Hoofdstuk 5.
 [32
 
@@ -642,7 +636,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  6369 strings out of 493634
- 89710 string characters out of 3141293
+ 89465 string characters out of 3141293
  168832 words of memory out of 3000000
  9599 multiletter control sequences out of 15000+200000
  31343 words of font info for 109 fonts, out of 3000000 for 9000
@@ -675,7 +669,7 @@ sfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
 bo8a.pfb>
-Output written on verslag3.pdf (40 pages, 953074 bytes).
+Output written on verslag3.pdf (40 pages, 952075 bytes).
 PDF statistics:
  311 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

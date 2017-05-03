@@ -10,6 +10,7 @@ end
 function PMC_default(points,hits)
     close all;
     PMC(points,hits,1,points,0.1,['PMC_' num2str(points) '_' num2str(hits) '_' ],false)
+    addpath('AAM/')
     PMC(points,hits,1,points,0.1,['PMC_AAM_' num2str(points) '_' num2str(hits) '_' ],true)
 end
 
