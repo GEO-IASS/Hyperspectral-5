@@ -1,74 +1,4 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: verslag3.aux
-Case mismatch error between cite keys MATLAB and matlab
----line 123 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 124 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 125 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 126 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 127 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 128 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 160 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 161 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 170 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 171 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 172 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 173 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 174 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MATLAB and matlab
----line 175 of file verslag3.aux
- : \citation{MATLAB
- :                 }
-I'm skipping whatever remains of this command
 The style file: plain.bst
 Database file #1: biblio.bib
 Warning--I didn't find a database entry for "cursus"
@@ -77,4 +7,4 @@ Warning--empty journal in mlinmix
 Warning--empty year in mlinmix
 Warning--empty journal in mesma
 Warning--empty year in mesma
-(There were 14 error messages)
+(There were 6 warnings)

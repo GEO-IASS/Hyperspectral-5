@@ -31,8 +31,7 @@
 \contentsline {subsubsection}{Ontmengen van de selectie}{21}
 \contentsline {subsection}{\numberline {3.1.2}vrije keuze van het ontmengalgoritme}{22}
 \contentsline {section}{\numberline {3.2}Hoekminimalisatie}{22}
-\contentsline {subsection}{\numberline {3.2.1}berekening}{22}
-\contentsline {subsection}{\numberline {3.2.2}optimalisatie}{23}
+\contentsline {subsection}{\numberline {3.2.1}minimale reconstructie-error}{23}
 \contentsline {chapter}{\numberline {4}Spectrale variabiliteit bij niet-lineaire ontmenging}{25}
 \contentsline {section}{\numberline {4.1}Multilineair MESMA}{25}
 \contentsline {section}{\numberline {4.2}Semi-lineair model}{26}

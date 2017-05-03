@@ -168,11 +168,11 @@ Rob {Heylen} % Supervisor's Name
 
 Het eerste hoofdstuk introduceert het onderwerp van deze thesis: spectrale ontmenging. Eerst wordt het lineaire spectrale ontmengingsmodel beschreven, welke het meest gebruikte model is. Dan worden twee belangrijke problemen beschreven die niet met het lineaire model kunnen worden behandeld: niet-lineaire effecten en endmember variabiliteit.
 
-In hoofdstuk 2 worden 2 state-of-the-art methodes uit de literatuur beschreven voor niet-lineair spectrale ontmenging en endmember variabiliteit.  Het multilineair model is een methode voor niet-lineaire spectrale ontmenging, en wordt uitvoerig beschreven in: \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}. De tweede methode brengt  endmember variabiliteit in rekening en wordt behandeld in: \textit{Hyperspectral unmixing with endmember variability via alternating angle minimization}\cite{mesma}.
+In hoofdstuk 2 en 3 worden 2 state-of-the-art methodes uit de literatuur beschreven voor niet-lineair spectrale ontmenging en endmember variabiliteit.  Het multilineair model -beschreven in hoofdstuk twee - is een methode voor niet-lineaire spectrale ontmenging, en wordt uitvoerig beschreven in: \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}. In hoofdstuk 3 wordt de methode die endmember variabiliteit in rekening brengt bescreven, deze wordt behandeld in: \textit{Hyperspectral unmixing with endmember variability via alternating angle minimization}\cite{mesma}.
 
-Er zijn in de literatuur momenteel nauwelijks of geen methoden gekend die endmember variabiliteit in rekening brengen bij niet-lineaire ontmenging. Daarom heb ik in deze masterproef onderzoek gedaan naar de combinatie van niet-lineaire ontmenging en endmember variabiliteit. In het derde hoofdstuk beschrijf ik een aantal methodes die gelijktijdig rekening houden met beide concepten. Deze methodes zijn gebaseerd op combinaties van de 2 methodes uit hoofdstuk 2.
+Er zijn in de literatuur momenteel nauwelijks of geen methoden gekend die endmember variabiliteit in rekening brengen bij niet-lineaire ontmenging. Daarom heb ik in deze masterproef onderzoek gedaan naar de combinatie van niet-lineaire ontmenging en endmember variabiliteit. In het derde hoofdstuk beschrijf ik een aantal methodes die gelijktijdig rekening houden met beide concepten. Deze methodes zijn gebaseerd op combinaties van de 2 methodes uit hoofdstuk 2 en 3.
 	
-In hoofdstuk 4 worden de ontwikkelde methodes en een aantal varianten hierop gevalideerd  op een experimentele dataset: de Alina dataset\cite{Alina}.  
+In hoofdstuk 5 worden de ontwikkelde methodes en een aantal varianten hierop gevalideerd  op een experimentele dataset: de Alina dataset\cite{Alina}.  
 \newpage
 \chapter*{Inleiding}
 \addcontentsline{toc}{chapter}{Inleiding}
@@ -733,7 +733,7 @@ Eerst worden voor elke pixel willekeurige abundanties en een vaste reflectiekans
 \includegraphics[width=\textwidth,trim=0 200 0 175 cm]{export_PMC_10_100_EPlog.pdf}
 \caption{Reconstructie-error van het semilineaire model in functie van de gemeten $P$ waarde. De y-as is logaritmisch \label{fig:EPlog} }
 \end{subfigure}
-\caption{Vergelijking tussen lineair, semilineair en multilineair MESMA. Voor elke $P$ waarde zijn er 100 pixels berekend. Rood is het lineaire model en blauw het semilineaire model. Merk trouwens op dat wanneer het eindpunt van de onderste foutenvlag onder nul ligt, alleen de bovengrens getekend is en niet de foutenvlag zelf op de logaritmische grafieken. Deze figuren zijn gemaakt met \textit{matlab}\cite{MATLAB}\label{fig:e100}}
+\caption{Vergelijking tussen lineair, semilineair en multilineair MESMA. Voor elke $P$ waarde zijn er 100 pixels berekend. Rood is het lineaire model en blauw het semilineaire model. Merk trouwens op dat wanneer het eindpunt van de onderste foutenvlag onder nul ligt, alleen de bovengrens getekend is en niet de foutenvlag zelf op de logaritmische grafieken. Deze figuren zijn gemaakt met \textit{matlab}\cite{matlab}\label{fig:e100}}
 \end{figure}
 
 \begin{figure}
@@ -748,9 +748,9 @@ Eerst worden voor elke pixel willekeurige abundanties en een vaste reflectiekans
 \end{subfigure}
 \begin{subfigure}[b]{0.5\textwidth}
 \includegraphics[width=\textwidth,trim=0 200 0 175 cm]{export_PMC_10_100_angle.pdf}
-\caption{Gevonden hoek in functie van de reflectie. Men ziet dat de foutenvlaggen veel groter zijn dan de data zelf. Deze figuur is gemaakt met \textit{matlab}\cite{MATLAB} \label{fig:hoek}}
+\caption{Gevonden hoek in functie van de reflectie. Men ziet dat de foutenvlaggen veel groter zijn dan de data zelf. Deze figuur is gemaakt met \textit{matlab}\cite{matlab} \label{fig:hoek}}
 \end{subfigure}
-\caption{Vergelijking tussen lineair, semilineair en multilineair MESMA. Voor elke $P$ waarde zijn er 100 pixels berekend. Rood is het lineaire model en blauw het semilineaire model. Deze figuren zijn gemaakt met \textit{matlab}\cite{MATLAB}\label{fig:e100}}
+\caption{Vergelijking tussen lineair, semilineair en multilineair MESMA. Voor elke $P$ waarde zijn er 100 pixels berekend. Rood is het lineaire model en blauw het semilineaire model. Deze figuren zijn gemaakt met \textit{matlab}\cite{matlab}\label{fig:e100}}
 \end{figure}
 
 \subsubsection{Correct geselecteerde materialen}
@@ -855,7 +855,7 @@ onafhankelijke $P$ & Strict & Strong
 
 \begin{figure}
 \includegraphics[width=0.4\textwidth, trim=400 450 0 175 cm,clip]{plot_legend.pdf}
-\caption{Legende van figuren \ref{fig:trees}, \ref{fig:road} en \ref{fig:grass}. Deze afbeelding is gemaakt met MATLAB\cite{MATLAB} \label{fig:legend}}
+\caption{Legende van figuren \ref{fig:trees}, \ref{fig:road} en \ref{fig:grass}. Deze afbeelding is gemaakt met MATLAB\cite{matlab} \label{fig:legend}}
 \end{figure}
 \begin{table}
 \begin{tabular}{l r r}
@@ -878,17 +878,17 @@ We vergelijken niet alleen de verschillende methodes, maar ook, waar toepasselij
 
 \begin{figure}
 \includegraphics[width=0.99\textwidth,trim=0 200 0 175 cm]{plot_trees.pdf}
-\caption{Vergelijking van verschillende methoden voor een pixel waar de overheersende eindmember respectievelijk bebossing, asfalt en gras is. De legende van dez afbeelding is te vinden in figuur \ref{fig:legend}. Deze afbeelding is gemaakt met MATLAB\cite{MATLAB}\label{fig:trees}}
+\caption{Vergelijking van verschillende methoden voor een pixel waar de overheersende eindmember respectievelijk bebossing, asfalt en gras is. De legende van dez afbeelding is te vinden in figuur \ref{fig:legend}. Deze afbeelding is gemaakt met MATLAB\cite{matlab}\label{fig:trees}}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=0.99\textwidth,trim=0 200 0 175 cm]{plot_road.pdf}
-\caption{Vergelijking van verschillende methoden voor een pixel waar de overheersende eindmember asvalt is. De legende van dez afbeelding is te vinden in figuur \ref{fig:legend}. Deze afbeelding is gemaakt met MATLAB\cite{MATLAB} \label{fig:road}}
+\caption{Vergelijking van verschillende methoden voor een pixel waar de overheersende eindmember asvalt is. De legende van dez afbeelding is te vinden in figuur \ref{fig:legend}. Deze afbeelding is gemaakt met MATLAB\cite{matlab} \label{fig:road}}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=0.99\textwidth,trim=0 200 0 175 cm]{plot_grass.pdf}
-\caption{Vergelijking van verschillende methoden voor een pixel waar de overheersende eindmember gras is. De legende van dez afbeelding is te vinden in figuur \ref{fig:legend}. Deze afbeelding is gemaakt met MATLAB\cite{MATLAB} \label{fig:grass}}
+\caption{Vergelijking van verschillende methoden voor een pixel waar de overheersende eindmember gras is. De legende van dez afbeelding is te vinden in figuur \ref{fig:legend}. Deze afbeelding is gemaakt met MATLAB\cite{matlab} \label{fig:grass}}
 \end{figure}
 
 
@@ -916,7 +916,7 @@ Het aanpassen van de ondergrens van $P$ geeft geen verschil in de looptijd, de e
 
 \subsection{Bepreking multilinair AAM vs semilinair model}
 
-Zoals te zien in de figuren en voorspeld in sectie \ref{sec:smesma}, geeft het semilineair model een verbetering in looptijd ten opzichte van het multilineair model , terwijl er maar een kleine verhoging is voor de reconstructie-error.
+In tegenstelling dan voorspelt in \ref{sec:smesma}, geeft in het experiment AAM dezelfde resultaten als het lineair model, en elk semilineair model dezelfde resultaten als elk respectievelijk multilineair AAM model. Niet alleen dezelfde reconstructie-error, maar omdat deze dezelfde indices kiest, ook dezelfde abundaties en reflectiekansen. Echter, de looptijd is veel korter. 
 
 \vspace{5 mm}
 
