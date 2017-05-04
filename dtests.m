@@ -8,19 +8,23 @@ s.tablehandle = @table_show_result;
 end
 
 function PMC_default(points,hits)
-    PMC(points,hits,1,points,0.1,['export_PMC_' num2str(points) '_' num2str(hits) '_' ])
+    close all;
+    PMC(points,hits,1,points,0.1,['PMC_' num2str(points) '_' num2str(hits) '_' ],false)
+    addpath('AAM/')
+    PMC(points,hits,1,points,0.1,['PMC_AAM_' num2str(points) '_' num2str(hits) '_' ],true)
 end
 
 
-function PMC(points,hits,maxP,zoom_points,zoomP,filename)
-    file_for = filename; 
-    close all;
-    
+function PMC(points,hits,maxP,zoom_points,zoomP,filename,AAM)
+
+    file_for = filename;
     smallP = linspace(0,zoomP,zoom_points+1);
     smallP = smallP(1:end-1);
     P = [smallP linspace(zoomP,maxP,points)];
-    [mc,sc,me,se,mp,sp,ma,sa,ml,sl] = mean_correctness(P,hits);
-    
+    P = P(1:end-1);
+  
+    [mc,sc,me,se,mp,sp,ma,sa,ml,sl] = mean_correctness(P,hits,AAM);
+
     figure;
     errorbar(P,mc,sc);
     xlabel('P');
@@ -109,8 +113,8 @@ function PMC(points,hits,maxP,zoom_points,zoomP,filename)
    
 end
 
-function [mcorr,scorr,merr,serr,mrefl,srefl,mangle,sangle,mlin,slin] = mean_correctness(P,hits)
-    [corr,err,refl,angle,lin] = linfixfast(repmat(P(:),1,hits));
+function [mcorr,scorr,merr,serr,mrefl,srefl,mangle,sangle,mlin,slin] = mean_correctness(P,hits,AAM)
+    [corr,err,refl,angle,lin] = linfixfast(repmat(P(:),1,hits),AAM);
     [mcorr,scorr] = grow_mats(corr,P);
     [merr,serr] = grow_mats(err,P);
     [mrefl,srefl] = grow_mats(refl,P);
@@ -145,7 +149,7 @@ end
 
 end
 
-function [corr,error,refl,angle,linerror] = linfixfast(P)
+function [corr,error,refl,angle,linerror] = linfixfast(P,AAM)
 pixels = zeros(size(P(:),1),53);
 compare = zeros(size(P(:),1),4);
 [library,~,~,rl] = load_Alina();
@@ -154,7 +158,11 @@ for i=1:size(P(:),1)
     compare(i,:) = solution.indices;
 end
 %[indices, abundance, rP, ~, ~, ~, error] = libraryperm(pixels,library,true,false,true,false);
-[indices,error,linerror,refl] = library_fast(library,rl,pixels);
+if AAM
+    [indices,error,linerror,refl] = library_fast_AAM(library,rl,pixels);
+else
+    [indices,error,linerror,refl] = library_fast(library,rl,pixels);
+end
 %[ uma, umP, ~, ~, ume ] = multilin_psmall( pixels, solution.endmem,true,false);
 
 disp(indices);

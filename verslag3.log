@@ -1,22 +1,13 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  29 APR 2017 11:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.28)  3 MAY 2017 10:07
 entering extended mode
-**verslag3.tex
-(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
-Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+**./verslag3.tex
+(verslag3.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -31,26 +22,26 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2016/01/08 3.9n The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\dutch.ldf"
+(C:\Users\Thorvald_Dox\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-dutch\dutch.l
+df
 Language: dutch 2005/03/30 v3.8i Dutch support from the babel system
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/01/08 3.9n Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
 Package babel Info: Making " an active character on input line 132.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box26
 \beforetitleunit=\skip43
@@ -62,7 +53,8 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen107
 \titlewidthfirst=\dimen108
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
+(C:\Users\Thorvald_Dox\AppData\Roaming\MiKTeX\2.9\tex\latex\footmisc\footmisc.s
+ty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks15
 \footnotemargin=\dimen109
@@ -75,32 +67,31 @@ Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
 Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count90
@@ -108,16 +99,16 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen110
 \Gin@req@width=\dimen111
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titleps.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\titleps.sty"
 Package: titleps 2011/12/15 v1.1.0 Page styles
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\ttlps.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\ttlps.def"
 File: ttlps.def 2011/12/15
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks17
 \symAMSa=\mathgroup4
@@ -125,24 +116,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
 \ex@=\dimen112
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen113
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count91
@@ -183,8 +174,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
-Package: amsthm 2004/08/06 v2.20
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks23
 \thm@bodyfont=\toks24
 \thm@headfont=\toks25
@@ -195,48 +186,47 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip50
 \dth@everypar=\toks28
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks29
 \verbatim@line=\toks30
 \verbatim@in@stream=\read1
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\titling\titling.sty"
+(C:\Users\Thorvald_Dox\AppData\Roaming\MiKTeX\2.9\tex\latex\titling\titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip51
 \thanksmargin=\skip52
 \droptitle=\skip53
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
+(C:\Users\Thorvald_Dox\AppData\Roaming\MiKTeX\2.9\tex\latex\appendix\appendix.s
+ty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@pps=\count103
 \c@@ppsavesec=\count104
 \c@@ppsaveapp=\count105
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty"
-Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\bm.sty"
+Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
 \symboldsymbols=\mathgroup8
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
-LaTeX Info: Redefining \bm on input line 204.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+(C:\Users\Thorvald_Dox\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
 \wrapoverhang=\dimen121
 \WF@size=\dimen122
 \c@WF@wrappedlines=\count106
 \WF@box=\box29
 \WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
-Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2015/09/15 v1.1-100 Sub-captions (AR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen123
 \captionmargin@=\dimen124
@@ -252,11 +242,11 @@ Package caption Info: wrapfig package is loaded.
 \c@subfigure=\count108
 \c@subtable=\count109
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\algorithms\algorithm.sty"
+(C:\Users\Thorvald_Dox\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithms\algorith
+m.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count110
 \float@exts=\toks32
@@ -264,16 +254,18 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks33
 \@floatcapt=\box31
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks34
 \c@algorithm=\count111
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty"
+(C:\Users\Thorvald_Dox\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithmicx\algpse
+udocode.sty
 Package: algpseudocode 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty"
+(C:\Users\Thorvald_Dox\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithmicx\algori
+thmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -289,7 +281,7 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip56
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
 \fancy@headwidth=\skip57
 \f@ncyO@elh=\skip58
 \f@ncyO@erh=\skip59
@@ -304,18 +296,18 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 Package Fancyhdr Warning: \fancyhfoffset's `E' option without twoside option is
  useless on input line 45.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count119
@@ -331,23 +323,24 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen137
 \Gm@dimlist=\toks35
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip66
 \bibsep=\skip67
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count122
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\bibentry.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\natbib\bibentry.sty"
 Package: bibentry 2007/10/30 1.5 (PWD)
 )
-(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.bbl)
-(C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.aux
+(verslag3.bbl) (verslag3.aux
 
 LaTeX Warning: Label `fig:e100' multiply defined.
 
 )
+\openout1 = `verslag3.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
 LaTeX Font Info:    ... okay on input line 77.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
@@ -360,7 +353,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
 LaTeX Font Info:    ... okay on input line 77.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
 LaTeX Font Info:    ... okay on input line 77.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count123
 \scratchdimen=\dimen138
@@ -413,12 +406,12 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 112.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 112.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <download.jpg, id=1, 148.555pt x 127.47626pt>
@@ -434,14 +427,13 @@ Package pdftex.def Info: vlabsym.png used on input line 140.
 (pdftex.def)             Requested size: 104.03047pt x 113.81102pt.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Thorvald/Dropbox
-/Masterproef/Hyperspectral/download.jpg> <C:/Users/Thorvald/Dropbox/Masterproef
-/Hyperspectral/vlabsym.png>] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectr
-al\verslag3.toc
-[1
+{C:/Users/Thorvald_Dox/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./do
+wnload.jpg> <./vlabsym.png>] (verslag3.toc [1
 
 ])
 \tf@toc=\write3
+\openout3 = `verslag3.toc'.
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -463,7 +455,7 @@ Package pdftex.def Info: rs.PNG used on input line 186.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 201.
 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
@@ -474,8 +466,7 @@ LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
 (Font)              Font shape `OT1/phv/b/sl' tried instead on input line 201.
  [6
 
- <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/rs.PNG>]
-<golflengte.PNG, id=40, 313.17pt x 241.65282pt>
+ <./rs.PNG>] <golflengte.PNG, id=40, 313.17pt x 241.65282pt>
 File: golflengte.PNG Graphic file (type png)
  <use golflengte.PNG>
 Package pdftex.def Info: golflengte.PNG used on input line 211.
@@ -496,16 +487,14 @@ File: spec2.PNG Graphic file (type png)
  <use spec2.PNG>
 Package pdftex.def Info: spec2.PNG used on input line 219.
 (pdftex.def)             Requested size: 187.89914pt x 147.36716pt.
- [7 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/golflengte.PNG> <C:/Us
-ers/Thorvald/Dropbox/Masterproef/Hyperspectral/spec.PNG> <C:/Users/Thorvald/Dro
-pbox/Masterproef/Hyperspectral/spec2.PNG>] <hyp.PNG, id=49, 454.69875pt x 356.0
-803pt>
+ [7 <./golflengte.PNG> <./spec.PNG> <./spec2.PNG>] <hyp.PNG, id=49, 454.69875pt
+ x 356.0803pt>
 File: hyp.PNG Graphic file (type png)
 
 <use hyp.PNG>
 Package pdftex.def Info: hyp.PNG used on input line 263.
 (pdftex.def)             Requested size: 469.75502pt x 367.87521pt.
- [8] [9 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/hyp.PNG>]
+ [8] [9 <./hyp.PNG>]
 Hoofdstuk 1.
 [10
 
@@ -523,18 +512,16 @@ Package natbib Warning: Citation `cursus' on page 12 undefined on input line 35
 Package natbib Warning: Citation `cursus' on page 12 undefined on input line 35
 6.
 
-[12] [13 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/nonneg.PNG>]
-[14]
+[12] [13 <./nonneg.PNG>] [14]
 Hoofdstuk 2.
 [15
 
 ] <multi.PNG, id=87, 297.36093pt x 198.7425pt>
 File: multi.PNG Graphic file (type png)
  <use multi.PNG>
-Package pdftex.def Info: multi.PNG used on input line 427.
+Package pdftex.def Info: multi.PNG used on input line 424.
 (pdftex.def)             Requested size: 187.89914pt x 125.58144pt.
- [16 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/multi.PNG>] [17] [18]
- [19]
+ [16 <./multi.PNG>] [17] [18] [19]
 Hoofdstuk 3.
 [20
 
@@ -542,215 +529,147 @@ Hoofdstuk 3.
 Hoofdstuk 4.
 [25
 
-] [26] <export_PMC_10_100_E.pdf, id=128, 614.295pt x 794.97pt>
-File: export_PMC_10_100_E.pdf Graphic file (type pdf)
+] [26] <PMC_10_100_E.pdf, id=128, 614.295pt x 794.97pt>
+File: PMC_10_100_E.pdf Graphic file (type pdf)
 
-<use export_PMC_10_100_E.pdf>
-Package pdftex.def Info: export_PMC_10_100_E.pdf used on input line 719.
+<use PMC_10_100_E.pdf>
+Package pdftex.def Info: PMC_10_100_E.pdf used on input line 721.
+(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+ <PMC_10_100_El.pdf, id=129, 614.295pt x 794.97pt>
+File: PMC_10_100_El.pdf Graphic file (type pdf)
+
+<use PMC_10_100_El.pdf>
+Package pdftex.def Info: PMC_10_100_El.pdf used on input line 725.
+(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+ <PMC_10_100_Elog.pdf, id=130, 614.295pt x 794.97pt>
+File: PMC_10_100_Elog.pdf Graphic file (type pdf)
+
+<use PMC_10_100_Elog.pdf>
+Package pdftex.def Info: PMC_10_100_Elog.pdf used on input line 729.
+(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+ <PMC_10_100_EPlog.pdf, id=131, 614.295pt x 794.97pt>
+File: PMC_10_100_EPlog.pdf Graphic file (type pdf)
+
+<use PMC_10_100_EPlog.pdf>
+Package pdftex.def Info: PMC_10_100_EPlog.pdf used on input line 733.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-<export_PMC_10_100_El.pdf, id=129, 614.295pt x 794.97pt>
-File: export_PMC_10_100_El.pdf Graphic file (type pdf)
-
-<use export_PMC_10_100_El.pdf>
-Package pdftex.def Info: export_PMC_10_100_El.pdf used on input line 723.
-(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
-
-<export_PMC_10_100_Elog.pdf, id=130, 614.295pt x 794.97pt>
-File: export_PMC_10_100_Elog.pdf Graphic file (type pdf)
-
-<use export_PMC_10_100_Elog.pdf>
-Package pdftex.def Info: export_PMC_10_100_Elog.pdf used on input line 727.
-(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
-
-<export_PMC_10_100_EPlog.pdf, id=131, 614.295pt x 794.97pt>
-File: export_PMC_10_100_EPlog.pdf Graphic file (type pdf)
-
-<use export_PMC_10_100_EPlog.pdf>
-Package pdftex.def Info: export_PMC_10_100_EPlog.pdf used on input line 731.
-(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 718--734
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 720--736
 [][] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 718--734
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 720--736
 [] [] 
  []
 
-
-Package natbib Warning: Citation `MATLAB' on page 27 undefined on input line 73
-4.
-
-
-Package natbib Warning: Citation `MATLAB' on page 27 undefined on input line 73
-4.
-
-<export_PMC_10_100_corr.pdf, id=132, 614.295pt x 794.97pt>
-File: export_PMC_10_100_corr.pdf Graphic file (type pdf)
-
-<use export_PMC_10_100_corr.pdf>
-Package pdftex.def Info: export_PMC_10_100_corr.pdf used on input line 740.
+<PMC_10_100_corr.pdf, id=132, 614.295pt x 794.97pt>
+File: PMC_10_100_corr.pdf Graphic file (type pdf)
+ <use PMC_10_100_corr.pdf>
+Package pdftex.def Info: PMC_10_100_corr.pdf used on input line 742.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-<export_PMC_10_100_PP.pdf, id=133, 614.295pt x 794.97pt>
-File: export_PMC_10_100_PP.pdf Graphic file (type pdf)
-
-<use export_PMC_10_100_PP.pdf>
-Package pdftex.def Info: export_PMC_10_100_PP.pdf used on input line 744.
+<PMC_10_100_PP.pdf, id=133, 614.295pt x 794.97pt>
+File: PMC_10_100_PP.pdf Graphic file (type pdf)
+ <use PMC_10_100_PP.pdf>
+Package pdftex.def Info: PMC_10_100_PP.pdf used on input line 746.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-<export_PMC_10_100_angle.pdf, id=134, 614.295pt x 794.97pt>
-File: export_PMC_10_100_angle.pdf Graphic file (type pdf)
+<PMC_10_100_angle.pdf, id=134, 614.295pt x 794.97pt>
+File: PMC_10_100_angle.pdf Graphic file (type pdf)
 
-<use export_PMC_10_100_angle.pdf>
-Package pdftex.def Info: export_PMC_10_100_angle.pdf used on input line 748.
+<use PMC_10_100_angle.pdf>
+Package pdftex.def Info: PMC_10_100_angle.pdf used on input line 750.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-
-Package natbib Warning: Citation `MATLAB' on page 27 undefined on input line 74
-9.
-
-
-Package natbib Warning: Citation `MATLAB' on page 27 undefined on input line 74
-9.
-
-
-Overfull \hbox (5.62215pt too wide) in paragraph at lines 739--751
+Overfull \hbox (5.62215pt too wide) in paragraph at lines 741--753
 [][] | []
  []
 
 
-Package natbib Warning: Citation `MATLAB' on page 27 undefined on input line 75
-1.
-
-
-Package natbib Warning: Citation `MATLAB' on page 27 undefined on input line 75
-1.
-
-
-Overfull \hbox (13.1173pt too wide) in paragraph at lines 764--765
+Overfull \hbox (13.1173pt too wide) in paragraph at lines 766--767
 \OT1/cmr/m/n/12 Figuur 4.2[] be-schrijft de reconstructie-error. De fi-gu-ren 4
 .1a[] en 4.1b[] be-schrij-ven de reconstructie-
  []
 
-[27] [28 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_100
-_E.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_100_
-El.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_100_
-Elog.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_PMC_10_10
-0_EPlog.pdf>] [29 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export_P
-MC_10_100_corr.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export
-_PMC_10_100_PP.pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/export
-_PMC_10_100_angle.pdf>] [30] [31]
+[27] [28 <./PMC_10_100_E.pdf> <./PMC_10_100_El.pdf> <./PMC_10_100_Elog.pdf> <./
+PMC_10_100_EPlog.pdf>] [29 <./PMC_10_100_corr.pdf> <./PMC_10_100_PP.pdf> <./PMC
+_10_100_angle.pdf>] [30] [31]
 Hoofdstuk 5.
 [32
 
 ] <plot_legend.pdf, id=188, 614.295pt x 794.97pt>
 File: plot_legend.pdf Graphic file (type pdf)
  <use plot_legend.pdf>
-Package pdftex.def Info: plot_legend.pdf used on input line 855.
+Package pdftex.def Info: plot_legend.pdf used on input line 857.
 (pdftex.def)             Requested size: 187.89914pt x 148.02176pt.
 
-
-Package natbib Warning: Citation `MATLAB' on page 33 undefined on input line 85
-6.
-
-
-Package natbib Warning: Citation `MATLAB' on page 33 undefined on input line 85
-6.
-
-[33 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_legend.pdf>]
-<plot_trees.pdf, id=197, 614.295pt x 794.97pt>
+[33 <./plot_legend.pdf>] <plot_trees.pdf, id=197, 614.295pt x 794.97pt>
 File: plot_trees.pdf Graphic file (type pdf)
- <use plot_trees.pdf>
-Package pdftex.def Info: plot_trees.pdf used on input line 878.
+
+<use plot_trees.pdf>
+Package pdftex.def Info: plot_trees.pdf used on input line 880.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
-
-
-Package natbib Warning: Citation `MATLAB' on page 34 undefined on input line 87
-9.
-
-
-Package natbib Warning: Citation `MATLAB' on page 34 undefined on input line 87
-9.
-
-<plot_road.pdf, id=198, 614.295pt x 794.97pt>
+ <plot_road.pdf, id=198, 614.295pt x 794.97pt>
 File: plot_road.pdf Graphic file (type pdf)
- <use plot_road.pdf>
-Package pdftex.def Info: plot_road.pdf used on input line 883.
+
+<use plot_road.pdf>
+Package pdftex.def Info: plot_road.pdf used on input line 885.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
-
-
-Package natbib Warning: Citation `MATLAB' on page 34 undefined on input line 88
-4.
-
-
-Package natbib Warning: Citation `MATLAB' on page 34 undefined on input line 88
-4.
-
-<plot_grass.pdf, id=199, 614.295pt x 794.97pt>
+ <plot_grass.pdf, id=199, 614.295pt x 794.97pt>
 File: plot_grass.pdf Graphic file (type pdf)
- <use plot_grass.pdf>
-Package pdftex.def Info: plot_grass.pdf used on input line 888.
+
+<use plot_grass.pdf>
+Package pdftex.def Info: plot_grass.pdf used on input line 890.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
-
-
-Package natbib Warning: Citation `MATLAB' on page 34 undefined on input line 88
-9.
-
-
-Package natbib Warning: Citation `MATLAB' on page 34 undefined on input line 88
-9.
-
-[34 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_trees.pdf>]
-[35 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_road.pdf>]
-[36 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/plot_grass.pdf>]
-[37] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.bbl [38])
+ [34 <./plot_trees.pdf>] [35 <./plot_road.pdf>] [36 <./plot_grass.pdf>] [37] (v
+erslag3.bbl [38])
 
 Package natbib Warning: There were undefined citations.
 
 [39
 
-] (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.aux)
+] (verslag3.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6257 strings out of 493921
- 87532 string characters out of 3147272
- 159671 words of memory out of 3000000
- 9397 multiletter control sequences out of 15000+200000
+ 6369 strings out of 493634
+ 89465 string characters out of 3141293
+ 168832 words of memory out of 3000000
+ 9599 multiletter control sequences out of 15000+200000
  31343 words of font info for 109 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 42i,14n,50p,1121b,534s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmitt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a
-.pfb>
-Output written on verslag3.pdf (40 pages, 973035 bytes).
+ 1025 hyphenation exceptions out of 8191
+ 42i,13n,50p,1123b,544s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
+bo8a.pfb>
+Output written on verslag3.pdf (40 pages, 952075 bytes).
 PDF statistics:
  311 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

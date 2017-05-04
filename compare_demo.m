@@ -23,6 +23,8 @@ pixel = reshape(data(y,x,:),[1,53]);
 allsystems = { ...
     multilin_options(0,false,false,false,600), ...
     multilin_options(0,false,false,true,600), ...
+    multilin_options(0,false,true,false,600), ...
+    multilin_options(0,false,true,true,600), ...
     multilin_options(1,true,false,false,600), ...
     multilin_options(1,false,true,false,600), ...
     multilin_options(1,false,true,true,600), ...
@@ -130,16 +132,35 @@ end
 function cdata()
 
 trees = testpix(3,3);
-road = testpix(11,3);
+mix1 = testpix(5,3);
+road = testpix(9,3);
+mix2 = testpix(12,3);
+curb = testpix(14,3);
 grass = testpix(17,3);
 
-%save_latex_file(table1,'TabTree');
+names = trees.Properties.RowNames;
+
+errors = table(trees.error,mix1.error,road.error,mix2.error,curb.error,grass.error,'RowNames',names);
+errorsrn = table(rne(trees),rne(mix1),rne(road),rne(mix2),rne(curb),rne(grass),'RowNames',names);
+runtime = table(trees.runtime,mix1.runtime,road.runtime,mix2.runtime,curb.runtime,grass.runtime,'RowNames',names);
+
+save_latex_file(errors,'TabErrors');
+save_latex_file(errorsrn,'TabErrorsrn');
+save_latex_file(runtime,'TabRuntime');
 %save_latex_file(table2,'TabRoad');
 %save_latex_file(table3,'TabGrass');
-save('fulltables.mat','trees','road','grass');
+save('fintables.mat','trees','road','grass','curb','mix1','mix2','errors','errorsrn','runtime');
+
+
 
 %show_table(11,3);
-cfunc()
+%cfunc()
+end
+
+function rn = rne(tab)
+
+rn = tab.error/max(tab.error);
+
 end
 
 function cfunc()
