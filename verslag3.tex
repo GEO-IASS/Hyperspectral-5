@@ -217,7 +217,7 @@ Gewone beelden van een camera bestaan uit drie kleuren, elk passende bij een spe
 \end{subfigure}\rulesep
 \begin{subfigure}[b]{0.4\textwidth}
 \includegraphics[width=\textwidth]{spec2.PNG}
-\caption{Het spectrum van de zon. \label{fig:specs}}
+\caption{Het spectrum van de zon en de absorsie van de admosfeer.\label{fig:specs}}
 \end{subfigure}
 \caption{Electromagnetische golven. Deze afbeeldingen komen uit \textit{Fundamentals of remote sensing\cite{fun}}\label{fig:rs2}}
 \end{figure}
@@ -340,7 +340,7 @@ Het minimaliseren van de reconstructie-error, gebruik makend van vergelijking \r
 \text{argmin}_{a_1 ... a_p} \left| \bm{x} - \sum_{i=1}^p a_i \bm{e}_i\right|^2
 \end{align}
 
-Indien de abundanties $a_i$ vrije re\"ele waarden zouden zijn, zou dit minimum eenvoudig berekend kunnen worden, door een projectie te nemen opgespannen door het vlak van de endmembers. Deze projectie kan genomen worden als volgt. Neem $E = [e_1,e_2,...,e_n]$ een matrix met als kolommen de verschillende endmembers. De projectie op de deelruimte opgespannen door de elementen van $E$ kan gevonden worden aan de hand van de \textit{Penrose-inverse} matrix.
+Indien de abundanties $a_i$ vrije re\"ele waarden zouden zijn, zou dit minimum eenvoudig berekend kunnen worden, door een projectie te nemen opgespannen door het vlak van de endmembers. Deze projectie kan genomen worden als volgt. Neem $E = [e_1,e_2,...,e_n]$ een matrix met als kolommen de verschillende endmembers. De projectie op de deelruimte opgespannen door de elementen van $E$ kan gevonden worden aan de hand van de \textit{More-Penrose-inverse} matrix.
 
 \begin{equation}
 \bm{a} = (E^T E)^{-1} E^T \bm{x}
@@ -356,13 +356,13 @@ Doordat de abundanties gedeeltes van lichtstralen zijn die op een materiaal bots
 \caption{Voorbeeld van de niet-negativiteisvoorwaarde aan de hand van een model met twee endmembers. (a) is het model zonder voorwaarden. (b) bevat de eenheidssom-voorwaarde, (c) de niet-negativiteisvoorwaarde en (d) beide voorwaarden. Deze figuur komt uit \cite{cursus}. \label{fig:nonneg}}
 \end{figure}
 
-De niet-negativiteitsvoorwaarde geeft weer dat de abundanties allemaal positief moeten zijn, dus groter dan nul. Dit betekent dat men niet moet projecteren op de deelruimte, maar op een polyhedrale kegel hierin. Een tweedimenstionaal voorbeeld, waarvan het systeem zonder voorwaarde de volledige ruimte is, is geillustreerd in figuur \ref{fig:nonneg}. Hiervoor kan een aangepast algoritme gebruikt worden, namelijk het ``nonnegative least-squares curve fitting'' of \texttt{lsqnonneg} algoritme. Dit algoritme is veel berekeningsintensiever dan het \textit{penrose-inverse} algoritme.
+De niet-negativiteitsvoorwaarde geeft weer dat de abundanties allemaal positief moeten zijn, dus groter of gelijk aan nul. Dit betekent dat men niet moet projecteren op de deelruimte, maar op een polyhedrale kegel hierin. Een tweedimenstionaal voorbeeld, waarvan het systeem zonder voorwaarde de volledige ruimte is, is geillustreerd in figuur \ref{fig:nonneg}. Hiervoor kan een aangepast algoritme gebruikt worden, namelijk het ``nonnegative least-squares curve fitting'' of \texttt{lsqnonneg} algoritme. Dit algoritme is veel berekeningsintensiever dan het \textit{penrose-inverse} algoritme.
 
 \subsubsection{Eenheidssom}
 
 De eenheidssom-voorwaarde geeft weer dat de abundanties moeten sommeren tot \'e\'en. Dit zorgt ervoor dat de mogelijke abundanties geen deelruimte meer opspannen, maar een hypervlak, aangezien het nulpunt geen element meer is, zoals te zien in figuur \ref{fig:nonneg}. Dit kan worden opgelost door een van de endmembers als schaduw te beschouwen. Dit verschuift het hypervlak over de vector $e_1$ zodanig dat het nulpunt deel wordt van de hyperruimte en dit terug een deelruimte is.
 
-Deze transformatie houdt in dat de matrix $E$ getranslateerd wordt naar $[\bm{e}_2-\bm{e}_1;\bm{e}_3-\bm{e}_1;...;\bm{e}_n-\bm{e}_1]$ en het gemeten spectrum naar $\bm{x} - \bm{e}_1$. Na deze transformatie kan het \textit{Penrose-inverse} algoritme worden toegepast, zodat men de abundanties $a_2,a_3,...,a_n$ krijgt. De laatste abundantie $a_1$ kan gevonden worden door de eenheidssomvoorwaarde te eisen, zodat $a_1 = 1 - \sum{i=2}^{n} a_i$.
+Deze transformatie houdt in dat de matrix $E$ getranslateerd wordt naar $[\bm{e}_2-\bm{e}_1;\bm{e}_3-\bm{e}_1;...;\bm{e}_n-\bm{e}_1]$ en het gemeten spectrum naar $\bm{x} - \bm{e}_1$. Na deze transformatie kan het \textit{Penrose-inverse} algoritme worden toegepast, zodat men de abundanties $a_2,a_3,...,a_n$ krijgt. De laatste abundantie $a_1$ kan gevonden worden door de eenheidssomvoorwaarde te eisen, zodat $a_1 = 1 - \sum_{i=2}^{n} a_i$.
 
 \vspace{5 mm}
 
