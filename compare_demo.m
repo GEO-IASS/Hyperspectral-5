@@ -151,12 +151,12 @@ end
 end
 function cdata()
 
-trees = testarea(1,3,3,1);
-mix1 = testarea(4,3,3,1);
-road = testarea(8,3,3,1);
-mix2 = testarea(11,3,3,1);
-curb = testarea(13,3,3,1);
-grass = testarea(16,3,3,1);
+trees = testarea(1,3,3,6);
+mix1 = testarea(4,3,3,6);
+road = testarea(8,3,3,6);
+mix2 = testarea(11,3,3,6);
+curb = testarea(13,3,3,6);
+grass = testarea(16,3,3,6);
 
 names = trees.Properties.RowNames;
 
