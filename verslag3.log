@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.28)  9 MAY 2017 09:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.28)  9 MAY 2017 10:16
 entering extended mode
 **./verslag3.tex
 (verslag3.tex
@@ -672,92 +672,75 @@ AM_10_100_PP.pdf> <./PMC_AAM_10_100_angle.pdf>]
 Hoofdstuk 5.
 [34
 
-] <plot_trees.pdf, id=234, 614.295pt x 794.97pt>
-File: plot_trees.pdf Graphic file (type pdf)
- <use plot_trees.pdf>
-Package pdftex.def Info: plot_trees.pdf used on input line 941.
+]
+Overfull \hbox (58.46599pt too wide) in paragraph at lines 1074--1108
+ [][] 
+ []
+
+<multilinMESMA.pdf, id=234, 614.295pt x 794.97pt>
+File: multilinMESMA.pdf Graphic file (type pdf)
+ <use multilinMESMA.pdf>
+Package pdftex.def Info: multilinMESMA.pdf used on input line 1113.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
 
-
-LaTeX Warning: Reference `fig:legend' on page 35 undefined on input line 942.
-
-
-LaTeX Warning: Reference `fig:legend' on page 35 undefined on input line 942.
-
-<plot_road.pdf, id=235, 614.295pt x 794.97pt>
-File: plot_road.pdf Graphic file (type pdf)
- <use plot_road.pdf>
-Package pdftex.def Info: plot_road.pdf used on input line 946.
+<semilinMESMA.pdf, id=235, 614.295pt x 794.97pt>
+File: semilinMESMA.pdf Graphic file (type pdf)
+ <use semilinMESMA.pdf>
+Package pdftex.def Info: semilinMESMA.pdf used on input line 1118.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
 
-
-LaTeX Warning: Reference `fig:legend' on page 35 undefined on input line 947.
-
-
-LaTeX Warning: Reference `fig:legend' on page 35 undefined on input line 947.
-
-<plot_grass.pdf, id=236, 614.295pt x 794.97pt>
-File: plot_grass.pdf Graphic file (type pdf)
- <use plot_grass.pdf>
-Package pdftex.def Info: plot_grass.pdf used on input line 951.
+<linMESMA.pdf, id=236, 614.295pt x 794.97pt>
+File: linMESMA.pdf Graphic file (type pdf)
+ <use linMESMA.pdf>
+Package pdftex.def Info: linMESMA.pdf used on input line 1123.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
-
-
-LaTeX Warning: Reference `fig:legend' on page 35 undefined on input line 952.
-
-
-LaTeX Warning: Reference `fig:legend' on page 35 undefined on input line 952.
-
-[35] [36 <./plot_trees.pdf>] [37 <./plot_road.pdf>] [38 <./plot_grass.pdf>]
-[39] (verslag3.bbl [40])
+ [35] [36]
+[37] [38 <./multilinMESMA.pdf>] [39 <./semilinMESMA.pdf>] [40 <./linMESMA.pdf>]
+[41] (verslag3.bbl [42])
 
 Package natbib Warning: There were undefined citations.
 
-[41
+[43
 
-] (verslag3.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+] (verslag3.aux) ) 
 Here is how much of TeX's memory you used:
- 6422 strings out of 493634
- 90568 string characters out of 3141293
- 170017 words of memory out of 3000000
- 9645 multiletter control sequences out of 15000+200000
+ 6425 strings out of 493634
+ 90629 string characters out of 3141293
+ 201061 words of memory out of 3000000
+ 9648 multiletter control sequences out of 15000+200000
  31343 words of font info for 109 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  42i,15n,51p,1123b,544s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
-bo8a.pfb>
-Output written on verslag3.pdf (42 pages, 1007579 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8
+r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+urw/helvetic/uhvbo8a.pfb>
+Output written on verslag3.pdf (44 pages, 1110871 bytes).
 PDF statistics:
- 352 PDF objects out of 1000 (max. 8388607)
+ 428 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
