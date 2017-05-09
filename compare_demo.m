@@ -22,10 +22,10 @@ pixel = reshape(data(y,x,:),[1,53]);
 %     };
 
 allsystems = { ...
-    multilin_options(0,false,false,false,600), ...
-    multilin_options(0,false,false,true,600), ...
-    multilin_options(0,false,true,false,600), ...
-    multilin_options(0,false,true,true,600), ...
+    %multilin_options(0,false,false,false,600), ...
+    %multilin_options(0,false,false,true,600), ...
+    %multilin_options(0,false,true,false,600), ...
+    %multilin_options(0,false,true,true,600), ...
     multilin_options(1,true,false,false,600), ...
     multilin_options(1,false,true,false,600), ...
     multilin_options(1,false,true,true,600), ...
@@ -86,7 +86,26 @@ for op  = allsystems
     freedom(i,:) = options.dof;
 end
 
-tabl = table(runtime,error,freedom,abundance,reflectance,markers,'RowNames',names)
+tabl = table(runtime,error,freedom,abundance,reflectance,markers,'RowNames',names);
+
+end
+
+function [tabl,runtime,error] = testarea(x,y,w,h)
+error = [];
+runtime = [];
+
+for i=1:w
+    for j=1:h
+        [t,e,r] = testpix(x+i-1,y+j-1);
+        error = [error , e];
+        runtime = [runtime , r];
+    end
+end
+names = t.Properties.RowNames;
+
+error = mean(error.').'
+runtime = mean(runtime.').'
+tabl = table(runtime,error,'RowNames',names)
 
 end
 
@@ -132,12 +151,12 @@ end
 end
 function cdata()
 
-trees = testpix(3,3);
-mix1 = testpix(5,3);
-road = testpix(9,3);
-mix2 = testpix(12,3);
-curb = testpix(14,3);
-grass = testpix(17,3);
+trees = testarea(1,3,3,1);
+mix1 = testarea(4,3,3,1);
+road = testarea(8,3,3,1);
+mix2 = testarea(11,3,3,1);
+curb = testarea(13,3,3,1);
+grass = testarea(16,3,3,1);
 
 names = trees.Properties.RowNames;
 
@@ -145,12 +164,12 @@ errors = table(trees.error,mix1.error,road.error,mix2.error,curb.error,grass.err
 errorsrn = table(rne(trees),rne(mix1),rne(road),rne(mix2),rne(curb),rne(grass),'RowNames',names);
 runtime = table(trees.runtime,mix1.runtime,road.runtime,mix2.runtime,curb.runtime,grass.runtime,'RowNames',names);
 
-save_latex_file(errors,'TabErrors');
-save_latex_file(errorsrn,'TabErrorsrn');
-save_latex_file(runtime,'TabRuntime');
+save_latex_file(errors,'TabErrorsA');
+save_latex_file(errorsrn,'TabErrorsrnA');
+save_latex_file(runtime,'TabRuntimeA');
 %save_latex_file(table2,'TabRoad');
 %save_latex_file(table3,'TabGrass');
-save('fintables.mat','trees','road','grass','curb','mix1','mix2','errors','errorsrn','runtime');
+save('meantables.mat','errors','errorsrn','runtime');
 
 
 

@@ -3,6 +3,7 @@ c.testpix = @testpix;
 c.show = @show_table;
 c.c = @cdata;
 c.cf = @cfunc;
+c.lfpd = @save_latex_file_pixel_data;
 end
 
 
@@ -21,10 +22,10 @@ pixel = reshape(data(y,x,:),[1,53]);
 %     };
 
 allsystems = { ...
-    multilin_options(0,false,false,false,600), ...
-    multilin_options(0,false,false,true,600), ...
-    multilin_options(0,false,true,false,600), ...
-    multilin_options(0,false,true,true,600), ...
+    %multilin_options(0,false,false,false,600), ...
+    %multilin_options(0,false,false,true,600), ...
+    %multilin_options(0,false,true,false,600), ...
+    %multilin_options(0,false,true,true,600), ...
     multilin_options(1,true,false,false,600), ...
     multilin_options(1,false,true,false,600), ...
     multilin_options(1,false,true,true,600), ...
@@ -85,7 +86,22 @@ for op  = allsystems
     freedom(i,:) = options.dof;
 end
 
-tabl = table(runtime,error,freedom,abundance,reflectance,markers,'RowNames',names)
+tabl = table(runtime,error,freedom,abundance,reflectance,markers,'RowNames',names);
+
+end
+
+function [runtime,error] = testarea(x,y,w,h)
+error = []
+runtime = []
+
+for i=1:w
+    for j=1:h
+        [t,e,r] = testpix(x+i-1,y+j-1)
+        error = [error ; e]
+        runtime = [runtime ; r]
+    end
+end
+
 
 end
 
@@ -207,9 +223,10 @@ end
 
 %Deze code snipped komt uit de example file van latexTable
 function save_latex_file_pixel_data(table,filename)
+table.markers = [];
 input.data = table;
 input.dataFormat = {'%.3f',2,'%.0f',1,'%.3f',8};
-input.tableColLabels = {'runtime','error','freedom','$a_1$','$a_2$','$a_3$','$a_4$','$P_1$','$P_2$','$P_3$','$P_4$','n/a')
+input.tableColLabels = {'runtime','error','freedom','$a_1$','$a_2$','$a_3$','$a_4$','$P_1$','$P_2$','$P_3$','$P_4$'};
 latex = latexTable(input);
 % save LaTex code as file
 
