@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.28)  3 MAY 2017 10:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.28)  9 MAY 2017 09:14
 entering extended mode
 **./verslag3.tex
 (verslag3.tex
@@ -334,11 +334,7 @@ LaTeX Info: Redefining \cite on input line 694.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\natbib\bibentry.sty"
 Package: bibentry 2007/10/30 1.5 (PWD)
 )
-(verslag3.bbl) (verslag3.aux
-
-LaTeX Warning: Label `fig:e100' multiply defined.
-
-)
+(verslag3.bbl) (verslag3.aux)
 \openout1 = `verslag3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
@@ -353,7 +349,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
 LaTeX Font Info:    ... okay on input line 77.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
 LaTeX Font Info:    ... okay on input line 77.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count123
 \scratchdimen=\dimen138
@@ -519,129 +516,218 @@ Hoofdstuk 2.
 ] <multi.PNG, id=87, 297.36093pt x 198.7425pt>
 File: multi.PNG Graphic file (type png)
  <use multi.PNG>
-Package pdftex.def Info: multi.PNG used on input line 424.
+Package pdftex.def Info: multi.PNG used on input line 432.
 (pdftex.def)             Requested size: 187.89914pt x 125.58144pt.
- [16 <./multi.PNG>] [17] [18] [19]
+
+
+Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
+ Make it at least 14.70474pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16 <./multi.PNG>] [17] [18] [19]
 Hoofdstuk 3.
 [20
 
-] [21] [22] [23] [24]
+] [21] [22] <AAMProj.PNG, id=114, 377.91188pt x 212.29312pt>
+File: AAMProj.PNG Graphic file (type png)
+
+<use AAMProj.PNG>
+Package pdftex.def Info: AAMProj.PNG used on input line 610.
+(pdftex.def)             Requested size: 187.89914pt x 105.5535pt.
+ [23 <./AAMProj.PNG>] [24]
 Hoofdstuk 4.
 [25
 
-] [26] <PMC_10_100_E.pdf, id=128, 614.295pt x 794.97pt>
+] [26] <PMC_10_100_E.pdf, id=129, 614.295pt x 794.97pt>
 File: PMC_10_100_E.pdf Graphic file (type pdf)
 
 <use PMC_10_100_E.pdf>
-Package pdftex.def Info: PMC_10_100_E.pdf used on input line 721.
+Package pdftex.def Info: PMC_10_100_E.pdf used on input line 738.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
- <PMC_10_100_El.pdf, id=129, 614.295pt x 794.97pt>
+ <PMC_10_100_El.pdf, id=130, 614.295pt x 794.97pt>
 File: PMC_10_100_El.pdf Graphic file (type pdf)
 
 <use PMC_10_100_El.pdf>
-Package pdftex.def Info: PMC_10_100_El.pdf used on input line 725.
+Package pdftex.def Info: PMC_10_100_El.pdf used on input line 742.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
- <PMC_10_100_Elog.pdf, id=130, 614.295pt x 794.97pt>
+ <PMC_10_100_Elog.pdf, id=131, 614.295pt x 794.97pt>
 File: PMC_10_100_Elog.pdf Graphic file (type pdf)
 
 <use PMC_10_100_Elog.pdf>
-Package pdftex.def Info: PMC_10_100_Elog.pdf used on input line 729.
+Package pdftex.def Info: PMC_10_100_Elog.pdf used on input line 746.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
- <PMC_10_100_EPlog.pdf, id=131, 614.295pt x 794.97pt>
+ <PMC_10_100_EPlog.pdf, id=132, 614.295pt x 794.97pt>
 File: PMC_10_100_EPlog.pdf Graphic file (type pdf)
 
 <use PMC_10_100_EPlog.pdf>
-Package pdftex.def Info: PMC_10_100_EPlog.pdf used on input line 733.
+Package pdftex.def Info: PMC_10_100_EPlog.pdf used on input line 750.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 720--736
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 737--753
 [][] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 720--736
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 737--753
 [] [] 
  []
 
-<PMC_10_100_corr.pdf, id=132, 614.295pt x 794.97pt>
+<PMC_10_100_corr.pdf, id=133, 614.295pt x 794.97pt>
 File: PMC_10_100_corr.pdf Graphic file (type pdf)
  <use PMC_10_100_corr.pdf>
-Package pdftex.def Info: PMC_10_100_corr.pdf used on input line 742.
+Package pdftex.def Info: PMC_10_100_corr.pdf used on input line 759.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-<PMC_10_100_PP.pdf, id=133, 614.295pt x 794.97pt>
+<PMC_10_100_PP.pdf, id=134, 614.295pt x 794.97pt>
 File: PMC_10_100_PP.pdf Graphic file (type pdf)
  <use PMC_10_100_PP.pdf>
-Package pdftex.def Info: PMC_10_100_PP.pdf used on input line 746.
+Package pdftex.def Info: PMC_10_100_PP.pdf used on input line 763.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-<PMC_10_100_angle.pdf, id=134, 614.295pt x 794.97pt>
+<PMC_10_100_angle.pdf, id=135, 614.295pt x 794.97pt>
 File: PMC_10_100_angle.pdf Graphic file (type pdf)
 
 <use PMC_10_100_angle.pdf>
-Package pdftex.def Info: PMC_10_100_angle.pdf used on input line 750.
+Package pdftex.def Info: PMC_10_100_angle.pdf used on input line 767.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-Overfull \hbox (5.62215pt too wide) in paragraph at lines 741--753
+Overfull \hbox (5.62215pt too wide) in paragraph at lines 758--770
 [][] | []
  []
 
 
-Overfull \hbox (13.1173pt too wide) in paragraph at lines 766--767
-\OT1/cmr/m/n/12 Figuur 4.2[] be-schrijft de reconstructie-error. De fi-gu-ren 4
+Overfull \hbox (13.1173pt too wide) in paragraph at lines 783--784
+\OT1/cmr/m/n/12 Figuur 4.1[] be-schrijft de reconstructie-error. De fi-gu-ren 4
 .1a[] en 4.1b[] be-schrij-ven de reconstructie-
  []
 
 [27] [28 <./PMC_10_100_E.pdf> <./PMC_10_100_El.pdf> <./PMC_10_100_Elog.pdf> <./
 PMC_10_100_EPlog.pdf>] [29 <./PMC_10_100_corr.pdf> <./PMC_10_100_PP.pdf> <./PMC
-_10_100_angle.pdf>] [30] [31]
+_10_100_angle.pdf>] <PMC_AAM_10_100_E.pdf, id=179, 614.295pt x 794.97pt>
+File: PMC_AAM_10_100_E.pdf Graphic file (type pdf)
+
+<use PMC_AAM_10_100_E.pdf>
+Package pdftex.def Info: PMC_AAM_10_100_E.pdf used on input line 822.
+(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+
+<PMC_AAM_10_100_El.pdf, id=180, 614.295pt x 794.97pt>
+File: PMC_AAM_10_100_El.pdf Graphic file (type pdf)
+
+<use PMC_AAM_10_100_El.pdf>
+Package pdftex.def Info: PMC_AAM_10_100_El.pdf used on input line 826.
+(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+
+<PMC_AAM_10_100_Elog.pdf, id=181, 614.295pt x 794.97pt>
+File: PMC_AAM_10_100_Elog.pdf Graphic file (type pdf)
+
+<use PMC_AAM_10_100_Elog.pdf>
+Package pdftex.def Info: PMC_AAM_10_100_Elog.pdf used on input line 830.
+(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+
+<PMC_AAM_10_100_EPlog.pdf, id=182, 614.295pt x 794.97pt>
+File: PMC_AAM_10_100_EPlog.pdf Graphic file (type pdf)
+
+<use PMC_AAM_10_100_EPlog.pdf>
+Package pdftex.def Info: PMC_AAM_10_100_EPlog.pdf used on input line 834.
+(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 821--837
+[][] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 821--837
+[] [] 
+ []
+
+[30] <PMC_AAM_10_100_corr.pdf, id=187, 614.295pt x 794.97pt>
+File: PMC_AAM_10_100_corr.pdf Graphic file (type pdf)
+
+<use PMC_AAM_10_100_corr.pdf>
+Package pdftex.def Info: PMC_AAM_10_100_corr.pdf used on input line 843.
+(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+
+<PMC_AAM_10_100_PP.pdf, id=188, 614.295pt x 794.97pt>
+File: PMC_AAM_10_100_PP.pdf Graphic file (type pdf)
+
+<use PMC_AAM_10_100_PP.pdf>
+Package pdftex.def Info: PMC_AAM_10_100_PP.pdf used on input line 847.
+(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+
+<PMC_AAM_10_100_angle.pdf, id=189, 614.295pt x 794.97pt>
+File: PMC_AAM_10_100_angle.pdf Graphic file (type pdf)
+
+<use PMC_AAM_10_100_angle.pdf>
+Package pdftex.def Info: PMC_AAM_10_100_angle.pdf used on input line 851.
+(pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
+
+Overfull \hbox (5.62215pt too wide) in paragraph at lines 842--854
+[][] | []
+ []
+
+[31] [32 <./PMC_AAM_10_100_E.pdf> <./PMC_AAM_10_100_El.pdf> <./PMC_AAM_10_100_E
+log.pdf> <./PMC_AAM_10_100_EPlog.pdf>] [33 <./PMC_AAM_10_100_corr.pdf> <./PMC_A
+AM_10_100_PP.pdf> <./PMC_AAM_10_100_angle.pdf>]
 Hoofdstuk 5.
-[32
+[34
 
-] <plot_legend.pdf, id=188, 614.295pt x 794.97pt>
-File: plot_legend.pdf Graphic file (type pdf)
- <use plot_legend.pdf>
-Package pdftex.def Info: plot_legend.pdf used on input line 857.
-(pdftex.def)             Requested size: 187.89914pt x 148.02176pt.
-
-[33 <./plot_legend.pdf>] <plot_trees.pdf, id=197, 614.295pt x 794.97pt>
+] <plot_trees.pdf, id=234, 614.295pt x 794.97pt>
 File: plot_trees.pdf Graphic file (type pdf)
-
-<use plot_trees.pdf>
-Package pdftex.def Info: plot_trees.pdf used on input line 880.
+ <use plot_trees.pdf>
+Package pdftex.def Info: plot_trees.pdf used on input line 941.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
- <plot_road.pdf, id=198, 614.295pt x 794.97pt>
+
+
+LaTeX Warning: Reference `fig:legend' on page 35 undefined on input line 942.
+
+
+LaTeX Warning: Reference `fig:legend' on page 35 undefined on input line 942.
+
+<plot_road.pdf, id=235, 614.295pt x 794.97pt>
 File: plot_road.pdf Graphic file (type pdf)
-
-<use plot_road.pdf>
-Package pdftex.def Info: plot_road.pdf used on input line 885.
+ <use plot_road.pdf>
+Package pdftex.def Info: plot_road.pdf used on input line 946.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
- <plot_grass.pdf, id=199, 614.295pt x 794.97pt>
+
+
+LaTeX Warning: Reference `fig:legend' on page 35 undefined on input line 947.
+
+
+LaTeX Warning: Reference `fig:legend' on page 35 undefined on input line 947.
+
+<plot_grass.pdf, id=236, 614.295pt x 794.97pt>
 File: plot_grass.pdf Graphic file (type pdf)
-
-<use plot_grass.pdf>
-Package pdftex.def Info: plot_grass.pdf used on input line 890.
+ <use plot_grass.pdf>
+Package pdftex.def Info: plot_grass.pdf used on input line 951.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
- [34 <./plot_trees.pdf>] [35 <./plot_road.pdf>] [36 <./plot_grass.pdf>] [37] (v
-erslag3.bbl [38])
+
+
+LaTeX Warning: Reference `fig:legend' on page 35 undefined on input line 952.
+
+
+LaTeX Warning: Reference `fig:legend' on page 35 undefined on input line 952.
+
+[35] [36 <./plot_trees.pdf>] [37 <./plot_road.pdf>] [38 <./plot_grass.pdf>]
+[39] (verslag3.bbl [40])
 
 Package natbib Warning: There were undefined citations.
 
-[39
+[41
 
 ] (verslag3.aux)
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6369 strings out of 493634
- 89465 string characters out of 3141293
- 168832 words of memory out of 3000000
- 9599 multiletter control sequences out of 15000+200000
+ 6422 strings out of 493634
+ 90568 string characters out of 3141293
+ 170017 words of memory out of 3000000
+ 9645 multiletter control sequences out of 15000+200000
  31343 words of font info for 109 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 42i,13n,50p,1123b,544s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,15n,51p,1123b,544s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Fil
@@ -669,9 +755,9 @@ sfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
 bo8a.pfb>
-Output written on verslag3.pdf (40 pages, 952075 bytes).
+Output written on verslag3.pdf (42 pages, 1007579 bytes).
 PDF statistics:
- 311 PDF objects out of 1000 (max. 8388607)
+ 352 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 107 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -36,10 +36,10 @@
   \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
   \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
 }
-\lhead{\fancyplain{}{\titletext}}
+\lhead{\fancyplain{}{\nouppercase{\leftmark}}}
 \rhead{\fancyplain{}{Thorvald Dox}}
 \rfoot{\fancyplain{}{\nouppercase{\thepage}}}
-\lfoot{\fancyplain{}{\nouppercase{\leftmark}}}
+\lfoot{\fancyplain{}{Universiteit Antwerpen}}
 \renewcommand{\footrulewidth}{0.4pt}
 
 \fancyhfoffset[E,O]{0pt}
@@ -217,7 +217,7 @@ Gewone beelden van een camera bestaan uit drie kleuren, elk passende bij een spe
 \end{subfigure}\rulesep
 \begin{subfigure}[b]{0.4\textwidth}
 \includegraphics[width=\textwidth]{spec2.PNG}
-\caption{Het spectrum van de zon. \label{fig:specs}}
+\caption{Het spectrum van de zon en de absorpsie van de admosfeer.\label{fig:specs}}
 \end{subfigure}
 \caption{Electromagnetische golven. Deze afbeeldingen komen uit \textit{Fundamentals of remote sensing\cite{fun}}\label{fig:rs2}}
 \end{figure}
@@ -340,7 +340,7 @@ Het minimaliseren van de reconstructie-error, gebruik makend van vergelijking \r
 \text{argmin}_{a_1 ... a_p} \left| \bm{x} - \sum_{i=1}^p a_i \bm{e}_i\right|^2
 \end{align}
 
-Indien de abundanties $a_i$ vrije re\"ele waarden zouden zijn, zou dit minimum eenvoudig berekend kunnen worden, door een projectie te nemen opgespannen door het vlak van de endmembers. Deze projectie kan genomen worden als volgt. Neem $E = [e_1,e_2,...,e_n]$ een matrix met als kolommen de verschillende endmembers. De projectie op de deelruimte opgespannen door de elementen van $E$ kan gevonden worden aan de hand van de \textit{Penrose-inverse} matrix.
+Indien de abundanties $a_i$ vrije re\"ele waarden zouden zijn, zou dit minimum eenvoudig berekend kunnen worden, door een projectie te nemen opgespannen door het vlak van de endmembers. Deze projectie kan genomen worden als volgt. Neem $E = [e_1,e_2,...,e_n]$ een matrix met als kolommen de verschillende endmembers. De projectie op de deelruimte opgespannen door de elementen van $E$ kan gevonden worden aan de hand van de \textit{More-Penrose-inverse} matrix.
 
 \begin{equation}
 \bm{a} = (E^T E)^{-1} E^T \bm{x}
@@ -356,13 +356,13 @@ Doordat de abundanties gedeeltes van lichtstralen zijn die op een materiaal bots
 \caption{Voorbeeld van de niet-negativiteisvoorwaarde aan de hand van een model met twee endmembers. (a) is het model zonder voorwaarden. (b) bevat de eenheidssom-voorwaarde, (c) de niet-negativiteisvoorwaarde en (d) beide voorwaarden. Deze figuur komt uit \cite{cursus}. \label{fig:nonneg}}
 \end{figure}
 
-De niet-negativiteitsvoorwaarde geeft weer dat de abundanties allemaal positief moeten zijn, dus groter dan nul. Dit betekent dat men niet moet projecteren op de deelruimte, maar op een polyhedrale kegel hierin. Een tweedimenstionaal voorbeeld, waarvan het systeem zonder voorwaarde de volledige ruimte is, is geillustreerd in figuur \ref{fig:nonneg}. Hiervoor kan een aangepast algoritme gebruikt worden, namelijk het ``nonnegative least-squares curve fitting'' of \texttt{lsqnonneg} algoritme. Dit algoritme is veel berekeningsintensiever dan het \textit{penrose-inverse} algoritme.
+De niet-negativiteitsvoorwaarde geeft weer dat de abundanties allemaal positief moeten zijn, dus groter of gelijk aan nul. Dit betekent dat men niet moet projecteren op de deelruimte, maar op een polyhedrale kegel hierin. Een tweedimenstionaal voorbeeld, waarvan het systeem zonder voorwaarde de volledige ruimte is, is geillustreerd in figuur \ref{fig:nonneg}. Hiervoor kan een aangepast algoritme gebruikt worden, namelijk het ``nonnegative least-squares curve fitting'' of \texttt{lsqnonneg} algoritme. Dit algoritme is veel berekeningsintensiever dan het \textit{penrose-inverse} algoritme.
 
 \subsubsection{Eenheidssom}
 
 De eenheidssom-voorwaarde geeft weer dat de abundanties moeten sommeren tot \'e\'en. Dit zorgt ervoor dat de mogelijke abundanties geen deelruimte meer opspannen, maar een hypervlak, aangezien het nulpunt geen element meer is, zoals te zien in figuur \ref{fig:nonneg}. Dit kan worden opgelost door een van de endmembers als schaduw te beschouwen. Dit verschuift het hypervlak over de vector $e_1$ zodanig dat het nulpunt deel wordt van de hyperruimte en dit terug een deelruimte is.
 
-Deze transformatie houdt in dat de matrix $E$ getranslateerd wordt naar $[\bm{e}_2-\bm{e}_1;\bm{e}_3-\bm{e}_1;...;\bm{e}_n-\bm{e}_1]$ en het gemeten spectrum naar $\bm{x} - \bm{e}_1$. Na deze transformatie kan het \textit{Penrose-inverse} algoritme worden toegepast, zodat men de abundanties $a_2,a_3,...,a_n$ krijgt. De laatste abundantie $a_1$ kan gevonden worden door de eenheidssomvoorwaarde te eisen, zodat $a_1 = 1 - \sum{i=2}^{n} a_i$.
+Deze transformatie houdt in dat de matrix $E$ getranslateerd wordt naar $[\bm{e}_2-\bm{e}_1;\bm{e}_3-\bm{e}_1;...;\bm{e}_n-\bm{e}_1]$ en het gemeten spectrum naar $\bm{x} - \bm{e}_1$. Na deze transformatie kan het \textit{Penrose-inverse} algoritme worden toegepast, zodat men de abundanties $a_2,a_3,...,a_n$ krijgt. De laatste abundantie $a_1$ kan gevonden worden door de eenheidssomvoorwaarde te eisen, zodat $a_1 = 1 - \sum_{i=2}^{n} a_i$.
 
 \vspace{5 mm}
 
@@ -394,19 +394,27 @@ In dit hoofdstuk werd ervan uitgegaan dat elke endmember een enkel vast spectrum
 
 \section{Bilineair ontmengen}
 
-Het bilineair model beschrijft dat elke lichtstraal \'e\'en of twee keer kan reflecteren in een enkele pixel. Van dit model bestaan twee varianten. Enerzijds bestaat het model van Nascimento en Somers\cite{mlinmix}. Deze voert de bilinaire term in als volgt.
+Het bilineair model beschrijft dat elke lichtstraal \'e\'en of twee keer kan reflecteren in een enkele pixel. Van dit model bestaan meerdere varianten. Het Fan model\cite{mlinmix} voert de bilinaire term in als volgt.
 
 \begin{equation}
-\bm{x} = \sum a_i \bm{e}_i + \sum a_i a_j \bm{e}_i \odot \bm{e}_j + \bm{\eta}
+\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i,j} a_i a_j \bm{e}_i \odot \bm{e}_j + \bm{\eta}
 \end{equation}
 
-Dit geeft in de praktijk geen goede resultaten, omdat het bilineair model is ontwikkeld voor objecten met een ingewikkelde geometrie, en deze methode bevat echter geen parameters of informatie over deze geometrie. Dit probleem kan worden opgelost door gebruik te maken van het Fan model\cite{mlinmix}, dat beschrijft dat de endmembers worden gemengd als volgt:
+Dit geeft in de praktijk geen goede resultaten, omdat het bilineair model is ontwikkeld voor objecten met een ingewikkelde geometrie, maar deze methode bevat geen parameters of informatie over deze geometrie. Dit probleem kan worden opgelost door gebruik te maken van het veralgemeend bilineair model\cite{mlinmix}, dat beschrijft dat de endmembers worden gemengd als volgt:
 
 \begin{equation}
-\bm{x} = \sum a_i \bm{e}_i + \sum \gamma_{ij} a_i a_j \bm{e}_i \odot \bm{e}_j + \bm{\eta}
+\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i,j}  \gamma_{ij} a_i a_j \bm{e}_i \odot \bm{e}_j + \bm{\eta}
 \end{equation}
 
-Dit model heeft een ander probleem, namelijk dat voor een model met $p$ materialen, dit model $p^2$ extra vrijheidsgraden bevat. Daardoor is er geen garantie dat het model het juiste resultaat weergeeft, zoals beschreven in sectie \ref{sec:vrij}. 
+Een alternatief is het model van Nascimento en Somers, dat de abundaties mengt als volgt:
+
+\begin{equation}
+\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i,j}  b_{ij} \bm{e}_i \odot \bm{e}_j + \bm{\eta}
+\end{equation}
+
+Dit is equivalent aan het vorige model, behalve dat de eenheidssomvoorwaarde $\sum_i a_i + \sum_{i,j} b_{ij} = 1$ wordt in plaats daarvan $\sum_i a_i = 1$
+
+Deze beide model hebben een ander probleem, namelijk dat voor een model met $p$ materialen, dit model $p^2$ extra vrijheidsgraden bevat. Daardoor is er geen garantie dat het model het juiste resultaat weergeeft, zoals beschreven in sectie \ref{sec:vrij}. 
 
 
 
@@ -515,16 +523,18 @@ Hierbij wordt verondersteld dat $P_i$ gekend is, wat in werkelijkheid niet het g
 \subsection{Ondergrens van P waarde}
 
 $P$ is per definitie een getal groter dan nul, omdat kansen tussen nul en \'e\'en liggen. Echter, het is mogelijk om in vergelijking \ref{eq:Pi} een negatieve waarde in te voeren. Dit komt neer op een verandering van de randvoorwaarden in het \texttt{fmincon} algoritme. In plaats van dat de grenzen $[0,1]$ zijn, worden de grenzen nu $[-1,1]$. 
-Een negatieve reflectiekans is niet fysisch, maar er bestaan twee mogelijke verklaringen voor het toelaten van negative $P$ waarden, elk waarbij $P$ niet meer als kans wordt beschouwd.
-De eerste mogelijke verklaring - zoals beschreven in de vorige sectie- is dat het albedo slechts een benadering os. Het vervangen van het albedo door de reflectie is equivalent aan het veronderstellen dat de reflectie van het referentiemateriaal gelijk is aan nul. Dit zorgt dat de waarde van $P$ die gemeten wordt lager is dan in werkelijkheid. Als de reflectie van de pixel kleiner is dan de reflectie van het referentiemateriaal, zorgt dit voor een negatieve gemeten reflectiekans, hoewel de werkelijke reflectie nog steeds positief is. Merk op dat de reflectiekans $P$ niet kan  vervangen worden door $P-P_{R}$ - met $P_{R}$ de reflectie van het referentiemateriaal - omdat het systeem niet lineair afhangt van $P$.
-De twee megelijke verklaring is het meenemen van interpixel interacties. Deze geeft extra hogere orde termen mee aan het systeem. De enige hoge orde termen die het multilineair model meeneemt hebben machten van $P$ als co\"efficienten, dus worden deze waarden van $P$ aangepast naar niet werkelijke waarden.  
+Een negatieve reflectiekans is niet fysisch, maar er bestaan twee mogelijke verklaringen voor het toelaten van negatieve $P$ waarden, waarbij $P$ niet meer als kans wordt beschouwd.
+
+De eerste mogelijke verklaring - zoals beschreven in de vorige sectie - is dat het albedo slechts een benadering is. Het vervangen van het albedo door de reflectie is equivalent aan het veronderstellen dat de reflectie van het referentiemateriaal gelijk is aan nul. Dit zorgt dat de waarde van $P$ die gemeten wordt lager is dan in werkelijkheid. Als de reflectie van de pixel kleiner is dan de reflectie van het referentiemateriaal, zorgt dit voor een negatieve gemeten reflectiekans, hoewel de werkelijke reflectie nog steeds positief is. Merk op dat de reflectiekans $P$ niet kan  vervangen worden door $P-P_{R}$  - met $P_{R}$ de reflectie van het referentiemateriaal - omdat het systeem niet lineair afhangt van $P$.
+
+De tweede mogelijke verklaring is het niet meenemen van interpixelinteracties. Deze interacties geven extra hogere-ordetermen mee aan het systeem. De enige hogere-ordetermen die het multilineair model meeneemt hebben machten van $P$ als co\"effici\"enten, dus wordt de waarde van $P$ aangepast naar niet werkelijke waarden.  
 %\subsection{afhankelijke vs onafhankelijke P waarden}
 
 
 
-\chapter{Endmember-variabiliteit} 
+\chapter{Endmember-variabiliteit\cite{mesma}} 
 
-\section{Multiple endmember spectral mixture analysis\cite{mesma}} \label{sec:mesma}
+\section{Multiple endmember spectral mixture analysis} \label{sec:mesma}
 
 Om te ontmengen rekening houdend met variabiliteit wordt elke endmember, in plaats van als een enkel spectrum, gedefini\"eerd als een bibliotheek van verschillende spectra. Het extraheren van deze spectra uit de metingen ligt buiten het bestek van deze thesis: er wordt gewoon vanuit gegaan dat de endmembers gekend zijn. De experimentele data beschouwd in deze thesis bevatten spectra die vanop de grond gemeten zijn aan de hand van een spectrograaf, dus exact gekend zijn.
 
@@ -563,7 +573,7 @@ Voor elke van deze deelverzameling van materialen, moet ge\"iterereerd worden ov
 
 \subsubsection{Ontmengen van de selectie}
 
-In de vorige secties zijn er materialen en hun spectra geselecteerd. Hierna kan de pixel worden ontmengd zoals in vorig hoofdstuk, gebruikt makend van het \textit{sum-to-one constrained least-squares unmixing model}. Dit model houdt geen rekening met de niet-negativiteitsvoorwaarde, en kan bijgevolg negatieve abundanties hebben. In dat geval wordt de selectie overgeslagen, en wordt er overgegaan naar de volgende selectie van spectra en materialen. Het is onmogelijk dat op die manier alle selecties worden verwijderd, aangezien bij deelverzamelingen met een enkel materiaal dit materiaal dankzij de eenheidssom-voorwaarde abundantie $1$ heeft. Het hele proces wordt beschreven in algoritme \ref{al:mesma}.
+In de vorige secties zijn er materialen en hun spectra geselecteerd. Hierna kan de pixel worden ontmengd zoals in vorig hoofdstuk, gebruikt makend van het \textit{sum-to-one constrained least-squares unmixing model}. Dit model houdt geen rekening met de niet-negativiteitsvoorwaarde, en kan bijgevolg negatieve abundanties hebben. Indien negatieve abundaties voorkomen wordt de selectie overgeslagen, en wordt er overgegaan naar de volgende selectie van spectra en materialen. Het is onmogelijk dat op die manier alle selecties worden verwijderd, aangezien bij deelverzamelingen met een enkel materiaal dit materiaal dankzij de eenheidssom-voorwaarde abundantie $1$ heeft. Het hele proces wordt beschreven in algoritme \ref{al:mesma}.
 
 \begin{algorithm}
 \caption{MESMA\label{al:mesma}}
@@ -586,16 +596,21 @@ In de vorige secties zijn er materialen en hun spectra geselecteerd. Hierna kan 
 \end{algorithm}
 
 \subsection{vrije keuze van het ontmengalgoritme}
-Hierboven is gebruikt gemaakt van het lineaire ontmengalgoritme, maar dit hoeft niet het geval te zijn. In algoritme \ref{al:mesma} kan de regel \texttt{Ontmeng gebruik makend van het \textit{sum-to-one constrained least-squares unmixing model}} vervangen worden door elk algoritme naar keuze. Indien men ge\"intereseerd is in niet lineaire effecten, kan hier gebruik gemaakt worden van het multilineair model. De \textit{Alina-dataset} gebruikt in deze thesis, bevat voor de deelverzameling van alle materialen $50\times 10\times 10 \times 10= 50000$ mogelijkheden, en het ontmengen van een pixel aan de hand van vier spectra  duurt ongeveer $0.1$ seconden. Hierdoor neemt dit algoritme meer dan $2$ uur in beslag voor elke pixel. Het beeld bevat ongeveer 400 pixels, dus de totale looptijd van dit algoritme is ongeveer $25$ dagen. 
+Hierboven is gebruikt gemaakt van het lineaire ontmengalgoritme, maar dit hoeft niet het geval te zijn. In algoritme \ref{al:mesma} kan de regel \texttt{Ontmeng gebruik makend van het \textit{sum-to-one constrained least-squares unmixing model}} vervangen worden door elk algoritme naar keuze. Indien men ge\"intereseerd is in niet lineaire effecten, kan hier gebruik gemaakt worden van het multilineair model. De \textit{Alina-dataset} gebruikt in deze thesis, bevat voor de deelverzameling van alle materialen $50\times 10\times 10 \times 10= 50000$ mogelijkheden, en het ontmengen van een pixel aan de hand van vier spectra  duurt ongeveer $0.1$ seconden. Hierdoor neemt dit algoritme meer dan $2$ uur in beslag voor elke pixel. Het beeld bevat ongeveer 400 pixels, dus de totale looptijd van dit algoritme is ongeveer $25$ dagen. Zelfs als \textit{Sum-to-one contrained least-square unmixing} gebruikt wordt, levert dit een langdurig proces.
 
-\section{Hoekminimalisatie} \label{sec:AAM}
+\section{Suboptimaal algoritme} \label{sec:AAM}
 
-Bij \textit{MESMA} moet een pixel dat ontmengd worden in functie van elke deelverzameling van endmembers, voor elk materiaal. Zelfs als \textit{Sum-to-one contrained least-square unmixing} gebruikt wordt, levert dit een langdurig proces. Er bestaat een efficienter proces dat werkt als volgt.
-Een startpositie wordt gekozen van willekeurige bibliotheekelementen en daarna wordt herhaaldelijk voor een materiaal het geselecteerde spectrum vervangen door een andere spectrum van ditzelfde materiaal, met een minimale reconstructie-error. Hierbij worden de spectra van de andere materialen constant gehouden. Dit wordt gedaan voor elk materiaal, en verscheidene keren herhaald. 
-Doordat de reconstructie-error kleiner wordt na elke stap, bestaat er een optimaal minimum. Wanneer dit bereikt wordt, kan voor geen enkel materiaal de reconstructie-error verlaagt worden door een ander spectrum te nemen. Dit is niet per definitie gelijk aan de oplossing van \textit{mesma}, omdat dit een lokaal minimum vind in plaats van een globaal minimum.
-Men in in elke stap niet ge\"intereseert in de werkelijke reconstructie-error, alleen het element dat de laagst mogelijke reconstructie-error heeft.
+Bij \textit{MESMA} moet een pixel ontmengd worden in functie van elke deelverzameling van endmembers, voor elk materiaal.  Er bestaat een effici\"enter proces dat werkt als volgt: een startpositie wordt gekozen van willekeurige bibliotheekelementen en daarna wordt herhaaldelijk voor een materiaal het geselecteerde spectrum vervangen door een andere spectrum van ditzelfde materiaal, met de minimale reconstructie-error. Hierbij worden de spectra van de andere materialen constant gehouden. Dit wordt gedaan voor elk materiaal, en verscheidene keren herhaald. 
+Doordat de reconstructie-error kleiner wordt na elke stap, bestaat er een suboptimaal minimum. Wanneer dit bereikt wordt, kan voor geen enkel materiaal de reconstructie-error verlaagd worden door een ander spectrum te nemen. Dit is niet per definitie gelijk aan de oplossing van \textit{mesma}, omdat dit een lokaal minimum vindt in plaats van een globaal minimum.
+Men is in elke stap niet ge\"intereseerd in de werkelijke reconstructie-error, alleen in het element dat de laagst mogelijke reconstructie-error heeft.
 
-\subsection{minimale reconstructie-error}
+\subsection{Hoekminimalisatie}
+
+\begin{wrapfigure}{R}{0.4\textwidth}
+\includegraphics[width=0.4\textwidth]{AAMProj.PNG}
+\caption{Voorbeeld van projecties van verschillende vlakken in drie dimenties, waarbij $e_3$ de endmembers is waarvoor het spectrum gekozen moet worden. Deze figuur kom uit \textit{Hyperspectral unmixing with endmember variability
+via alternating angle minimization}\cite{mesma}}
+\end{wrapfigure}
 
 Het lineair ontmengen gebeurt door het gemeten spectrum te projecteren op het hypervlak opgespannen door de endmembers. Noemen we dit hypervlak $S$, dan kan de reconstructie-error herschreven worden als:
 
@@ -623,6 +638,8 @@ In deze laatste uitdrukking kan de rol van $e_p$ en $x$ worden verwisseld, dus a
 \end{equation} 
 
 Aangezien in functie van $\bm{e}_p$, $\left| \bm{x} - \proj{\bm{x}}{F}\right|$ constant is, zal de minimalisatie van $\sin \theta$ de reconstructie-error minimaliseren. Deze methode noemt men hoekminimalisatie of \textit{alternating angle minimalisation}
+
+Het voordeel van deze methode is dat de reconstructie-error niet uitgerekend moet worden voor de verschillende combinaties, maar alleen voor de hoek tussen twee vectoren, waarvan een enkele vector op voorhand wordt berekend. Dit is computationeel veel effici\"enter dan het voorgaande systeem.
 
 \vspace{5 mm}
 
@@ -662,7 +679,7 @@ least-squares unmixing model} met als endmembers $E$
 
 \section{Multilineair MESMA} \label{sec:mmesma}
 
-Volgens het \textit{MESMA}-algoritme wordt ontmengd aan de hand van elke mogelijke combinatie van endmembers voor alle materialen. Dit ontmengalgorimte kan vrij gekozen worden. Niet-lineaire effecten en variabiliteit kunnen bijgevolg gecombineerd worden door het multilineair model in te voegen. Dit zorgt echter -zoals beschreven in vorig hoofdstuk- voor een te lange looptijd. Dit model wordt verder in deze thesis \textit{multilineair MESMA} genoemd. Het voorgenoemde \textit{MESMA} algoritme wordt vanaf nu \textit{lineair MESMA} genoemd. Merk op dat deze methode niet gebruikt kan worden om niet-lineariteit in te voeren in hoekminimalisatie, aangezien deze laatste uitgaat van projecties op hypervlakken.
+Volgens het optimaal \textit{MESMA}-algoritme wordt ontmengd aan de hand van elke mogelijke combinatie van endmembers voor alle materialen. Dit ontmengalgorimte kan vrij gekozen worden. Niet-lineaire effecten en variabiliteit kunnen bijgevolg gecombineerd worden door het multilineair model in te voegen. Dit zorgt echter -zoals beschreven in vorig hoofdstuk- voor een te lange looptijd. Dit model wordt verder in deze thesis \textit{multilineair MESMA} genoemd. Het voorgenoemde \textit{MESMA} algoritme wordt vanaf nu \textit{lineair MESMA} genoemd. Merk op dat deze methode niet gebruikt kan worden om niet-lineariteit in te voeren in hoekminimalisatie, aangezien deze laatste uitgaat van projecties op hypervlakken.
 
 \begin{algorithm}
 \caption{multilineair MESMA\label{al:mmesma}}
@@ -705,9 +722,9 @@ Volgens het \textit{MESMA}-algoritme wordt ontmengd aan de hand van elke mogelij
 
 \section{Semi-lineair model} \label{sec:smesma}
 
-Om te looptijd van het algoritme te verkorten, wordt in plaats van elke combinatie multilineair te ontmengen, elke combinaite lineair ontmengd aan de hand van \textit{sum-to-one least-square unmixing}. Hierbij is men niet ge\"intereseerd in de abundanties van elke combinatie, alleen in de indices - die aanduiden welke combinatie men beschouwd - en de reconstructie-error. De combinatie met de laagste reconstructie-error wordt teruggegeven en het systeem wordt eenmalig ontmengd aan de hand van de bekomen indices. Deze methode wordt verder \textit{Semilineair MESMA} genoemd, en is een benadering van \textit{multilineair MESMA}. Het is niet evident dat deze methode goede resultaten geeft, aangezien ontmengd wordt aan de hand van een ander model dan dat waarmee de spectra van de endmembers gekozen werden.
+Om te looptijd van het algoritme te verkorten, wordt in plaats van elke combinatie multilineair te ontmengen, elke combinaite lineair ontmengd aan de hand van \textit{sum-to-one least-square unmixing}. Hierbij is men niet ge\"intereseerd in de abundanties van elke combinatie, alleen in de indices - die aanduiden welke combinatie men beschouwd - en de reconstructie-error. De combinatie met de laagste reconstructie-error wordt teruggegeven en het systeem wordt eenmalig multilineair ontmengd aan de hand van de bekomen indices. Deze methode wordt verder \textit{Semilineair MESMA} genoemd, en is een benadering van \textit{multilineair MESMA}. Het is niet evident dat deze methode goede resultaten geeft, aangezien ontmengd wordt aan de hand van een ander model dan dat waarmee de spectra van de endmembers gekozen werden.
 
-\subsection{Theoretische controle met gesimuleerde data}
+\subsection{Theoretische controle met gesimuleerde data} \label{sec:tc}
 
 De beste methode om na te gaan of \textit{semilineair MESMA} een goede benadering is van \textit{multilineair MESMA}, is ze allebei testen op experimentele data, en de resultaten ervan vergelijken. Hoewel dit gedeeltelijk gedaan wordt in volgend hoofdstuk, is dit wegens de looptijd van \textit{multilineair MESMA} een langdurig proces. In dit hoofdstuk wordt in plaats hiervan een theoretisch model gemaakt waarvan de ontmenging van \textit{multilineair MESMA} gekend is. Dit model wordt ontmengd aan de hand van \textit{semilineair MESMA} en \textit{lineair MESMA}. Dit theoretisch model maakt gebruik van de bibliotheek van de \textit{Alina}-dataset maar niet van de spectra van de pixels.
 
@@ -750,7 +767,7 @@ Eerst worden voor elke pixel willekeurige abundanties en een vaste reflectiekans
 \includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_10_100_angle.pdf}
 \caption{Gevonden hoek in functie van de reflectie. Men ziet dat de foutenvlaggen veel groter zijn dan de data zelf. Deze figuur is gemaakt met \textit{matlab}\cite{matlab} \label{fig:hoek}}
 \end{subfigure}
-\caption{Vergelijking tussen lineair, semilineair en multilineair MESMA. Voor elke $P$ waarde zijn er 100 pixels berekend. Rood is het lineaire model en blauw het semilineaire model. Deze figuren zijn gemaakt met \textit{matlab}\cite{matlab}\label{fig:e100}}
+\caption{Vergelijking tussen lineair, semilineair en multilineair MESMA. Voor elke $P$ waarde zijn er 100 pixels berekend. Rood is het lineaire model en blauw het semilineaire model. Deze figuren zijn gemaakt met \textit{matlab}\cite{matlab}\label{fig:b100}}
 \end{figure}
 
 \subsubsection{Correct geselecteerde materialen}
@@ -787,7 +804,56 @@ Dit geldt zowel voor de het reconstructiespectrum als het gemengde spectrum, en 
 
 \section{multilineair AAM} \label{sec:MAAM}
 
-Aangezien \textit{semilineair MESMA} gebruikt maakt van \textit{sum-to-one least-sqaure unmixing} kan hoekminimalisatie gebruikt worden om dit algoritme te versnellen, op analoge wijze als dit gebruikt werd voor lineair MESMA. De controle van deze data wordt gedaan op analoge manier.
+Aangezien \textit{semilineair mesma} gebruikt maakt van \textit{sum-to-one least-sqaure unmixing} kan hoekminimalisatie gebruikt worden om dit algoritme te versnellen, op analoge wijze als dit gebruikt werd voor \textit{lineair mesma}. De theoretische controle verloop gelijkaardig aan de vorige sectie, alleen gebeurt de selectie in het semilineair model en het lineair model aan de hand van hoekminimalisatie. Aangezien beide algoritmen voor de selecties gebruik maken van lineaire ontmenging, kan deze benadering doorgevoerd worden. Er is niets aangepast aan het genereren van de data, dus om de gegeven data terug te krijgen, moet nog steeds \textit{optimal multilineair mesma} gebruikt worden.
+
+De resultaten van de theoretische controle zijn te zien in figuren \ref{fig:Ae100} en \ref{fig:Ab100}. De resultaten voor de reconstructie-error, de hoeken tussen de materialen en de gemeten $P$-waarden zijn hetzelfde als in sectie \ref{sec:tc}. Er is alleen een verandering in het aantal correct geselecteerde materialen.
+
+\subsection{correct geselecteerde materialen}
+Wanneer de reflectiekans klein is, is er geen verschil meer tussen de optimale lineaire, semilineaire en multilineaire \textit{mesma}-algoritmen, dus gaat in de limiet het gedeelte correct gesimuleerde materialen naar $1$. Dit is niet meer het geval voor hoekminimalisatie. Hoekminimalisatie is suboptimaal, dus geeft niet altijd de gegenereerde spectra terug. Hierdoor gaat de limiet van het gedeelte correct geselecteerde materialen niet naar $1$, maar gaat deze naar een waarde rond $0.25$. Ditzelfde effect gebeurt ook voor de recontructie-errors. In voorgaande sectie was de limiet voor $P \rightarrow 0$ gelijk aan nul, en nu is dit niet altijd het geval. Maar aangezien de gemiddelden nog steeds veel kleiner zijn dan de varianties, is dit in de grafieken alleen zichtbaar in de foutenvlaggen. In vorige sectie waren de foutenvlaggen van de reconstructie-error voor $P=0$ nul - op numerieke fouten na - omdat de gesimuleerde waarden consequent gelijk zijn aan de gemeten waarden. Dit is niet meer het geval voor hoekminimalisatie. 
+
+
+
+
+
+
+\begin{figure}
+
+\begin{subfigure}[b]{0.5\textwidth}
+\includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_AAM_10_100_E.pdf}
+\caption{Reconstructie-error van het semilineaire model in functie van de $P$ waarde. \label{fig:AE}}
+\end{subfigure}
+\begin{subfigure}[b]{0.5\textwidth}
+\includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_AAM_10_100_El.pdf}
+\caption{Reconstructie-error van het lineaire en semilineair model in functie van de $P$ waarde. \label{fig:AEl}}
+\end{subfigure}
+\begin{subfigure}[b]{0.5\textwidth}
+\includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_AAM_10_100_Elog.pdf}
+\caption{Reconstructie-error van het semilineaire model in functie van de $P$ waarde. De y-as is logaritmisch \label{fig:AElog} }
+\end{subfigure}
+\begin{subfigure}[b]{0.5\textwidth}
+\includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_AAM_10_100_EPlog.pdf}
+\caption{Reconstructie-error van het semilineaire model in functie van de gemeten $P$ waarde. De y-as is logaritmisch \label{fig:AEPlog} }
+\end{subfigure}
+\caption{Vergelijking tussen lineair, semilineair en multilineair MESMA. Voor elke $P$ waarde zijn er 100 pixels berekend. Rood is het lineaire model en blauw het semilineaire model. Merk trouwens op dat wanneer het eindpunt van de onderste foutenvlag onder nul ligt, alleen de bovengrens getekend is en niet de foutenvlag zelf op de logaritmische grafieken. Deze figuren zijn gemaakt met \textit{matlab}\cite{matlab}\label{fig:Ae100}}
+\end{figure}
+
+\begin{figure}
+
+\begin{subfigure}[b]{0.5\textwidth}
+\includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_AAM_10_100_corr.pdf}
+\caption{Aantal correct geselecteerde materialen. Deze zijn hetzelfde voor het lineair en multilineair model. \label{fig:Acorr}}
+\end{subfigure} \rulesep
+\begin{subfigure}[b]{0.5\textwidth}
+\includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_AAM_10_100_PP.pdf}
+\caption{De gemeten $P$ waarde voor het semilineair model in functie van de gegeven $P$ waarde van het multilineair model. De stippelijn is de eerste bissectrice.\label{fig:APP} }
+\end{subfigure}
+\begin{subfigure}[b]{0.5\textwidth}
+\includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_AAM_10_100_angle.pdf}
+\caption{Gevonden hoek in functie van de reflectie. Men ziet dat de foutenvlaggen veel groter zijn dan de data zelf. Deze figuur is gemaakt met \textit{matlab}\cite{matlab} \label{fig:Ahoek}}
+\end{subfigure}
+\caption{Vergelijking tussen lineair, semilineair en multilineair MESMA. Voor elke $P$ waarde zijn er 100 pixels berekend. Rood is het lineaire model en blauw het semilineaire model. Deze figuren zijn gemaakt met \textit{matlab}\cite{matlab}\label{fig:Ab100}}
+\end{figure}
+
 
 \begin{algorithm}
 \caption{\textit{multilineair Alternating Angle Minimalistation} \label{al:MAAM}}
@@ -825,7 +891,7 @@ In dit hoofdstuk worden verschillende modellen toegepast op de \textit{Alina}-da
 
 \section{Looptijd en reconstructie-error}
 
-Een algoritme heeft twee belangrijke aspecten. Ten eerste moet het zo nauwkeurig mogelijk zijn. Dit komt overeen met een zo laag mogelijke reconstructie-error. ten tweede moet het algoritme effeci\"ent zijn, dus een zo kort mogelijke looptijd. Deze twee aspecten zijn meestal niet verenigbaar. Een eenvoudig algoritme zoals lineair ontmengen heeft een korte looptijd maar een grote reconstructie-error; een complex algoritme zoals \textit{multilineair MESMA} heeft een lage reconstructie-error, maar een lange looptijd. In praktijk wordt de overweging gemaakt hoe nauwkeurig of hoe snel de data moet worden verwerkt, en aan de hand daarvan wordt een algoritme gekozen.
+Een algoritme heeft twee belangrijke aspecten. Ten eerste moet het zo nauwkeurig mogelijk zijn. Dit komt overeen met een zo laag mogelijke reconstructie-error. Ten tweede moet het algoritme effeci\"ent zijn, dus een zo kort mogelijke looptijd. Deze twee aspecten zijn meestal niet verenigbaar. Een eenvoudig algoritme zoals lineair ontmengen heeft een korte looptijd maar een grote reconstructie-error; een complex algoritme zoals \textit{multilineair MESMA} heeft een lage reconstructie-error, maar een lange looptijd. In praktijk wordt de overweging gemaakt hoe nauwkeurig of hoe snel de data moeten worden verwerkt, en aan de hand daarvan wordt een algoritme gekozen.
 
 
 
@@ -838,8 +904,7 @@ De \textit{Alina}-dataset is een dataset die vier endmembers bevat, namelijk beb
 
 \section{De vergeleken methodes}
 
-In dit hoofdstuk worden 5 methoden vergeleken. In tabel ref{tab:a} staan de secties en de pseudocode gebruikt in deze thesis.  
-
+In dit hoofdstuk worden vijf methoden vergeleken. In tabel \ref{tab:a} staan de secties en de pseudocodes die gebruikt worden  in deze thesis.  
 
 \begin{table}
 \Large\center
@@ -853,10 +918,6 @@ onafhankelijke $P$ & Strict & Strong
 \end{table}
 
 
-\begin{figure}
-\includegraphics[width=0.4\textwidth, trim=400 450 0 175 cm,clip]{plot_legend.pdf}
-\caption{Legende van figuren \ref{fig:trees}, \ref{fig:road} en \ref{fig:grass}. Deze afbeelding is gemaakt met MATLAB\cite{matlab} \label{fig:legend}}
-\end{figure}
 \begin{table}
 \begin{tabular}{l r r}
 algoritme & sectie & algoritme \\
@@ -871,7 +932,7 @@ multilineair AAM & \ref{sec:MAAM} & \ref{al:MAAM}
 \end{table}
 
 
-We vergelijken niet alleen de verschillende methodes, maar ook, waar toepasselijk, de verschillende opties van het multilineair model. Ten eerste worden de afhankelijkheid met de onafhankelijkheid van de reflectiekans van het materiaal vergeleken. Ten tweede wordt het al dan niet toelaten van negatieve reflectiekansen bekeken. De optie die het meest fysisch relevant is, namelijk dat reflectiekansen afhankelijk zijn en positief, wordt \textit{real} genoemd. De optie met het meeste vrijheid, waarbij de reflectiekansen afhankelijk zijn en negatieve waarden kunnen aannemen wordt \textit{real} genoemd. De tegengestelde optie, met een onafhankelijke positieve reflectiekans wordt \textit{strict} genoemd en de overgebleven optie, met onafhankelijke als dan niet negatieve kansen wordt \textit{strong} genoemd. Voor het multilineair MESMA zijn maar twee van de vier opties nagegaan omdat deze computationeel intensief zijn, maar deze zullen dezelfde trend volgen als bij \textit{semilineair MESMA} en \textit{multilineair AAM}.  
+We vergelijken niet alleen de verschillende methodes, maar ook, waar toepasselijk, de verschillende opties van het multilineair model. Ten eerste wordt de afhankelijkheid met de onafhankelijkheid van de reflectiekans van het materiaal vergeleken. Ten tweede wordt het al dan niet toelaten van negatieve reflectiekansen bekeken. De optie die het meest fysisch relevant is, namelijk dat reflectiekansen afhankelijk zijn en positief, wordt \textit{real} genoemd. De optie met het meeste vrijheid, waarbij de reflectiekansen afhankelijk zijn en negatieve waarden kunnen aannemen wordt \textit{free} genoemd. De tegengestelde optie, met een onafhankelijke positieve reflectiekans wordt \textit{strict} genoemd en de overgebleven optie, met onafhankelijke al dan niet negatieve kansen wordt \textit{strong} genoemd. 
 
 
 
@@ -893,8 +954,8 @@ We vergelijken niet alleen de verschillende methodes, maar ook, waar toepasselij
 
 
 
-In figuur \ref{fig:trees}, \ref{fig:road} en \ref{fig:grass} staan, voor alle beschouwde methoden en opties, de reconstructie-error en de looptijd. Figuur \ref{fig:legend} bevat de legende voor deze figuren. Merk op dat de $P$-waarden van de pixels respectievelijk $0.5$, $0.1$ en $10^{-5}$ zijn. Deze waarden zijn afhankelijk van de methode waarmee ze gemeten zijn en zijn niet exact gekend. 
-
+In figuur \ref{fig:trees}, \ref{fig:road} en \ref{fig:grass} staan, voor alle beschouwde methodes en opties, de reconstructie-error en de looptijd. Merk op dat de $P$-waarden van de pixels respectievelijk $0.5$, $0.1$ en $10^{-5}$ zijn. Deze waarden zijn afhankelijk van de methode waarmee ze gemeten zijn en zijn niet exact gekend. 
+%AANPASSEN !!!
 
 \section{Bespreking van de resultaten}
 \subsection{Lineair vs semilineair}
@@ -916,11 +977,11 @@ Het aanpassen van de ondergrens van $P$ geeft geen verschil in de looptijd, de e
 
 \subsection{Bepreking multilinair AAM vs semilinair model}
 
-In tegenstelling dan voorspelt in \ref{sec:smesma}, geeft in het experiment AAM dezelfde resultaten als het lineair model, en elk semilineair model dezelfde resultaten als elk respectievelijk multilineair AAM model. Niet alleen dezelfde reconstructie-error, maar omdat deze dezelfde indices kiest, ook dezelfde abundaties en reflectiekansen. Echter, de looptijd is veel korter. 
+In tegenstelling tot wat voorspeld werd in sectie \ref{sec:smesma}, geeft in het experiment hoekminimalisatie dezelfde resultaten als het lineair model, en elk semilineair model dezelfde resultaten als elk respectievelijk multilineair hoekminimalisatie model. Niet alleen dezelfde reconstructie-error, maar omdat deze dezelfde indices kiest, maar ook dezelfde abundaties en reflectiekansen. Echter, de looptijd is veel korter. 
 
 \vspace{5 mm}
 
-Gebruikt makend van de vorige vergelijkingen is het meest nuttige model een semilineair model waarbij de reflectiekans onafhankelijk is van de endmember en tussen $-1$ en $1$ ligt. Dit is \textit{strong semilineair mesma}.
+Gebruikt makend van de vorige vergelijkingen is het meest nuttige model een semilineair model waarbij de reflectiekans onafhankelijk is van de endmember en tussen $-1$ en $1$ ligt. Dit is \textit{strong multilineair AAM}.
 
 
 \begin{flushleft}
