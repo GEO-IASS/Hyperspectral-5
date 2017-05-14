@@ -525,7 +525,7 @@ Hierbij wordt verondersteld dat $P_i$ gekend is, wat in werkelijkheid niet het g
 $P$ is per definitie een getal groter dan nul, omdat kansen tussen nul en \'e\'en liggen. Echter, het is mogelijk om in vergelijking \ref{eq:Pi} een negatieve waarde in te voeren. Dit komt neer op een verandering van de randvoorwaarden in het \texttt{fmincon} algoritme. In plaats van dat de grenzen $[0,1]$ zijn, worden de grenzen nu $[-1,1]$. 
 Een negatieve reflectiekans is niet fysisch, maar er bestaan twee mogelijke verklaringen voor het toelaten van negatieve $P$ waarden, waarbij $P$ niet meer als kans wordt beschouwd.
 
-De eerste mogelijke verklaring - zoals beschreven in de vorige sectie - is dat het albedo slechts een benadering is. Het vervangen van het albedo door de reflectie is equivalent aan het veronderstellen dat de reflectie van het referentiemateriaal gelijk is aan nul. Dit zorgt dat de waarde van $P$ die gemeten wordt lager is dan in werkelijkheid. Als de reflectie van de pixel kleiner is dan de reflectie van het referentiemateriaal, zorgt dit voor een negatieve gemeten reflectiekans, hoewel de werkelijke reflectie nog steeds positief is. Merk op dat de reflectiekans $P$ niet kan  vervangen worden door $P-P_{R}$  - met $P_{R}$ de reflectie van het referentiemateriaal - omdat het systeem niet lineair afhangt van $P$.
+De eerste mogelijke verklaring - zoals beschreven in de vorige sectie - is dat het albedo slechts een benadering is. Het vervangen van het albedo door de reflectie is equivalent aan het veronderstellen dat de reflectiekans van het referentiemateriaal gelijk is aan nul. Dit zorgt dat de waarde van $P$ die gemeten wordt lager is dan in werkelijkheid. Als de reflectiekans van de pixel kleiner is dan de reflectiekans van het referentiemateriaal, zorgt dit voor een negatieve gemeten reflectiekans, hoewel de werkelijke reflectiekans nog steeds positief is. Merk op dat de reflectiekans $P$ niet kan  vervangen worden door $P-P_{R}$  - met $P_{R}$ de reflectiekans van het referentiemateriaal - omdat het systeem niet lineair afhangt van $P$.
 
 De tweede mogelijke verklaring is het niet meenemen van interpixelinteracties. Deze interacties geven extra hogere-ordetermen mee aan het systeem. De enige hogere-ordetermen die het multilineair model meeneemt hebben machten van $P$ als co\"effici\"enten, dus wordt de waarde van $P$ aangepast naar niet werkelijke waarden.  
 %\subsection{afhankelijke vs onafhankelijke P waarden}
@@ -765,14 +765,14 @@ Eerst worden voor elke pixel willekeurige abundanties en een vaste reflectiekans
 \end{subfigure}
 \begin{subfigure}[b]{0.5\textwidth}
 \includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_10_100_angle.pdf}
-\caption{Gevonden hoek in functie van de reflectie. Men ziet dat de foutenvlaggen veel groter zijn dan de data zelf. Deze figuur is gemaakt met \textit{matlab}\cite{matlab} \label{fig:hoek}}
+\caption{Gevonden hoek in functie van de reflectiekans. Men ziet dat de foutenvlaggen veel groter zijn dan de data zelf. Deze figuur is gemaakt met \textit{matlab}\cite{matlab} \label{fig:hoek}}
 \end{subfigure}
 \caption{Vergelijking tussen lineair, semilineair en multilineair MESMA. Voor elke $P$ waarde zijn er 100 pixels berekend. Rood is het lineaire model en blauw het semilineaire model. Deze figuren zijn gemaakt met \textit{matlab}\cite{matlab}\label{fig:b100}}
 \end{figure}
 
 \subsubsection{Correct geselecteerde materialen}
 
-In figuur \ref{fig:corr} staat het aantal juist geselecteerde spectra in functie van de gegeven reflectiekans. Deze geeft weer welk deel van de indices in $lineair$ of $semilineair MESMA$ - die voor beide modellen hetzelfde zijn - gelijk zijn aan de gegeven indices van het multilineair model. Zelfs voor een lage reflectie zoals $0.1$ zijn maar 1 op 10 indices correct. Echter, het is mogelijk dat er spectra bestaan voor een specifiek materiaal die sterk lijken op andere spectra, en die daarom - hoewel deze verschillende indices hebben - grotendeels dezelfde resultaten geven. In theorie kan dit nagegaan worden door de hoek te bepalen tussen het werkelijke en het bepaalde spectrum, maar zoals te zien in figuur \ref{fig:hoek}, zijn de fouten op deze data groter dan de data zelf, en kan hieruit niets worden afgeleid. 
+In figuur \ref{fig:corr} staat het aantal juist geselecteerde spectra in functie van de gegeven reflectiekans. Deze geeft weer welk deel van de indices in $lineair$ of $semilineair MESMA$ - die voor beide modellen hetzelfde zijn - gelijk zijn aan de gegeven indices van het multilineair model. Zelfs voor een lage reflectiekans zoals $0.1$ zijn maar 1 op 10 indices correct. Echter, het is mogelijk dat er spectra bestaan voor een specifiek materiaal die sterk lijken op andere spectra, en die daarom - hoewel deze verschillende indices hebben - grotendeels dezelfde resultaten geven. In theorie kan dit nagegaan worden door de hoek te bepalen tussen het werkelijke en het bepaalde spectrum, maar zoals te zien in figuur \ref{fig:hoek}, zijn de fouten op deze data groter dan de data zelf, en kan hieruit niets worden afgeleid. 
 
 
 \subsubsection{Reflectiekans}
@@ -849,7 +849,7 @@ Wanneer de reflectiekans klein is, is er geen verschil meer tussen de optimale l
 \end{subfigure}
 \begin{subfigure}[b]{0.5\textwidth}
 \includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_AAM_10_100_angle.pdf}
-\caption{Gevonden hoek in functie van de reflectie. Men ziet dat de foutenvlaggen veel groter zijn dan de data zelf. Deze figuur is gemaakt met \textit{matlab}\cite{matlab} \label{fig:Ahoek}}
+\caption{Gevonden hoek in functie van de reflectiekans. Men ziet dat de foutenvlaggen veel groter zijn dan de data zelf. Deze figuur is gemaakt met \textit{matlab}\cite{matlab} \label{fig:Ahoek}}
 \end{subfigure}
 \caption{Vergelijking tussen lineair, semilineair en multilineair MESMA. Voor elke $P$ waarde zijn er 100 pixels berekend. Rood is het lineaire model en blauw het semilineaire model. Deze figuren zijn gemaakt met \textit{matlab}\cite{matlab}\label{fig:Ab100}}
 \end{figure}

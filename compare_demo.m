@@ -2,6 +2,7 @@ function c = compare_demo()
 c.testpix = @testpix;
 c.show = @show_table;
 c.c = @cdata;
+c.cx = @cdatapix;
 c.cf = @cfunc;
 c.lfpd = @save_latex_file_pixel_data;
 end
@@ -22,8 +23,6 @@ pixel = reshape(data(y,x,:),[1,53]);
 %     };
 
 allsystems = { ...
-<<<<<<< HEAD
-<<<<<<< HEAD
     multilin_options(0,false,false,false,600), ...
     multilin_options(0,false,false,true,600), ...
     multilin_options(0,false,true,false,600), ...
@@ -38,24 +37,7 @@ allsystems = { ...
     %multilin_options(2,false,true,true,600), ...
     %multilin_options(2,false,false,true,600), ...    
     %multilin_options(2,false,false,false,600), ...
-=======
-=======
->>>>>>> 63bb797e8f10b4c2c1672bdb9c5a9dc52b71cb7f
-    %multilin_options(0,false,false,false,600), ...
-    %multilin_options(0,false,false,true,600), ...
-    %multilin_options(0,false,true,false,600), ...
-    %multilin_options(0,false,true,true,600), ...
-    multilin_options(1,true,false,false,600), ...
-    multilin_options(1,false,true,false,600), ...
-    multilin_options(1,false,true,true,600), ...
-    multilin_options(1,false,false,true,600), ...    
-    multilin_options(1,false,false,false,600), ...
-    multilin_options(2,true,false,false,600), ...
-    multilin_options(2,false,true,false,600), ...
-    multilin_options(2,false,true,true,600), ...
-    multilin_options(2,false,false,true,600), ...    
-    multilin_options(2,false,false,false,600), ...
->>>>>>> 63bb797e8f10b4c2c1672bdb9c5a9dc52b71cb7f
+
     };
 
 
@@ -177,6 +159,34 @@ road = testarea(8,3,3,6);
 mix2 = testarea(11,3,3,6);
 curb = testarea(13,3,3,6);
 grass = testarea(16,3,3,6);
+
+names = trees.Properties.RowNames;
+
+errors = table(trees.error,mix1.error,road.error,mix2.error,curb.error,grass.error,'RowNames',names);
+errorsrn = table(rne(trees),rne(mix1),rne(road),rne(mix2),rne(curb),rne(grass),'RowNames',names);
+runtime = table(trees.runtime,mix1.runtime,road.runtime,mix2.runtime,curb.runtime,grass.runtime,'RowNames',names);
+
+save_latex_file(errors,'TabErrorsA');
+save_latex_file(errorsrn,'TabErrorsrnA');
+save_latex_file(runtime,'TabRuntimeA');
+%save_latex_file(table2,'TabRoad');
+%save_latex_file(table3,'TabGrass');
+save('meantables.mat','errors','errorsrn','runtime');
+
+
+
+%show_table(11,3);
+%cfunc()
+end
+
+function cdatapix()
+
+trees = testpix(3,3);
+mix1 = testpix(5,3);
+road = testpix(9,3);
+mix2 = testpix(12,3);
+curb = testpix(14,3);
+grass = testpix(17,3);
 
 names = trees.Properties.RowNames;
 
