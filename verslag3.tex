@@ -397,19 +397,19 @@ In dit hoofdstuk werd ervan uitgegaan dat elke endmember een enkel vast spectrum
 Het bilineair model beschrijft dat elke lichtstraal \'e\'en of twee keer kan reflecteren in een enkele pixel. Van dit model bestaan meerdere varianten. Het Fan model\cite{mlinmix} voert de bilinaire term in als volgt.
 
 \begin{equation}
-\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i,j} a_i a_j \bm{e}_i \odot \bm{e}_j + \bm{\eta}
+\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i=1}^{p-1} \sum_{j=i}^{p} a_i a_j \bm{e}_i \odot \bm{e}_j + \bm{\eta}
 \end{equation}
 
 Dit geeft in de praktijk geen goede resultaten, omdat het bilineair model is ontwikkeld voor objecten met een ingewikkelde geometrie, maar deze methode bevat geen parameters of informatie over deze geometrie. Dit probleem kan worden opgelost door gebruik te maken van het veralgemeend bilineair model\cite{mlinmix}, dat beschrijft dat de endmembers worden gemengd als volgt:
 
 \begin{equation}
-\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i,j}  \gamma_{ij} a_i a_j \bm{e}_i \odot \bm{e}_j + \bm{\eta}
+\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i=1}^{p-1} \sum_{j=i}^{p}  \gamma_{ij} a_i a_j \bm{e}_i \odot \bm{e}_j + \bm{\eta}
 \end{equation}
 
 Een alternatief is het model van Nascimento en Somers, dat de abundaties mengt als volgt:
 
 \begin{equation}
-\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i,j}  b_{ij} \bm{e}_i \odot \bm{e}_j + \bm{\eta}
+\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i=1}^{p-1} \sum_{j=i}^{p}  b_{ij} \bm{e}_i \odot \bm{e}_j + \bm{\eta}
 \end{equation}
 
 Dit is equivalent aan het vorige model, behalve dat de eenheidssomvoorwaarde $\sum_i a_i + \sum_{i,j} b_{ij} = 1$ wordt in plaats daarvan $\sum_i a_i = 1$
