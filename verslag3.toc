@@ -47,10 +47,10 @@
 \contentsline {section}{\numberline {5.1}Looptijd en reconstructie-error}{34}
 \contentsline {section}{\numberline {5.2}Alina-dataset}{35}
 \contentsline {section}{\numberline {5.3}De vergeleken methodes}{35}
-\contentsline {section}{\numberline {5.4}Bespreking van de resultaten}{39}
-\contentsline {subsection}{\numberline {5.4.1}Lineair vs semilineair}{39}
-\contentsline {subsection}{\numberline {5.4.2}Semi-lineair vs multilineair}{39}
-\contentsline {subsection}{\numberline {5.4.3}P-afhankelijkheid}{39}
-\contentsline {subsection}{\numberline {5.4.4}Bespreking P-ondergrens}{39}
-\contentsline {subsection}{\numberline {5.4.5}Bepreking multilinair AAM vs semilinair model}{40}
-\contentsline {chapter}{Bibliografie}{41}
+\contentsline {section}{\numberline {5.4}Bespreking van de resultaten}{40}
+\contentsline {subsection}{\numberline {5.4.1}Lineair vs semilineair}{40}
+\contentsline {subsection}{\numberline {5.4.2}Semi-lineair vs multilineair}{40}
+\contentsline {subsection}{\numberline {5.4.3}P-afhankelijkheid}{40}
+\contentsline {subsection}{\numberline {5.4.4}Bespreking P-ondergrens}{40}
+\contentsline {subsection}{\numberline {5.4.5}Bepreking multilinair AAM vs semilinair model}{41}
+\contentsline {chapter}{Bibliografie}{42}
