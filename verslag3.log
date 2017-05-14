@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  14 MAY 2017 10:45
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.28)  10 MAY 2017 13:58
+>>>>>>> 63bb797e8f10b4c2c1672bdb9c5a9dc52b71cb7f
 =======
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.28)  10 MAY 2017 13:58
 >>>>>>> 63bb797e8f10b4c2c1672bdb9c5a9dc52b71cb7f
@@ -711,6 +715,7 @@ Here is how much of TeX's memory you used:
  9645 multiletter control sequences out of 15000+200000
  31343 words of font info for 109 fonts, out of 3000000 for 9000
 <<<<<<< HEAD
+<<<<<<< HEAD
  841 hyphenation exceptions out of 8191
  42i,15n,51p,1121b,540s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
@@ -740,6 +745,8 @@ nts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a
 .pfb>
 Output written on verslag3.pdf (42 pages, 1027988 bytes).
 =======
+=======
+>>>>>>> 63bb797e8f10b4c2c1672bdb9c5a9dc52b71cb7f
  1025 hyphenation exceptions out of 8191
  42i,15n,51p,1123b,544s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
@@ -770,6 +777,9 @@ onts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
 bo8a.pfb>
 Output written on verslag3.pdf (43 pages, 1076937 bytes).
+<<<<<<< HEAD
+>>>>>>> 63bb797e8f10b4c2c1672bdb9c5a9dc52b71cb7f
+=======
 >>>>>>> 63bb797e8f10b4c2c1672bdb9c5a9dc52b71cb7f
 PDF statistics:
  398 PDF objects out of 1000 (max. 8388607)
