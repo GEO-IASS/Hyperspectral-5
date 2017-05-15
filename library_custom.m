@@ -4,7 +4,7 @@ len = length(libs);
 error = Inf();
 indices = zeros(1,len);
 
-
+perm = ones(1,len);
 slib = libs(perm);
 len = length(slib);
 lsize = zeros(1,len);

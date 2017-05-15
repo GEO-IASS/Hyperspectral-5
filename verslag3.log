@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  14 MAY 2017 11:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.15)  15 MAY 2017 13:34
 entering extended mode
 **verslag3.tex
 (C:\Users\Thorvald\Dropbox\Masterproef\Hyperspectral\verslag3.tex
@@ -509,16 +509,16 @@ Hoofdstuk 1.
 ] [11] <nonneg.PNG, id=68, 435.12563pt x 112.92188pt>
 File: nonneg.PNG Graphic file (type png)
  <use nonneg.PNG>
-Package pdftex.def Info: nonneg.PNG used on input line 355.
+Package pdftex.def Info: nonneg.PNG used on input line 361.
 (pdftex.def)             Requested size: 469.75502pt x 121.91588pt.
 
 
-Package natbib Warning: Citation `cursus' on page 12 undefined on input line 35
-6.
+Package natbib Warning: Citation `cursus' on page 12 undefined on input line 36
+2.
 
 
-Package natbib Warning: Citation `cursus' on page 12 undefined on input line 35
-6.
+Package natbib Warning: Citation `cursus' on page 12 undefined on input line 36
+2.
 
 [12] [13 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/nonneg.PNG>]
 [14]
@@ -528,7 +528,7 @@ Hoofdstuk 2.
 ] <multi.PNG, id=87, 297.36093pt x 198.7425pt>
 File: multi.PNG Graphic file (type png)
  <use multi.PNG>
-Package pdftex.def Info: multi.PNG used on input line 432.
+Package pdftex.def Info: multi.PNG used on input line 438.
 (pdftex.def)             Requested size: 187.89914pt x 125.58144pt.
 
 
@@ -546,7 +546,7 @@ Hoofdstuk 3.
 File: AAMProj.PNG Graphic file (type png)
 
 <use AAMProj.PNG>
-Package pdftex.def Info: AAMProj.PNG used on input line 610.
+Package pdftex.def Info: AAMProj.PNG used on input line 622.
 (pdftex.def)             Requested size: 187.89914pt x 105.5535pt.
  [23 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/AAMProj.PNG>] [24]
 Hoofdstuk 4.
@@ -556,61 +556,61 @@ Hoofdstuk 4.
 File: PMC_10_100_E.pdf Graphic file (type pdf)
 
 <use PMC_10_100_E.pdf>
-Package pdftex.def Info: PMC_10_100_E.pdf used on input line 738.
+Package pdftex.def Info: PMC_10_100_E.pdf used on input line 745.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
  <PMC_10_100_El.pdf, id=130, 614.295pt x 794.97pt>
 File: PMC_10_100_El.pdf Graphic file (type pdf)
 
 <use PMC_10_100_El.pdf>
-Package pdftex.def Info: PMC_10_100_El.pdf used on input line 742.
+Package pdftex.def Info: PMC_10_100_El.pdf used on input line 749.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
  <PMC_10_100_Elog.pdf, id=131, 614.295pt x 794.97pt>
 File: PMC_10_100_Elog.pdf Graphic file (type pdf)
 
 <use PMC_10_100_Elog.pdf>
-Package pdftex.def Info: PMC_10_100_Elog.pdf used on input line 746.
+Package pdftex.def Info: PMC_10_100_Elog.pdf used on input line 753.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
  <PMC_10_100_EPlog.pdf, id=132, 614.295pt x 794.97pt>
 File: PMC_10_100_EPlog.pdf Graphic file (type pdf)
 
 <use PMC_10_100_EPlog.pdf>
-Package pdftex.def Info: PMC_10_100_EPlog.pdf used on input line 750.
+Package pdftex.def Info: PMC_10_100_EPlog.pdf used on input line 757.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 737--753
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 744--760
 [][] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 737--753
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 744--760
 [] [] 
  []
 
 <PMC_10_100_corr.pdf, id=133, 614.295pt x 794.97pt>
 File: PMC_10_100_corr.pdf Graphic file (type pdf)
  <use PMC_10_100_corr.pdf>
-Package pdftex.def Info: PMC_10_100_corr.pdf used on input line 759.
+Package pdftex.def Info: PMC_10_100_corr.pdf used on input line 766.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
 <PMC_10_100_PP.pdf, id=134, 614.295pt x 794.97pt>
 File: PMC_10_100_PP.pdf Graphic file (type pdf)
  <use PMC_10_100_PP.pdf>
-Package pdftex.def Info: PMC_10_100_PP.pdf used on input line 763.
+Package pdftex.def Info: PMC_10_100_PP.pdf used on input line 770.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
 <PMC_10_100_angle.pdf, id=135, 614.295pt x 794.97pt>
 File: PMC_10_100_angle.pdf Graphic file (type pdf)
 
 <use PMC_10_100_angle.pdf>
-Package pdftex.def Info: PMC_10_100_angle.pdf used on input line 767.
+Package pdftex.def Info: PMC_10_100_angle.pdf used on input line 774.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-Overfull \hbox (5.62215pt too wide) in paragraph at lines 758--770
+Overfull \hbox (5.62215pt too wide) in paragraph at lines 765--777
 [][] | []
  []
 
 
-Overfull \hbox (13.1173pt too wide) in paragraph at lines 783--784
+Overfull \hbox (13.1173pt too wide) in paragraph at lines 790--791
 \OT1/cmr/m/n/12 Figuur 4.1[] be-schrijft de reconstructie-error. De fi-gu-ren 4
 .1a[] en 4.1b[] be-schrij-ven de reconstructie-
  []
@@ -626,36 +626,36 @@ pbox/Masterproef/Hyperspectral/PMC_10_100_angle.pdf>]
 File: PMC_AAM_10_100_E.pdf Graphic file (type pdf)
 
 <use PMC_AAM_10_100_E.pdf>
-Package pdftex.def Info: PMC_AAM_10_100_E.pdf used on input line 822.
+Package pdftex.def Info: PMC_AAM_10_100_E.pdf used on input line 829.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
 <PMC_AAM_10_100_El.pdf, id=180, 614.295pt x 794.97pt>
 File: PMC_AAM_10_100_El.pdf Graphic file (type pdf)
 
 <use PMC_AAM_10_100_El.pdf>
-Package pdftex.def Info: PMC_AAM_10_100_El.pdf used on input line 826.
+Package pdftex.def Info: PMC_AAM_10_100_El.pdf used on input line 833.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
 <PMC_AAM_10_100_Elog.pdf, id=181, 614.295pt x 794.97pt>
 File: PMC_AAM_10_100_Elog.pdf Graphic file (type pdf)
 
 <use PMC_AAM_10_100_Elog.pdf>
-Package pdftex.def Info: PMC_AAM_10_100_Elog.pdf used on input line 830.
+Package pdftex.def Info: PMC_AAM_10_100_Elog.pdf used on input line 837.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
 <PMC_AAM_10_100_EPlog.pdf, id=182, 614.295pt x 794.97pt>
 File: PMC_AAM_10_100_EPlog.pdf Graphic file (type pdf)
 
 <use PMC_AAM_10_100_EPlog.pdf>
-Package pdftex.def Info: PMC_AAM_10_100_EPlog.pdf used on input line 834.
+Package pdftex.def Info: PMC_AAM_10_100_EPlog.pdf used on input line 841.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 821--837
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 828--844
 [][] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 821--837
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 828--844
 [] [] 
  []
 
@@ -663,24 +663,24 @@ Overfull \hbox (2.61107pt too wide) in paragraph at lines 821--837
 File: PMC_AAM_10_100_corr.pdf Graphic file (type pdf)
 
 <use PMC_AAM_10_100_corr.pdf>
-Package pdftex.def Info: PMC_AAM_10_100_corr.pdf used on input line 843.
+Package pdftex.def Info: PMC_AAM_10_100_corr.pdf used on input line 850.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
 <PMC_AAM_10_100_PP.pdf, id=188, 614.295pt x 794.97pt>
 File: PMC_AAM_10_100_PP.pdf Graphic file (type pdf)
 
 <use PMC_AAM_10_100_PP.pdf>
-Package pdftex.def Info: PMC_AAM_10_100_PP.pdf used on input line 847.
+Package pdftex.def Info: PMC_AAM_10_100_PP.pdf used on input line 854.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
 <PMC_AAM_10_100_angle.pdf, id=189, 614.295pt x 794.97pt>
 File: PMC_AAM_10_100_angle.pdf Graphic file (type pdf)
 
 <use PMC_AAM_10_100_angle.pdf>
-Package pdftex.def Info: PMC_AAM_10_100_angle.pdf used on input line 851.
+Package pdftex.def Info: PMC_AAM_10_100_angle.pdf used on input line 858.
 (pdftex.def)             Requested size: 234.8775pt x 160.03908pt.
 
-Overfull \hbox (5.62215pt too wide) in paragraph at lines 842--854
+Overfull \hbox (5.62215pt too wide) in paragraph at lines 849--861
 [][] | []
  []
 
@@ -695,20 +695,20 @@ pdf> <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/PMC_AAM_10_100_PP.pdf
 Hoofdstuk 5.
 [34
 
-] <semilinMESMA.pdf, id=234, 614.295pt x 794.97pt>
+] <semilinMESMA.pdf, id=235, 614.295pt x 794.97pt>
 File: semilinMESMA.pdf Graphic file (type pdf)
  <use semilinMESMA.pdf>
-Package pdftex.def Info: semilinMESMA.pdf used on input line 1137.
+Package pdftex.def Info: semilinMESMA.pdf used on input line 1140.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
 
-<linMESMA.pdf, id=235, 614.295pt x 794.97pt>
+<linMESMA.pdf, id=236, 614.295pt x 794.97pt>
 File: linMESMA.pdf Graphic file (type pdf)
  <use linMESMA.pdf>
-Package pdftex.def Info: linMESMA.pdf used on input line 1142.
+Package pdftex.def Info: linMESMA.pdf used on input line 1145.
 (pdftex.def)             Requested size: 465.06004pt x 316.87842pt.
 
 
-LaTeX Warning: Reference `table:Merror' on page 35 undefined on input line 1147
+LaTeX Warning: Reference `table:Merror' on page 35 undefined on input line 1150
 .
 
 [35] [36] [37] [38 <C:/Users/Thorvald/Dropbox/Masterproef/Hyperspectral/semilin
@@ -728,11 +728,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  6308 strings out of 493921
  88362 string characters out of 3147272
- 191900 words of memory out of 3000000
+ 189900 words of memory out of 3000000
  9442 multiletter control sequences out of 15000+200000
  31343 words of font info for 109 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,15n,51p,1121b,540s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,15n,50p,1121b,540s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/font
@@ -758,7 +758,7 @@ ype1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a
 .pfb>
-Output written on verslag3.pdf (43 pages, 1097313 bytes).
+Output written on verslag3.pdf (43 pages, 1098496 bytes).
 PDF statistics:
  398 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

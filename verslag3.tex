@@ -264,6 +264,12 @@ Aardobservatie wordt ook toepast in de geologie. Van de aardbodem kan niet allee
 \caption{Opbouw van een hyperspectraal beeld. Deze afbeelding komt uit \textit{Fundamentals of remote sensing\cite{fun}}}
 \end{figure}
 
+\section{Alina-dataset}\cite{Alina}
+
+De \textit{Alina-dataset} is een dataset die verder in deze thesis gebruikt wordt. Deze is een deel uit een hyperspectraal beeld uit Long-beach, Missouri, USA, en is genomen met de Avari-sensor. Het oorspronkelijke beeld is vrij groot, maar hier er is een deel van genomen van $13\times 19$ pixels. Dit stuk van het beeld bevat vier verschillende endmembers: een geasfalteerde weg, een voetpad naast de weg, een bos van eikenbomen en een grasveld. Voor elk van deze endmembers is er een bibliotheek van spectra, gemeten met een \textit{hand-held ASD spectrometer}, met respectievelijk 10,10,10 en 50 spectra. Zowel de pixels van het beeld en de spectra uit de bibliotheken hebben 53 banden. 
+
+
+
 \chapter{Spectraal ontmengen}
 
 
@@ -543,6 +549,12 @@ Het \textit{multiple endmember spectral mixture analysis} ofwel \textit{MESMA}-a
 Merk op dat er altijd minstens een model is dat voldoet aan beide voorwaarden. De eenheidssomvoorwaarde is voldaan voor alle modellen dankzij het gebruikte ontmengalgoritme. De modellen met maar een endmember hebben bijgevolg een abundatie van 1, en voldoen per definitie ook aan de niet-negativiteitsvoorwaarde.
 
 
+\subsection{randvoorwaarden}
+
+Wanneer een pixel wordt ontmengd waarbij een endmember volgens \textit{sum-to-one constrained least-squares unmixing model} een negtaive abundatie zou hebben, is deze abundatie in \textit{Fully constrained least-squares unmixing model} gelijk aan nul. Indien deze pixel zou worden ontmengd aan de hand van de endmembers met niet negatieve abundaties, zijn de abundaties van de voordien negatieve endmembers bij definitie nul, en worden de overige abundaties bepaald door het minimaliseren van de reconstructie-error. Dit geeft de zelfde resultaten als bij het \textit{Fully constrained least-squares unmixing model}. Dit betekend dat het computationeel zware \textit{Fully constrained least-squares unmixing model} kan worden vervangen door het veel snellere \textit{sum-to-one constrained least-squares unmixing model}, gegeven dat men ontmengt aan de hand van alle deelverzamelingen. 
+
+
+
 \subsection{Werking en implementatie van MESMA}
 
 \subsubsection{deelverzameling van alle materialen}
@@ -685,17 +697,12 @@ Volgens het optimaal \textit{MESMA}-algoritme wordt ontmengd aan de hand van elk
 \caption{multilineair MESMA\label{al:mmesma}}
 \begin{algorithmic}[1]
 \State $\eta = +\infty$ 
-\For {Voor alle deelverzamelingen}
 \For {Voor alle combinaties van spectra}
 \State Ontmeng gebruik makend van het multilineair model
-\If {$\exists \text{Abundantie} < 0$}
-\State \textbf{continue}
-\EndIf
 \If {reconstructie-error $< \eta$}
 \State $\eta = $ reconstructie-error
 \State $a_i = $ abundanties
 \EndIf
-\EndFor
 \EndFor
 \State $a_i$ zijn nu de correcte abundanties
 \end{algorithmic}
@@ -895,10 +902,6 @@ Een algoritme heeft twee belangrijke aspecten. Ten eerste moet het zo nauwkeurig
 
 
 
-
-\section{Alina-dataset}
-
-De \textit{Alina}-dataset is een dataset die vier endmembers bevat, namelijk bebossing, asfalt, voetpad en gras. De bibliotheken van deze endmembers zijn met de hand opgemeten en bevatten respectievelijk 50, 10, 10 en 10 elementen. 
 
 
 
