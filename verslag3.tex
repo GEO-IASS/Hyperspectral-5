@@ -160,20 +160,7 @@ Rob {Heylen} % Supervisor's Name
 
 
 
-\newpage
-\chapter*{Structuur van deze thesis}
-\addcontentsline{toc}{chapter}{Structuur van deze thesis}
- In de inleiding worden de fundamenten van aardobservatie beschreven.Dit hoofdstuk is vooral gebaseerd op 
-\textit{Fundamentals of remote sensing\cite{fun}}.
 
-Het eerste hoofdstuk introduceert het onderwerp van deze thesis: spectrale ontmenging. Eerst wordt het lineaire spectrale ontmengingsmodel beschreven, welke het meest gebruikte model is. Dan worden twee belangrijke problemen beschreven die niet met het lineaire model kunnen worden behandeld: niet-lineaire effecten en endmember variabiliteit.
-
-In hoofdstuk 2 en 3 worden 2 state-of-the-art methodes uit de literatuur beschreven voor niet-lineair spectrale ontmenging en endmember variabiliteit.  Het multilineair model -beschreven in hoofdstuk twee - is een methode voor niet-lineaire spectrale ontmenging, en wordt uitvoerig beschreven in: \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}. In hoofdstuk 3 wordt de methode die endmember variabiliteit in rekening brengt bescreven, deze wordt behandeld in: \textit{Hyperspectral unmixing with endmember variability via alternating angle minimization}\cite{mesma}.
-
-Er zijn in de literatuur momenteel nauwelijks of geen methoden gekend die endmember variabiliteit in rekening brengen bij niet-lineaire ontmenging. Daarom heb ik in deze masterproef onderzoek gedaan naar de combinatie van niet-lineaire ontmenging en endmember variabiliteit. In het derde hoofdstuk beschrijf ik een aantal methodes die gelijktijdig rekening houden met beide concepten. Deze methodes zijn gebaseerd op combinaties van de 2 methodes uit hoofdstuk 2 en 3.
-	
-In hoofdstuk 5 worden de ontwikkelde methodes en een aantal varianten hierop gevalideerd  op een experimentele dataset: de Alina dataset\cite{Alina}.  
-\newpage
 \chapter*{Inleiding}
 \addcontentsline{toc}{chapter}{Inleiding}
 
@@ -264,10 +251,13 @@ Aardobservatie wordt ook toepast in de geologie. Van de aardbodem kan niet allee
 \caption{Opbouw van een hyperspectraal beeld. Deze afbeelding komt uit \textit{Fundamentals of remote sensing\cite{fun}}}
 \end{figure}
 
+<<<<<<< HEAD
 \section{Alina-dataset}\cite{Alina}
 
 De \textit{Alina-dataset} is een dataset die verder in deze thesis gebruikt wordt. Deze is een deel uit een hyperspectraal beeld uit Long-beach, Missouri, USA, en is genomen met de Avari-sensor. Het oorspronkelijke beeld is vrij groot, maar hier er is een deel van genomen van $13\times 19$ pixels. Dit stuk van het beeld bevat vier verschillende endmembers: een geasfalteerde weg, een voetpad naast de weg, een bos van eikenbomen en een grasveld. Voor elk van deze endmembers is er een bibliotheek van spectra, gemeten met een \textit{hand-held ASD spectrometer}, met respectievelijk 10,10,10 en 50 spectra. Zowel de pixels van het beeld en de spectra uit de bibliotheken hebben 53 banden. 
 
+=======
+>>>>>>> ec219482147d18405d34cc33cbd35a9724060ed4
 
 
 \chapter{Spectraal ontmengen}
@@ -391,7 +381,25 @@ In deze thesis wordt geen rekening gehouden met transmissie-effecten en interpix
 
 In dit hoofdstuk werd ervan uitgegaan dat elke endmember een enkel vast spectrum heeft. In werkelijkheid is dit niet het geval. Enerzijds worden materialen met verschillende spectra beschouwd als een enkel materiaal. Bijvoorbeeld de bovenkant en de onderkant van een blad, die een verschillend spectrum hebben, zien we als een materiaal. Ook door de mens gemaakte materialen, zoals beton en asfalt, kunnen verschillende spectra hebben. Meestal is het niet interessant om een onderscheid te maken tussen deze verschillende materialen. Aan de andere kant kan het spectrum van een enkel materiaal ook verschillen dankzij verschillen in belichting en atmosfeer. Deze beide effecten zorgen ervoor dat een enkele endmember meerdere spectra heeft. Dit concept noemt men variabiliteit. Hierdoor word elke endmember beschreven door een bibliotheek van spectra, in plaats van een enkel spectrum. Hoe kan worden ontmengd, rekening houdend met variabiliteit staat beschreven in sectie \ref{sec:mesma}. 
 
+\newpage
+\chapter*{Verdere structuur van deze thesis}
+\addcontentsline{toc}{chapter}{Structuur van deze thesis}
+In vorige hoofdstukken zijn twee problemen geintroduceerd, namelijk variabiliteit en niet-lineairiteit.
 
+In hoofdstuk 2 en 3 worden 2 state-of-the-art methodes uit de literatuur beschreven voor niet-lineair spectrale ontmenging en endmember variabiliteit.  Het multilineair model -beschreven in hoofdstuk twee - is een methode voor niet-lineaire spectrale ontmenging, en wordt uitvoerig beschreven in: \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}. In hoofdstuk 3 wordt de methode die endmember variabiliteit in rekening brengt bescreven, deze wordt behandeld in: \textit{Hyperspectral unmixing with endmember variability via alternating angle minimization}\cite{mesma}.
+
+Er zijn in de literatuur momenteel nauwelijks of geen methoden gekend die endmember variabiliteit in rekening brengen bij niet-lineaire ontmenging. Daarom heb ik in deze masterproef onderzoek gedaan naar de combinatie van niet-lineaire ontmenging en endmember variabiliteit. In het derde hoofdstuk beschrijf ik een aantal methodes die gelijktijdig rekening houden met beide concepten. Deze methodes zijn gebaseerd op combinaties van de 2 methodes uit hoofdstuk 2 en 3.
+	
+In hoofdstuk 5 worden de ontwikkelde methodes en een aantal varianten hierop gevalideerd  op een experimentele dataset: de Alina dataset\cite{Alina}.  
+
+\section{Alina-dataset}\cite{Alina}
+
+De \textit{Alina-dataset} is een dataset die verder in deze thesis gebruikt wordt. Deze is een deel uit een hyperspectraal beeld uit Long-beach, Missouri, USA, en is genomen met de Avari-sensor. Het oorspronkelijke beeld is vrij groot, maar hier er is een deel van genomen van $13\times 19$ pixels. Dit stuk van het beeld bevat vier verschillende endmembers: een geasfalteerde weg, een voetpad naast de weg, een bos van eikenbomen en een grasveld. Voor elk van deze endmembers is er een bibliotheek van spectra, gemeten met een \textit{hand-held ASD spectrometer}, met respectievelijk 10,10,10 en 50 spectra. Zowel de pixels van het beeld en de spectra uit de bibliotheken hebben 53 banden. 
+
+
+
+
+\newpage
 
 
 
@@ -688,6 +696,12 @@ least-squares unmixing model} met als endmembers $E$
 
 
 \chapter{Spectrale variabiliteit bij niet-lineaire ontmenging}
+
+
+
+\section{Variabiliteit en niet-lineaire ontmenging}
+
+Zowel variabiliteit en niet-lineariteit zijn uitvoerig bestudeerd in de literatuur, en verschillende correcties op het lineaire model zijn doorgevoerd. Echter, er is weinig onderzoek gedaan naar het combineren van beide methoden, hoewel dat in werkelijkheid deze beide probleem vaak allebei voorkomen. In complexe objecten, zoals vegetatie en gebouwen, komt enerzijds veel interne reflectie voor, ten gevolge van hun ingewikkelde structuur, en anderzijds veel verschillende variaties op hetzelfde materiaal. Dit laatste gebeurt bijvoorbeeld doordat de boven- en onderkant van een boomblad een verschillend spectrum hebben, of dat er verschillende samenstellingen van cement gebuikt zijn in een gebouw. Daarom is het belangrijk om een model te ontwikkelen dat met beide systemen correcties houdt. Dit gebeurt in volgend hoofdstuk.
 
 \section{Multilineair MESMA} \label{sec:mmesma}
 
@@ -1172,9 +1186,11 @@ Het aanpassen van de ondergrens van $P$ geeft geen verschil in de looptijd, de e
 
 In tegenstelling tot wat voorspeld werd in sectie \ref{sec:smesma}, geeft in het experiment hoekminimalisatie bijna altijd dezelfde resultaten als het lineair model, en elk semilineair model bija altijd dezelfde resultaten als elk respectievelijk multilineair hoekminimalisatie model. Niet alleen dezelfde reconstructie-error, maar omdat deze dezelfde indices kiest, maar ook dezelfde abundaties en reflectiekansen. Doordat voor sommige pixels de suboptimale en optimale spectra niet hetzelfde zijn, zordt dit ervoor dat het gemiddelde een kleine hoeveelheid hoger is voor \textit{AAM}. Echter, de looptijd is veel korter. 
 
-\vspace{5 mm}
+\section{strong multilineair Alternating Angle Minimalisation}
 
-Gebruikt makend van de vorige vergelijkingen is het meest nuttige model een semilineair model waarbij de reflectiekans onafhankelijk is van de endmember en tussen $-1$ en $1$ ligt. Dit is \textit{strong multilineair AAM}.
+Gebruikt makend van de vorige vergelijkingen is het meest nuttige model een semilineair model waarbij de reflectiekans onafhankelijk is van de endmember en tussen $-1$ en $1$ ligt. Dit is \textit{strong multilineair AAM}. Merk op dat dit model op geen enkel van de verschillende vlakken het beste scoort, aangezien deze meer vrijheidsgraden en looptijd heeft dan het lineair model, en een grotere reconstructie-error heeft dan \textit{strong multilineair mesma}. Maar op deze vlakken scoort dit algoritme een kleine hoeveelheid slechter dan de voorgenoemde algoritmes, terwijl deze op de andere vlakken, respectievelijk reconstructie-error en looptijd, een grote verbetering levert. In vergelijking met \textit{lineair mesma}, wat in praktijk vaak gebruikt wordt, geeft dit algorimte een sterke verbetering op zowel reconstructie-error als looptijd, en zelfs op de verbetering hiervan: \textit{lineair AAM}, geeft \textit{Strong multilineair mesma} nog een sterke verbetering op vlak van reconstructie-error, in ruil voor een kleine verlenging van de looptijd. 
+
+Kortom, indien er nood is aan een zeer nauwkeurige bepaling kan gebruik gemaakt worden van \textit{strong multilineair mesma}, maar voor een kleine vergroting van de reconstructie-error, kan de looptijd vier grote-ordes kleiner gemaakt worden door gebruik te maken van \textit{strong multilineair AAM}. Deze beide methodes staan beschreven in deze thesis.
 
 
 \begin{flushleft}
