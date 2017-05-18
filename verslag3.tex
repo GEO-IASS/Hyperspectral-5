@@ -264,6 +264,12 @@ Aardobservatie wordt ook toepast in de geologie. Van de aardbodem kan niet allee
 \caption{Opbouw van een hyperspectraal beeld. Deze afbeelding komt uit \textit{Fundamentals of remote sensing\cite{fun}}}
 \end{figure}
 
+\section{Alina-dataset}\cite{Alina}
+
+De \textit{Alina-dataset} is een dataset die verder in deze thesis gebruikt wordt. Deze is een deel uit een hyperspectraal beeld uit Long-beach, Missouri, USA, en is genomen met de Avari-sensor. Het oorspronkelijke beeld is vrij groot, maar hier er is een deel van genomen van $13\times 19$ pixels. Dit stuk van het beeld bevat vier verschillende endmembers: een geasfalteerde weg, een voetpad naast de weg, een bos van eikenbomen en een grasveld. Voor elk van deze endmembers is er een bibliotheek van spectra, gemeten met een \textit{hand-held ASD spectrometer}, met respectievelijk 10,10,10 en 50 spectra. Zowel de pixels van het beeld en de spectra uit de bibliotheken hebben 53 banden. 
+
+
+
 \chapter{Spectraal ontmengen}
 
 
@@ -397,19 +403,19 @@ In dit hoofdstuk werd ervan uitgegaan dat elke endmember een enkel vast spectrum
 Het bilineair model beschrijft dat elke lichtstraal \'e\'en of twee keer kan reflecteren in een enkele pixel. Van dit model bestaan meerdere varianten. Het Fan model\cite{mlinmix} voert de bilinaire term in als volgt.
 
 \begin{equation}
-\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i,j} a_i a_j \bm{e}_i \odot \bm{e}_j + \bm{\eta}
+\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i=1}^{p-1} \sum_{j=i}^{p} a_i a_j \bm{e}_i \odot \bm{e}_j + \bm{\eta}
 \end{equation}
 
 Dit geeft in de praktijk geen goede resultaten, omdat het bilineair model is ontwikkeld voor objecten met een ingewikkelde geometrie, maar deze methode bevat geen parameters of informatie over deze geometrie. Dit probleem kan worden opgelost door gebruik te maken van het veralgemeend bilineair model\cite{mlinmix}, dat beschrijft dat de endmembers worden gemengd als volgt:
 
 \begin{equation}
-\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i,j}  \gamma_{ij} a_i a_j \bm{e}_i \odot \bm{e}_j + \bm{\eta}
+\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i=1}^{p-1} \sum_{j=i}^{p}  \gamma_{ij} a_i a_j \bm{e}_i \odot \bm{e}_j + \bm{\eta}
 \end{equation}
 
 Een alternatief is het model van Nascimento en Somers, dat de abundaties mengt als volgt:
 
 \begin{equation}
-\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i,j}  b_{ij} \bm{e}_i \odot \bm{e}_j + \bm{\eta}
+\bm{x} = \sum_i a_i \bm{e}_i + \sum_{i=1}^{p-1} \sum_{j=i}^{p}  b_{ij} \bm{e}_i \odot \bm{e}_j + \bm{\eta}
 \end{equation}
 
 Dit is equivalent aan het vorige model, behalve dat de eenheidssomvoorwaarde $\sum_i a_i + \sum_{i,j} b_{ij} = 1$ wordt in plaats daarvan $\sum_i a_i = 1$
@@ -525,7 +531,7 @@ Hierbij wordt verondersteld dat $P_i$ gekend is, wat in werkelijkheid niet het g
 $P$ is per definitie een getal groter dan nul, omdat kansen tussen nul en \'e\'en liggen. Echter, het is mogelijk om in vergelijking \ref{eq:Pi} een negatieve waarde in te voeren. Dit komt neer op een verandering van de randvoorwaarden in het \texttt{fmincon} algoritme. In plaats van dat de grenzen $[0,1]$ zijn, worden de grenzen nu $[-1,1]$. 
 Een negatieve reflectiekans is niet fysisch, maar er bestaan twee mogelijke verklaringen voor het toelaten van negatieve $P$ waarden, waarbij $P$ niet meer als kans wordt beschouwd.
 
-De eerste mogelijke verklaring - zoals beschreven in de vorige sectie - is dat het albedo slechts een benadering is. Het vervangen van het albedo door de reflectie is equivalent aan het veronderstellen dat de reflectie van het referentiemateriaal gelijk is aan nul. Dit zorgt dat de waarde van $P$ die gemeten wordt lager is dan in werkelijkheid. Als de reflectie van de pixel kleiner is dan de reflectie van het referentiemateriaal, zorgt dit voor een negatieve gemeten reflectiekans, hoewel de werkelijke reflectie nog steeds positief is. Merk op dat de reflectiekans $P$ niet kan  vervangen worden door $P-P_{R}$  - met $P_{R}$ de reflectie van het referentiemateriaal - omdat het systeem niet lineair afhangt van $P$.
+De eerste mogelijke verklaring - zoals beschreven in de vorige sectie - is dat het albedo slechts een benadering is. Het vervangen van het albedo door de reflectie is equivalent aan het veronderstellen dat de reflectiekans van het referentiemateriaal gelijk is aan nul. Dit zorgt dat de waarde van $P$ die gemeten wordt lager is dan in werkelijkheid. Als de reflectiekans van de pixel kleiner is dan de reflectiekans van het referentiemateriaal, zorgt dit voor een negatieve gemeten reflectiekans, hoewel de werkelijke reflectiekans nog steeds positief is. Merk op dat de reflectiekans $P$ niet kan  vervangen worden door $P-P_{R}$  - met $P_{R}$ de reflectiekans van het referentiemateriaal - omdat het systeem niet lineair afhangt van $P$.
 
 De tweede mogelijke verklaring is het niet meenemen van interpixelinteracties. Deze interacties geven extra hogere-ordetermen mee aan het systeem. De enige hogere-ordetermen die het multilineair model meeneemt hebben machten van $P$ als co\"effici\"enten, dus wordt de waarde van $P$ aangepast naar niet werkelijke waarden.  
 %\subsection{afhankelijke vs onafhankelijke P waarden}
@@ -541,6 +547,12 @@ Om te ontmengen rekening houdend met variabiliteit wordt elke endmember, in plaa
 Het \textit{multiple endmember spectral mixture analysis} ofwel \textit{MESMA}-algoritme gaat ervan uit dat elk materiaal in elke pixel naar een enkel spectrum reflecteert, maar dit spectrum kan veranderen tussen verschillende pixels. Dit algoritme ontmengd de gegeven spectra over alle modellen, waarbij een model een verzameling is van spectra, gehaald uit de bibliotheken van hun specifieke materialen. Elk model bevat een verzameling spectra, en aan de hand van \textit{sum-to-one constrained least square unmixing} kan een pixel worden ontmengd aan de hand van deze spectra. Uiteindelijk wordt het model  met de laagste reconstructie-error geselecteerd dat voldoet aan de niet-negativiteitsvoorwaarde en de eenheidssom-voorwaarde. De abundanties van dit model zijn de abundanties van de materialen in de pixel.
 
 Merk op dat er altijd minstens een model is dat voldoet aan beide voorwaarden. De eenheidssomvoorwaarde is voldaan voor alle modellen dankzij het gebruikte ontmengalgoritme. De modellen met maar een endmember hebben bijgevolg een abundatie van 1, en voldoen per definitie ook aan de niet-negativiteitsvoorwaarde.
+
+
+\subsection{randvoorwaarden}
+
+Wanneer een pixel wordt ontmengd waarbij een endmember volgens \textit{sum-to-one constrained least-squares unmixing model} een negtaive abundatie zou hebben, is deze abundatie in \textit{Fully constrained least-squares unmixing model} gelijk aan nul. Indien deze pixel zou worden ontmengd aan de hand van de endmembers met niet negatieve abundaties, zijn de abundaties van de voordien negatieve endmembers bij definitie nul, en worden de overige abundaties bepaald door het minimaliseren van de reconstructie-error. Dit geeft de zelfde resultaten als bij het \textit{Fully constrained least-squares unmixing model}. Dit betekend dat het computationeel zware \textit{Fully constrained least-squares unmixing model} kan worden vervangen door het veel snellere \textit{sum-to-one constrained least-squares unmixing model}, gegeven dat men ontmengt aan de hand van alle deelverzamelingen. 
+
 
 
 \subsection{Werking en implementatie van MESMA}
@@ -685,17 +697,12 @@ Volgens het optimaal \textit{MESMA}-algoritme wordt ontmengd aan de hand van elk
 \caption{multilineair MESMA\label{al:mmesma}}
 \begin{algorithmic}[1]
 \State $\eta = +\infty$ 
-\For {Voor alle deelverzamelingen}
 \For {Voor alle combinaties van spectra}
 \State Ontmeng gebruik makend van het multilineair model
-\If {$\exists \text{Abundantie} < 0$}
-\State \textbf{continue}
-\EndIf
 \If {reconstructie-error $< \eta$}
 \State $\eta = $ reconstructie-error
 \State $a_i = $ abundanties
 \EndIf
-\EndFor
 \EndFor
 \State $a_i$ zijn nu de correcte abundanties
 \end{algorithmic}
@@ -765,14 +772,14 @@ Eerst worden voor elke pixel willekeurige abundanties en een vaste reflectiekans
 \end{subfigure}
 \begin{subfigure}[b]{0.5\textwidth}
 \includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_10_100_angle.pdf}
-\caption{Gevonden hoek in functie van de reflectie. Men ziet dat de foutenvlaggen veel groter zijn dan de data zelf. Deze figuur is gemaakt met \textit{matlab}\cite{matlab} \label{fig:hoek}}
+\caption{Gevonden hoek in functie van de reflectiekans. Men ziet dat de foutenvlaggen veel groter zijn dan de data zelf. Deze figuur is gemaakt met \textit{matlab}\cite{matlab} \label{fig:hoek}}
 \end{subfigure}
 \caption{Vergelijking tussen lineair, semilineair en multilineair MESMA. Voor elke $P$ waarde zijn er 100 pixels berekend. Rood is het lineaire model en blauw het semilineaire model. Deze figuren zijn gemaakt met \textit{matlab}\cite{matlab}\label{fig:b100}}
 \end{figure}
 
 \subsubsection{Correct geselecteerde materialen}
 
-In figuur \ref{fig:corr} staat het aantal juist geselecteerde spectra in functie van de gegeven reflectiekans. Deze geeft weer welk deel van de indices in $lineair$ of $semilineair MESMA$ - die voor beide modellen hetzelfde zijn - gelijk zijn aan de gegeven indices van het multilineair model. Zelfs voor een lage reflectie zoals $0.1$ zijn maar 1 op 10 indices correct. Echter, het is mogelijk dat er spectra bestaan voor een specifiek materiaal die sterk lijken op andere spectra, en die daarom - hoewel deze verschillende indices hebben - grotendeels dezelfde resultaten geven. In theorie kan dit nagegaan worden door de hoek te bepalen tussen het werkelijke en het bepaalde spectrum, maar zoals te zien in figuur \ref{fig:hoek}, zijn de fouten op deze data groter dan de data zelf, en kan hieruit niets worden afgeleid. 
+In figuur \ref{fig:corr} staat het aantal juist geselecteerde spectra in functie van de gegeven reflectiekans. Deze geeft weer welk deel van de indices in $lineair$ of $semilineair MESMA$ - die voor beide modellen hetzelfde zijn - gelijk zijn aan de gegeven indices van het multilineair model. Zelfs voor een lage reflectiekans zoals $0.1$ zijn maar 1 op 10 indices correct. Echter, het is mogelijk dat er spectra bestaan voor een specifiek materiaal die sterk lijken op andere spectra, en die daarom - hoewel deze verschillende indices hebben - grotendeels dezelfde resultaten geven. In theorie kan dit nagegaan worden door de hoek te bepalen tussen het werkelijke en het bepaalde spectrum, maar zoals te zien in figuur \ref{fig:hoek}, zijn de fouten op deze data groter dan de data zelf, en kan hieruit niets worden afgeleid. 
 
 
 \subsubsection{Reflectiekans}
@@ -849,7 +856,7 @@ Wanneer de reflectiekans klein is, is er geen verschil meer tussen de optimale l
 \end{subfigure}
 \begin{subfigure}[b]{0.5\textwidth}
 \includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_AAM_10_100_angle.pdf}
-\caption{Gevonden hoek in functie van de reflectie. Men ziet dat de foutenvlaggen veel groter zijn dan de data zelf. Deze figuur is gemaakt met \textit{matlab}\cite{matlab} \label{fig:Ahoek}}
+\caption{Gevonden hoek in functie van de reflectiekans. Men ziet dat de foutenvlaggen veel groter zijn dan de data zelf. Deze figuur is gemaakt met \textit{matlab}\cite{matlab} \label{fig:Ahoek}}
 \end{subfigure}
 \caption{Vergelijking tussen lineair, semilineair en multilineair MESMA. Voor elke $P$ waarde zijn er 100 pixels berekend. Rood is het lineaire model en blauw het semilineaire model. Deze figuren zijn gemaakt met \textit{matlab}\cite{matlab}\label{fig:Ab100}}
 \end{figure}
@@ -895,10 +902,6 @@ Een algoritme heeft twee belangrijke aspecten. Ten eerste moet het zo nauwkeurig
 
 
 
-
-\section{Alina-dataset}
-
-De \textit{Alina}-dataset is een dataset die vier endmembers bevat, namelijk bebossing, asfalt, voetpad en gras. De bibliotheken van deze endmembers zijn met de hand opgemeten en bevatten respectievelijk 50, 10, 10 en 10 elementen. 
 
 
 
