@@ -158,9 +158,16 @@ Rob {Heylen} % Supervisor's Name
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract (Nederlands)}
 
+Aardopservatie is de wetenschap van het verzamelen van informatie van het aardoppervlak zonder hiermee in contact te komen. Dit wordt gedaan door het meten en vastleggen van gereflecteerde of uitgezonden elektromagnetische straling en het verwerken, analyseren en toepassen van deze informatie. Deze elektromagnetische golven worden gemeten door een hyperspectrale camera op een sateliet. Specifiek is men ge\"intereseerd in het omzetten van de spectra van de verschillende pixels in het hyperspectrale beeld naar de hoeveelheden ofwel abundaties van verschillende materialen. Het kunnen analyseren 
 
+Deze thesis beschrijft ten eerste de methode van het lineair ontmengen, de methode die vaak gebruikt wordt in de literatuur. Ook worden twee belangrijke problemen hiermee beschreven, namelijk niet-lineariteit en variabiliteit. Niet lineariteit houdt in dat om materialen te mengen de spectra van verschillende materialen niet eenvoudigweg opgeteld kunnen worden, maar er rekening moet gehouden worden met interne reflecties. Variabiliteit houd in dat niet elk materiaal een vast spectrum heeft, maar meerdere spectra kan hebben. Bijvoorbeeld de bovenkant en onderkant van een boomblad zenden een verschillend spectrum uit, maar men wil deze in spectraal ontmengen lieft beschouwen als eenzelfde materiaal.
 
+Daarna worden twee state-of-the-art methodes uit de literatuur beschreven voor niet-lineair spectrale ontmenging en endmember variabiliteit. Eerste wordt het multilineair model beschreven. Dit is een methode voor niet-lineaire spectrale ontmenging, en wordt uitvoerig beschreven in: \textit{A multilinear mixing model for nonlinear spectral unmixing}\cite{mlinmix}. In hoofdstuk 3 worden twee methodes die endmember variabiliteit in rekening brengt beschreven - deze worden behandeld in: \textit{Hyperspectral unmixing with endmember variability via alternating angle minimization}\cite{mesma}- namelijk \textit{Multiple endmember spectral mixture analysis}, en \textit{alternating angle minimization}, wat een computationeel efficienter alternatief is voor \textit{Multiple endmember spectral mixture analysis}.
 
+Zowel variabiliteit en niet-lineariteit zijn uitvoerig bestudeerd in de literatuur, en verschillende correcties op het lineaire model kunne worden doorgevoerd. Er is weinig onderzoek gedaan naar het combineren van beide correcties, hoewel dat  deze beide problemen vaak allebei tegelijkertijd voorkomen. In complexe objecten, zoals vegetatie en gebouwen, komt enerzijds veel interne reflectie voor, ten gevolge van hun ingewikkelde structuur, en anderzijds veel verschillende variaties op hetzelfde materiaal. Dit laatste gebeurt bijvoorbeeld doordat de boven- en onderkant van een boomblad een verschillend spectrum hebben, of dat er verschillende samenstellingen van cement gebuikt zijn in een gebouw. Daarom is het belangrijk om een model te ontwikkelen dat met beide systemen correcties houdt.
+
+Daarom is er een deze thesis onderzoek gedaan naar verscheidene methoden om deze beide correcties door te voeren in een systeem en wordt een vergelijking gemaakt tussen de verschillende methoden om deze correcties allebei door te voeren. Er wordt eerst een numerieke controle gebruikt door het ontmengen van verschillende data, en nadien worden deze methodes en een aantal varianten hierop gevalideerd  op een experimentele dataset: de Alina dataset\cite{Alina}.
+	
 \chapter*{Inleiding}
 \addcontentsline{toc}{chapter}{Inleiding}
 
@@ -244,6 +251,8 @@ Wanneer de lichtbron uniform en genormaliseerd is, is de reflectie gelijk aan de
 Een veelgebruikte toepassing van aardobservatie is het in kaart brengen van landbouwgewassen\cite{fun}. Men kan niet alleen het soort gewas op een akker in kaart brengen, maar ook de gezondheid en verwachte oogst van verschillende gewassen. In het verleden werd het in kaart brengen van gewassen gedaan door steekproeven met de hand vanop de grond te nemen, maar aardobservatie is nauwkeuriger, goedkoper en kan gestandaardiseerd worden. Enerzijds is deze informatie nuttig voor de landbouwers zelf, omdat deze aan de hand van de data kunnen bepalen welke gewassen het beste groeien op welke plaats en wanneer er het best gezaaid of geoogst wordt, aan de andere kant is deze informatie ook nuttig voor overheden en verzekeraars, omdat deze kunnen nagaan welke planten er geplant worden, voorspellen wat de oogst gaat zijn en de schade  bepalen na een droogte of storm. 
 
 Aardobservatie wordt ook toepast in de geologie. Van de aardbodem kan niet alleen het soort gesteente aan de oppervlakte in kaart gebracht worden, maar ook de formatie van deze gesteentes en zelfs de gesteentes liggend onder de aardbodem. Een van de voor de hand liggende toepassingen hiervan is de mijnbouw; een andere, het voorspellen van aardbevingen, aardverschuivingen en vulkanisme, wat inhoudt dat aardobservatie gebruikt kan worden voor het plannen van wegen, gebouwen en andere structuren. 
+
+Buiten deze twee toepassingen zijn er nog veel andere toepassingen, zoals bosbouw, hydrologie, ecologie, het bestuderen van landformaties, zee-ijs, biomassa, het observeren van andere planeten, het opvolgen van olierampen en vele andere toepassingen. 
 
   
 \begin{figure}
@@ -694,7 +703,7 @@ least-squares unmixing model} met als endmembers $E$
 
 \section{Variabiliteit en niet-lineaire ontmenging}
 
-Zowel variabiliteit en niet-lineariteit zijn uitvoerig bestudeerd in de literatuur, en verschillende correcties op het lineaire model zijn doorgevoerd. Echter, er is weinig onderzoek gedaan naar het combineren van beide methoden, hoewel dat in werkelijkheid deze beide probleem vaak allebei voorkomen. In complexe objecten, zoals vegetatie en gebouwen, komt enerzijds veel interne reflectie voor, ten gevolge van hun ingewikkelde structuur, en anderzijds veel verschillende variaties op hetzelfde materiaal. Dit laatste gebeurt bijvoorbeeld doordat de boven- en onderkant van een boomblad een verschillend spectrum hebben, of dat er verschillende samenstellingen van cement gebuikt zijn in een gebouw. Daarom is het belangrijk om een model te ontwikkelen dat met beide systemen correcties houdt. Dit gebeurt in volgend hoofdstuk.
+Zowel variabiliteit en niet-lineariteit zijn uitvoerig bestudeerd in de literatuur, en verschillende correcties op het lineaire model zijn doorgevoerd. Echter, er is weinig onderzoek gedaan naar het combineren van beide methoden, hoewel dat  deze beide probleem vaak allebei tegelijk voorkomen. In complexe objecten, zoals vegetatie en gebouwen, komt enerzijds veel interne reflectie voor, ten gevolge van hun ingewikkelde structuur, en anderzijds veel verschillende variaties op hetzelfde materiaal. Dit laatste gebeurt bijvoorbeeld doordat de boven- en onderkant van een boomblad een verschillend spectrum hebben, of dat er verschillende samenstellingen van cement gebuikt zijn in een gebouw. Daarom is het belangrijk om een model te ontwikkelen dat met beide systemen correcties houdt. Dit gebeurt in volgend hoofdstuk.
 
 \section{Multilineair MESMA} \label{sec:mmesma}
 
@@ -816,7 +825,7 @@ Vullen we $P \rightarrow 1$ in dan krijgt men
 Dit geldt zowel voor de het reconstructiespectrum als het gemengde spectrum, en de reconstructie-error is dus de norm van de nulvector namelijk nul.
  
 
-\section{multilineair AAM} \label{sec:MAAM}
+\section{semilineair AAM} \label{sec:MAAM}
 
 Aangezien \textit{semilineair mesma} gebruikt maakt van \textit{sum-to-one least-sqaure unmixing} kan hoekminimalisatie gebruikt worden om dit algoritme te versnellen, op analoge wijze als dit gebruikt werd voor \textit{lineair mesma}. De theoretische controle verloop gelijkaardig aan de vorige sectie, alleen gebeurt de selectie in het semilineair model en het lineair model aan de hand van hoekminimalisatie. Aangezien beide algoritmen voor de selecties gebruik maken van lineaire ontmenging, kan deze benadering doorgevoerd worden. Er is niets aangepast aan het genereren van de data, dus om de gegeven data terug te krijgen, moet nog steeds \textit{optimal multilineair mesma} gebruikt worden.
 
@@ -855,7 +864,7 @@ Wanneer de reflectiekans klein is, is er geen verschil meer tussen de optimale l
 
 \begin{subfigure}[b]{0.5\textwidth}
 \includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_AAM_10_100_corr.pdf}
-\caption{Aantal correct geselecteerde materialen. Deze zijn hetzelfde voor het lineair en multilineair model. \label{fig:Acorr}}
+\caption{Aantal correct geselecteerde materialen. Deze zijn hetzelfde voor het lineair en semilineair model. \label{fig:Acorr}}
 \end{subfigure} \rulesep
 \begin{subfigure}[b]{0.5\textwidth}
 \includegraphics[width=\textwidth,trim=0 200 0 175 cm]{PMC_AAM_10_100_PP.pdf}
@@ -870,7 +879,7 @@ Wanneer de reflectiekans klein is, is er geen verschil meer tussen de optimale l
 
 
 \begin{algorithm}
-\caption{\textit{multilineair Alternating Angle Minimalistation} \label{al:MAAM}}
+\caption{\textit{semilineair Alternating Angle Minimalistation} \label{al:MAAM}}
 \begin{algorithmic}[1]
 \State kies een aantal iteraties $K$
 \For {Voor elke deelverzameling van materialen}
@@ -936,7 +945,7 @@ lineair MESMA & \ref{sec:mesma} & \ref{al:mesma}\\
 semi-lineair MESMA & \ref{sec:mmesma} &\ref{al:mmesma}\\
 multi-lineair MESMA & \ref{sec:smesma} &\ref{al:smesma}\\
 lineair AAM & \ref{sec:AAM}&\ref{al:AAM} \\
-multilineair AAM & \ref{sec:MAAM} & \ref{al:MAAM} 
+semilineair AAM & \ref{sec:MAAM} & \ref{al:MAAM} 
 \end{tabular}
 \caption{De vijf beschouwde methoden \label{tab:a}}
 \end{table}
@@ -988,13 +997,13 @@ real semilineair  & 2.0982 & 2.1208 & 2.0752 & 2.0880 & 2.0628 & 2.1169 \\
 \hline
 AAM  & 0.1086 & 0.0543 & 0.0538 & 0.0543 & 0.0533 & 0.0536 \\
 \hline
-strict AAM ML  & 0.0922 & 0.1567 & 0.0980 & 0.1007 & 0.0805 & 0.1143 \\
+strict semilineair AAM   & 0.0922 & 0.1567 & 0.0980 & 0.1007 & 0.0805 & 0.1143 \\
 \hline
-strong AAM ML  & 0.0876 & 0.1564 & 0.0833 & 0.0829 & 0.1018 & 0.0906 \\
+strong semilineair AAM  & 0.0876 & 0.1564 & 0.0833 & 0.0829 & 0.1018 & 0.0906 \\
 \hline
-free AAM ML  & 0.1638 & 0.1477 & 0.1629 & 0.1713 & 0.1129 & 0.1618 \\
+free semilineair AAM  & 0.1638 & 0.1477 & 0.1629 & 0.1713 & 0.1129 & 0.1618 \\
 \hline
-real AAM ML  & 0.1625 & 0.1473 & 0.1129 & 0.1147 & 0.1024 & 0.1377 \\
+real semilineair AAM  & 0.1625 & 0.1473 & 0.1129 & 0.1147 & 0.1024 & 0.1377 \\
 \hline
 \end{tabular}
 \caption{Looptijd van de verschillende algoritmen voor verschillende pixels, in seconden. Deze zijn allen gekozen voor een pixel met $y=3$. Deze pixels bevatten voor de meerderheid respectievelijk: bos;bos en asvalt;asvalt;asvalt en voetpad; voetpad en grass; grass. Deze indeling is gemaakt op basis van wat zich werkelijk op de grond bevind, en kan bijgevolg verschillen van de gemeten abundanties.
@@ -1027,13 +1036,13 @@ real semilineair  & 0.0023 & 0.0020 & 0.0045 & 0.0058 & 0.0535 & 0.0070 \\
 \hline
 AAM  & 0.0835 & 0.0023 & 0.0045 & 0.0058 & 0.0535 & 0.0070 \\
 \hline
-strict AAM ML  & 0.0022 & 0.0020 & 0.0045 & 0.0058 & 0.0535 & 0.0077 \\
+strict semilineair AAM & 0.0022 & 0.0020 & 0.0045 & 0.0058 & 0.0535 & 0.0077 \\
 \hline
-strong AAM ML  & 0.0022 & 0.0020 & 0.0014 & 0.0021 & 0.0078 & 0.0070 \\
+strong semilineair AAM  & 0.0022 & 0.0020 & 0.0014 & 0.0021 & 0.0078 & 0.0070 \\
 \hline
-free AAM ML  & 0.0021 & 0.0020 & 0.0013 & 0.0021 & 0.0077 & 0.0066 \\
+free semilineair AAM & 0.0021 & 0.0020 & 0.0013 & 0.0021 & 0.0077 & 0.0066 \\
 \hline
-real AAM ML  & 0.0022 & 0.0020 & 0.0045 & 0.0058 & 0.0535 & 0.0070 \\
+real semilineair AAM & 0.0022 & 0.0020 & 0.0045 & 0.0058 & 0.0535 & 0.0070 \\
 \hline
 \end{tabular}
 \caption{Reconsturctie-error van de verschillende algoritmen voor verschillende pixels. Deze zijn allen gekozen voor een pixel met $y=3$. Deze pixels bevatten voor de meerderheid respectievelijk: bos;bos en asvalt;asvalt;asvalt en voetpad; voetpad en grass; grass. Deze indeling is gemaakt op basis van wat zich werkelijk op de grond bevind, en kan bijgevolg verschillen van de gemeten abundanties.
@@ -1066,16 +1075,16 @@ real semilineair  & 0.0271 & 0.8935 & 1.0000 & 1.0000 & 1.0000 & 0.9056 \\
 \hline
 AAM  & 1.0000 & 1.0000 & 0.9999 & 0.9998 & 1.0000 & 0.9056 \\
 \hline
-strict AAM ML  & 0.0268 & 0.8960 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+strict semilineair AAM & 0.0268 & 0.8960 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
 \hline
-strong AAM ML  & 0.0268 & 0.8960 & 0.3060 & 0.3631 & 0.1460 & 0.9049 \\
+strong semilineair AAM & 0.0268 & 0.8960 & 0.3060 & 0.3631 & 0.1460 & 0.9049 \\
 \hline
-free AAM ML  & 0.0256 & 0.8773 & 0.2946 & 0.3574 & 0.1447 & 0.8554 \\
+free semilineair AAM & 0.0256 & 0.8773 & 0.2946 & 0.3574 & 0.1447 & 0.8554 \\
 \hline
-real AAM ML  & 0.0260 & 0.8935 & 1.0000 & 1.0000 & 1.0000 & 0.9056 \\
+real semilineair AAM & 0.0260 & 0.8935 & 1.0000 & 1.0000 & 1.0000 & 0.9056 \\
 \hline
 \end{tabular}
-\caption{Reconsturctie-error van de verschillende algoritmen voor verschillende pixels, gerenormaliseerd met de grooste error voor elke pixel. Deze zijn allen gekozen voor een pixel met $y=3$. Deze pixels bevatten voor de meerderheid respectievelijk: bos;bos en asvalt;asvalt;asvalt en voetpad; voetpad en grass; grass. Deze indeling is gemaakt op basis van wat zich werkelijk op de grond bevind, en kan bijgevolg verschillen van de gemeten abundanties.
+\caption{Reconstructie-error van de verschillende algoritmen voor verschillende pixels, gerenormaliseerd met de grooste error voor elke pixel. Deze zijn allen gekozen voor een pixel met $y=3$. Deze pixels bevatten voor de meerderheid respectievelijk: bos;bos en asfalt;asfalt;asfalt en voetpad; voetpad en grass; grass. Deze indeling is gemaakt op basis van wat zich werkelijk op de grond bevind, en kan bijgevolg verschillen van de gemeten abundanties.
 \label{table:errosrn}}
 \end{table}
 
@@ -1097,13 +1106,13 @@ real semilineair  & 2.0728 & 2.0918 & 2.0747 & 2.0549 & 2.0534 & 2.0742 \\
 \hline
 AAM  & 0.0559 & 0.0553 & 0.0550 & 0.0550 & 0.0548 & 0.0548 \\
 \hline
-strict AAM ML  & 0.1092 & 0.1187 & 0.1124 & 0.1010 & 0.0933 & 0.0944 \\
+strict semilineair AAM  & 0.1092 & 0.1187 & 0.1124 & 0.1010 & 0.0933 & 0.0944 \\
 \hline
-strong AAM ML  & 0.0891 & 0.0974 & 0.0930 & 0.0970 & 0.0963 & 0.0870 \\
+strong semilineair AAM  & 0.0891 & 0.0974 & 0.0930 & 0.0970 & 0.0963 & 0.0870 \\
 \hline
-free AAM ML  & 0.1520 & 0.1645 & 0.1659 & 0.1667 & 0.1568 & 0.1480 \\
+free semilineair AAM  & 0.1520 & 0.1645 & 0.1659 & 0.1667 & 0.1568 & 0.1480 \\
 \hline
-real AAM ML  & 0.1274 & 0.1402 & 0.1264 & 0.1293 & 0.1090 & 0.1115 \\
+real semilineair AAM  & 0.1274 & 0.1402 & 0.1264 & 0.1293 & 0.1090 & 0.1115 \\
 \hline
 \end{tabular}
 \caption{Looptijd van de verschillende algoritmen voor verschillende pixels, in seconden. Deze zijn uitgemiddeldvoor een gebied voor $y$ gaande van 3 tot 8. Deze pixels bevatten voor de meerderheid respectievelijk: bos;bos en asvalt;asvalt;asvalt en voetpad; voetpad en grass; grass. Deze indeling is gemaakt op basis van wat zich werkelijk op de grond bevind, en kan bijgevolg verschillen van de gemeten abundanties.
@@ -1129,13 +1138,13 @@ real semilineair  & 0.0030 & 0.0027 & 0.0036 & 0.0093 & 0.0255 & 0.0201 \\
 \hline
 AAM  & 0.0156 & 0.0127 & 0.0036 & 0.0093 & 0.0257 & 0.0202 \\
 \hline
-strict AAM ML  & 0.0030 & 0.0026 & 0.0036 & 0.0093 & 0.0257 & 0.0202 \\
+strict semilineair AAM  & 0.0030 & 0.0026 & 0.0036 & 0.0093 & 0.0257 & 0.0202 \\
 \hline
-strong AAM ML  & 0.0029 & 0.0026 & 0.0019 & 0.0023 & 0.0055 & 0.0104 \\
+strong semilineair AAM  & 0.0029 & 0.0026 & 0.0019 & 0.0023 & 0.0055 & 0.0104 \\
 \hline
-free AAM ML  & 0.0028 & 0.0025 & 0.0018 & 0.0023 & 0.0053 & 0.0098 \\
+free semilineair AAM  & 0.0028 & 0.0025 & 0.0018 & 0.0023 & 0.0053 & 0.0098 \\
 \hline
-real AAM ML  & 0.0029 & 0.0026 & 0.0036 & 0.0093 & 0.0257 & 0.0202 \\
+real semilineair AAM  & 0.0029 & 0.0026 & 0.0036 & 0.0093 & 0.0257 & 0.0202 \\
 \hline
 \end{tabular}
 \caption{Reconsturctie-error van de verschillende algoritmen voor verschillende pixels. Deze zijn uitgemiddeldvoor een gebied voor $y$ gaande van 3 tot 8. Deze pixels bevatten voor de meerderheid respectievelijk: bos;bos en asvalt;asvalt;asvalt en voetpad; voetpad en grass; grass. Deze indeling is gemaakt op basis van wat zich werkelijk op de grond bevind, en kan bijgevolg verschillen van de gemeten abundanties.
@@ -1160,7 +1169,7 @@ Er worden gebieden geselecteerd van pixels die volgens de groundtruth ongeveer d
 \section{Bespreking van de resultaten}
 \subsection{Lineair vs semilineair}
 
-Een methode waarbij de abundantie lineair berekend wordt vergeleken met een methode die dit multilineair doet, gegeven dat de selectie van de spectra gebeurt op lineaire manier. Concreet betekent dit dat het lineair met het semilineair model vergeleken wordt en het hoekminimalisatiemodel met het multilineair hoekminimalisatiemodel. Voor alle pixels geldt dat de looptijd ongeveer gelijk is, aangezien de bottleneck ligt bij het selecteren van de spectra en niet bij het ontmengen. In de pixels met gras of asfalt is de reconstructie-error bij beide methoden gelijk. De reflectiekans is laag, dus het lineaire model is een goede benadering. Echter, bij de pixel met bebossing, waar de reflectiekans hoog is, geeft het semilineair model een beter resultaat.
+Een methode waarbij de abundantie lineair berekend wordt vergeleken met een methode die dit multilineair doet, gegeven dat de selectie van de spectra gebeurt op lineaire manier. Concreet betekent dit dat het lineair met het semilineair model vergeleken wordt en het hoekminimalisatiemodel met het semilineair hoekminimalisatiemodel. Voor alle pixels geldt dat de looptijd ongeveer gelijk is, aangezien de bottleneck ligt bij het selecteren van de spectra en niet bij het ontmengen. In de pixels met gras of asfalt is de reconstructie-error bij beide methoden gelijk. De reflectiekans is laag, dus het lineaire model is een goede benadering. Echter, bij de pixel met bebossing, waar de reflectiekans hoog is, geeft het semilineair model een beter resultaat.
 
 
 \subsection{Semi-lineair vs multilineair}
@@ -1177,13 +1186,13 @@ Het aanpassen van de ondergrens van $P$ geeft geen verschil in de looptijd, de e
 
 \subsection{Bepreking multilinair AAM vs semilinair model}
 
-In tegenstelling tot wat voorspeld werd in sectie \ref{sec:smesma}, geeft in het experiment hoekminimalisatie bijna altijd dezelfde resultaten als het lineair model, en elk semilineair model bija altijd dezelfde resultaten als elk respectievelijk multilineair hoekminimalisatie model. Niet alleen dezelfde reconstructie-error, maar omdat deze dezelfde indices kiest, maar ook dezelfde abundaties en reflectiekansen. Doordat voor sommige pixels de suboptimale en optimale spectra niet hetzelfde zijn, zordt dit ervoor dat het gemiddelde een kleine hoeveelheid hoger is voor \textit{AAM}. Echter, de looptijd is veel korter. 
+In tegenstelling tot wat voorspeld werd in sectie \ref{sec:smesma}, geeft in het experiment hoekminimalisatie bijna altijd dezelfde resultaten als het lineair model, en elk semilineair model bija altijd dezelfde resultaten als elk respectievelijk semilineair hoekminimalisatie model. Niet alleen dezelfde reconstructie-error, maar omdat deze dezelfde indices kiest, maar ook dezelfde abundaties en reflectiekansen. Doordat voor sommige pixels de suboptimale en optimale spectra niet hetzelfde zijn, zordt dit ervoor dat het gemiddelde een kleine hoeveelheid hoger is voor \textit{AAM}. Echter, de looptijd is veel korter. 
 
-\section{strong multilineair Alternating Angle Minimalisation}
+\section{strong semilineair Alternating Angle Minimalisation}
 
-Gebruikt makend van de vorige vergelijkingen is het meest nuttige model een semilineair model waarbij de reflectiekans onafhankelijk is van de endmember en tussen $-1$ en $1$ ligt. Dit is \textit{strong multilineair AAM}. Merk op dat dit model op geen enkel van de verschillende vlakken het beste scoort, aangezien deze meer vrijheidsgraden en looptijd heeft dan het lineair model, en een grotere reconstructie-error heeft dan \textit{strong multilineair mesma}. Maar op deze vlakken scoort dit algoritme een kleine hoeveelheid slechter dan de voorgenoemde algoritmes, terwijl deze op de andere vlakken, respectievelijk reconstructie-error en looptijd, een grote verbetering levert. In vergelijking met \textit{lineair mesma}, wat in praktijk vaak gebruikt wordt, geeft dit algorimte een sterke verbetering op zowel reconstructie-error als looptijd, en zelfs op de verbetering hiervan: \textit{lineair AAM}, geeft \textit{Strong multilineair mesma} nog een sterke verbetering op vlak van reconstructie-error, in ruil voor een kleine verlenging van de looptijd. 
+Gebruikt makend van de vorige vergelijkingen is het meest nuttige model een semilineair model waarbij de reflectiekans onafhankelijk is van de endmember en tussen $-1$ en $1$ ligt. Dit is \textit{strong semilineair AAM}. Merk op dat dit model op geen enkel van de verschillende vlakken het beste scoort, aangezien deze meer vrijheidsgraden en looptijd heeft dan het lineair model, en een grotere reconstructie-error heeft dan \textit{strong multilineair mesma}. Maar op deze vlakken scoort dit algoritme een kleine hoeveelheid slechter dan de voorgenoemde algoritmes, terwijl deze op de andere vlakken, respectievelijk reconstructie-error en looptijd, een grote verbetering levert. In vergelijking met \textit{lineair mesma}, wat in praktijk vaak gebruikt wordt, geeft dit algorimte een sterke verbetering op zowel reconstructie-error als looptijd, en zelfs op de verbetering hiervan: \textit{lineair AAM}, geeft \textit{strong semilineair AAM} nog een sterke verbetering op vlak van reconstructie-error, in ruil voor een kleine verlenging van de looptijd. 
 
-Kortom, indien er nood is aan een zeer nauwkeurige bepaling kan gebruik gemaakt worden van \textit{strong multilineair mesma}, maar voor een kleine vergroting van de reconstructie-error, kan de looptijd vier grote-ordes kleiner gemaakt worden door gebruik te maken van \textit{strong multilineair AAM}. Deze beide methodes staan beschreven in deze thesis.
+Kortom, indien er nood is aan een zeer nauwkeurige analyse kan gebruik gemaakt worden van \textit{strong multilineair mesma}, maar voor een kleine vergroting van de reconstructie-error, kan de looptijd vier grote-ordes kleiner gemaakt worden door gebruik te maken van \textit{strong multilineair AAM}. Deze beide methodes staan beschreven in deze thesis.
 
 
 \begin{flushleft}
