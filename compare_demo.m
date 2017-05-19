@@ -194,12 +194,14 @@ errors = table(trees.error,mix1.error,road.error,mix2.error,curb.error,grass.err
 errorsrn = table(rne(trees),rne(mix1),rne(road),rne(mix2),rne(curb),rne(grass),'RowNames',names);
 runtime = table(trees.runtime,mix1.runtime,road.runtime,mix2.runtime,curb.runtime,grass.runtime,'RowNames',names);
 
-save_latex_file(errors,'TabErrorsA');
-save_latex_file(errorsrn,'TabErrorsrnA');
-save_latex_file(runtime,'TabRuntimeA');
+
+save_latex_file(errors,'TabErrorsB');
+save_latex_file(errorsrn,'TabErrorsrnB');
+save_latex_file(runtime,'TabRuntimeB');
 %save_latex_file(table2,'TabRoad');
 %save_latex_file(table3,'TabGrass');
-save('meantables.mat','errors','errorsrn','runtime');
+save('pixtables.mat','errors','errorsrn','runtime');
+
 
 
 

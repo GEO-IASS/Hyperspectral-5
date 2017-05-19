@@ -158,7 +158,8 @@ Rob {Heylen} % Supervisor's Name
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract (Nederlands)}
 
-Aardopservatie is de wetenschap van het verzamelen van informatie van het aardoppervlak zonder hiermee in contact te komen. Dit wordt gedaan door het meten en vastleggen van gereflecteerde of uitgezonden elektromagnetische straling en het verwerken, analyseren en toepassen van deze informatie. Deze elektromagnetische golven worden gemeten door een hyperspectrale camera op een sateliet. Specifiek is men ge\"intereseerd in het omzetten van de spectra van de verschillende pixels in het hyperspectrale beeld naar de hoeveelheden ofwel abundaties van verschillende materialen. Het kunnen analyseren 
+Aardopservatie is de wetenschap van het verzamelen van informatie van het aardoppervlak zonder hiermee in contact te komen. Dit wordt gedaan door het meten en vastleggen van gereflecteerde of uitgezonden elektromagnetische straling en het verwerken, analyseren en toepassen van deze informatie. Deze elektromagnetische golven worden gemeten door een hyperspectrale camera op een sateliet. Specifiek is men ge\"intereseerd in het omzetten van de spectra van de verschillende pixels in het hyperspectrale beeld naar de hoeveelheden ofwel abundaties van verschillende materialen. 
+Aardopservatie heeft toepassingen in verschillende gebieden, zoals landbouw, geologie, bosbouw, hydrologie, ecologie, het bestuderen van landformaties, zee-ijs, biomassa, het observeren van andere planeten, het opvolgen van olierampen en vele andere toepassingen. 
 
 Deze thesis beschrijft ten eerste de methode van het lineair ontmengen, de methode die vaak gebruikt wordt in de literatuur. Ook worden twee belangrijke problemen hiermee beschreven, namelijk niet-lineariteit en variabiliteit. Niet lineariteit houdt in dat om materialen te mengen de spectra van verschillende materialen niet eenvoudigweg opgeteld kunnen worden, maar er rekening moet gehouden worden met interne reflecties. Variabiliteit houd in dat niet elk materiaal een vast spectrum heeft, maar meerdere spectra kan hebben. Bijvoorbeeld de bovenkant en onderkant van een boomblad zenden een verschillend spectrum uit, maar men wil deze in spectraal ontmengen lieft beschouwen als eenzelfde materiaal.
 
@@ -618,7 +619,7 @@ In de vorige secties zijn er materialen en hun spectra geselecteerd. Hierna kan 
 \end{algorithm}
 
 \subsection{vrije keuze van het ontmengalgoritme}
-Hierboven is gebruikt gemaakt van het lineaire ontmengalgoritme, maar dit hoeft niet het geval te zijn. In algoritme \ref{al:mesma} kan de regel \texttt{Ontmeng gebruik makend van het \textit{sum-to-one constrained least-squares unmixing model}} vervangen worden door elk algoritme naar keuze. Indien men ge\"intereseerd is in niet lineaire effecten, kan hier gebruik gemaakt worden van het multilineair model. De \textit{Alina-dataset} gebruikt in deze thesis, bevat voor de deelverzameling van alle materialen $50\times 10\times 10 \times 10= 50000$ mogelijkheden, en het ontmengen van een pixel aan de hand van vier spectra  duurt ongeveer $0.1$ seconden. Hierdoor neemt dit algoritme meer dan $2$ uur in beslag voor elke pixel. Het beeld bevat ongeveer 400 pixels, dus de totale looptijd van dit algoritme is ongeveer $25$ dagen. Zelfs als \textit{Sum-to-one contrained least-square unmixing} gebruikt wordt, levert dit een langdurig proces.
+Hierboven is gebruikt gemaakt van het lineaire ontmengalgoritme, maar dit hoeft niet het geval te zijn. In algoritme \ref{al:mesma} kan de regel \texttt{Ontmeng gebruik makend van het \textit{sum-to-one constrained least-squares unmixing model}} vervangen worden door elk algoritme naar keuze. Indien men ge\"intereseerd is in niet lineaire effecten, kan hier gebruik gemaakt worden van het multilineair model. De \textit{Alina-dataset} gebruikt in deze thesis, bevat voor de deelverzameling van alle materialen $50\times 10\times 10 \times 10= 50000$ mogelijkheden, en het ontmengen van een pixel aan de hand van vier spectra  duurt ongeveer $0.1$ seconden. Hierdoor neemt dit algoritme meer dan $2$ uur in beslag voor elke pixel, hoewel door optimalisaties zoals multi-threading dit kan worden verkort op een kwartier. Het beeld bevat ongeveer 400 pixels, dus de totale looptijd van dit algoritme is ongeveer $25$ dagen. Zelfs als \textit{Sum-to-one contrained least-square unmixing} gebruikt wordt, levert dit een langdurig proces.
 
 \section{Suboptimaal algoritme} \label{sec:AAM}
 
@@ -977,13 +978,13 @@ We vergelijken niet alleen de verschillende methodes, maar ook, waar toepasselij
 \hline
 x-pos&3 & 5 & 9 & 12 & 14 & 17 \\
 \hline
-real multilineair  & 6776.9 & 6246.9 & 6009.1 & 6063.3 & 6097.4 & 6060.3 \\
+real multilineair & 941.5419 & 941.1282 & 945.4887 & 944.4081 & 901.0079 & 924.5870 \\
 \hline
-free multilineair  & 6597.8 & 6533.0 & 6490.3 & 6492.1 & 5707.1 & 6495.9 \\
+free multilineair & 942.7313 & 914.6477 & 947.9145 & 946.6204 & 908.2608 & 938.4770 \\
 \hline
-strict multilineair  & 5746.3 & 5486.6 & 6132.5 & 6050.9 & 5405.2 & 5676.8 \\
+strict multilineair & 903.7542 & 823.6796 & 791.1329 & 792.1679 & 822.2177 & 791.3122 \\
 \hline
-strong multilineair  & 5603.9 & 5461.7 & 5284.3 & 5412.6 & 5699.3 & 5553.0 \\
+strong multilineair & 929.7014 & 902.9595 & 892.1193 & 881.2452 & 835.1917 & 925.4355 \\
 \hline
 lineair  & 2.0421 & 2.0435 & 2.0213 & 2.0154 & 2.0175 & 2.0103 \\
 \hline
