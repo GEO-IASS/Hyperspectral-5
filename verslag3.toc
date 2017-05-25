@@ -1,6 +1,4 @@
 \select@language {dutch}
-\contentsline {chapter}{Abstract (English)}{3}
-\contentsline {chapter}{Abstract (Nederlands)}{4}
 \contentsline {chapter}{Inleiding}{6}
 \contentsline {subsubsection}{Elektromagnetische golven}{6}
 \contentsline {subsubsection}{Hyperspectrale camera's}{7}
@@ -16,44 +14,43 @@
 \contentsline {section}{\numberline {1.3}Niet-lineaire interacties}{14}
 \contentsline {section}{\numberline {1.4}Variabiliteit}{14}
 \contentsline {chapter}{Structuur van deze thesis}{15}
-\contentsline {section}{\numberline {1.5}Alina-dataset}{15}
-\contentsline {chapter}{\numberline {2}Niet-lineariteit\cite {mlinmix}}{16}
+\contentsline {chapter}{\numberline {2}Niet-lineariteit}{16}
 \contentsline {section}{\numberline {2.1}Bilineair ontmengen}{16}
 \contentsline {subsection}{\numberline {2.1.1}Vrijheidsgraden}{17}
 \contentsline {section}{\numberline {2.2}Multilineair ontmengen}{17}
 \contentsline {subsection}{\numberline {2.2.1}Berekening}{17}
-\contentsline {subsection}{\numberline {2.2.2}Reflectantie vs albedo}{20}
-\contentsline {subsection}{\numberline {2.2.3}Ondergrens van P waarde}{20}
-\contentsline {chapter}{\numberline {3}Endmember-variabiliteit\cite {mesma}}{21}
-\contentsline {section}{\numberline {3.1}Multiple endmember spectral mixture analysis}{21}
-\contentsline {subsection}{\numberline {3.1.1}randvoorwaarden}{21}
+\contentsline {subsection}{\numberline {2.2.2}Reflectantie versus albedo}{20}
+\contentsline {subsection}{\numberline {2.2.3}Ondergrens van de reflectiekans}{20}
+\contentsline {chapter}{\numberline {3}Endmembervariabiliteit}{21}
+\contentsline {section}{\numberline {3.1}\textit {Multiple endmember spectral mixture analysis}}{21}
+\contentsline {subsection}{\numberline {3.1.1}Randvoorwaarden}{21}
 \contentsline {subsection}{\numberline {3.1.2}Werking en implementatie van MESMA}{22}
-\contentsline {subsubsection}{deelverzameling van alle materialen}{22}
+\contentsline {subsubsection}{Deelverzameling van alle materialen}{22}
 \contentsline {subsubsection}{Itereren over alle bibliotheken}{22}
 \contentsline {subsubsection}{Ontmengen van de selectie}{23}
-\contentsline {subsection}{\numberline {3.1.3}vrije keuze van het ontmengalgoritme}{23}
+\contentsline {subsection}{\numberline {3.1.3}Vrije keuze van het ontmengalgoritme}{23}
 \contentsline {section}{\numberline {3.2}Suboptimaal algoritme}{24}
 \contentsline {subsection}{\numberline {3.2.1}Hoekminimalisatie}{24}
 \contentsline {chapter}{\numberline {4}Spectrale variabiliteit bij niet-lineaire ontmenging}{26}
 \contentsline {section}{\numberline {4.1}Variabiliteit en niet-lineaire ontmenging}{26}
-\contentsline {section}{\numberline {4.2}Multilineair MESMA}{26}
-\contentsline {section}{\numberline {4.3}Semi-lineair model}{28}
+\contentsline {section}{\numberline {4.2}\textit {Multilinear MESMA}}{26}
+\contentsline {section}{\numberline {4.3}Semilineair model}{28}
 \contentsline {subsection}{\numberline {4.3.1}Theoretische controle met gesimuleerde data}{28}
 \contentsline {subsubsection}{Genereren van de data}{28}
+\contentsline {subsubsection}{Maximale reflectie}{31}
 \contentsline {subsubsection}{Correct geselecteerde materialen}{31}
 \contentsline {subsubsection}{Reflectiekans}{31}
 \contentsline {subsubsection}{Reconstructie-error}{31}
-\contentsline {subsubsection}{Maximale reflectie}{31}
-\contentsline {section}{\numberline {4.4}semilineair AAM}{32}
-\contentsline {subsection}{\numberline {4.4.1}correct geselecteerde materialen}{32}
+\contentsline {section}{\numberline {4.4}\textit {Semilinear AAM}}{32}
+\contentsline {subsection}{\numberline {4.4.1}Correct geselecteerde materialen}{32}
 \contentsline {chapter}{\numberline {5}Experimentele vergelijking van verschillende methodes}{36}
 \contentsline {section}{\numberline {5.1}Looptijd en reconstructie-error}{36}
 \contentsline {section}{\numberline {5.2}De vergeleken methodes}{36}
 \contentsline {section}{\numberline {5.3}Bespreking van de resultaten}{42}
-\contentsline {subsection}{\numberline {5.3.1}Lineair vs semilineair}{42}
-\contentsline {subsection}{\numberline {5.3.2}Semi-lineair vs multilineair}{42}
+\contentsline {subsection}{\numberline {5.3.1}Lineair versus semilineair}{42}
+\contentsline {subsection}{\numberline {5.3.2}Semilineair versus multilineair}{42}
 \contentsline {subsection}{\numberline {5.3.3}P-afhankelijkheid}{42}
 \contentsline {subsection}{\numberline {5.3.4}Bespreking P-ondergrens}{43}
-\contentsline {subsection}{\numberline {5.3.5}Bepreking multilinair AAM vs semilinair model}{43}
-\contentsline {section}{\numberline {5.4}strong semilineair Alternating Angle Minimalisation}{43}
-\contentsline {chapter}{Bibliografie}{44}
+\contentsline {subsection}{\numberline {5.3.5}Bepreking multilineair hoelminimalistatie versus semilinear model}{43}
+\contentsline {section}{\numberline {5.4}\textit {Strong semilinear Alternating Angle Minimalisation}}{43}
+\contentsline {chapter}{Bibliografie}{47}

@@ -1,42 +1,155 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{bioucas13}
-Jose~M. Biouscas-dias, Antonio Plaza, Gustavo Camps-Valls, Paul Scheunders,
-  Nasser~M. Nasrabadi, and Jocelyn Chanussot.
+\bibitem{Adams:1995}
+John~B. Adams, Donald~E. Sabol, Valerie Kapos, Raimundo~Almeida Filho, Dar~A.
+  Roberts, Milton~O. Smith, and Alan~R. Gillespie.
+\newblock Classification of multispectral images based on fractions of
+  endmembers: Application to land-cover change in the brazilian amazon.
+\newblock {\em Remote Sensing of Environment}, 52(2):137 -- 154, 1995.
+
+\bibitem{altmann12}
+Y.~Altmann, A.~Halimi, N.~Dobigeon, and J.-Y. Tourneret.
+\newblock Supervised nonlinear spectral unmixing using a post-nonlinear mixing
+  model for hyperspectral imagery.
+\newblock {\em IEEE Trans. Image Process.}, 21(6):3017--3025, Jun 2012.
+
+\bibitem{dias13}
+J.~M. Bioucas-Dias, A.~Plaza, G.~Camps-Valls, P.~Scheunders, N.~Nasrabadi, and
+  J.~Chanussot.
 \newblock Hyperspectral remote sensing data analysis and future challenges.
-\newblock {\em Geoscience and remote sensing magazine}, pages 6--36, June 2013.
+\newblock {\em IEEE Geosci. Remote Sens. Mag.}, 1(2):6--36, June 2013.
 
 \bibitem{dias12}
-Jose~M. Biouscas-dias, Antonio Plaza, Nicolas Dobigeon, Mario Parente, Qian Du,
-  Pual Grader, and Jocelyn Chanussot.
-\newblock Hyperspectral unmixing overview: Geometrical, statistical and sparse
-  regression based approaches.
-\newblock {\em Journal of selected topics in applied earth opservation and
-  remote sensing}, 5(2):354--376, April 2012.
+J.M. Bioucas-Dias, A.~Plaza, N.~Dobigeon, M.~Parente, Q.~Du, P.~Gader, and
+  J.~Chanussot.
+\newblock Hyperspectral unmixing overview: Geometrical, statistical, and sparse
+  regression-based approaches.
+\newblock {\em IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens.}, 5(2):354--379,
+  2012.
 
 \bibitem{fun}
 Canada centre for~remote sensing.
 \newblock {\em Fundamentals of remote sensing}.
 \newblock Natural Resources Canada.
 
-\bibitem{Alina}
-Xiaoxiao Du, Alina Zare, Paul Gader, and Dmitri Dranishnikov.
+\bibitem{dennison04}
+P.~Dennison, K.~Halligan, and D.~Roberts.
+\newblock A comparison of error metrics and constraints for multiple endmember
+  spectral mixture analysis and spectral angle mapper.
+\newblock {\em Remote Sensing Environ.}, 93:359--367, Nov 2004.
+
+\bibitem{dobigeon14}
+N.~Dobigeon, J.-Y. Tourneret, C.~Richard, J.C.M. Bermudez, S.~McLaughlin, and
+  AO. Hero.
+\newblock Nonlinear unmixing of hyperspectral images: Models and algorithms.
+\newblock {\em IEEE Sig. Process. Mag.}, 31(1):82--94, Jan 2014.
+
+\bibitem{du14}
+X.~Du, A.~Zare, P.~Gader, and D.~Dranishnikov.
 \newblock Spatial and spectral unmixing using the beta compositional model.
-\newblock {\em Journal of selected topics in applied earth opservation and
-  remote sensing}, 7(6):1994--2003, June 2014.
+\newblock {\em IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens.},
+  7(6):1994--2003, June 2014.
 
-\bibitem{mlinmix}
-Rob Heylen and Paul Scheunders.
+\bibitem{fan09}
+W.~Fan, B.~Hu, J.~Miller, and M.~Li.
+\newblock Comparative study between a new nonlinear model and common linear
+  model for analysing laboratory simulated forest hyperspectral data.
+\newblock {\em Int. J. remote sens.}, 30(11):2951--2962, 2009.
+
+\bibitem{Haro:2005}
+F.~J. Garcia-Haro, S.~Sommer, and T.~Kemper.
+\newblock A new tool for variable multiple endmember spectral mixture analysis
+  (vmesma).
+\newblock {\em International Journal of Remote Sensing}, 26(10):2135--2162, May
+  2005.
+
+\bibitem{halimi11}
+A.~Halimi, Y.~Altmann, N.~Dobigeon, and J.-Y. Tourneret.
+\newblock Nonlinear unmixing of hyperspectral images using a generalized
+  bilinear model.
+\newblock {\em IEEE Trans. Geosci. Remote Sens.}, 49(11):4153--4162, 2011.
+
+\bibitem{hapke81}
+B.~Hapke.
+\newblock Bidirectional reflectance spectroscopy. 1. {T}heory.
+\newblock {\em J. Geophys. Res.}, 86:3039--3054, 1981.
+
+\bibitem{heinz01}
+D.C. Heinz and C.-I Chang.
+\newblock Fully constrained least squares linear spectral mixture analysis
+  method for material quantification in hyperspectral imagery.
+\newblock {\em IEEE Trans. Geosci. Remote Sens.}, 39(3):529--545, 2001.
+
+\bibitem{heylen13_4}
+R.~Heylen, P.~Gader, and P.~Scheunders.
+\newblock Handling spectral variability with alternating angle minimization.
+\newblock {\em Proc. IEEE WHISPERS}, pages 1--4, 2013.
+
+\bibitem{heylen14_1}
+R.~Heylen, M.~Parente, and P.~Gader.
+\newblock A review of nonlinear hyperspectral unmixing methods.
+\newblock {\em IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens.},
+  7(6):1844--1868, June 2014.
+
+\bibitem{heylen11_2}
+R.~Heylen and P.~Scheunders.
+\newblock Fully constrained least-squares spectral unmixing by simplex
+  projection.
+\newblock {\em IEEE Trans. Geosci. Remote Sens.: Spec. iss. Remote Sensing},
+  49(11):4112--4122, 2011.
+
+\bibitem{heylen14_3}
+R.~Heylen and P.~Scheunders.
+\newblock Hyperspectral unmixing using an active set algorithm.
+\newblock {\em Proc. IEEE ICIP}, 2014.
+
+\bibitem{heylen16}
+R.~Heylen and P.~Scheunders.
 \newblock A multilinear mixing model for nonlinear spectral unmixing.
+\newblock {\em IEEE Transactions on Geoscience and Remote Sensing},
+  54(1):240--251, Jan 2016.
 
-\bibitem{mesma}
-Rob Heylen, Alina Zare, Paul Gader, and Paul Scheunders.
-\newblock Hyperspectral unmixing with endmember variability via alternating
-  angle minimization.
+\bibitem{karami14}
+A.~Karami, R.~Heylen, and P.~Scheunders.
+\newblock Hyperspectral image noise reduction and its effect on spectral
+  unmixing (accepted).
+\newblock {\em Proc. IEEE WHISPERS}, 2014.
 
-\bibitem{matlab}
+\bibitem{diric}
+mathworks.
+\newblock The dirichlet function.
+\newblock https://nl.mathworks.com/help/signal/gs/the-dirichlet-function.html.
+
+\bibitem{MATLAB}
 MATLAB.
 \newblock {\em version 8.5.0 (R2015a)}.
 \newblock The MathWorks Inc., Natick, Massachusetts, 2015.
+
+\bibitem{nascimento09}
+J.M.P. Nascimento and J.M. Bioucas-Dias.
+\newblock Nonlinear mixture model for hyperspectral unmixing.
+\newblock {\em Image Sig. Process. for Remote Sens. XV}, 7477(1):74770I, 2009.
+
+\bibitem{Smith:1994}
+M.~Smith, D.~Roberts, J.~Hill, W.~Mehl, B.~Hosgood, J.~Verdebout, G.~Schmuck,
+  C.~Koechler, and J.~Adams.
+\newblock A new approach to quantifying abundances of materials in
+  multispectral images.
+\newblock In {\em Proceedings of Geoscience and Remote Sensing Symposium IGARSS
+  '94. Surface and Atmospheric Remote Sensing: Technologies, Data Analysis and
+  Interpretation., International}, volume~4, pages 2372--2374, 1994.
+
+\bibitem{somers09}
+B.~Somers, K.~Cools, S.~Delalieux, J.~Stuckens, D.~Van der Zande, W.W.
+  Verstraeten, and P.~Coppin.
+\newblock Nonlinear hyperspectral image analysis for tree cover estimates in
+  orchards.
+\newblock {\em Remote Sens. Environ.}, 113:1183--1193, 2009.
+
+\bibitem{zare14}
+A.~Zare and K.C. Ho.
+\newblock Endmember variability in hyperspectral analysis: Addressing spectral
+  variability during spectral unmixing.
+\newblock {\em IEEE Sig. Process. Mag.}, 31(1):95--104, Jan 2014.
 
 \end{thebibliography}

@@ -25,7 +25,7 @@
 }
 
 @Article{dias12,
-  Title                    = {HyperspeHyper Unmixing Overview: Geometrical, Statistical and Sparse Regression Based Approaches.},
+  Title                    = {Hyperspectral Unmixing Overview: Geometrical, Statistical and Sparse Regression Based Approaches.},
   Author                   = {Jose M. Biouscas-dias and Antonio Plaza and Nicolas Dobigeon and Mario Parente and Qian Du and Pual Grader and Jocelyn Chanussot},
   Journal                  = {Journal of selected topics in applied earth opservation and remote sensing},
   Year                     = {2012},
@@ -66,6 +66,15 @@ unmixing},
 
   Owner                    = {Thorvald},
   Timestamp                = {2016.09.14}
+}
+
+@Electronic{diric,
+  Title                    = {The Dirichlet Function},
+  Author                   = {mathworks},
+  HowPublished             = {https://nl.mathworks.com/help/signal/gs/the-dirichlet-function.html},
+
+  Owner                    = {Thorvald},
+  Timestamp                = {2017.05.25}
 }
 
 @Book{MATLAB,
